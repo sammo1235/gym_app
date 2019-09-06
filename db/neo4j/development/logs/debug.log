@@ -368,3 +368,49 @@
 2019-09-05 20:56:34.573+0000 INFO [o.n.k.i.DiagnosticsManager] --- STARTED diagnostics for KernelDiagnostics:StoreFiles END ---
 2019-09-05 20:56:35.907+0000 INFO [o.n.k.i.DiagnosticsManager] --- SERVER STARTED START ---
 2019-09-05 20:56:36.588+0000 INFO [o.n.k.i.DiagnosticsManager] --- SERVER STARTED END ---
+2019-09-06 10:46:14.034+0000 INFO [o.n.k.i.a.i.IndexPopulationJob] Index population started: [:Neo4j::Migrations::SchemaMigration(migration_id) [provider: {key=lucene+native, version=2.0}]]
+2019-09-06 10:46:14.240+0000 INFO [o.n.k.i.a.i.IndexPopulationJob] Completed node store scan. Flushing all pending updates.
+BatchingMultipleIndexPopulator{activeTasks=0, executor=java.util.concurrent.ThreadPoolExecutor@41dea9cd[Running, pool size = 1, active threads = 0, queued tasks = 0, completed tasks = 1], batchedUpdates = [0 updates], queuedUpdates = 0}
+2019-09-06 10:46:14.241+0000 INFO [o.n.k.i.a.i.IndexPopulationJob] Shutting down executor.
+BatchingMultipleIndexPopulator{activeTasks=1, executor=java.util.concurrent.ThreadPoolExecutor@41dea9cd[Running, pool size = 2, active threads = 1, queued tasks = 0, completed tasks = 1], batchedUpdates = [0 updates], queuedUpdates = 0}
+2019-09-06 10:46:14.300+0000 INFO [o.n.k.i.a.i.IndexPopulationJob] Index population completed. Index [:Neo4j::Migrations::SchemaMigration(migration_id) [provider: {key=lucene+native, version=2.0}]] is POPULATING.
+2019-09-06 10:46:20.491+0000 INFO [o.n.k.i.t.l.c.CheckPointerImpl] Checkpoint triggered by scheduler for time threshold @ txId: 5 checkpoint started...
+2019-09-06 10:46:20.539+0000 INFO [o.n.k.i.s.c.CountsTracker] Rotated counts store at transaction 5 to [/home/sammo/gym_app/gym_app/db/neo4j/development/data/databases/graph.db/neostore.counts.db.b], from [/home/sammo/gym_app/gym_app/db/neo4j/development/data/databases/graph.db/neostore.counts.db.a].
+2019-09-06 10:46:20.573+0000 INFO [o.n.k.i.t.l.c.CheckPointerImpl] Checkpoint triggered by scheduler for time threshold @ txId: 5 checkpoint completed in 80ms
+2019-09-06 10:46:20.574+0000 INFO [o.n.k.i.t.l.p.LogPruningImpl] No log version pruned, last checkpoint was made in version 0
+2019-09-06 10:53:03.980+0000 INFO [o.n.k.i.a.i.IndexPopulationJob] Index population started: [:User(uuid) [provider: {key=lucene+native, version=2.0}]]
+2019-09-06 10:53:04.037+0000 INFO [o.n.k.i.a.i.IndexPopulationJob] Completed node store scan. Flushing all pending updates.
+BatchingMultipleIndexPopulator{activeTasks=0, executor=java.util.concurrent.ThreadPoolExecutor@7d1d9673[Running, pool size = 1, active threads = 0, queued tasks = 0, completed tasks = 1], batchedUpdates = [0 updates], queuedUpdates = 0}
+2019-09-06 10:53:04.037+0000 INFO [o.n.k.i.a.i.IndexPopulationJob] Shutting down executor.
+BatchingMultipleIndexPopulator{activeTasks=1, executor=java.util.concurrent.ThreadPoolExecutor@7d1d9673[Running, pool size = 2, active threads = 1, queued tasks = 0, completed tasks = 1], batchedUpdates = [0 updates], queuedUpdates = 0}
+2019-09-06 10:53:04.067+0000 INFO [o.n.k.i.a.i.IndexPopulationJob] Index population completed. Index [:User(uuid) [provider: {key=lucene+native, version=2.0}]] is POPULATING.
+2019-09-06 10:53:04.182+0000 INFO [o.n.k.i.a.i.IndexPopulationJob] Index population started: [:WorkUnit(uuid) [provider: {key=lucene+native, version=2.0}]]
+2019-09-06 10:53:04.236+0000 INFO [o.n.k.i.a.i.IndexPopulationJob] Completed node store scan. Flushing all pending updates.
+BatchingMultipleIndexPopulator{activeTasks=1, executor=java.util.concurrent.ThreadPoolExecutor@7432f3b2[Running, pool size = 1, active threads = 1, queued tasks = 0, completed tasks = 0], batchedUpdates = [0 updates], queuedUpdates = 0}
+2019-09-06 10:53:04.236+0000 INFO [o.n.k.i.a.i.IndexPopulationJob] Shutting down executor.
+BatchingMultipleIndexPopulator{activeTasks=1, executor=java.util.concurrent.ThreadPoolExecutor@7432f3b2[Running, pool size = 2, active threads = 1, queued tasks = 0, completed tasks = 1], batchedUpdates = [0 updates], queuedUpdates = 0}
+2019-09-06 10:53:04.268+0000 INFO [o.n.k.i.a.i.IndexPopulationJob] Index population completed. Index [:WorkUnit(uuid) [provider: {key=lucene+native, version=2.0}]] is POPULATING.
+2019-09-06 10:53:04.358+0000 INFO [o.n.k.i.a.i.IndexPopulationJob] Index population started: [:Lift(uuid) [provider: {key=lucene+native, version=2.0}]]
+2019-09-06 10:53:04.411+0000 INFO [o.n.k.i.a.i.IndexPopulationJob] Completed node store scan. Flushing all pending updates.
+BatchingMultipleIndexPopulator{activeTasks=1, executor=java.util.concurrent.ThreadPoolExecutor@1080aa79[Running, pool size = 1, active threads = 1, queued tasks = 0, completed tasks = 0], batchedUpdates = [0 updates], queuedUpdates = 0}
+2019-09-06 10:53:04.411+0000 INFO [o.n.k.i.a.i.IndexPopulationJob] Shutting down executor.
+BatchingMultipleIndexPopulator{activeTasks=1, executor=java.util.concurrent.ThreadPoolExecutor@1080aa79[Running, pool size = 2, active threads = 1, queued tasks = 0, completed tasks = 1], batchedUpdates = [0 updates], queuedUpdates = 0}
+2019-09-06 10:53:04.442+0000 INFO [o.n.k.i.a.i.IndexPopulationJob] Index population completed. Index [:Lift(uuid) [provider: {key=lucene+native, version=2.0}]] is POPULATING.
+2019-09-06 11:01:20.602+0000 INFO [o.n.k.i.t.l.c.CheckPointerImpl] Checkpoint triggered by scheduler for time threshold @ txId: 22 checkpoint started...
+2019-09-06 11:01:20.706+0000 INFO [o.n.k.i.s.c.CountsTracker] Rotated counts store at transaction 22 to [/home/sammo/gym_app/gym_app/db/neo4j/development/data/databases/graph.db/neostore.counts.db.a], from [/home/sammo/gym_app/gym_app/db/neo4j/development/data/databases/graph.db/neostore.counts.db.b].
+2019-09-06 11:01:20.739+0000 INFO [o.n.k.i.t.l.c.CheckPointerImpl] Checkpoint triggered by scheduler for time threshold @ txId: 22 checkpoint completed in 136ms
+2019-09-06 11:01:20.740+0000 INFO [o.n.k.i.t.l.p.LogPruningImpl] No log version pruned, last checkpoint was made in version 0
+2019-09-06 11:16:20.764+0000 INFO [o.n.k.i.t.l.c.CheckPointerImpl] Checkpoint triggered by scheduler for time threshold @ txId: 31 checkpoint started...
+2019-09-06 11:16:20.860+0000 INFO [o.n.k.i.s.c.CountsTracker] Rotated counts store at transaction 31 to [/home/sammo/gym_app/gym_app/db/neo4j/development/data/databases/graph.db/neostore.counts.db.b], from [/home/sammo/gym_app/gym_app/db/neo4j/development/data/databases/graph.db/neostore.counts.db.a].
+2019-09-06 11:16:20.893+0000 INFO [o.n.k.i.t.l.c.CheckPointerImpl] Checkpoint triggered by scheduler for time threshold @ txId: 31 checkpoint completed in 128ms
+2019-09-06 11:16:20.893+0000 INFO [o.n.k.i.t.l.p.LogPruningImpl] No log version pruned, last checkpoint was made in version 0
+2019-09-06 12:04:37.814+0000 INFO [o.n.c.i.CommunityCompatibilityFactory] Discarded stale query from the query cache after 3043 seconds: MATCH (n:`WorkUnit`) WHERE (n.uuid = {n_uuid}) RETURN n ORDER BY n.uuid LIMIT {limit_1}
+2019-09-06 12:04:37.815+0000 INFO [o.n.c.i.ExecutionEngine] Discarded stale query from the query cache after 3043 seconds: MATCH (n:`WorkUnit`) WHERE (n.uuid = {n_uuid}) RETURN n ORDER BY n.uuid LIMIT {limit_1}
+2019-09-06 12:04:37.841+0000 INFO [o.n.c.i.CommunityCompatibilityFactory] Discarded stale query from the query cache after 3043 seconds: MATCH (previous:`WorkUnit`) WHERE (ID(previous) = {ID_previous}) OPTIONAL MATCH (previous)-[rel1:`HAS_LIFT`]->(next:`Lift`) RETURN ID(previous), collect(next)
+2019-09-06 12:04:37.842+0000 INFO [o.n.c.i.ExecutionEngine] Discarded stale query from the query cache after 3043 seconds: MATCH (previous:`WorkUnit`) WHERE (ID(previous) = {ID_previous}) OPTIONAL MATCH (previous)-[rel1:`HAS_LIFT`]->(next:`Lift`) RETURN ID(previous), collect(next)
+2019-09-06 12:04:40.975+0000 INFO [o.n.k.i.t.l.c.CheckPointerImpl] Checkpoint triggered by scheduler for time threshold @ txId: 33 checkpoint started...
+2019-09-06 12:04:41.068+0000 INFO [o.n.k.i.s.c.CountsTracker] Rotated counts store at transaction 33 to [/home/sammo/gym_app/gym_app/db/neo4j/development/data/databases/graph.db/neostore.counts.db.a], from [/home/sammo/gym_app/gym_app/db/neo4j/development/data/databases/graph.db/neostore.counts.db.b].
+2019-09-06 12:04:41.085+0000 INFO [o.n.k.i.t.l.c.CheckPointerImpl] Checkpoint triggered by scheduler for time threshold @ txId: 33 checkpoint completed in 110ms
+2019-09-06 12:04:41.085+0000 INFO [o.n.k.i.t.l.p.LogPruningImpl] No log version pruned, last checkpoint was made in version 0
+2019-09-06 12:04:44.951+0000 INFO [o.n.c.i.CommunityCompatibilityFactory] Discarded stale query from the query cache after 4231 seconds: MATCH (n:`WorkUnit`) RETURN n
+2019-09-06 12:04:44.951+0000 INFO [o.n.c.i.ExecutionEngine] Discarded stale query from the query cache after 4231 seconds: MATCH (n:`WorkUnit`) RETURN n

@@ -1,0 +1,22 @@
+<%= form_with(model: lift, local: true) do |form| %>
+  <% if lift.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(lift.errors.count, "error") %> prohibited this lift from being saved:</h2>
+
+      <ul>
+      <% lift.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= form.label :name %>
+    <%= form.text_field :name %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>

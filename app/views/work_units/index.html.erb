@@ -1,0 +1,33 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Work Units</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Weight</th>
+      <th>Reps</th>
+      <th>User</th>
+      <th>Lift</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @work_units.each do |work_unit| %>
+      <tr>
+        <td><%= work_unit.weight %></td>
+        <td><%= work_unit.reps %></td>
+        <td><%= work_unit.user.try(:name) %></td>
+        <td><%= work_unit.lift.try(:name) %></td>
+        <td><%= link_to 'Show', work_unit %></td>
+        <td><%= link_to 'Edit', edit_work_unit_path(work_unit) %></td>
+        <td><%= link_to 'Destroy', work_unit, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Work Unit', new_work_unit_path %>

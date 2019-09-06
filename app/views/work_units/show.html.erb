@@ -1,0 +1,24 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Weight:</strong>
+  <%= @work_unit.weight %>
+</p>
+
+<p>
+  <strong>Reps:</strong>
+  <%= @work_unit.reps %>
+</p>
+
+<p>
+  <strong>User:</strong>
+  <%= @work_unit.user.try(:name) %>
+</p>
+
+<p>
+  <strong>Lift:</strong>
+  <%= @work_unit.lift.name %>
+</p>
+
+<%= link_to 'Edit', edit_work_unit_path(@work_unit) %> |
+<%= link_to 'Back', work_units_path %>
