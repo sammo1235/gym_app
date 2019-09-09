@@ -3,5 +3,5 @@ class Lift
   property :name, type: String
 
 
-
+  has_many :in, :work_units, type: nil
 end
