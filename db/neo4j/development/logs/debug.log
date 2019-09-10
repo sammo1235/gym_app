@@ -9437,3 +9437,75 @@ BatchingMultipleIndexPopulator{activeTasks=1, executor=java.util.concurrent.Thre
 2019-09-09 14:42:17.161+0000 INFO [o.n.k.i.s.c.CountsTracker] Rotated counts store at transaction 1248 to [/home/sammo/gym_app/gym_app/db/neo4j/development/data/databases/graph.db/neostore.counts.db.a], from [/home/sammo/gym_app/gym_app/db/neo4j/development/data/databases/graph.db/neostore.counts.db.b].
 2019-09-09 14:42:17.177+0000 INFO [o.n.k.i.t.l.c.CheckPointerImpl] Checkpoint triggered by scheduler for time threshold @ txId: 1248 checkpoint completed in 92ms
 2019-09-09 14:42:17.177+0000 INFO [o.n.k.i.t.l.p.LogPruningImpl] No log version pruned, last checkpoint was made in version 0
+2019-09-09 15:25:09.173+0000 INFO [o.n.c.i.CommunityCompatibilityFactory] Discarded stale query from the query cache after 6313 seconds: MATCH (n:`User`) WHERE (n.uuid = {n_uuid}) RETURN n LIMIT {limit_1}
+2019-09-09 15:25:09.174+0000 INFO [o.n.c.i.ExecutionEngine] Discarded stale query from the query cache after 6313 seconds: MATCH (n:`User`) WHERE (n.uuid = {n_uuid}) RETURN n LIMIT {limit_1}
+2019-09-09 15:25:17.278+0000 INFO [o.n.k.i.t.l.c.CheckPointerImpl] Checkpoint triggered by scheduler for time threshold @ txId: 1251 checkpoint started...
+2019-09-09 15:25:17.352+0000 INFO [o.n.k.i.s.c.CountsTracker] Rotated counts store at transaction 1251 to [/home/sammo/gym_app/gym_app/db/neo4j/development/data/databases/graph.db/neostore.counts.db.b], from [/home/sammo/gym_app/gym_app/db/neo4j/development/data/databases/graph.db/neostore.counts.db.a].
+2019-09-09 15:25:17.372+0000 INFO [o.n.k.i.t.l.c.CheckPointerImpl] Checkpoint triggered by scheduler for time threshold @ txId: 1251 checkpoint completed in 93ms
+2019-09-09 15:25:17.372+0000 INFO [o.n.k.i.t.l.p.LogPruningImpl] No log version pruned, last checkpoint was made in version 0
+2019-09-09 15:25:20.797+0000 INFO [o.n.c.i.CommunityCompatibilityFactory] Discarded stale query from the query cache after 7041 seconds: MATCH (n:`User`) RETURN n
+2019-09-09 15:25:20.797+0000 INFO [o.n.c.i.ExecutionEngine] Discarded stale query from the query cache after 7041 seconds: MATCH (n:`User`) RETURN n
+2019-09-09 15:26:29.912+0000 INFO [o.n.c.i.CommunityCompatibilityFactory] Discarded stale query from the query cache after 20413 seconds: MATCH p=()-[r:LIFTED]->() RETURN p LIMIT 25
+2019-09-09 15:26:29.912+0000 INFO [o.n.c.i.ExecutionEngine] Discarded stale query from the query cache after 20413 seconds: MATCH p=()-[r:LIFTED]->() RETURN p LIMIT 25
+2019-09-09 15:27:27.868+0000 INFO [o.n.c.i.CommunityCompatibilityFactory] Discarded stale query from the query cache after 6093 seconds: MATCH (n:`User`) RETURN n ORDER BY n.uuid LIMIT {limit_1}
+2019-09-09 15:27:27.868+0000 INFO [o.n.c.i.ExecutionEngine] Discarded stale query from the query cache after 6093 seconds: MATCH (n:`User`) RETURN n ORDER BY n.uuid LIMIT {limit_1}
+2019-09-09 15:40:17.403+0000 INFO [o.n.k.i.t.l.c.CheckPointerImpl] Checkpoint triggered by scheduler for time threshold @ txId: 1254 checkpoint started...
+2019-09-09 15:40:17.476+0000 INFO [o.n.k.i.s.c.CountsTracker] Rotated counts store at transaction 1254 to [/home/sammo/gym_app/gym_app/db/neo4j/development/data/databases/graph.db/neostore.counts.db.a], from [/home/sammo/gym_app/gym_app/db/neo4j/development/data/databases/graph.db/neostore.counts.db.b].
+2019-09-09 15:40:17.494+0000 INFO [o.n.k.i.t.l.c.CheckPointerImpl] Checkpoint triggered by scheduler for time threshold @ txId: 1254 checkpoint completed in 91ms
+2019-09-09 15:40:17.494+0000 INFO [o.n.k.i.t.l.p.LogPruningImpl] No log version pruned, last checkpoint was made in version 0
+2019-09-09 15:40:43.644+0000 INFO [o.n.c.i.CommunityCompatibilityFactory] Discarded stale query from the query cache after 6880 seconds: MATCH (n:`User`) RETURN n ORDER BY n.uuid DESC LIMIT {limit_1}
+2019-09-09 15:40:43.644+0000 INFO [o.n.c.i.ExecutionEngine] Discarded stale query from the query cache after 6880 seconds: MATCH (n:`User`) RETURN n ORDER BY n.uuid DESC LIMIT {limit_1}
+2019-09-09 15:55:17.528+0000 INFO [o.n.k.i.t.l.c.CheckPointerImpl] Checkpoint triggered by scheduler for time threshold @ txId: 1256 checkpoint started...
+2019-09-09 15:55:17.599+0000 INFO [o.n.k.i.s.c.CountsTracker] Rotated counts store at transaction 1256 to [/home/sammo/gym_app/gym_app/db/neo4j/development/data/databases/graph.db/neostore.counts.db.b], from [/home/sammo/gym_app/gym_app/db/neo4j/development/data/databases/graph.db/neostore.counts.db.a].
+2019-09-09 15:55:17.615+0000 INFO [o.n.k.i.t.l.c.CheckPointerImpl] Checkpoint triggered by scheduler for time threshold @ txId: 1256 checkpoint completed in 81ms
+2019-09-09 15:55:17.615+0000 INFO [o.n.k.i.t.l.p.LogPruningImpl] No log version pruned, last checkpoint was made in version 0
+2019-09-09 16:13:17.663+0000 INFO [o.n.k.i.t.l.c.CheckPointerImpl] Checkpoint triggered by scheduler for time threshold @ txId: 1257 checkpoint started...
+2019-09-09 16:13:17.721+0000 INFO [o.n.k.i.s.c.CountsTracker] Rotated counts store at transaction 1257 to [/home/sammo/gym_app/gym_app/db/neo4j/development/data/databases/graph.db/neostore.counts.db.a], from [/home/sammo/gym_app/gym_app/db/neo4j/development/data/databases/graph.db/neostore.counts.db.b].
+2019-09-09 16:13:17.741+0000 INFO [o.n.k.i.t.l.c.CheckPointerImpl] Checkpoint triggered by scheduler for time threshold @ txId: 1257 checkpoint completed in 78ms
+2019-09-09 16:13:17.741+0000 INFO [o.n.k.i.t.l.p.LogPruningImpl] No log version pruned, last checkpoint was made in version 0
+2019-09-09 16:13:27.760+0000 INFO [o.n.c.i.CommunityCompatibilityFactory] Discarded stale query from the query cache after 2487 seconds: MATCH p=()-[r:LIFT]->() RETURN p LIMIT 25
+2019-09-09 16:13:27.761+0000 INFO [o.n.c.i.ExecutionEngine] Discarded stale query from the query cache after 2487 seconds: MATCH p=()-[r:LIFT]->() RETURN p LIMIT 25
+2019-09-09 16:13:28.145+0000 INFO [o.n.c.i.CommunityCompatibilityFactory] Discarded stale query from the query cache after 18673 seconds: MATCH (a)-[r]->(b) WHERE id(a) IN $existingNodeIds AND id(b) IN $newNodeIds RETURN r;
+2019-09-09 16:13:28.145+0000 INFO [o.n.c.i.ExecutionEngine] Discarded stale query from the query cache after 18673 seconds: MATCH (a)-[r]->(b) WHERE id(a) IN $existingNodeIds AND id(b) IN $newNodeIds RETURN r;
+2019-09-09 16:14:07.993+0000 INFO [o.n.c.i.CommunityCompatibilityFactory] Discarded stale query from the query cache after 55 seconds: MATCH (:User)-[r:LIFTED_BY]-(:WorkUnit)
+DELETE r
+2019-09-09 16:14:07.993+0000 INFO [o.n.c.i.ExecutionEngine] Discarded stale query from the query cache after 55 seconds: EXPLAIN MATCH (:User)-[r:LIFTED_BY]-(:WorkUnit)
+DELETE r
+2019-09-09 16:15:02.323+0000 INFO [o.n.c.i.CommunityCompatibilityFactory] Discarded stale query from the query cache after 24 seconds: MATCH (:Lift)-[r:HAS_LIFT]-(:WorkUnit)
+DELETE r
+2019-09-09 16:15:02.324+0000 INFO [o.n.c.i.ExecutionEngine] Discarded stale query from the query cache after 24 seconds: EXPLAIN MATCH (:Lift)-[r:HAS_LIFT]-(:WorkUnit)
+DELETE r
+2019-09-09 16:15:08.157+0000 INFO [o.n.c.i.CommunityCompatibilityFactory] Discarded stale query from the query cache after 44 seconds: MATCH (:User)-[r:HAS_LIFT]-(:WorkUnit)
+DELETE r
+2019-09-09 16:15:08.158+0000 INFO [o.n.c.i.ExecutionEngine] Discarded stale query from the query cache after 44 seconds: EXPLAIN MATCH (:User)-[r:HAS_LIFT]-(:WorkUnit)
+DELETE r
+2019-09-09 16:15:26.130+0000 INFO [o.n.c.i.CommunityCompatibilityFactory] Discarded stale query from the query cache after 15 seconds: MATCH (:User)-[r:LIFTED]-(:WorkUnit)
+DELETE r
+2019-09-09 16:15:26.130+0000 INFO [o.n.c.i.ExecutionEngine] Discarded stale query from the query cache after 15 seconds: EXPLAIN MATCH (:User)-[r:LIFTED]-(:WorkUnit)
+DELETE r
+2019-09-09 16:15:39.821+0000 INFO [o.n.c.i.CommunityCompatibilityFactory] Discarded stale query from the query cache after 16388 seconds: MATCH p=()-->() RETURN p LIMIT 25
+2019-09-09 16:15:39.821+0000 INFO [o.n.c.i.ExecutionEngine] Discarded stale query from the query cache after 16388 seconds: MATCH p=()-->() RETURN p LIMIT 25
+2019-09-09 16:15:40.196+0000 INFO [o.n.c.i.CommunityCompatibilityFactory] Discarded stale query from the query cache after 132 seconds: MATCH (a)-[r]->(b) WHERE id(a) IN $existingNodeIds AND id(b) IN $newNodeIds RETURN r;
+2019-09-09 16:15:40.197+0000 INFO [o.n.c.i.ExecutionEngine] Discarded stale query from the query cache after 132 seconds: MATCH (a)-[r]->(b) WHERE id(a) IN $existingNodeIds AND id(b) IN $newNodeIds RETURN r;
+2019-09-09 16:16:10.014+0000 INFO [o.n.c.i.CommunityCompatibilityFactory] Discarded stale query from the query cache after 11298 seconds: MATCH (previous:`WorkUnit`) WHERE (ID(previous) IN {ID_previous}) OPTIONAL MATCH (previous)-[rel1]->(next:`User`) RETURN ID(previous), collect(next)
+2019-09-09 16:16:10.014+0000 INFO [o.n.c.i.ExecutionEngine] Discarded stale query from the query cache after 11298 seconds: MATCH (previous:`WorkUnit`) WHERE (ID(previous) IN {ID_previous}) OPTIONAL MATCH (previous)-[rel1]->(next:`User`) RETURN ID(previous), collect(next)
+2019-09-09 16:16:10.075+0000 INFO [o.n.c.i.CommunityCompatibilityFactory] Discarded stale query from the query cache after 16157 seconds: MATCH (previous:`WorkUnit`) WHERE (ID(previous) IN {ID_previous}) OPTIONAL MATCH (previous)-[rel1]->(next:`Lift`) RETURN ID(previous), collect(next)
+2019-09-09 16:16:10.075+0000 INFO [o.n.c.i.ExecutionEngine] Discarded stale query from the query cache after 16157 seconds: MATCH (previous:`WorkUnit`) WHERE (ID(previous) IN {ID_previous}) OPTIONAL MATCH (previous)-[rel1]->(next:`Lift`) RETURN ID(previous), collect(next)
+2019-09-09 16:17:59.237+0000 INFO [o.n.c.i.CommunityCompatibilityFactory] Discarded stale query from the query cache after 14645 seconds: MATCH (workunit836) WHERE (ID(workunit836) = {ID_workunit836}) MATCH (workunit836)-[rel1]->(result_user:`User`) RETURN result_user
+2019-09-09 16:17:59.237+0000 INFO [o.n.c.i.ExecutionEngine] Discarded stale query from the query cache after 14645 seconds: MATCH (workunit836) WHERE (ID(workunit836) = {ID_workunit836}) MATCH (workunit836)-[rel1]->(result_user:`User`) RETURN result_user
+2019-09-09 16:28:17.776+0000 INFO [o.n.k.i.t.l.c.CheckPointerImpl] Checkpoint triggered by scheduler for time threshold @ txId: 1260 checkpoint started...
+2019-09-09 16:28:17.858+0000 INFO [o.n.k.i.s.c.CountsTracker] Rotated counts store at transaction 1260 to [/home/sammo/gym_app/gym_app/db/neo4j/development/data/databases/graph.db/neostore.counts.db.b], from [/home/sammo/gym_app/gym_app/db/neo4j/development/data/databases/graph.db/neostore.counts.db.a].
+2019-09-09 16:28:17.874+0000 INFO [o.n.k.i.t.l.c.CheckPointerImpl] Checkpoint triggered by scheduler for time threshold @ txId: 1260 checkpoint completed in 98ms
+2019-09-09 16:28:17.875+0000 INFO [o.n.k.i.t.l.p.LogPruningImpl] No log version pruned, last checkpoint was made in version 0
+2019-09-09 16:29:33.546+0000 INFO [o.n.c.i.CommunityCompatibilityFactory] Discarded stale query from the query cache after 833 seconds: MATCH (a)-[r]->(b) WHERE id(a) IN $existingNodeIds AND id(b) IN $newNodeIds RETURN r;
+2019-09-09 16:29:33.546+0000 INFO [o.n.c.i.ExecutionEngine] Discarded stale query from the query cache after 833 seconds: MATCH (a)-[r]->(b) WHERE id(a) IN $existingNodeIds AND id(b) IN $newNodeIds RETURN r;
+2019-09-09 16:30:30.190+0000 INFO [o.n.c.i.CommunityCompatibilityFactory] Discarded stale query from the query cache after 14849 seconds: MATCH (user21) WHERE (ID(user21) = {ID_user21}) MATCH (user21)<-[rel1]-(result_work_units:`WorkUnit`) RETURN result_work_units
+2019-09-09 16:30:30.190+0000 INFO [o.n.c.i.ExecutionEngine] Discarded stale query from the query cache after 14849 seconds: MATCH (user21) WHERE (ID(user21) = {ID_user21}) MATCH (user21)<-[rel1]-(result_work_units:`WorkUnit`) RETURN result_work_units
+2019-09-09 16:30:51.212+0000 INFO [o.n.c.i.CommunityCompatibilityFactory] Discarded stale query from the query cache after 881 seconds: MATCH (previous:`WorkUnit`) WHERE (ID(previous) IN {ID_previous}) OPTIONAL MATCH (previous)-[rel1]->(next:`User`) RETURN ID(previous), collect(next)
+2019-09-09 16:30:51.212+0000 INFO [o.n.c.i.ExecutionEngine] Discarded stale query from the query cache after 881 seconds: MATCH (previous:`WorkUnit`) WHERE (ID(previous) IN {ID_previous}) OPTIONAL MATCH (previous)-[rel1]->(next:`User`) RETURN ID(previous), collect(next)
+2019-09-09 16:30:51.410+0000 INFO [o.n.c.i.CommunityCompatibilityFactory] Discarded stale query from the query cache after 881 seconds: MATCH (previous:`WorkUnit`) WHERE (ID(previous) IN {ID_previous}) OPTIONAL MATCH (previous)-[rel1]->(next:`Lift`) RETURN ID(previous), collect(next)
+2019-09-09 16:30:51.411+0000 INFO [o.n.c.i.ExecutionEngine] Discarded stale query from the query cache after 881 seconds: MATCH (previous:`WorkUnit`) WHERE (ID(previous) IN {ID_previous}) OPTIONAL MATCH (previous)-[rel1]->(next:`Lift`) RETURN ID(previous), collect(next)
+2019-09-09 16:43:17.911+0000 INFO [o.n.k.i.t.l.c.CheckPointerImpl] Checkpoint triggered by scheduler for time threshold @ txId: 1261 checkpoint started...
+2019-09-09 16:43:17.988+0000 INFO [o.n.k.i.s.c.CountsTracker] Rotated counts store at transaction 1261 to [/home/sammo/gym_app/gym_app/db/neo4j/development/data/databases/graph.db/neostore.counts.db.a], from [/home/sammo/gym_app/gym_app/db/neo4j/development/data/databases/graph.db/neostore.counts.db.b].
+2019-09-09 16:43:18.011+0000 INFO [o.n.k.i.t.l.c.CheckPointerImpl] Checkpoint triggered by scheduler for time threshold @ txId: 1261 checkpoint completed in 100ms
+2019-09-09 16:43:18.012+0000 INFO [o.n.k.i.t.l.p.LogPruningImpl] No log version pruned, last checkpoint was made in version 0

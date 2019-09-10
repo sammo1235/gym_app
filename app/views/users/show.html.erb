@@ -16,6 +16,32 @@
 </p>
 
 <p>
-  <strong>Workouts:</strong>
-  <%= @user.work_units %>
+<%= link_to 'Edit User', edit_user_path(@user) %>
+</p>
+
+<p>
+<%= link_to 'New Work Unit', new_work_unit_path %>
+</p>
+<p>
+<table>
+  <thead>
+    <tr>
+      <th>Lift</th>
+      <th>Weight</th>
+      <th>Reps</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @user.work_units.each do |work| %>
+      <tr>
+        <td><%= work.lift.name %></td>
+        <td><%= work.weight %></td>
+        <td><%= work.reps %></td>
+        <td><%= link_to "Edit", edit_work_unit_path(work) %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
 </p>
