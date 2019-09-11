@@ -4,7 +4,7 @@ class WorkUnitsController < ApplicationController
   # GET /work_units
   # GET /work_units.json
   def index
-    @work_units = WorkUnit.all
+    @work_units = WorkUnit.all.order(:created_at).reverse_each
   end
 
   # GET /work_units/1

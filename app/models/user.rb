@@ -4,6 +4,5 @@ class User
   property :email, type: String
   property :bodyweight, type: Integer
 
-  has_many :in, :work_units, type: nil # , type: :work_units
-
+  has_many :in, :work_units, type: nil
 end

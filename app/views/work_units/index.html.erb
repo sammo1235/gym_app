@@ -1,15 +1,17 @@
 <p id="notice"><%= notice %></p>
 
-<h1>Work Units</h1>
+<h1>Workouts</h1>
 
 <table>
   <thead>
     <tr>
       <th>Weight</th>
       <th>Reps</th>
+      <th>Workload</th>
       <th>User</th>
       <th>Lift</th>
-      <th colspan="3"></th>
+      <th>Date</th>
+      <th colspan="5"></th>
     </tr>
   </thead>
 
@@ -18,8 +20,10 @@
       <tr>
         <td><%= work_unit.weight %></td>
         <td><%= work_unit.reps %></td>
+        <td><%= work_unit.workload %></td>
         <td><%= work_unit.user.try(:name) %></td>
         <td><%= work_unit.lift.try(:name) %></td>
+        <td><%= work_unit.created_at %></td>
         <td><%= link_to 'Show', work_unit %></td>
         <td><%= link_to 'Edit', edit_work_unit_path(work_unit) %></td>
         <td><%= link_to 'Destroy', work_unit, method: :delete, data: { confirm: 'Are you sure?' } %></td>
