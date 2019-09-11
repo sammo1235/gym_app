@@ -5765,3 +5765,12 @@ nohup: ignoring input
 2019-09-11 15:12:33.764+0000 INFO  Remote interface available at http://localhost:7474/
 2019-09-11 15:29:26.460+0000 ERROR Client triggered an unexpected error [Neo.DatabaseError.Schema.ConstraintCreationFailed]: Unable to create CONSTRAINT ON ( lift:Lift ) ASSERT lift.name IS UNIQUE:
 Both Node(20) and Node(41) have the label `Lift` and property `name` = 'Squat', reference 443241ab-01ef-4ea4-94c1-ec22a97d2fc4.
+2019-09-11 16:57:37.432+0000 INFO  Neo4j Server shutdown initiated by request
+2019-09-11 16:57:37.441+0000 INFO  Stopping...
+2019-09-11 16:57:37.699+0000 INFO  Stopped.
+nohup: ignoring input
+2019-09-11 16:57:45.093+0000 INFO  ======== Neo4j 3.4.1 ========
+2019-09-11 16:57:45.120+0000 INFO  Starting...
+2019-09-11 16:57:46.908+0000 INFO  Bolt enabled on localhost:7472.
+2019-09-11 16:57:48.372+0000 INFO  Started.
+2019-09-11 16:57:49.045+0000 INFO  Remote interface available at http://localhost:7474/
