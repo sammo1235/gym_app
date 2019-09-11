@@ -1,0 +1,24 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Type:</strong>
+  <%= @work_out.type %>
+</p>
+
+<p>
+  <strong>Created at:</strong>
+  <%= @work_out.created_at %>
+</p>
+
+<p>
+  <strong>Total workload:</strong>
+  <%= @work_out.total_workload %>
+</p>
+
+<p>
+  <strong>User:</strong>
+  <%= @work_out.user %>
+</p>
+
+<%= link_to 'Edit', edit_work_out_path(@work_out) %> |
+<%= link_to 'Back', work_outs_path %>

@@ -18344,3 +18344,27 @@ BatchingMultipleIndexPopulator{activeTasks=1, executor=java.util.concurrent.Thre
 2019-09-11 16:02:51.957+0000 INFO [o.n.k.i.s.c.CountsTracker] Rotated counts store at transaction 1914 to [/home/sammo/Workload/gym_app/db/neo4j/development/data/databases/graph.db/neostore.counts.db.b], from [/home/sammo/Workload/gym_app/db/neo4j/development/data/databases/graph.db/neostore.counts.db.a].
 2019-09-11 16:02:51.974+0000 INFO [o.n.k.i.t.l.c.CheckPointerImpl] Checkpoint triggered by scheduler for time threshold @ txId: 1914 checkpoint completed in 144ms
 2019-09-11 16:02:51.974+0000 INFO [o.n.k.i.t.l.p.LogPruningImpl] No log version pruned, last checkpoint was made in version 0
+2019-09-11 16:22:42.016+0000 INFO [o.n.k.i.t.l.c.CheckPointerImpl] Checkpoint triggered by scheduler for time threshold @ txId: 1915 checkpoint started...
+2019-09-11 16:22:42.125+0000 INFO [o.n.k.i.s.c.CountsTracker] Rotated counts store at transaction 1915 to [/home/sammo/Workload/gym_app/db/neo4j/development/data/databases/graph.db/neostore.counts.db.a], from [/home/sammo/Workload/gym_app/db/neo4j/development/data/databases/graph.db/neostore.counts.db.b].
+2019-09-11 16:22:42.140+0000 INFO [o.n.k.i.t.l.c.CheckPointerImpl] Checkpoint triggered by scheduler for time threshold @ txId: 1915 checkpoint completed in 123ms
+2019-09-11 16:22:42.141+0000 INFO [o.n.k.i.t.l.p.LogPruningImpl] No log version pruned, last checkpoint was made in version 0
+2019-09-11 16:31:22.242+0000 INFO [o.n.c.i.CommunityCompatibilityFactory] Discarded stale query from the query cache after 371 seconds: MATCH (n) WHERE (ID(n) = {ID_n}) OPTIONAL MATCH (n)-[r]-() DELETE n, r
+2019-09-11 16:31:22.242+0000 INFO [o.n.c.i.ExecutionEngine] Discarded stale query from the query cache after 371 seconds: MATCH (n) WHERE (ID(n) = {ID_n}) OPTIONAL MATCH (n)-[r]-() DELETE n, r
+2019-09-11 16:34:37.264+0000 INFO [o.n.k.i.a.i.IndexPopulationJob] Index population started: [:WorkOut(uuid) [provider: {key=lucene+native, version=2.0}]]
+2019-09-11 16:34:37.324+0000 INFO [o.n.k.i.a.i.IndexPopulationJob] Completed node store scan. Flushing all pending updates.
+BatchingMultipleIndexPopulator{activeTasks=1, executor=java.util.concurrent.ThreadPoolExecutor@47b421b0[Running, pool size = 1, active threads = 1, queued tasks = 0, completed tasks = 0], batchedUpdates = [0 updates], queuedUpdates = 0}
+2019-09-11 16:34:37.324+0000 INFO [o.n.k.i.a.i.IndexPopulationJob] Shutting down executor.
+BatchingMultipleIndexPopulator{activeTasks=1, executor=java.util.concurrent.ThreadPoolExecutor@47b421b0[Running, pool size = 2, active threads = 1, queued tasks = 0, completed tasks = 1], batchedUpdates = [0 updates], queuedUpdates = 0}
+2019-09-11 16:34:37.351+0000 INFO [o.n.k.i.a.i.IndexPopulationJob] Index population completed. Index [:WorkOut(uuid) [provider: {key=lucene+native, version=2.0}]] is POPULATING.
+2019-09-11 16:37:42.174+0000 INFO [o.n.k.i.t.l.c.CheckPointerImpl] Checkpoint triggered by scheduler for time threshold @ txId: 1964 checkpoint started...
+2019-09-11 16:37:42.315+0000 INFO [o.n.k.i.s.c.CountsTracker] Rotated counts store at transaction 1964 to [/home/sammo/Workload/gym_app/db/neo4j/development/data/databases/graph.db/neostore.counts.db.b], from [/home/sammo/Workload/gym_app/db/neo4j/development/data/databases/graph.db/neostore.counts.db.a].
+2019-09-11 16:37:42.334+0000 INFO [o.n.k.i.t.l.c.CheckPointerImpl] Checkpoint triggered by scheduler for time threshold @ txId: 1964 checkpoint completed in 160ms
+2019-09-11 16:37:42.334+0000 INFO [o.n.k.i.t.l.p.LogPruningImpl] No log version pruned, last checkpoint was made in version 0
+2019-09-11 16:41:01.780+0000 INFO [o.n.c.i.CommunityCompatibilityFactory] Discarded stale query from the query cache after 345 seconds: MATCH (a)-[r]->(b) WHERE id(a) IN $existingNodeIds AND id(b) IN $newNodeIds RETURN r;
+2019-09-11 16:41:01.780+0000 INFO [o.n.c.i.ExecutionEngine] Discarded stale query from the query cache after 345 seconds: MATCH (a)-[r]->(b) WHERE id(a) IN $existingNodeIds AND id(b) IN $newNodeIds RETURN r;
+2019-09-11 16:41:16.927+0000 INFO [o.n.c.i.CommunityCompatibilityFactory] Discarded stale query from the query cache after 15 seconds: MATCH (a)-[r]->(b) WHERE id(a) IN $existingNodeIds AND id(b) IN $newNodeIds RETURN r;
+2019-09-11 16:41:16.927+0000 INFO [o.n.c.i.ExecutionEngine] Discarded stale query from the query cache after 15 seconds: MATCH (a)-[r]->(b) WHERE id(a) IN $existingNodeIds AND id(b) IN $newNodeIds RETURN r;
+2019-09-11 16:48:55.886+0000 INFO [o.n.c.i.CommunityCompatibilityFactory] Discarded stale query from the query cache after 459 seconds: MATCH p=()-[r:WORK_OUT]->() RETURN p LIMIT 25
+2019-09-11 16:48:55.886+0000 INFO [o.n.c.i.ExecutionEngine] Discarded stale query from the query cache after 459 seconds: MATCH p=()-[r:WORK_OUT]->() RETURN p LIMIT 25
+2019-09-11 16:48:56.433+0000 INFO [o.n.c.i.CommunityCompatibilityFactory] Discarded stale query from the query cache after 459 seconds: MATCH (a)-[r]->(b) WHERE id(a) IN $existingNodeIds AND id(b) IN $newNodeIds RETURN r;
+2019-09-11 16:48:56.433+0000 INFO [o.n.c.i.ExecutionEngine] Discarded stale query from the query cache after 459 seconds: MATCH (a)-[r]->(b) WHERE id(a) IN $existingNodeIds AND id(b) IN $newNodeIds RETURN r;
