@@ -17,7 +17,7 @@ workout_1.total_workload = workload
 workout_1.total_sets = sets
 workout_1.save
 
-# do the same as aboce but for a workout a week ago
+# do the same as above but for a workout a week ago
 
 workout_2 = WorkOut.create(type: "Legs", user: user, created_at: 1.week.ago)
 

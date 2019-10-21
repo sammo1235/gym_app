@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  get '/status', controller: 'application', action: 'status'
   resources :work_outs
   resources :lifts
   resources :work_units

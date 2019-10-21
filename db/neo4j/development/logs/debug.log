@@ -18909,3 +18909,1270 @@ BatchingMultipleIndexPopulator{activeTasks=1, executor=java.util.concurrent.Thre
 2019-09-11 16:57:46.962+0000 INFO [o.n.k.i.DiagnosticsManager] --- STARTED diagnostics for KernelDiagnostics:StoreFiles END ---
 2019-09-11 16:57:48.372+0000 INFO [o.n.k.i.DiagnosticsManager] --- SERVER STARTED START ---
 2019-09-11 16:57:49.045+0000 INFO [o.n.k.i.DiagnosticsManager] --- SERVER STARTED END ---
+2019-10-19 12:25:32.047+0000 WARN [o.n.i.p.PageCache] The dbms.memory.pagecache.size setting has not been configured. It is recommended that this setting is always explicitly configured, to ensure the system has a balanced configuration. Until then, a computed heuristic value of 6246258688 bytes will be used instead. Run `neo4j-admin memrec` for memory configuration suggestions.
+2019-10-19 12:25:32.366+0000 INFO [o.n.k.i.f.CommunityEditionModule] No locking implementation specified, defaulting to 'community'
+2019-10-19 12:25:32.521+0000 INFO [o.n.k.AvailabilityGuard] Requirement makes database unavailable: Database available
+2019-10-19 12:25:32.533+0000 INFO [o.n.k.i.DiagnosticsManager] --- INITIALIZED diagnostics START ---
+2019-10-19 12:25:32.534+0000 INFO [o.n.k.i.DiagnosticsManager] Neo4j Kernel properties:
+2019-10-19 12:25:32.534+0000 INFO [o.n.k.i.DiagnosticsManager] dbms.connector.http.enabled=true
+2019-10-19 12:25:32.534+0000 INFO [o.n.k.i.DiagnosticsManager] dbms.security.auth_enabled=false
+2019-10-19 12:25:32.534+0000 INFO [o.n.k.i.DiagnosticsManager] dbms.windows_service_name=neo4j
+2019-10-19 12:25:32.534+0000 INFO [o.n.k.i.DiagnosticsManager] dbms.connector.http.listen_address=localhost:7474
+2019-10-19 12:25:32.534+0000 INFO [o.n.k.i.DiagnosticsManager] dbms.connector.https.listen_address=localhost:7473
+2019-10-19 12:25:32.534+0000 INFO [o.n.k.i.DiagnosticsManager] unsupported.dbms.directories.neo4j_home=/home/sammo/Workload/gym_app/db/neo4j/development
+2019-10-19 12:25:32.534+0000 INFO [o.n.k.i.DiagnosticsManager] dbms.connector.bolt.listen_address=localhost:7472
+2019-10-19 12:25:32.534+0000 INFO [o.n.k.i.DiagnosticsManager] dbms.directories.import=import
+2019-10-19 12:25:32.535+0000 INFO [o.n.k.i.DiagnosticsManager] unsupported.dbms.edition=community
+2019-10-19 12:25:32.535+0000 INFO [o.n.k.i.DiagnosticsManager] dbms.connector.bolt.enabled=true
+2019-10-19 12:25:32.535+0000 INFO [o.n.k.i.DiagnosticsManager] dbms.connector.https.enabled=false
+2019-10-19 12:25:32.535+0000 INFO [o.n.k.i.DiagnosticsManager] dbms.jvm.additional=-Dunsupported.dbms.udc.source=tarball
+2019-10-19 12:25:32.535+0000 INFO [o.n.k.i.DiagnosticsManager] dbms.tx_log.rotation.retention_policy=1 days
+2019-10-19 12:25:32.535+0000 INFO [o.n.k.i.DiagnosticsManager] Diagnostics providers:
+2019-10-19 12:25:32.535+0000 INFO [o.n.k.i.DiagnosticsManager] org.neo4j.kernel.configuration.Config
+2019-10-19 12:25:32.535+0000 INFO [o.n.k.i.DiagnosticsManager] org.neo4j.kernel.info.DiagnosticsManager
+2019-10-19 12:25:32.535+0000 INFO [o.n.k.i.DiagnosticsManager] SYSTEM_MEMORY
+2019-10-19 12:25:32.535+0000 INFO [o.n.k.i.DiagnosticsManager] JAVA_MEMORY
+2019-10-19 12:25:32.535+0000 INFO [o.n.k.i.DiagnosticsManager] OPERATING_SYSTEM
+2019-10-19 12:25:32.535+0000 INFO [o.n.k.i.DiagnosticsManager] JAVA_VIRTUAL_MACHINE
+2019-10-19 12:25:32.536+0000 INFO [o.n.k.i.DiagnosticsManager] CLASSPATH
+2019-10-19 12:25:32.536+0000 INFO [o.n.k.i.DiagnosticsManager] LIBRARY_PATH
+2019-10-19 12:25:32.536+0000 INFO [o.n.k.i.DiagnosticsManager] SYSTEM_PROPERTIES
+2019-10-19 12:25:32.536+0000 INFO [o.n.k.i.DiagnosticsManager] TIMEZONE_DATABASE
+2019-10-19 12:25:32.536+0000 INFO [o.n.k.i.DiagnosticsManager] LINUX_SCHEDULERS
+2019-10-19 12:25:32.536+0000 INFO [o.n.k.i.DiagnosticsManager] NETWORK
+2019-10-19 12:25:32.536+0000 INFO [o.n.k.i.DiagnosticsManager] System memory information:
+2019-10-19 12:25:32.538+0000 INFO [o.n.k.i.DiagnosticsManager] Total Physical memory: 15.51 GB
+2019-10-19 12:25:32.538+0000 INFO [o.n.k.i.DiagnosticsManager] Free Physical memory: 180.00 MB
+2019-10-19 12:25:32.539+0000 INFO [o.n.k.i.DiagnosticsManager] Committed virtual memory: 7.60 GB
+2019-10-19 12:25:32.539+0000 INFO [o.n.k.i.DiagnosticsManager] Total swap space: 2.00 GB
+2019-10-19 12:25:32.539+0000 INFO [o.n.k.i.DiagnosticsManager] Free swap space: 1.36 GB
+2019-10-19 12:25:32.539+0000 INFO [o.n.k.i.DiagnosticsManager] JVM memory information:
+2019-10-19 12:25:32.539+0000 INFO [o.n.k.i.DiagnosticsManager] Free  memory: 209.26 MB
+2019-10-19 12:25:32.539+0000 INFO [o.n.k.i.DiagnosticsManager] Total memory: 250.00 MB
+2019-10-19 12:25:32.539+0000 INFO [o.n.k.i.DiagnosticsManager] Max   memory: 3.88 GB
+2019-10-19 12:25:32.542+0000 INFO [o.n.k.i.DiagnosticsManager] Garbage Collector: G1 Young Generation: [G1 Eden Space, G1 Survivor Space, G1 Old Gen]
+2019-10-19 12:25:32.542+0000 INFO [o.n.k.i.DiagnosticsManager] Garbage Collector: G1 Old Generation: [G1 Eden Space, G1 Survivor Space, G1 Old Gen]
+2019-10-19 12:25:32.542+0000 INFO [o.n.k.i.DiagnosticsManager] Memory Pool: Code Cache (Non-heap memory): committed=5.56 MB, used=5.54 MB, max=240.00 MB, threshold=0.00 B
+2019-10-19 12:25:32.542+0000 INFO [o.n.k.i.DiagnosticsManager] Memory Pool: Metaspace (Non-heap memory): committed=15.38 MB, used=14.29 MB, max=-1.00 B, threshold=0.00 B
+2019-10-19 12:25:32.543+0000 INFO [o.n.k.i.DiagnosticsManager] Memory Pool: Compressed Class Space (Non-heap memory): committed=2.13 MB, used=1.84 MB, max=1.00 GB, threshold=0.00 B
+2019-10-19 12:25:32.543+0000 INFO [o.n.k.i.DiagnosticsManager] Memory Pool: G1 Eden Space (Heap memory): committed=156.00 MB, used=24.00 MB, max=-1.00 B, threshold=?
+2019-10-19 12:25:32.543+0000 INFO [o.n.k.i.DiagnosticsManager] Memory Pool: G1 Survivor Space (Heap memory): committed=2.00 MB, used=2.00 MB, max=-1.00 B, threshold=?
+2019-10-19 12:25:32.543+0000 INFO [o.n.k.i.DiagnosticsManager] Memory Pool: G1 Old Gen (Heap memory): committed=92.00 MB, used=14.74 MB, max=3.88 GB, threshold=0.00 B
+2019-10-19 12:25:32.543+0000 INFO [o.n.k.i.DiagnosticsManager] Operating system information:
+2019-10-19 12:25:32.543+0000 INFO [o.n.k.i.DiagnosticsManager] Operating System: Linux; version: 4.15.0-65-generic; arch: amd64; cpus: 8
+2019-10-19 12:25:32.544+0000 INFO [o.n.k.i.DiagnosticsManager] Max number of file descriptors: 4096
+2019-10-19 12:25:32.544+0000 INFO [o.n.k.i.DiagnosticsManager] Number of open file descriptors: 122
+2019-10-19 12:25:32.544+0000 INFO [o.n.k.i.DiagnosticsManager] Process id: 6404@sammo-HP-EliteBook-840-G5
+2019-10-19 12:25:32.544+0000 INFO [o.n.k.i.DiagnosticsManager] Byte order: LITTLE_ENDIAN
+2019-10-19 12:25:32.546+0000 INFO [o.n.k.i.DiagnosticsManager] Local timezone: Europe/London
+2019-10-19 12:25:32.546+0000 INFO [o.n.k.i.DiagnosticsManager] JVM information:
+2019-10-19 12:25:32.546+0000 INFO [o.n.k.i.DiagnosticsManager] VM Name: OpenJDK 64-Bit Server VM
+2019-10-19 12:25:32.546+0000 INFO [o.n.k.i.DiagnosticsManager] VM Vendor: Private Build
+2019-10-19 12:25:32.546+0000 INFO [o.n.k.i.DiagnosticsManager] VM Version: 25.222-b10
+2019-10-19 12:25:32.546+0000 INFO [o.n.k.i.DiagnosticsManager] JIT compiler: HotSpot 64-Bit Tiered Compilers
+2019-10-19 12:25:32.547+0000 INFO [o.n.k.i.DiagnosticsManager] VM Arguments: [-XX:+UseG1GC, -XX:-OmitStackTraceInFastThrow, -XX:+AlwaysPreTouch, -XX:+UnlockExperimentalVMOptions, -XX:+TrustFinalNonStaticFields, -XX:+DisableExplicitGC, -Djdk.tls.ephemeralDHKeySize=2048, -Djdk.tls.rejectClientInitiatedRenegotiation=true, -Dunsupported.dbms.udc.source=tarball, -Dfile.encoding=UTF-8]
+2019-10-19 12:25:32.547+0000 INFO [o.n.k.i.DiagnosticsManager] Java classpath:
+2019-10-19 12:25:32.548+0000 INFO [o.n.k.i.DiagnosticsManager]  [bootstrap] /usr/lib/jvm/java-8-openjdk-amd64/jre/lib/jce.jar
+2019-10-19 12:25:32.548+0000 INFO [o.n.k.i.DiagnosticsManager]  [classpath + loader.0] file:/home/sammo/Workload/gym_app/db/neo4j/development/lib/parboiled-scala_2.11-1.1.7.jar
+2019-10-19 12:25:32.548+0000 INFO [o.n.k.i.DiagnosticsManager]  [classpath + loader.0] file:/home/sammo/Workload/gym_app/db/neo4j/development/lib/scala-library-2.11.12.jar
+2019-10-19 12:25:32.548+0000 INFO [o.n.k.i.DiagnosticsManager]  [classpath + loader.0] file:/home/sammo/Workload/gym_app/db/neo4j/development/lib/neo4j-cypher-compiler-3.1-3.1.8.jar
+2019-10-19 12:25:32.548+0000 INFO [o.n.k.i.DiagnosticsManager]  [classpath + loader.0] file:/home/sammo/Workload/gym_app/db/neo4j/development/lib/lucene-codecs-5.5.5.jar
+2019-10-19 12:25:32.548+0000 INFO [o.n.k.i.DiagnosticsManager]  [classpath + loader.0] file:/home/sammo/Workload/gym_app/db/neo4j/development/lib/jsr311-api-1.1.2.r612.jar
+2019-10-19 12:25:32.548+0000 INFO [o.n.k.i.DiagnosticsManager]  [classpath + loader.0] file:/home/sammo/Workload/gym_app/db/neo4j/development/lib/jetty-server-9.4.8.v20171121.jar
+2019-10-19 12:25:32.548+0000 INFO [o.n.k.i.DiagnosticsManager]  [classpath + loader.0] file:/home/sammo/Workload/gym_app/db/neo4j/development/lib/neo4j-cypher-logical-plans-3.3-3.3.5.jar
+2019-10-19 12:25:32.549+0000 INFO [o.n.k.i.DiagnosticsManager]  [loader.1] file:/usr/lib/jvm/java-8-openjdk-amd64/jre/lib/ext/nashorn.jar
+2019-10-19 12:25:32.549+0000 INFO [o.n.k.i.DiagnosticsManager]  [classpath + loader.0] file:/home/sammo/Workload/gym_app/db/neo4j/development/lib/neo4j-bolt-3.4.1.jar
+2019-10-19 12:25:32.549+0000 INFO [o.n.k.i.DiagnosticsManager]  [classpath + loader.0] file:/home/sammo/Workload/gym_app/db/neo4j/development/lib/neo4j-lucene-upgrade-3.4.1.jar
+2019-10-19 12:25:32.549+0000 INFO [o.n.k.i.DiagnosticsManager]  [classpath + loader.0] file:/home/sammo/Workload/gym_app/db/neo4j/development/lib/neo4j-browser-3.1.14.jar
+2019-10-19 12:25:32.549+0000 INFO [o.n.k.i.DiagnosticsManager]  [classpath + loader.0] file:/home/sammo/Workload/gym_app/db/neo4j/development/lib/commons-io-2.6.jar
+2019-10-19 12:25:32.549+0000 INFO [o.n.k.i.DiagnosticsManager]  [classpath + loader.0] file:/home/sammo/Workload/gym_app/db/neo4j/development/lib/jetty-http-9.4.8.v20171121.jar
+2019-10-19 12:25:32.549+0000 INFO [o.n.k.i.DiagnosticsManager]  [classpath + loader.0] file:/home/sammo/Workload/gym_app/db/neo4j/development/lib/rhino-1.7.9.jar
+2019-10-19 12:25:32.549+0000 INFO [o.n.k.i.DiagnosticsManager]  [classpath + loader.0] file:/home/sammo/Workload/gym_app/db/neo4j/development/lib/neo4j-jmx-3.4.1.jar
+2019-10-19 12:25:32.549+0000 INFO [o.n.k.i.DiagnosticsManager]  [classpath + loader.0] file:/home/sammo/Workload/gym_app/db/neo4j/development/lib/neo4j-cypher-frontend-3.1-3.1.8.jar
+2019-10-19 12:25:32.549+0000 INFO [o.n.k.i.DiagnosticsManager]  [classpath + loader.0] file:/home/sammo/Workload/gym_app/db/neo4j/development/lib/neo4j-common-3.4.1.jar
+2019-10-19 12:25:32.549+0000 INFO [o.n.k.i.DiagnosticsManager]  [classpath + loader.0] file:/home/sammo/Workload/gym_app/db/neo4j/development/lib/concurrentlinkedhashmap-lru-1.4.2.jar
+2019-10-19 12:25:32.549+0000 INFO [o.n.k.i.DiagnosticsManager]  [classpath + loader.0] file:/home/sammo/Workload/gym_app/db/neo4j/development/lib/neo4j-cypher-ir-3.4-3.4.1.jar
+2019-10-19 12:25:32.549+0000 INFO [o.n.k.i.DiagnosticsManager]  [classpath + loader.0] file:/home/sammo/Workload/gym_app/db/neo4j/development/lib/neo4j-server-3.4.1.jar
+2019-10-19 12:25:32.549+0000 INFO [o.n.k.i.DiagnosticsManager]  [classpath + loader.0] file:/home/sammo/Workload/gym_app/db/neo4j/development/plugins/*
+2019-10-19 12:25:32.549+0000 INFO [o.n.k.i.DiagnosticsManager]  [classpath + loader.0] file:/home/sammo/Workload/gym_app/db/neo4j/development/lib/jetty-security-9.4.8.v20171121.jar
+2019-10-19 12:25:32.549+0000 INFO [o.n.k.i.DiagnosticsManager]  [classpath + loader.0] file:/home/sammo/Workload/gym_app/db/neo4j/development/lib/javax.servlet-api-3.1.0.jar
+2019-10-19 12:25:32.549+0000 INFO [o.n.k.i.DiagnosticsManager]  [bootstrap] /usr/lib/jvm/java-8-openjdk-amd64/jre/lib/jsse.jar
+2019-10-19 12:25:32.550+0000 INFO [o.n.k.i.DiagnosticsManager]  [classpath + loader.0] file:/home/sammo/Workload/gym_app/db/neo4j/development/lib/neo4j-consistency-check-3.4.1.jar
+2019-10-19 12:25:32.550+0000 INFO [o.n.k.i.DiagnosticsManager]  [classpath + loader.0] file:/home/sammo/Workload/gym_app/db/neo4j/development/lib/neo4j-cypher-3.4.1.jar
+2019-10-19 12:25:32.550+0000 INFO [o.n.k.i.DiagnosticsManager]  [loader.1] file:/usr/lib/jvm/java-8-openjdk-amd64/jre/lib/ext/localedata.jar
+2019-10-19 12:25:32.550+0000 INFO [o.n.k.i.DiagnosticsManager]  [classpath + loader.0] file:/home/sammo/Workload/gym_app/db/neo4j/development/lib/jline-2.12.jar
+2019-10-19 12:25:32.550+0000 INFO [o.n.k.i.DiagnosticsManager]  [classpath + loader.0] file:/home/sammo/Workload/gym_app/db/neo4j/development/lib/neo4j-graphdb-api-3.4.1.jar
+2019-10-19 12:25:32.550+0000 INFO [o.n.k.i.DiagnosticsManager]  [loader.1] file:/usr/lib/jvm/java-8-openjdk-amd64/jre/lib/ext/libatk-wrapper.so
+2019-10-19 12:25:32.550+0000 INFO [o.n.k.i.DiagnosticsManager]  [classpath + loader.0] file:/home/sammo/Workload/gym_app/db/neo4j/development/lib/neo4j-cypher-frontend-3.3-3.3.5.jar
+2019-10-19 12:25:32.550+0000 INFO [o.n.k.i.DiagnosticsManager]  [classpath + loader.0] file:/home/sammo/Workload/gym_app/db/neo4j/development/lib/scala-reflect-2.11.12.jar
+2019-10-19 12:25:32.550+0000 INFO [o.n.k.i.DiagnosticsManager]  [classpath + loader.0] file:/home/sammo/Workload/gym_app/db/neo4j/development/lib/server-api-3.4.1.jar
+2019-10-19 12:25:32.550+0000 INFO [o.n.k.i.DiagnosticsManager]  [classpath + loader.0] file:/home/sammo/Workload/gym_app/db/neo4j/development/lib/neo4j-cypher-planner-spi-3.4-3.4.1.jar
+2019-10-19 12:25:32.550+0000 INFO [o.n.k.i.DiagnosticsManager]  [classpath + loader.0] file:/home/sammo/Workload/gym_app/db/neo4j/development/lib/neo4j-command-line-3.4.1.jar
+2019-10-19 12:25:32.550+0000 INFO [o.n.k.i.DiagnosticsManager]  [loader.1] file:/usr/lib/jvm/java-8-openjdk-amd64/jre/lib/ext/cldrdata.jar
+2019-10-19 12:25:32.550+0000 INFO [o.n.k.i.DiagnosticsManager]  [bootstrap] /usr/lib/jvm/java-8-openjdk-amd64/jre/classes
+2019-10-19 12:25:32.550+0000 INFO [o.n.k.i.DiagnosticsManager]  [classpath + loader.0] file:/home/sammo/Workload/gym_app/db/neo4j/development/lib/commons-configuration-1.10.jar
+2019-10-19 12:25:32.550+0000 INFO [o.n.k.i.DiagnosticsManager]  [classpath + loader.0] file:/home/sammo/Workload/gym_app/db/neo4j/development/lib/neo4j-codegen-3.4.1.jar
+2019-10-19 12:25:32.550+0000 INFO [o.n.k.i.DiagnosticsManager]  [classpath + loader.0] file:/home/sammo/Workload/gym_app/db/neo4j/development/lib/opencsv-2.3.jar
+2019-10-19 12:25:32.550+0000 INFO [o.n.k.i.DiagnosticsManager]  [classpath + loader.0] file:/home/sammo/Workload/gym_app/db/neo4j/development/lib/neo4j-graph-algo-3.4.1.jar
+2019-10-19 12:25:32.550+0000 INFO [o.n.k.i.DiagnosticsManager]  [classpath + loader.0] file:/home/sammo/Workload/gym_app/db/neo4j/development/lib/bcpkix-jdk15on-1.59.jar
+2019-10-19 12:25:32.551+0000 INFO [o.n.k.i.DiagnosticsManager]  [classpath + loader.0] file:/home/sammo/Workload/gym_app/db/neo4j/development/lib/neo4j-cypher-util-3.4-3.4.1.jar
+2019-10-19 12:25:32.551+0000 INFO [o.n.k.i.DiagnosticsManager]  [classpath + loader.0] file:/home/sammo/Workload/gym_app/db/neo4j/development/lib/commons-lang3-3.7.jar
+2019-10-19 12:25:32.551+0000 INFO [o.n.k.i.DiagnosticsManager]  [classpath + loader.0] file:/home/sammo/Workload/gym_app/db/neo4j/development/lib/commons-logging-1.1.1.jar
+2019-10-19 12:25:32.551+0000 INFO [o.n.k.i.DiagnosticsManager]  [classpath + loader.0] file:/home/sammo/Workload/gym_app/db/neo4j/development/lib/openCypher-frontend-1-3.4.1.jar
+2019-10-19 12:25:32.551+0000 INFO [o.n.k.i.DiagnosticsManager]  [classpath + loader.0] file:/home/sammo/Workload/gym_app/db/neo4j/development/lib/lucene-analyzers-common-5.5.5.jar
+2019-10-19 12:25:32.551+0000 INFO [o.n.k.i.DiagnosticsManager]  [classpath + loader.0] file:/home/sammo/Workload/gym_app/db/neo4j/development/lib/neo4j-ssl-3.4.1.jar
+2019-10-19 12:25:32.551+0000 INFO [o.n.k.i.DiagnosticsManager]  [classpath + loader.0] file:/home/sammo/Workload/gym_app/db/neo4j/development/plugins/
+2019-10-19 12:25:32.551+0000 INFO [o.n.k.i.DiagnosticsManager]  [classpath + loader.0] file:/home/sammo/Workload/gym_app/db/neo4j/development/lib/neo4j-udc-3.4.1.jar
+2019-10-19 12:25:32.551+0000 INFO [o.n.k.i.DiagnosticsManager]  [classpath + loader.0] file:/home/sammo/Workload/gym_app/db/neo4j/development/lib/neo4j-values-3.4.1.jar
+2019-10-19 12:25:32.551+0000 INFO [o.n.k.i.DiagnosticsManager]  [classpath + loader.0] file:/home/sammo/Workload/gym_app/db/neo4j/development/lib/objenesis-2.6.jar
+2019-10-19 12:25:32.551+0000 INFO [o.n.k.i.DiagnosticsManager]  [classpath + loader.0] file:/home/sammo/Workload/gym_app/db/neo4j/development/lib/WMI4Java-1.6.1.jar
+2019-10-19 12:25:32.551+0000 INFO [o.n.k.i.DiagnosticsManager]  [classpath + loader.0] file:/home/sammo/Workload/gym_app/db/neo4j/development/lib/jetty-servlet-9.4.8.v20171121.jar
+2019-10-19 12:25:32.551+0000 INFO [o.n.k.i.DiagnosticsManager]  [classpath + loader.0] file:/home/sammo/Workload/gym_app/db/neo4j/development/lib/neo4j-unsafe-3.4.1.jar
+2019-10-19 12:25:32.551+0000 INFO [o.n.k.i.DiagnosticsManager]  [classpath + loader.0] file:/home/sammo/Workload/gym_app/db/neo4j/development/lib/neo4j-cypher-compiler-3.3-3.3.5.jar
+2019-10-19 12:25:32.551+0000 INFO [o.n.k.i.DiagnosticsManager]  [classpath + loader.0] file:/home/sammo/Workload/gym_app/db/neo4j/development/lib/neo4j-cypher-compiler-2.3-2.3.12.jar
+2019-10-19 12:25:32.551+0000 INFO [o.n.k.i.DiagnosticsManager]  [classpath + loader.0] file:/home/sammo/Workload/gym_app/db/neo4j/development/lib/neo4j-io-3.4.1.jar
+2019-10-19 12:25:32.551+0000 INFO [o.n.k.i.DiagnosticsManager]  [classpath + loader.0] file:/home/sammo/Workload/gym_app/db/neo4j/development/lib/neo4j-graph-matching-3.1.6.jar
+2019-10-19 12:25:32.551+0000 INFO [o.n.k.i.DiagnosticsManager]  [classpath + loader.0] file:/home/sammo/Workload/gym_app/db/neo4j/development/lib/neo4j-collections-3.4.1.jar
+2019-10-19 12:25:32.552+0000 INFO [o.n.k.i.DiagnosticsManager]  [classpath + loader.0] file:/home/sammo/Workload/gym_app/db/neo4j/development/lib/jPowerShell-1.9.jar
+2019-10-19 12:25:32.552+0000 INFO [o.n.k.i.DiagnosticsManager]  [classpath + loader.0] file:/home/sammo/Workload/gym_app/db/neo4j/development/lib/jersey-servlet-1.19.3.jar
+2019-10-19 12:25:32.552+0000 INFO [o.n.k.i.DiagnosticsManager]  [loader.1] file:/usr/lib/jvm/java-8-openjdk-amd64/jre/lib/ext/java-atk-wrapper.jar
+2019-10-19 12:25:32.552+0000 INFO [o.n.k.i.DiagnosticsManager]  [classpath + loader.0] file:/home/sammo/Workload/gym_app/db/neo4j/development/lib/jersey-server-1.19.3.jar
+2019-10-19 12:25:32.552+0000 INFO [o.n.k.i.DiagnosticsManager]  [classpath + loader.0] file:/home/sammo/Workload/gym_app/db/neo4j/development/lib/netty-all-4.1.24.Final.jar
+2019-10-19 12:25:32.552+0000 INFO [o.n.k.i.DiagnosticsManager]  [classpath + loader.0] file:/home/sammo/Workload/gym_app/db/neo4j/development/conf/
+2019-10-19 12:25:32.552+0000 INFO [o.n.k.i.DiagnosticsManager]  [loader.1] file:/usr/lib/jvm/java-8-openjdk-amd64/jre/lib/ext/icedtea-sound.jar
+2019-10-19 12:25:32.552+0000 INFO [o.n.k.i.DiagnosticsManager]  [classpath + loader.0] file:/home/sammo/Workload/gym_app/db/neo4j/development/lib/neo4j-import-tool-3.4.1.jar
+2019-10-19 12:25:32.552+0000 INFO [o.n.k.i.DiagnosticsManager]  [classpath + loader.0] file:/home/sammo/Workload/gym_app/db/neo4j/development/lib/jackson-core-asl-1.9.13.jar
+2019-10-19 12:25:32.552+0000 INFO [o.n.k.i.DiagnosticsManager]  [classpath + loader.0] file:/home/sammo/Workload/gym_app/db/neo4j/development/lib/neo4j-primitive-collections-3.4.1.jar
+2019-10-19 12:25:32.552+0000 INFO [o.n.k.i.DiagnosticsManager]  [classpath + loader.0] file:/home/sammo/Workload/gym_app/db/neo4j/development/lib/neo4j-index-3.4.1.jar
+2019-10-19 12:25:32.552+0000 INFO [o.n.k.i.DiagnosticsManager]  [loader.1] file:/usr/lib/jvm/java-8-openjdk-amd64/jre/lib/ext/sunjce_provider.jar
+2019-10-19 12:25:32.552+0000 INFO [o.n.k.i.DiagnosticsManager]  [classpath + loader.0] file:/home/sammo/Workload/gym_app/db/neo4j/development/lib/neo4j-configuration-3.4.1.jar
+2019-10-19 12:25:32.552+0000 INFO [o.n.k.i.DiagnosticsManager]  [bootstrap] /usr/lib/jvm/java-8-openjdk-amd64/jre/lib/sunrsasign.jar
+2019-10-19 12:25:32.552+0000 INFO [o.n.k.i.DiagnosticsManager]  [classpath + loader.0] file:/home/sammo/Workload/gym_app/db/neo4j/development/lib/neo4j-kernel-api-3.4.1.jar
+2019-10-19 12:25:32.552+0000 INFO [o.n.k.i.DiagnosticsManager]  [classpath + loader.0] file:/home/sammo/Workload/gym_app/db/neo4j/development/lib/jackson-jaxrs-1.9.13.jar
+2019-10-19 12:25:32.552+0000 INFO [o.n.k.i.DiagnosticsManager]  [classpath + loader.0] file:/home/sammo/Workload/gym_app/db/neo4j/development/lib/commons-compress-1.16.1.jar
+2019-10-19 12:25:32.552+0000 INFO [o.n.k.i.DiagnosticsManager]  [classpath + loader.0] file:/home/sammo/Workload/gym_app/db/neo4j/development/lib/neo4j-csv-3.4.1.jar
+2019-10-19 12:25:32.552+0000 INFO [o.n.k.i.DiagnosticsManager]  [classpath + loader.0] file:/home/sammo/Workload/gym_app/db/neo4j/development/lib/commons-lang-2.6.jar
+2019-10-19 12:25:32.553+0000 INFO [o.n.k.i.DiagnosticsManager]  [classpath + loader.0] file:/home/sammo/Workload/gym_app/db/neo4j/development/lib/neo4j-cypher-logical-plans-3.4-3.4.1.jar
+2019-10-19 12:25:32.553+0000 INFO [o.n.k.i.DiagnosticsManager]  [classpath + loader.0] file:/home/sammo/Workload/gym_app/db/neo4j/development/lib/lucene-core-5.5.5.jar
+2019-10-19 12:25:32.553+0000 INFO [o.n.k.i.DiagnosticsManager]  [classpath + loader.0] file:/home/sammo/Workload/gym_app/db/neo4j/development/lib/lucene-queryparser-5.5.5.jar
+2019-10-19 12:25:32.553+0000 INFO [o.n.k.i.DiagnosticsManager]  [classpath + loader.0] file:/home/sammo/Workload/gym_app/db/neo4j/development/lib/neo4j-procedure-api-3.4.1.jar
+2019-10-19 12:25:32.553+0000 INFO [o.n.k.i.DiagnosticsManager]  [classpath + loader.0] file:/home/sammo/Workload/gym_app/db/neo4j/development/lib/jetty-util-9.4.8.v20171121.jar
+2019-10-19 12:25:32.553+0000 INFO [o.n.k.i.DiagnosticsManager]  [classpath + loader.0] file:/home/sammo/Workload/gym_app/db/neo4j/development/lib/neo4j-resource-3.4.1.jar
+2019-10-19 12:25:32.553+0000 INFO [o.n.k.i.DiagnosticsManager]  [loader.1] file:/usr/lib/jvm/java-8-openjdk-amd64/jre/lib/ext/jaccess.jar
+2019-10-19 12:25:32.553+0000 INFO [o.n.k.i.DiagnosticsManager]  [classpath + loader.0] file:/home/sammo/Workload/gym_app/db/neo4j/development/lib/neo4j-cypher-ir-3.3-3.3.5.jar
+2019-10-19 12:25:32.553+0000 INFO [o.n.k.i.DiagnosticsManager]  [loader.1] file:/usr/lib/jvm/java-8-openjdk-amd64/jre/lib/ext/sunpkcs11.jar
+2019-10-19 12:25:32.553+0000 INFO [o.n.k.i.DiagnosticsManager]  [classpath + loader.0] file:/home/sammo/Workload/gym_app/db/neo4j/development/lib/neo4j-cypher-runtime-util-3.4.1.jar
+2019-10-19 12:25:32.553+0000 INFO [o.n.k.i.DiagnosticsManager]  [classpath + loader.0] file:/home/sammo/Workload/gym_app/db/neo4j/development/lib/neo4j-cypher-interpreted-runtime-3.4.1.jar
+2019-10-19 12:25:32.553+0000 INFO [o.n.k.i.DiagnosticsManager]  [classpath + loader.0] file:/home/sammo/Workload/gym_app/db/neo4j/development/lib/jetty-webapp-9.4.8.v20171121.jar
+2019-10-19 12:25:32.553+0000 INFO [o.n.k.i.DiagnosticsManager]  [classpath + loader.0] file:/home/sammo/Workload/gym_app/db/neo4j/development/lib/neo4j-cypher-planner-3.4-3.4.1.jar
+2019-10-19 12:25:32.553+0000 INFO [o.n.k.i.DiagnosticsManager]  [classpath + loader.0] file:/home/sammo/Workload/gym_app/db/neo4j/development/lib/caffeine-2.6.2.jar
+2019-10-19 12:25:32.553+0000 INFO [o.n.k.i.DiagnosticsManager]  [loader.1] file:/usr/lib/jvm/java-8-openjdk-amd64/jre/lib/ext/sunec.jar
+2019-10-19 12:25:32.553+0000 INFO [o.n.k.i.DiagnosticsManager]  [bootstrap] /usr/lib/jvm/java-8-openjdk-amd64/jre/lib/jfr.jar
+2019-10-19 12:25:32.553+0000 INFO [o.n.k.i.DiagnosticsManager]  [classpath + loader.0] file:/home/sammo/Workload/gym_app/db/neo4j/development/lib/jetty-xml-9.4.8.v20171121.jar
+2019-10-19 12:25:32.553+0000 INFO [o.n.k.i.DiagnosticsManager]  [classpath + loader.0] file:/home/sammo/Workload/gym_app/db/neo4j/development/lib/neo4j-dbms-3.4.1.jar
+2019-10-19 12:25:32.553+0000 INFO [o.n.k.i.DiagnosticsManager]  [classpath + loader.0] file:/home/sammo/Workload/gym_app/db/neo4j/development/lib/neo4j-logging-3.4.1.jar
+2019-10-19 12:25:32.553+0000 INFO [o.n.k.i.DiagnosticsManager]  [classpath + loader.0] file:/home/sammo/Workload/gym_app/db/neo4j/development/lib/neo4j-spatial-index-3.4.1.jar
+2019-10-19 12:25:32.553+0000 INFO [o.n.k.i.DiagnosticsManager]  [classpath + loader.0] file:/home/sammo/Workload/gym_app/db/neo4j/development/lib/neo4j-kernel-3.4.1.jar
+2019-10-19 12:25:32.553+0000 INFO [o.n.k.i.DiagnosticsManager]  [loader.1] file:/usr/lib/jvm/java-8-openjdk-amd64/jre/lib/ext/zipfs.jar
+2019-10-19 12:25:32.553+0000 INFO [o.n.k.i.DiagnosticsManager]  [classpath + loader.0] file:/home/sammo/Workload/gym_app/db/neo4j/development/lib/bcprov-jdk15on-1.59.jar
+2019-10-19 12:25:32.553+0000 INFO [o.n.k.i.DiagnosticsManager]  [classpath + loader.0] file:/home/sammo/Workload/gym_app/db/neo4j/development/lib/jackson-mapper-asl-1.9.13.jar
+2019-10-19 12:25:32.554+0000 INFO [o.n.k.i.DiagnosticsManager]  [bootstrap] /usr/lib/jvm/java-8-openjdk-amd64/jre/lib/resources.jar
+2019-10-19 12:25:32.554+0000 INFO [o.n.k.i.DiagnosticsManager]  [classpath + loader.0] file:/home/sammo/Workload/gym_app/db/neo4j/development/lib/neo4j-cypher-frontend-2.3-2.3.12.jar
+2019-10-19 12:25:32.554+0000 INFO [o.n.k.i.DiagnosticsManager]  [classpath + loader.0] file:/home/sammo/Workload/gym_app/db/neo4j/development/lib/neo4j-lucene-index-3.4.1.jar
+2019-10-19 12:25:32.554+0000 INFO [o.n.k.i.DiagnosticsManager]  [classpath + loader.0] file:/home/sammo/Workload/gym_app/db/neo4j/development/lib/neo4j-shell-3.4.1.jar
+2019-10-19 12:25:32.554+0000 INFO [o.n.k.i.DiagnosticsManager]  [classpath + loader.0] file:/home/sammo/Workload/gym_app/db/neo4j/development/lib/parboiled-core-1.1.7.jar
+2019-10-19 12:25:32.554+0000 INFO [o.n.k.i.DiagnosticsManager]  [loader.1] file:/usr/lib/jvm/java-8-openjdk-amd64/jre/lib/ext/dnsns.jar
+2019-10-19 12:25:32.554+0000 INFO [o.n.k.i.DiagnosticsManager]  [classpath + loader.0] file:/home/sammo/Workload/gym_app/db/neo4j/development/lib/jersey-core-1.19.3.jar
+2019-10-19 12:25:32.554+0000 INFO [o.n.k.i.DiagnosticsManager]  [classpath + loader.0] file:/home/sammo/Workload/gym_app/db/neo4j/development/lib/neo4j-security-3.4.1.jar
+2019-10-19 12:25:32.554+0000 INFO [o.n.k.i.DiagnosticsManager]  [classpath + loader.0] file:/home/sammo/Workload/gym_app/db/neo4j/development/lib/jetty-io-9.4.8.v20171121.jar
+2019-10-19 12:25:32.554+0000 INFO [o.n.k.i.DiagnosticsManager]  [classpath + loader.0] file:/home/sammo/Workload/gym_app/db/neo4j/development/lib/neo4j-cypher-expression-3.4-3.4.1.jar
+2019-10-19 12:25:32.554+0000 INFO [o.n.k.i.DiagnosticsManager]  [bootstrap] /usr/lib/jvm/java-8-openjdk-amd64/jre/lib/charsets.jar
+2019-10-19 12:25:32.554+0000 INFO [o.n.k.i.DiagnosticsManager]  [classpath + loader.0] file:/home/sammo/Workload/gym_app/db/neo4j/development/lib/jProcesses-1.6.4.jar
+2019-10-19 12:25:32.554+0000 INFO [o.n.k.i.DiagnosticsManager]  [bootstrap] /usr/lib/jvm/java-8-openjdk-amd64/jre/lib/rt.jar
+2019-10-19 12:25:32.554+0000 INFO [o.n.k.i.DiagnosticsManager]  [classpath + loader.0] file:/home/sammo/Workload/gym_app/db/neo4j/development/lib/commons-text-1.3.jar
+2019-10-19 12:25:32.554+0000 INFO [o.n.k.i.DiagnosticsManager] Library path:
+2019-10-19 12:25:32.554+0000 INFO [o.n.k.i.DiagnosticsManager] /usr/java/packages/lib/amd64
+2019-10-19 12:25:32.554+0000 INFO [o.n.k.i.DiagnosticsManager] /usr/lib/x86_64-linux-gnu/jni
+2019-10-19 12:25:32.554+0000 INFO [o.n.k.i.DiagnosticsManager] /lib/x86_64-linux-gnu
+2019-10-19 12:25:32.555+0000 INFO [o.n.k.i.DiagnosticsManager] /usr/lib/x86_64-linux-gnu
+2019-10-19 12:25:32.555+0000 INFO [o.n.k.i.DiagnosticsManager] /usr/lib/jni
+2019-10-19 12:25:32.555+0000 INFO [o.n.k.i.DiagnosticsManager] /lib
+2019-10-19 12:25:32.555+0000 INFO [o.n.k.i.DiagnosticsManager] /usr/lib
+2019-10-19 12:25:32.555+0000 INFO [o.n.k.i.DiagnosticsManager] System.properties:
+2019-10-19 12:25:32.555+0000 INFO [o.n.k.i.DiagnosticsManager] sun.boot.library.path = /usr/lib/jvm/java-8-openjdk-amd64/jre/lib/amd64
+2019-10-19 12:25:32.555+0000 INFO [o.n.k.i.DiagnosticsManager] jdk.tls.rejectClientInitiatedRenegotiation = true
+2019-10-19 12:25:32.555+0000 INFO [o.n.k.i.DiagnosticsManager] path.separator = :
+2019-10-19 12:25:32.555+0000 INFO [o.n.k.i.DiagnosticsManager] file.encoding.pkg = sun.io
+2019-10-19 12:25:32.555+0000 INFO [o.n.k.i.DiagnosticsManager] user.country = GB
+2019-10-19 12:25:32.555+0000 INFO [o.n.k.i.DiagnosticsManager] sun.java.launcher = SUN_STANDARD
+2019-10-19 12:25:32.555+0000 INFO [o.n.k.i.DiagnosticsManager] sun.os.patch.level = unknown
+2019-10-19 12:25:32.555+0000 INFO [o.n.k.i.DiagnosticsManager] user.dir = /home/sammo/Workload/gym_app
+2019-10-19 12:25:32.555+0000 INFO [o.n.k.i.DiagnosticsManager] sun.jnu.encoding = UTF-8
+2019-10-19 12:25:32.555+0000 INFO [o.n.k.i.DiagnosticsManager] unsupported.dbms.udc.source = tarball
+2019-10-19 12:25:32.556+0000 INFO [o.n.k.i.DiagnosticsManager] sun.management.compiler = HotSpot 64-Bit Tiered Compilers
+2019-10-19 12:25:32.556+0000 INFO [o.n.k.i.DiagnosticsManager] user.home = /home/sammo
+2019-10-19 12:25:32.556+0000 INFO [o.n.k.i.DiagnosticsManager] user.timezone = Europe/London
+2019-10-19 12:25:32.556+0000 INFO [o.n.k.i.DiagnosticsManager] file.encoding = UTF-8
+2019-10-19 12:25:32.556+0000 INFO [o.n.k.i.DiagnosticsManager] user.name = sammo
+2019-10-19 12:25:32.556+0000 INFO [o.n.k.i.DiagnosticsManager] sun.java.command = org.neo4j.server.CommunityEntryPoint --home-dir=/home/sammo/Workload/gym_app/db/neo4j/development --config-dir=/home/sammo/Workload/gym_app/db/neo4j/development/conf
+2019-10-19 12:25:32.556+0000 INFO [o.n.k.i.DiagnosticsManager] sun.arch.data.model = 64
+2019-10-19 12:25:32.556+0000 INFO [o.n.k.i.DiagnosticsManager] user.language = en
+2019-10-19 12:25:32.556+0000 INFO [o.n.k.i.DiagnosticsManager] awt.toolkit = sun.awt.X11.XToolkit
+2019-10-19 12:25:32.556+0000 INFO [o.n.k.i.DiagnosticsManager] jdk.tls.ephemeralDHKeySize = 2048
+2019-10-19 12:25:32.556+0000 INFO [o.n.k.i.DiagnosticsManager] file.separator = /
+2019-10-19 12:25:32.556+0000 INFO [o.n.k.i.DiagnosticsManager] sun.io.unicode.encoding = UnicodeLittle
+2019-10-19 12:25:32.556+0000 INFO [o.n.k.i.DiagnosticsManager] sun.cpu.endian = little
+2019-10-19 12:25:32.556+0000 INFO [o.n.k.i.DiagnosticsManager] sun.desktop = gnome
+2019-10-19 12:25:32.556+0000 INFO [o.n.k.i.DiagnosticsManager] sun.cpu.isalist = 
+2019-10-19 12:25:32.556+0000 INFO [o.n.k.i.DiagnosticsManager] (IANA) TimeZone Database Version:
+2019-10-19 12:25:32.586+0000 INFO [o.n.k.i.DiagnosticsManager]   TimeZone version: 2019a (available for 600 zone identifiers)
+2019-10-19 12:25:32.586+0000 INFO [o.n.k.i.DiagnosticsManager] Linux scheduler information:
+2019-10-19 12:25:32.593+0000 INFO [o.n.k.i.DiagnosticsManager] [none] 
+2019-10-19 12:25:32.594+0000 INFO [o.n.k.i.DiagnosticsManager] [none] 
+2019-10-19 12:25:32.594+0000 INFO [o.n.k.i.DiagnosticsManager] [none] 
+2019-10-19 12:25:32.594+0000 INFO [o.n.k.i.DiagnosticsManager] [none] 
+2019-10-19 12:25:32.595+0000 INFO [o.n.k.i.DiagnosticsManager] [none] 
+2019-10-19 12:25:32.595+0000 INFO [o.n.k.i.DiagnosticsManager] [none] 
+2019-10-19 12:25:32.595+0000 INFO [o.n.k.i.DiagnosticsManager] [none] 
+2019-10-19 12:25:32.595+0000 INFO [o.n.k.i.DiagnosticsManager] [none] 
+2019-10-19 12:25:32.595+0000 INFO [o.n.k.i.DiagnosticsManager] [none] 
+2019-10-19 12:25:32.596+0000 INFO [o.n.k.i.DiagnosticsManager] [none] 
+2019-10-19 12:25:32.596+0000 INFO [o.n.k.i.DiagnosticsManager] [none] 
+2019-10-19 12:25:32.596+0000 INFO [o.n.k.i.DiagnosticsManager] [none] 
+2019-10-19 12:25:32.596+0000 INFO [o.n.k.i.DiagnosticsManager] [none] 
+2019-10-19 12:25:32.596+0000 INFO [o.n.k.i.DiagnosticsManager] [none] 
+2019-10-19 12:25:32.597+0000 INFO [o.n.k.i.DiagnosticsManager] noop deadline [cfq] 
+2019-10-19 12:25:32.597+0000 INFO [o.n.k.i.DiagnosticsManager] [none] 
+2019-10-19 12:25:32.597+0000 INFO [o.n.k.i.DiagnosticsManager] [none] 
+2019-10-19 12:25:32.597+0000 INFO [o.n.k.i.DiagnosticsManager] [none] 
+2019-10-19 12:25:32.597+0000 INFO [o.n.k.i.DiagnosticsManager] [none] 
+2019-10-19 12:25:32.598+0000 INFO [o.n.k.i.DiagnosticsManager] [none] 
+2019-10-19 12:25:32.598+0000 INFO [o.n.k.i.DiagnosticsManager] Network information:
+2019-10-19 12:25:32.599+0000 INFO [o.n.k.i.DiagnosticsManager] Interface veth523a87b:
+2019-10-19 12:25:32.599+0000 INFO [o.n.k.i.DiagnosticsManager]     address: fe80:0:0:0:24e2:65ff:fe6a:ecca%veth523a87b
+2019-10-19 12:25:32.599+0000 INFO [o.n.k.i.DiagnosticsManager] Interface veth8446618:
+2019-10-19 12:25:32.599+0000 INFO [o.n.k.i.DiagnosticsManager]     address: fe80:0:0:0:48cf:ccff:fe41:94cd%veth8446618
+2019-10-19 12:25:32.599+0000 INFO [o.n.k.i.DiagnosticsManager] Interface veth6127446:
+2019-10-19 12:25:32.599+0000 INFO [o.n.k.i.DiagnosticsManager]     address: fe80:0:0:0:5cd6:89ff:fe03:510%veth6127446
+2019-10-19 12:25:32.600+0000 INFO [o.n.k.i.DiagnosticsManager] Interface veth5b89d0f:
+2019-10-19 12:25:32.600+0000 INFO [o.n.k.i.DiagnosticsManager]     address: fe80:0:0:0:ac58:6aff:fe6e:8b98%veth5b89d0f
+2019-10-19 12:25:32.600+0000 INFO [o.n.k.i.DiagnosticsManager] Interface vethac29915:
+2019-10-19 12:25:32.600+0000 INFO [o.n.k.i.DiagnosticsManager]     address: fe80:0:0:0:ecdc:4bff:fe51:8437%vethac29915
+2019-10-19 12:25:32.600+0000 INFO [o.n.k.i.DiagnosticsManager] Interface veth96e3130:
+2019-10-19 12:25:32.600+0000 INFO [o.n.k.i.DiagnosticsManager]     address: fe80:0:0:0:b89c:82ff:febc:a526%veth96e3130
+2019-10-19 12:25:32.600+0000 INFO [o.n.k.i.DiagnosticsManager] Interface vethdfd0706:
+2019-10-19 12:25:32.600+0000 INFO [o.n.k.i.DiagnosticsManager]     address: fe80:0:0:0:e47b:6dff:fe7a:f315%vethdfd0706
+2019-10-19 12:25:32.600+0000 INFO [o.n.k.i.DiagnosticsManager]     address: fe80:0:0:0:e47b:6dff:fe7a:f315%vethdfd0706
+2019-10-19 12:25:32.600+0000 INFO [o.n.k.i.DiagnosticsManager] Interface vethb5a62c4:
+2019-10-19 12:25:32.600+0000 INFO [o.n.k.i.DiagnosticsManager]     address: fe80:0:0:0:a80b:71ff:fe35:3fa0%vethb5a62c4
+2019-10-19 12:25:32.600+0000 INFO [o.n.k.i.DiagnosticsManager] Interface vethaf933a5:
+2019-10-19 12:25:32.600+0000 INFO [o.n.k.i.DiagnosticsManager]     address: fe80:0:0:0:d4a3:7bff:fe86:fd99%vethaf933a5
+2019-10-19 12:25:32.600+0000 INFO [o.n.k.i.DiagnosticsManager] Interface veth7a6aee1:
+2019-10-19 12:25:32.601+0000 INFO [o.n.k.i.DiagnosticsManager]     address: fe80:0:0:0:bc0b:5bff:fe07:79fb%veth7a6aee1
+2019-10-19 12:25:32.601+0000 INFO [o.n.k.i.DiagnosticsManager] Interface vethe8e1432:
+2019-10-19 12:25:32.601+0000 INFO [o.n.k.i.DiagnosticsManager]     address: fe80:0:0:0:bc08:91ff:fef8:228b%vethe8e1432
+2019-10-19 12:25:32.601+0000 INFO [o.n.k.i.DiagnosticsManager] Interface vetha6f9c13:
+2019-10-19 12:25:32.601+0000 INFO [o.n.k.i.DiagnosticsManager]     address: fe80:0:0:0:d452:a6ff:fe2a:94c1%vetha6f9c13
+2019-10-19 12:25:32.601+0000 INFO [o.n.k.i.DiagnosticsManager] Interface veth2426099:
+2019-10-19 12:25:32.601+0000 INFO [o.n.k.i.DiagnosticsManager]     address: fe80:0:0:0:d81b:e1ff:fec5:5472%veth2426099
+2019-10-19 12:25:32.601+0000 INFO [o.n.k.i.DiagnosticsManager] Interface veth3f554d2:
+2019-10-19 12:25:32.601+0000 INFO [o.n.k.i.DiagnosticsManager]     address: fe80:0:0:0:b8cd:29ff:fee2:7c40%veth3f554d2
+2019-10-19 12:25:32.601+0000 INFO [o.n.k.i.DiagnosticsManager] Interface vethe5fa322:
+2019-10-19 12:25:32.601+0000 INFO [o.n.k.i.DiagnosticsManager]     address: fe80:0:0:0:8cc3:c5ff:fe9c:7fa%vethe5fa322
+2019-10-19 12:25:32.601+0000 INFO [o.n.k.i.DiagnosticsManager] Interface veth5b78f03:
+2019-10-19 12:25:32.601+0000 INFO [o.n.k.i.DiagnosticsManager]     address: fe80:0:0:0:302e:59ff:fe64:7f12%veth5b78f03
+2019-10-19 12:25:32.601+0000 INFO [o.n.k.i.DiagnosticsManager] Interface veth8fb568c:
+2019-10-19 12:25:32.601+0000 INFO [o.n.k.i.DiagnosticsManager]     address: fe80:0:0:0:5cfa:d7ff:fe4c:106b%veth8fb568c
+2019-10-19 12:25:32.601+0000 INFO [o.n.k.i.DiagnosticsManager] Interface veth2dcdce0:
+2019-10-19 12:25:32.601+0000 INFO [o.n.k.i.DiagnosticsManager]     address: fe80:0:0:0:cf7:94ff:fe60:3162%veth2dcdce0
+2019-10-19 12:25:32.601+0000 INFO [o.n.k.i.DiagnosticsManager] Interface vethd7db083:
+2019-10-19 12:25:32.601+0000 INFO [o.n.k.i.DiagnosticsManager]     address: fe80:0:0:0:54e5:23ff:feed:6c0e%vethd7db083
+2019-10-19 12:25:32.601+0000 INFO [o.n.k.i.DiagnosticsManager] Interface vethc6f46ea:
+2019-10-19 12:25:32.601+0000 INFO [o.n.k.i.DiagnosticsManager]     address: fe80:0:0:0:40d8:3fff:fe5e:5917%vethc6f46ea
+2019-10-19 12:25:32.602+0000 INFO [o.n.k.i.DiagnosticsManager] Interface br-afcb2fc80723:
+2019-10-19 12:25:32.602+0000 INFO [o.n.k.i.DiagnosticsManager]     address: fe80:0:0:0:42:cff:fecf:3b65%br-afcb2fc80723
+2019-10-19 12:25:32.602+0000 INFO [o.n.k.i.DiagnosticsManager]     address: 172.31.0.1
+2019-10-19 12:25:32.602+0000 INFO [o.n.k.i.DiagnosticsManager] Interface br-87b0e862035b:
+2019-10-19 12:25:32.602+0000 INFO [o.n.k.i.DiagnosticsManager]     address: fe80:0:0:0:42:c0ff:fe16:9ed9%br-87b0e862035b
+2019-10-19 12:25:32.602+0000 INFO [o.n.k.i.DiagnosticsManager]     address: 172.22.13.1
+2019-10-19 12:25:32.602+0000 INFO [o.n.k.i.DiagnosticsManager] Interface br-7266773b3121:
+2019-10-19 12:25:32.602+0000 INFO [o.n.k.i.DiagnosticsManager]     address: fe80:0:0:0:42:55ff:feed:25d7%br-7266773b3121
+2019-10-19 12:25:32.602+0000 INFO [o.n.k.i.DiagnosticsManager]     address: 172.22.15.1
+2019-10-19 12:25:32.602+0000 INFO [o.n.k.i.DiagnosticsManager] Interface docker0:
+2019-10-19 12:25:32.602+0000 INFO [o.n.k.i.DiagnosticsManager]     address: 172.17.0.1
+2019-10-19 12:25:32.602+0000 INFO [o.n.k.i.DiagnosticsManager] Interface br-23ebbb90aceb:
+2019-10-19 12:25:32.602+0000 INFO [o.n.k.i.DiagnosticsManager]     address: fe80:0:0:0:42:71ff:fed7:a0a0%br-23ebbb90aceb
+2019-10-19 12:25:32.602+0000 INFO [o.n.k.i.DiagnosticsManager]     address: 172.22.14.1
+2019-10-19 12:25:32.602+0000 INFO [o.n.k.i.DiagnosticsManager] Interface br-04e92565538a:
+2019-10-19 12:25:32.602+0000 INFO [o.n.k.i.DiagnosticsManager]     address: 172.20.0.1
+2019-10-19 12:25:32.602+0000 INFO [o.n.k.i.DiagnosticsManager] Interface br-c614a7913d56:
+2019-10-19 12:25:32.602+0000 INFO [o.n.k.i.DiagnosticsManager]     address: fe80:0:0:0:42:37ff:feb9:f205%br-c614a7913d56
+2019-10-19 12:25:32.602+0000 INFO [o.n.k.i.DiagnosticsManager]     address: 172.30.0.1
+2019-10-19 12:25:32.602+0000 INFO [o.n.k.i.DiagnosticsManager] Interface br-c0dcdfdddafb:
+2019-10-19 12:25:32.603+0000 INFO [o.n.k.i.DiagnosticsManager]     address: fe80:0:0:0:42:bcff:fe8c:a5f5%br-c0dcdfdddafb
+2019-10-19 12:25:32.603+0000 INFO [o.n.k.i.DiagnosticsManager]     address: 172.22.16.1
+2019-10-19 12:25:32.603+0000 INFO [o.n.k.i.DiagnosticsManager] Interface wlp1s0:
+2019-10-19 12:25:32.603+0000 INFO [o.n.k.i.DiagnosticsManager]     address: fe80:0:0:0:315a:fb95:2d9d:999%wlp1s0
+2019-10-19 12:25:32.603+0000 INFO [o.n.k.i.DiagnosticsManager]     address: 192.168.0.10
+2019-10-19 12:25:32.603+0000 INFO [o.n.k.i.DiagnosticsManager] Interface lo:
+2019-10-19 12:25:32.603+0000 INFO [o.n.k.i.DiagnosticsManager]     address: 0:0:0:0:0:0:0:1%lo
+2019-10-19 12:25:32.603+0000 INFO [o.n.k.i.DiagnosticsManager]     address: 127.0.0.1
+2019-10-19 12:25:32.603+0000 INFO [o.n.k.i.DiagnosticsManager] --- INITIALIZED diagnostics END ---
+2019-10-19 12:25:32.733+0000 INFO [o.n.b.BoltKernelExtension] Bolt Server extension loaded.
+2019-10-19 12:25:32.973+0000 INFO [o.n.k.i.s.f.RecordFormatSelector] Selected RecordFormat:StandardV3_4[v0.A.9] record format from store /home/sammo/Workload/gym_app/db/neo4j/development/data/databases/graph.db
+2019-10-19 12:25:32.995+0000 INFO [o.n.k.i.s.f.RecordFormatSelector] Selected RecordFormat:StandardV3_4[v0.A.9] record format from store /home/sammo/Workload/gym_app/db/neo4j/development/data/databases/graph.db
+2019-10-19 12:25:32.995+0000 INFO [o.n.k.i.s.f.RecordFormatSelector] Format not configured. Selected format from the store: RecordFormat:StandardV3_4[v0.A.9]
+2019-10-19 12:25:33.521+0000 INFO [o.n.k.i.a.i.IndexingService] IndexingService.init: indexes not specifically mentioned above are ONLINE
+2019-10-19 12:25:33.528+0000 INFO [o.n.k.NeoStoreDataSource] No commits found after last check point (which is at LogPosition{logVersion=0, byteOffset=3516378})
+2019-10-19 12:25:33.531+0000 INFO [o.n.k.i.s.DynamicArrayStore] Rebuilding id generator for[/home/sammo/Workload/gym_app/db/neo4j/development/data/databases/graph.db/neostore.nodestore.db.labels] ...
+2019-10-19 12:25:33.533+0000 INFO [o.n.k.i.i.s.f.FusionIndexProvider] Schema index recovery completed: descriptor=Index( UNIQUE, :label[0](property[0]) ), file=/home/sammo/Workload/gym_app/db/neo4j/development/data/databases/graph.db/schema/index/lucene_native-2.0/1/string-1.0/index-1, Number of cleaned crashed pointers=0, Number of pages visited=3, Time spent=2ms
+2019-10-19 12:25:33.536+0000 INFO [o.n.k.i.i.s.f.FusionIndexProvider] Schema index recovery completed: descriptor=Index( UNIQUE, :label[0](property[0]) ), file=/home/sammo/Workload/gym_app/db/neo4j/development/data/databases/graph.db/schema/index/lucene_native-2.0/1/native-1.0/index-1, Number of cleaned crashed pointers=0, Number of pages visited=2, Time spent=2ms
+2019-10-19 12:25:33.538+0000 INFO [o.n.k.i.i.s.f.FusionIndexProvider] Schema index recovery completed: descriptor=Index( UNIQUE, :label[0](property[0]) ), file=/home/sammo/Workload/gym_app/db/neo4j/development/data/databases/graph.db/schema/index/lucene_native-2.0/1/spatial-1.0/1-4326, Number of cleaned crashed pointers=0, Number of pages visited=2, Time spent=1ms
+2019-10-19 12:25:33.539+0000 INFO [o.n.k.i.i.s.f.FusionIndexProvider] Schema index recovery completed: descriptor=Index( UNIQUE, :label[0](property[0]) ), file=/home/sammo/Workload/gym_app/db/neo4j/development/data/databases/graph.db/schema/index/lucene_native-2.0/1/temporal-1.0/date, Number of cleaned crashed pointers=0, Number of pages visited=2, Time spent=1ms
+2019-10-19 12:25:33.540+0000 INFO [o.n.k.i.i.s.f.FusionIndexProvider] Schema index recovery completed: descriptor=Index( UNIQUE, :label[1](property[2]) ), file=/home/sammo/Workload/gym_app/db/neo4j/development/data/databases/graph.db/schema/index/lucene_native-2.0/8/string-1.0/index-8, Number of cleaned crashed pointers=0, Number of pages visited=3, Time spent=1ms
+2019-10-19 12:25:33.541+0000 INFO [o.n.k.i.i.s.f.FusionIndexProvider] Schema index recovery completed: descriptor=Index( UNIQUE, :label[1](property[2]) ), file=/home/sammo/Workload/gym_app/db/neo4j/development/data/databases/graph.db/schema/index/lucene_native-2.0/8/native-1.0/index-8, Number of cleaned crashed pointers=0, Number of pages visited=2, Time spent=1ms
+2019-10-19 12:25:33.543+0000 INFO [o.n.k.i.s.DynamicArrayStore] [/home/sammo/Workload/gym_app/db/neo4j/development/data/databases/graph.db/neostore.nodestore.db.labels] high id=1 (defragged=0)
+2019-10-19 12:25:33.543+0000 INFO [o.n.k.i.s.DynamicArrayStore] /home/sammo/Workload/gym_app/db/neo4j/development/data/databases/graph.db/neostore.nodestore.db.labels rebuild id generator, highId=1 defragged count=0
+2019-10-19 12:25:33.543+0000 INFO [o.n.k.i.s.NodeStore] Rebuilding id generator for[/home/sammo/Workload/gym_app/db/neo4j/development/data/databases/graph.db/neostore.nodestore.db] ...
+2019-10-19 12:25:33.547+0000 INFO [o.n.k.i.i.s.f.FusionIndexProvider] Schema index recovery completed: descriptor=Index( UNIQUE, :label[1](property[2]) ), file=/home/sammo/Workload/gym_app/db/neo4j/development/data/databases/graph.db/schema/index/lucene_native-2.0/8/spatial-1.0/1-4326, Number of cleaned crashed pointers=0, Number of pages visited=2, Time spent=6ms
+2019-10-19 12:25:33.549+0000 INFO [o.n.k.i.i.s.f.FusionIndexProvider] Schema index recovery completed: descriptor=Index( UNIQUE, :label[1](property[2]) ), file=/home/sammo/Workload/gym_app/db/neo4j/development/data/databases/graph.db/schema/index/lucene_native-2.0/8/temporal-1.0/date, Number of cleaned crashed pointers=0, Number of pages visited=2, Time spent=1ms
+2019-10-19 12:25:33.553+0000 INFO [o.n.k.i.i.s.f.FusionIndexProvider] Schema index recovery completed: descriptor=Index( UNIQUE, :label[2](property[2]) ), file=/home/sammo/Workload/gym_app/db/neo4j/development/data/databases/graph.db/schema/index/lucene_native-2.0/15/string-1.0/index-15, Number of cleaned crashed pointers=0, Number of pages visited=21, Time spent=4ms
+2019-10-19 12:25:33.554+0000 INFO [o.n.k.i.s.NodeStore] [/home/sammo/Workload/gym_app/db/neo4j/development/data/databases/graph.db/neostore.nodestore.db] high id=165 (defragged=0)
+2019-10-19 12:25:33.554+0000 INFO [o.n.k.i.s.NodeStore] /home/sammo/Workload/gym_app/db/neo4j/development/data/databases/graph.db/neostore.nodestore.db rebuild id generator, highId=165 defragged count=0
+2019-10-19 12:25:33.554+0000 INFO [o.n.k.i.s.DynamicStringStore] Rebuilding id generator for[/home/sammo/Workload/gym_app/db/neo4j/development/data/databases/graph.db/neostore.propertystore.db.index.keys] ...
+2019-10-19 12:25:33.555+0000 INFO [o.n.k.i.i.s.f.FusionIndexProvider] Schema index recovery completed: descriptor=Index( UNIQUE, :label[2](property[2]) ), file=/home/sammo/Workload/gym_app/db/neo4j/development/data/databases/graph.db/schema/index/lucene_native-2.0/15/native-1.0/index-15, Number of cleaned crashed pointers=0, Number of pages visited=2, Time spent=2ms
+2019-10-19 12:25:33.564+0000 INFO [o.n.k.i.s.DynamicStringStore] [/home/sammo/Workload/gym_app/db/neo4j/development/data/databases/graph.db/neostore.propertystore.db.index.keys] high id=14 (defragged=0)
+2019-10-19 12:25:33.564+0000 INFO [o.n.k.i.s.DynamicStringStore] /home/sammo/Workload/gym_app/db/neo4j/development/data/databases/graph.db/neostore.propertystore.db.index.keys rebuild id generator, highId=14 defragged count=0
+2019-10-19 12:25:33.564+0000 INFO [o.n.k.i.s.PropertyKeyTokenStore] Rebuilding id generator for[/home/sammo/Workload/gym_app/db/neo4j/development/data/databases/graph.db/neostore.propertystore.db.index] ...
+2019-10-19 12:25:33.564+0000 INFO [o.n.k.i.i.s.f.FusionIndexProvider] Schema index recovery completed: descriptor=Index( UNIQUE, :label[2](property[2]) ), file=/home/sammo/Workload/gym_app/db/neo4j/development/data/databases/graph.db/schema/index/lucene_native-2.0/15/spatial-1.0/1-4326, Number of cleaned crashed pointers=0, Number of pages visited=2, Time spent=9ms
+2019-10-19 12:25:33.566+0000 INFO [o.n.k.i.i.s.f.FusionIndexProvider] Schema index recovery completed: descriptor=Index( UNIQUE, :label[2](property[2]) ), file=/home/sammo/Workload/gym_app/db/neo4j/development/data/databases/graph.db/schema/index/lucene_native-2.0/15/temporal-1.0/date, Number of cleaned crashed pointers=0, Number of pages visited=2, Time spent=2ms
+2019-10-19 12:25:33.571+0000 INFO [o.n.k.i.i.s.f.FusionIndexProvider] Schema index recovery completed: descriptor=Index( UNIQUE, :label[3](property[2]) ), file=/home/sammo/Workload/gym_app/db/neo4j/development/data/databases/graph.db/schema/index/lucene_native-2.0/22/string-1.0/index-22, Number of cleaned crashed pointers=0, Number of pages visited=3, Time spent=5ms
+2019-10-19 12:25:33.572+0000 INFO [o.n.k.i.i.s.f.FusionIndexProvider] Schema index recovery completed: descriptor=Index( UNIQUE, :label[3](property[2]) ), file=/home/sammo/Workload/gym_app/db/neo4j/development/data/databases/graph.db/schema/index/lucene_native-2.0/22/native-1.0/index-22, Number of cleaned crashed pointers=0, Number of pages visited=2, Time spent=1ms
+2019-10-19 12:25:33.573+0000 INFO [o.n.k.i.s.PropertyKeyTokenStore] [/home/sammo/Workload/gym_app/db/neo4j/development/data/databases/graph.db/neostore.propertystore.db.index] high id=13 (defragged=0)
+2019-10-19 12:25:33.573+0000 INFO [o.n.k.i.s.PropertyKeyTokenStore] /home/sammo/Workload/gym_app/db/neo4j/development/data/databases/graph.db/neostore.propertystore.db.index rebuild id generator, highId=13 defragged count=0
+2019-10-19 12:25:33.574+0000 INFO [o.n.k.i.i.s.f.FusionIndexProvider] Schema index recovery completed: descriptor=Index( UNIQUE, :label[3](property[2]) ), file=/home/sammo/Workload/gym_app/db/neo4j/development/data/databases/graph.db/schema/index/lucene_native-2.0/22/spatial-1.0/1-4326, Number of cleaned crashed pointers=0, Number of pages visited=2, Time spent=1ms
+2019-10-19 12:25:33.575+0000 INFO [o.n.k.i.s.DynamicStringStore] Rebuilding id generator for[/home/sammo/Workload/gym_app/db/neo4j/development/data/databases/graph.db/neostore.propertystore.db.strings] ...
+2019-10-19 12:25:33.579+0000 INFO [o.n.k.i.i.s.f.FusionIndexProvider] Schema index recovery completed: descriptor=Index( UNIQUE, :label[3](property[2]) ), file=/home/sammo/Workload/gym_app/db/neo4j/development/data/databases/graph.db/schema/index/lucene_native-2.0/22/temporal-1.0/date, Number of cleaned crashed pointers=0, Number of pages visited=2, Time spent=5ms
+2019-10-19 12:25:33.581+0000 INFO [o.n.k.i.i.s.f.FusionIndexProvider] Schema index recovery completed: descriptor=Index( UNIQUE, :label[1](property[3]) ), file=/home/sammo/Workload/gym_app/db/neo4j/development/data/databases/graph.db/schema/index/lucene_native-2.0/29/string-1.0/index-29, Number of cleaned crashed pointers=0, Number of pages visited=3, Time spent=2ms
+2019-10-19 12:25:33.583+0000 INFO [o.n.k.i.i.s.f.FusionIndexProvider] Schema index recovery completed: descriptor=Index( UNIQUE, :label[1](property[3]) ), file=/home/sammo/Workload/gym_app/db/neo4j/development/data/databases/graph.db/schema/index/lucene_native-2.0/29/native-1.0/index-29, Number of cleaned crashed pointers=0, Number of pages visited=2, Time spent=2ms
+2019-10-19 12:25:33.584+0000 INFO [o.n.k.i.i.s.f.FusionIndexProvider] Schema index recovery completed: descriptor=Index( UNIQUE, :label[1](property[3]) ), file=/home/sammo/Workload/gym_app/db/neo4j/development/data/databases/graph.db/schema/index/lucene_native-2.0/29/spatial-1.0/1-4326, Number of cleaned crashed pointers=0, Number of pages visited=2, Time spent=1ms
+2019-10-19 12:25:33.584+0000 INFO [o.n.k.i.s.DynamicStringStore] [/home/sammo/Workload/gym_app/db/neo4j/development/data/databases/graph.db/neostore.propertystore.db.strings] high id=1 (defragged=0)
+2019-10-19 12:25:33.585+0000 INFO [o.n.k.i.s.DynamicStringStore] /home/sammo/Workload/gym_app/db/neo4j/development/data/databases/graph.db/neostore.propertystore.db.strings rebuild id generator, highId=1 defragged count=0
+2019-10-19 12:25:33.585+0000 INFO [o.n.k.i.s.DynamicArrayStore] Rebuilding id generator for[/home/sammo/Workload/gym_app/db/neo4j/development/data/databases/graph.db/neostore.propertystore.db.arrays] ...
+2019-10-19 12:25:33.586+0000 INFO [o.n.k.i.i.s.f.FusionIndexProvider] Schema index recovery completed: descriptor=Index( UNIQUE, :label[1](property[3]) ), file=/home/sammo/Workload/gym_app/db/neo4j/development/data/databases/graph.db/schema/index/lucene_native-2.0/29/temporal-1.0/date, Number of cleaned crashed pointers=0, Number of pages visited=2, Time spent=1ms
+2019-10-19 12:25:33.587+0000 INFO [o.n.k.i.i.s.f.FusionIndexProvider] Schema index recovery completed: descriptor=Index( UNIQUE, :label[3](property[3]) ), file=/home/sammo/Workload/gym_app/db/neo4j/development/data/databases/graph.db/schema/index/lucene_native-2.0/39/string-1.0/index-39, Number of cleaned crashed pointers=0, Number of pages visited=3, Time spent=0ms
+2019-10-19 12:25:33.587+0000 INFO [o.n.k.i.i.s.f.FusionIndexProvider] Schema index recovery completed: descriptor=Index( UNIQUE, :label[3](property[3]) ), file=/home/sammo/Workload/gym_app/db/neo4j/development/data/databases/graph.db/schema/index/lucene_native-2.0/39/native-1.0/index-39, Number of cleaned crashed pointers=0, Number of pages visited=2, Time spent=0ms
+2019-10-19 12:25:33.589+0000 INFO [o.n.k.i.i.s.f.FusionIndexProvider] Schema index recovery completed: descriptor=Index( UNIQUE, :label[3](property[3]) ), file=/home/sammo/Workload/gym_app/db/neo4j/development/data/databases/graph.db/schema/index/lucene_native-2.0/39/spatial-1.0/1-4326, Number of cleaned crashed pointers=0, Number of pages visited=2, Time spent=2ms
+2019-10-19 12:25:33.590+0000 INFO [o.n.k.i.i.s.f.FusionIndexProvider] Schema index recovery completed: descriptor=Index( UNIQUE, :label[3](property[3]) ), file=/home/sammo/Workload/gym_app/db/neo4j/development/data/databases/graph.db/schema/index/lucene_native-2.0/39/temporal-1.0/date, Number of cleaned crashed pointers=0, Number of pages visited=2, Time spent=0ms
+2019-10-19 12:25:33.593+0000 INFO [o.n.k.i.i.s.f.FusionIndexProvider] Schema index recovery completed: descriptor=Index( UNIQUE, :label[4](property[2]) ), file=/home/sammo/Workload/gym_app/db/neo4j/development/data/databases/graph.db/schema/index/lucene_native-2.0/46/string-1.0/index-46, Number of cleaned crashed pointers=0, Number of pages visited=3, Time spent=3ms
+2019-10-19 12:25:33.594+0000 INFO [o.n.k.i.s.DynamicArrayStore] [/home/sammo/Workload/gym_app/db/neo4j/development/data/databases/graph.db/neostore.propertystore.db.arrays] high id=1 (defragged=0)
+2019-10-19 12:25:33.594+0000 INFO [o.n.k.i.s.DynamicArrayStore] /home/sammo/Workload/gym_app/db/neo4j/development/data/databases/graph.db/neostore.propertystore.db.arrays rebuild id generator, highId=1 defragged count=0
+2019-10-19 12:25:33.594+0000 INFO [o.n.k.i.s.PropertyStore] Rebuilding id generator for[/home/sammo/Workload/gym_app/db/neo4j/development/data/databases/graph.db/neostore.propertystore.db] ...
+2019-10-19 12:25:33.595+0000 INFO [o.n.k.i.i.s.f.FusionIndexProvider] Schema index recovery completed: descriptor=Index( UNIQUE, :label[4](property[2]) ), file=/home/sammo/Workload/gym_app/db/neo4j/development/data/databases/graph.db/schema/index/lucene_native-2.0/46/native-1.0/index-46, Number of cleaned crashed pointers=0, Number of pages visited=2, Time spent=2ms
+2019-10-19 12:25:33.597+0000 INFO [o.n.k.i.i.s.f.FusionIndexProvider] Schema index recovery completed: descriptor=Index( UNIQUE, :label[4](property[2]) ), file=/home/sammo/Workload/gym_app/db/neo4j/development/data/databases/graph.db/schema/index/lucene_native-2.0/46/spatial-1.0/1-4326, Number of cleaned crashed pointers=0, Number of pages visited=2, Time spent=2ms
+2019-10-19 12:25:33.599+0000 INFO [o.n.k.i.i.s.f.FusionIndexProvider] Schema index recovery completed: descriptor=Index( UNIQUE, :label[4](property[2]) ), file=/home/sammo/Workload/gym_app/db/neo4j/development/data/databases/graph.db/schema/index/lucene_native-2.0/46/temporal-1.0/date, Number of cleaned crashed pointers=0, Number of pages visited=2, Time spent=2ms
+2019-10-19 12:25:33.600+0000 INFO [o.n.k.i.i.l.NativeLabelScanStore] Scan store recovery completed: Number of cleaned crashed pointers: 0 Number of pages visited: 3 Time spent: 0ms
+2019-10-19 12:25:33.607+0000 INFO [o.n.k.i.s.PropertyStore] [/home/sammo/Workload/gym_app/db/neo4j/development/data/databases/graph.db/neostore.propertystore.db] high id=280 (defragged=0)
+2019-10-19 12:25:33.607+0000 INFO [o.n.k.i.s.PropertyStore] /home/sammo/Workload/gym_app/db/neo4j/development/data/databases/graph.db/neostore.propertystore.db rebuild id generator, highId=280 defragged count=0
+2019-10-19 12:25:33.607+0000 INFO [o.n.k.i.s.RelationshipStore] Rebuilding id generator for[/home/sammo/Workload/gym_app/db/neo4j/development/data/databases/graph.db/neostore.relationshipstore.db] ...
+2019-10-19 12:25:33.621+0000 INFO [o.n.k.i.s.RelationshipStore] [/home/sammo/Workload/gym_app/db/neo4j/development/data/databases/graph.db/neostore.relationshipstore.db] high id=222 (defragged=0)
+2019-10-19 12:25:33.621+0000 INFO [o.n.k.i.s.RelationshipStore] /home/sammo/Workload/gym_app/db/neo4j/development/data/databases/graph.db/neostore.relationshipstore.db rebuild id generator, highId=222 defragged count=0
+2019-10-19 12:25:33.621+0000 INFO [o.n.k.i.s.DynamicStringStore] Rebuilding id generator for[/home/sammo/Workload/gym_app/db/neo4j/development/data/databases/graph.db/neostore.relationshiptypestore.db.names] ...
+2019-10-19 12:25:33.631+0000 INFO [o.n.k.i.s.DynamicStringStore] [/home/sammo/Workload/gym_app/db/neo4j/development/data/databases/graph.db/neostore.relationshiptypestore.db.names] high id=8 (defragged=0)
+2019-10-19 12:25:33.631+0000 INFO [o.n.k.i.s.DynamicStringStore] /home/sammo/Workload/gym_app/db/neo4j/development/data/databases/graph.db/neostore.relationshiptypestore.db.names rebuild id generator, highId=8 defragged count=0
+2019-10-19 12:25:33.632+0000 INFO [o.n.k.i.s.RelationshipTypeTokenStore] Rebuilding id generator for[/home/sammo/Workload/gym_app/db/neo4j/development/data/databases/graph.db/neostore.relationshiptypestore.db] ...
+2019-10-19 12:25:33.642+0000 INFO [o.n.k.i.s.RelationshipTypeTokenStore] [/home/sammo/Workload/gym_app/db/neo4j/development/data/databases/graph.db/neostore.relationshiptypestore.db] high id=7 (defragged=0)
+2019-10-19 12:25:33.642+0000 INFO [o.n.k.i.s.RelationshipTypeTokenStore] /home/sammo/Workload/gym_app/db/neo4j/development/data/databases/graph.db/neostore.relationshiptypestore.db rebuild id generator, highId=7 defragged count=0
+2019-10-19 12:25:33.644+0000 INFO [o.n.k.i.s.DynamicStringStore] Rebuilding id generator for[/home/sammo/Workload/gym_app/db/neo4j/development/data/databases/graph.db/neostore.labeltokenstore.db.names] ...
+2019-10-19 12:25:33.653+0000 INFO [o.n.k.i.s.DynamicStringStore] [/home/sammo/Workload/gym_app/db/neo4j/development/data/databases/graph.db/neostore.labeltokenstore.db.names] high id=7 (defragged=0)
+2019-10-19 12:25:33.653+0000 INFO [o.n.k.i.s.DynamicStringStore] /home/sammo/Workload/gym_app/db/neo4j/development/data/databases/graph.db/neostore.labeltokenstore.db.names rebuild id generator, highId=7 defragged count=0
+2019-10-19 12:25:33.653+0000 INFO [o.n.k.i.s.LabelTokenStore] Rebuilding id generator for[/home/sammo/Workload/gym_app/db/neo4j/development/data/databases/graph.db/neostore.labeltokenstore.db] ...
+2019-10-19 12:25:33.663+0000 INFO [o.n.k.i.s.LabelTokenStore] [/home/sammo/Workload/gym_app/db/neo4j/development/data/databases/graph.db/neostore.labeltokenstore.db] high id=5 (defragged=0)
+2019-10-19 12:25:33.663+0000 INFO [o.n.k.i.s.LabelTokenStore] /home/sammo/Workload/gym_app/db/neo4j/development/data/databases/graph.db/neostore.labeltokenstore.db rebuild id generator, highId=5 defragged count=0
+2019-10-19 12:25:33.665+0000 INFO [o.n.k.i.s.SchemaStore] Rebuilding id generator for[/home/sammo/Workload/gym_app/db/neo4j/development/data/databases/graph.db/neostore.schemastore.db] ...
+2019-10-19 12:25:33.674+0000 INFO [o.n.k.i.s.SchemaStore] [/home/sammo/Workload/gym_app/db/neo4j/development/data/databases/graph.db/neostore.schemastore.db] high id=53 (defragged=0)
+2019-10-19 12:25:33.674+0000 INFO [o.n.k.i.s.SchemaStore] /home/sammo/Workload/gym_app/db/neo4j/development/data/databases/graph.db/neostore.schemastore.db rebuild id generator, highId=53 defragged count=0
+2019-10-19 12:25:33.674+0000 INFO [o.n.k.i.s.RelationshipGroupStore] Rebuilding id generator for[/home/sammo/Workload/gym_app/db/neo4j/development/data/databases/graph.db/neostore.relationshipgroupstore.db] ...
+2019-10-19 12:25:33.683+0000 INFO [o.n.k.i.s.RelationshipGroupStore] [/home/sammo/Workload/gym_app/db/neo4j/development/data/databases/graph.db/neostore.relationshipgroupstore.db] high id=1 (defragged=0)
+2019-10-19 12:25:33.684+0000 INFO [o.n.k.i.s.RelationshipGroupStore] /home/sammo/Workload/gym_app/db/neo4j/development/data/databases/graph.db/neostore.relationshipgroupstore.db rebuild id generator, highId=1 defragged count=0
+2019-10-19 12:25:33.684+0000 INFO [o.n.k.i.s.MetaDataStore] Rebuilding id generator for[/home/sammo/Workload/gym_app/db/neo4j/development/data/databases/graph.db/neostore] ...
+2019-10-19 12:25:33.693+0000 INFO [o.n.k.i.s.MetaDataStore] [/home/sammo/Workload/gym_app/db/neo4j/development/data/databases/graph.db/neostore] high id=15 (defragged=0)
+2019-10-19 12:25:33.693+0000 INFO [o.n.k.i.s.MetaDataStore] /home/sammo/Workload/gym_app/db/neo4j/development/data/databases/graph.db/neostore rebuild id generator, highId=15 defragged count=0
+2019-10-19 12:25:33.703+0000 INFO [o.n.k.i.a.i.IndexingService] IndexingService.start: indexes not specifically mentioned above are ONLINE
+2019-10-19 12:25:33.718+0000 INFO [o.n.k.i.DatabaseHealth] Database health set to OK
+2019-10-19 12:25:34.068+0000 INFO [o.n.b.BoltKernelExtension] Bolt enabled on localhost:7472.
+2019-10-19 12:25:34.076+0000 INFO [o.n.k.AvailabilityGuard] Fulfilling of requirement makes database available: Database available
+2019-10-19 12:25:34.077+0000 INFO [o.n.k.i.f.GraphDatabaseFacadeFactory] Database is now ready
+2019-10-19 12:25:34.078+0000 INFO [o.n.k.i.DiagnosticsManager] --- STARTED diagnostics for KernelDiagnostics:Versions START ---
+2019-10-19 12:25:34.078+0000 INFO [o.n.k.i.DiagnosticsManager] Graph Database: community single StoreId{creationTime=1567716994021, randomId=-8529380548656559324, storeVersion=16094931155187206, upgradeTime=1567716994021, upgradeId=1}
+2019-10-19 12:25:34.078+0000 INFO [o.n.k.i.DiagnosticsManager] Kernel version: 3.4.1,bf2fd1991decc5b49b63105e793230f19ccf6f15
+2019-10-19 12:25:34.078+0000 INFO [o.n.k.i.DiagnosticsManager] --- STARTED diagnostics for KernelDiagnostics:Versions END ---
+2019-10-19 12:25:34.079+0000 INFO [o.n.k.i.DiagnosticsManager] --- STARTED diagnostics for NEO_STORE_VERSIONS START ---
+2019-10-19 12:25:34.079+0000 INFO [o.n.k.i.DiagnosticsManager] Store versions:
+2019-10-19 12:25:34.079+0000 INFO [o.n.k.i.DiagnosticsManager] Store versions:
+2019-10-19 12:25:34.080+0000 INFO [o.n.k.i.DiagnosticsManager]   ArrayPropertyStore v0.A.9
+2019-10-19 12:25:34.080+0000 INFO [o.n.k.i.DiagnosticsManager]   NodeStore v0.A.9
+2019-10-19 12:25:34.080+0000 INFO [o.n.k.i.DiagnosticsManager]   StringPropertyStore v0.A.9
+2019-10-19 12:25:34.080+0000 INFO [o.n.k.i.DiagnosticsManager]   PropertyIndexStore v0.A.9
+2019-10-19 12:25:34.080+0000 INFO [o.n.k.i.DiagnosticsManager]   StringPropertyStore v0.A.9
+2019-10-19 12:25:34.080+0000 INFO [o.n.k.i.DiagnosticsManager]   ArrayPropertyStore v0.A.9
+2019-10-19 12:25:34.080+0000 INFO [o.n.k.i.DiagnosticsManager]   PropertyStore v0.A.9
+2019-10-19 12:25:34.080+0000 INFO [o.n.k.i.DiagnosticsManager]   RelationshipStore v0.A.9
+2019-10-19 12:25:34.080+0000 INFO [o.n.k.i.DiagnosticsManager]   StringPropertyStore v0.A.9
+2019-10-19 12:25:34.080+0000 INFO [o.n.k.i.DiagnosticsManager]   RelationshipTypeStore v0.A.9
+2019-10-19 12:25:34.080+0000 INFO [o.n.k.i.DiagnosticsManager]   StringPropertyStore v0.A.9
+2019-10-19 12:25:34.080+0000 INFO [o.n.k.i.DiagnosticsManager]   LabelTokenStore v0.A.9
+2019-10-19 12:25:34.081+0000 INFO [o.n.k.i.DiagnosticsManager]   SchemaStore v0.A.9
+2019-10-19 12:25:34.081+0000 INFO [o.n.k.i.DiagnosticsManager]   RelationshipGroupStore v0.A.9
+2019-10-19 12:25:34.081+0000 INFO [o.n.k.i.DiagnosticsManager]   NeoStore v0.A.9
+2019-10-19 12:25:34.081+0000 INFO [o.n.k.i.DiagnosticsManager] --- STARTED diagnostics for NEO_STORE_VERSIONS END ---
+2019-10-19 12:25:34.081+0000 INFO [o.n.k.i.DiagnosticsManager] --- STARTED diagnostics for NEO_STORE_ID_USAGE START ---
+2019-10-19 12:25:34.081+0000 INFO [o.n.k.i.DiagnosticsManager] Id usage:
+2019-10-19 12:25:34.081+0000 INFO [o.n.k.i.DiagnosticsManager] Id usage:
+2019-10-19 12:25:34.081+0000 INFO [o.n.k.i.DiagnosticsManager]   ArrayPropertyStore: used=1 high=0
+2019-10-19 12:25:34.081+0000 INFO [o.n.k.i.DiagnosticsManager]   NodeStore: used=165 high=164
+2019-10-19 12:25:34.081+0000 INFO [o.n.k.i.DiagnosticsManager]   StringPropertyStore: used=14 high=13
+2019-10-19 12:25:34.081+0000 INFO [o.n.k.i.DiagnosticsManager]   PropertyIndexStore: used=13 high=12
+2019-10-19 12:25:34.082+0000 INFO [o.n.k.i.DiagnosticsManager]   StringPropertyStore: used=1 high=0
+2019-10-19 12:25:34.082+0000 INFO [o.n.k.i.DiagnosticsManager]   ArrayPropertyStore: used=1 high=0
+2019-10-19 12:25:34.082+0000 INFO [o.n.k.i.DiagnosticsManager]   PropertyStore: used=280 high=279
+2019-10-19 12:25:34.082+0000 INFO [o.n.k.i.DiagnosticsManager]   RelationshipStore: used=222 high=221
+2019-10-19 12:25:34.082+0000 INFO [o.n.k.i.DiagnosticsManager]   StringPropertyStore: used=8 high=7
+2019-10-19 12:25:34.082+0000 INFO [o.n.k.i.DiagnosticsManager]   RelationshipTypeStore: used=7 high=6
+2019-10-19 12:25:34.082+0000 INFO [o.n.k.i.DiagnosticsManager]   StringPropertyStore: used=7 high=6
+2019-10-19 12:25:34.082+0000 INFO [o.n.k.i.DiagnosticsManager]   LabelTokenStore: used=5 high=4
+2019-10-19 12:25:34.082+0000 INFO [o.n.k.i.DiagnosticsManager]   SchemaStore: used=53 high=52
+2019-10-19 12:25:34.082+0000 INFO [o.n.k.i.DiagnosticsManager]   RelationshipGroupStore: used=1 high=0
+2019-10-19 12:25:34.082+0000 INFO [o.n.k.i.DiagnosticsManager]   NeoStore: used=15 high=14
+2019-10-19 12:25:34.082+0000 INFO [o.n.k.i.DiagnosticsManager] --- STARTED diagnostics for NEO_STORE_ID_USAGE END ---
+2019-10-19 12:25:34.082+0000 INFO [o.n.k.i.DiagnosticsManager] --- STARTED diagnostics for NEO_STORE_RECORDS START ---
+2019-10-19 12:25:34.082+0000 INFO [o.n.k.i.DiagnosticsManager] Neostore records:
+2019-10-19 12:25:34.083+0000 INFO [o.n.k.i.DiagnosticsManager] TIME (Creation time): 1567716994021
+2019-10-19 12:25:34.083+0000 INFO [o.n.k.i.DiagnosticsManager] RANDOM_NUMBER (Random number for store id): -8529380548656559324
+2019-10-19 12:25:34.083+0000 INFO [o.n.k.i.DiagnosticsManager] LOG_VERSION (Current log version): 0
+2019-10-19 12:25:34.083+0000 INFO [o.n.k.i.DiagnosticsManager] LAST_TRANSACTION_ID (Last committed transaction): 2103
+2019-10-19 12:25:34.083+0000 INFO [o.n.k.i.DiagnosticsManager] STORE_VERSION (Store format version): 16094931155187206
+2019-10-19 12:25:34.083+0000 INFO [o.n.k.i.DiagnosticsManager] FIRST_GRAPH_PROPERTY (First property record containing graph properties): -1
+2019-10-19 12:25:34.083+0000 INFO [o.n.k.i.DiagnosticsManager] LAST_CONSTRAINT_TRANSACTION (Last committed transaction containing constraint changes): 1950
+2019-10-19 12:25:34.083+0000 INFO [o.n.k.i.DiagnosticsManager] UPGRADE_TRANSACTION_ID (Transaction id most recent upgrade was performed at): 1
+2019-10-19 12:25:34.083+0000 INFO [o.n.k.i.DiagnosticsManager] UPGRADE_TIME (Time of last upgrade): 1567716994021
+2019-10-19 12:25:34.083+0000 INFO [o.n.k.i.DiagnosticsManager] LAST_TRANSACTION_CHECKSUM (Checksum of last committed transaction): -162458933885
+2019-10-19 12:25:34.083+0000 INFO [o.n.k.i.DiagnosticsManager] UPGRADE_TRANSACTION_CHECKSUM (Checksum of transaction id the most recent upgrade was performed at): 0
+2019-10-19 12:25:34.084+0000 INFO [o.n.k.i.DiagnosticsManager] LAST_CLOSED_TRANSACTION_LOG_VERSION (Log version where the last transaction commit entry has been written into): 0
+2019-10-19 12:25:34.084+0000 INFO [o.n.k.i.DiagnosticsManager] LAST_CLOSED_TRANSACTION_LOG_BYTE_OFFSET (Byte offset in the log file where the last transaction commit entry has been written into): 3516378
+2019-10-19 12:25:34.084+0000 INFO [o.n.k.i.DiagnosticsManager] LAST_TRANSACTION_COMMIT_TIMESTAMP (Commit time timestamp for last committed transaction): 1568220976340
+2019-10-19 12:25:34.084+0000 INFO [o.n.k.i.DiagnosticsManager] UPGRADE_TRANSACTION_COMMIT_TIMESTAMP (Commit timestamp of transaction the most recent upgrade was performed at): 0
+2019-10-19 12:25:34.084+0000 INFO [o.n.k.i.DiagnosticsManager] --- STARTED diagnostics for NEO_STORE_RECORDS END ---
+2019-10-19 12:25:34.085+0000 INFO [o.n.k.i.DiagnosticsManager] --- STARTED diagnostics for TRANSACTION_RANGE START ---
+2019-10-19 12:25:34.085+0000 INFO [o.n.k.i.DiagnosticsManager] Transaction log:
+2019-10-19 12:25:34.085+0000 INFO [o.n.k.i.DiagnosticsManager] Oldest transaction 2 found in log with version 0
+2019-10-19 12:25:34.085+0000 INFO [o.n.k.i.DiagnosticsManager] --- STARTED diagnostics for TRANSACTION_RANGE END ---
+2019-10-19 12:25:34.089+0000 INFO [o.n.k.i.DiagnosticsManager] --- STARTED diagnostics for KernelDiagnostics:StoreFiles START ---
+2019-10-19 12:25:34.089+0000 INFO [o.n.k.i.DiagnosticsManager] Disk space on partition (Total / Free / Free %): 502468108288 / 468583350272 / 93
+2019-10-19 12:25:34.089+0000 INFO [o.n.k.i.DiagnosticsManager] Storage files: (filename : modification date - size)
+2019-10-19 12:25:34.091+0000 INFO [o.n.k.i.DiagnosticsManager]   index:
+2019-10-19 12:25:34.091+0000 INFO [o.n.k.i.DiagnosticsManager]   - Total: 2019-09-05T21:56:34+0100 - 0.00 B
+2019-10-19 12:25:34.092+0000 INFO [o.n.k.i.DiagnosticsManager]   neostore: 2019-09-11T17:57:37+0100 - 8.00 kB
+2019-10-19 12:25:34.092+0000 INFO [o.n.k.i.DiagnosticsManager]   neostore.counts.db.a: 2019-09-11T17:52:42+0100 - 1.22 kB
+2019-10-19 12:25:34.092+0000 INFO [o.n.k.i.DiagnosticsManager]   neostore.counts.db.b: 2019-09-11T17:57:37+0100 - 1.25 kB
+2019-10-19 12:25:34.093+0000 INFO [o.n.k.i.DiagnosticsManager]   neostore.id: 2019-10-19T13:25:33+0100 - 9.00 B
+2019-10-19 12:25:34.093+0000 INFO [o.n.k.i.DiagnosticsManager]   neostore.labelscanstore.db: 2019-10-19T13:25:33+0100 - 48.00 kB
+2019-10-19 12:25:34.093+0000 INFO [o.n.k.i.DiagnosticsManager]   neostore.labeltokenstore.db: 2019-09-11T17:37:42+0100 - 8.00 kB
+2019-10-19 12:25:34.093+0000 INFO [o.n.k.i.DiagnosticsManager]   neostore.labeltokenstore.db.id: 2019-10-19T13:25:33+0100 - 9.00 B
+2019-10-19 12:25:34.093+0000 INFO [o.n.k.i.DiagnosticsManager]   neostore.labeltokenstore.db.names: 2019-09-11T17:37:42+0100 - 8.00 kB
+2019-10-19 12:25:34.093+0000 INFO [o.n.k.i.DiagnosticsManager]   neostore.labeltokenstore.db.names.id: 2019-10-19T13:25:33+0100 - 9.00 B
+2019-10-19 12:25:34.094+0000 INFO [o.n.k.i.DiagnosticsManager]   neostore.nodestore.db: 2019-09-11T17:57:37+0100 - 23.99 kB
+2019-10-19 12:25:34.094+0000 INFO [o.n.k.i.DiagnosticsManager]   neostore.nodestore.db.id: 2019-10-19T13:25:33+0100 - 9.00 B
+2019-10-19 12:25:34.094+0000 INFO [o.n.k.i.DiagnosticsManager]   neostore.nodestore.db.labels: 2019-09-05T21:56:33+0100 - 8.00 kB
+2019-10-19 12:25:34.094+0000 INFO [o.n.k.i.DiagnosticsManager]   neostore.nodestore.db.labels.id: 2019-10-19T13:25:33+0100 - 9.00 B
+2019-10-19 12:25:34.094+0000 INFO [o.n.k.i.DiagnosticsManager]   neostore.propertystore.db: 2019-09-11T17:57:37+0100 - 103.58 kB
+2019-10-19 12:25:34.094+0000 INFO [o.n.k.i.DiagnosticsManager]   neostore.propertystore.db.arrays: 2019-09-05T21:56:33+0100 - 8.00 kB
+2019-10-19 12:25:34.094+0000 INFO [o.n.k.i.DiagnosticsManager]   neostore.propertystore.db.arrays.id: 2019-10-19T13:25:33+0100 - 9.00 B
+2019-10-19 12:25:34.095+0000 INFO [o.n.k.i.DiagnosticsManager]   neostore.propertystore.db.id: 2019-10-19T13:25:33+0100 - 9.00 B
+2019-10-19 12:25:34.095+0000 INFO [o.n.k.i.DiagnosticsManager]   neostore.propertystore.db.index: 2019-09-11T17:57:37+0100 - 8.00 kB
+2019-10-19 12:25:34.095+0000 INFO [o.n.k.i.DiagnosticsManager]   neostore.propertystore.db.index.id: 2019-10-19T13:25:33+0100 - 9.00 B
+2019-10-19 12:25:34.095+0000 INFO [o.n.k.i.DiagnosticsManager]   neostore.propertystore.db.index.keys: 2019-09-11T17:57:37+0100 - 8.00 kB
+2019-10-19 12:25:34.095+0000 INFO [o.n.k.i.DiagnosticsManager]   neostore.propertystore.db.index.keys.id: 2019-10-19T13:25:33+0100 - 9.00 B
+2019-10-19 12:25:34.095+0000 INFO [o.n.k.i.DiagnosticsManager]   neostore.propertystore.db.strings: 2019-09-05T21:56:33+0100 - 8.00 kB
+2019-10-19 12:25:34.095+0000 INFO [o.n.k.i.DiagnosticsManager]   neostore.propertystore.db.strings.id: 2019-10-19T13:25:33+0100 - 9.00 B
+2019-10-19 12:25:34.095+0000 INFO [o.n.k.i.DiagnosticsManager]   neostore.relationshipgroupstore.db: 2019-09-11T17:02:51+0100 - 8.00 kB
+2019-10-19 12:25:34.096+0000 INFO [o.n.k.i.DiagnosticsManager]   neostore.relationshipgroupstore.db.id: 2019-10-19T13:25:33+0100 - 9.00 B
+2019-10-19 12:25:34.096+0000 INFO [o.n.k.i.DiagnosticsManager]   neostore.relationshipstore.db: 2019-09-11T17:57:37+0100 - 191.25 kB
+2019-10-19 12:25:34.096+0000 INFO [o.n.k.i.DiagnosticsManager]   neostore.relationshipstore.db.id: 2019-10-19T13:25:33+0100 - 9.00 B
+2019-10-19 12:25:34.096+0000 INFO [o.n.k.i.DiagnosticsManager]   neostore.relationshiptypestore.db: 2019-09-11T17:52:42+0100 - 8.00 kB
+2019-10-19 12:25:34.096+0000 INFO [o.n.k.i.DiagnosticsManager]   neostore.relationshiptypestore.db.id: 2019-10-19T13:25:33+0100 - 9.00 B
+2019-10-19 12:25:34.097+0000 INFO [o.n.k.i.DiagnosticsManager]   neostore.relationshiptypestore.db.names: 2019-09-11T17:52:42+0100 - 8.00 kB
+2019-10-19 12:25:34.097+0000 INFO [o.n.k.i.DiagnosticsManager]   neostore.relationshiptypestore.db.names.id: 2019-10-19T13:25:33+0100 - 9.00 B
+2019-10-19 12:25:34.097+0000 INFO [o.n.k.i.DiagnosticsManager]   neostore.schemastore.db: 2019-09-11T17:37:42+0100 - 8.00 kB
+2019-10-19 12:25:34.097+0000 INFO [o.n.k.i.DiagnosticsManager]   neostore.schemastore.db.id: 2019-10-19T13:25:33+0100 - 9.00 B
+2019-10-19 12:25:34.097+0000 INFO [o.n.k.i.DiagnosticsManager]   neostore.transaction.db.0: 2019-09-11T17:57:37+0100 - 3.35 MB
+2019-10-19 12:25:34.097+0000 INFO [o.n.k.i.DiagnosticsManager]   schema:
+2019-10-19 12:25:34.098+0000 INFO [o.n.k.i.DiagnosticsManager]     index:
+2019-10-19 12:25:34.098+0000 INFO [o.n.k.i.DiagnosticsManager]       lucene_native-2.0:
+2019-10-19 12:25:34.098+0000 INFO [o.n.k.i.DiagnosticsManager]         1:
+2019-10-19 12:25:34.098+0000 INFO [o.n.k.i.DiagnosticsManager]           lucene-1.0:
+2019-10-19 12:25:34.098+0000 INFO [o.n.k.i.DiagnosticsManager]             1:
+2019-10-19 12:25:34.098+0000 INFO [o.n.k.i.DiagnosticsManager]               segments_1f: 2019-09-11T17:57:37+0100 - 86.00 B
+2019-10-19 12:25:34.099+0000 INFO [o.n.k.i.DiagnosticsManager]               write.lock: 2019-09-06T13:07:33+0100 - 0.00 B
+2019-10-19 12:25:34.099+0000 INFO [o.n.k.i.DiagnosticsManager]             - Total: 2019-09-11T17:57:37+0100 - 86.00 B
+2019-10-19 12:25:34.099+0000 INFO [o.n.k.i.DiagnosticsManager]             failure-message: 2019-09-06T13:07:33+0100 - 16.00 kB
+2019-10-19 12:25:34.099+0000 INFO [o.n.k.i.DiagnosticsManager]           - Total: 2019-09-06T13:07:33+0100 - 16.08 kB
+2019-10-19 12:25:34.099+0000 INFO [o.n.k.i.DiagnosticsManager]           native-1.0:
+2019-10-19 12:25:34.100+0000 INFO [o.n.k.i.DiagnosticsManager]             index-1: 2019-10-19T13:25:33+0100 - 40.00 kB
+2019-10-19 12:25:34.100+0000 INFO [o.n.k.i.DiagnosticsManager]           - Total: 2019-09-06T13:07:33+0100 - 40.00 kB
+2019-10-19 12:25:34.100+0000 INFO [o.n.k.i.DiagnosticsManager]           spatial-1.0:
+2019-10-19 12:25:34.100+0000 INFO [o.n.k.i.DiagnosticsManager]             1-4326: 2019-10-19T13:25:33+0100 - 40.00 kB
+2019-10-19 12:25:34.100+0000 INFO [o.n.k.i.DiagnosticsManager]           - Total: 2019-09-06T13:07:33+0100 - 40.00 kB
+2019-10-19 12:25:34.100+0000 INFO [o.n.k.i.DiagnosticsManager]           string-1.0:
+2019-10-19 12:25:34.101+0000 INFO [o.n.k.i.DiagnosticsManager]             index-1: 2019-10-19T13:25:33+0100 - 48.00 kB
+2019-10-19 12:25:34.101+0000 INFO [o.n.k.i.DiagnosticsManager]           - Total: 2019-09-06T13:07:33+0100 - 48.00 kB
+2019-10-19 12:25:34.101+0000 INFO [o.n.k.i.DiagnosticsManager]           temporal-1.0:
+2019-10-19 12:25:34.101+0000 INFO [o.n.k.i.DiagnosticsManager]             date: 2019-10-19T13:25:33+0100 - 40.00 kB
+2019-10-19 12:25:34.101+0000 INFO [o.n.k.i.DiagnosticsManager]           - Total: 2019-09-06T13:07:33+0100 - 40.00 kB
+2019-10-19 12:25:34.101+0000 INFO [o.n.k.i.DiagnosticsManager]         - Total: 2019-09-06T13:07:33+0100 - 184.08 kB
+2019-10-19 12:25:34.102+0000 INFO [o.n.k.i.DiagnosticsManager]         15:
+2019-10-19 12:25:34.102+0000 INFO [o.n.k.i.DiagnosticsManager]           lucene-1.0:
+2019-10-19 12:25:34.102+0000 INFO [o.n.k.i.DiagnosticsManager]             1:
+2019-10-19 12:25:34.102+0000 INFO [o.n.k.i.DiagnosticsManager]               segments_1e: 2019-09-11T17:57:37+0100 - 86.00 B
+2019-10-19 12:25:34.102+0000 INFO [o.n.k.i.DiagnosticsManager]               write.lock: 2019-09-06T13:07:33+0100 - 0.00 B
+2019-10-19 12:25:34.102+0000 INFO [o.n.k.i.DiagnosticsManager]             - Total: 2019-09-11T17:57:37+0100 - 86.00 B
+2019-10-19 12:25:34.103+0000 INFO [o.n.k.i.DiagnosticsManager]             failure-message: 2019-09-06T13:07:33+0100 - 16.00 kB
+2019-10-19 12:25:34.103+0000 INFO [o.n.k.i.DiagnosticsManager]           - Total: 2019-09-06T13:07:33+0100 - 16.08 kB
+2019-10-19 12:25:34.103+0000 INFO [o.n.k.i.DiagnosticsManager]           native-1.0:
+2019-10-19 12:25:34.103+0000 INFO [o.n.k.i.DiagnosticsManager]             index-15: 2019-10-19T13:25:33+0100 - 40.00 kB
+2019-10-19 12:25:34.103+0000 INFO [o.n.k.i.DiagnosticsManager]           - Total: 2019-09-06T13:07:33+0100 - 40.00 kB
+2019-10-19 12:25:34.103+0000 INFO [o.n.k.i.DiagnosticsManager]           spatial-1.0:
+2019-10-19 12:25:34.104+0000 INFO [o.n.k.i.DiagnosticsManager]             1-4326: 2019-10-19T13:25:33+0100 - 40.00 kB
+2019-10-19 12:25:34.104+0000 INFO [o.n.k.i.DiagnosticsManager]           - Total: 2019-09-06T13:07:33+0100 - 40.00 kB
+2019-10-19 12:25:34.104+0000 INFO [o.n.k.i.DiagnosticsManager]           string-1.0:
+2019-10-19 12:25:34.104+0000 INFO [o.n.k.i.DiagnosticsManager]             index-15: 2019-10-19T13:25:33+0100 - 192.00 kB
+2019-10-19 12:25:34.104+0000 INFO [o.n.k.i.DiagnosticsManager]           - Total: 2019-09-06T13:07:33+0100 - 192.00 kB
+2019-10-19 12:25:34.104+0000 INFO [o.n.k.i.DiagnosticsManager]           temporal-1.0:
+2019-10-19 12:25:34.105+0000 INFO [o.n.k.i.DiagnosticsManager]             date: 2019-10-19T13:25:33+0100 - 40.00 kB
+2019-10-19 12:25:34.105+0000 INFO [o.n.k.i.DiagnosticsManager]           - Total: 2019-09-06T13:07:33+0100 - 40.00 kB
+2019-10-19 12:25:34.105+0000 INFO [o.n.k.i.DiagnosticsManager]         - Total: 2019-09-06T13:07:33+0100 - 328.08 kB
+2019-10-19 12:25:34.105+0000 INFO [o.n.k.i.DiagnosticsManager]         22:
+2019-10-19 12:25:34.105+0000 INFO [o.n.k.i.DiagnosticsManager]           lucene-1.0:
+2019-10-19 12:25:34.105+0000 INFO [o.n.k.i.DiagnosticsManager]             1:
+2019-10-19 12:25:34.105+0000 INFO [o.n.k.i.DiagnosticsManager]               segments_1e: 2019-09-11T17:57:37+0100 - 86.00 B
+2019-10-19 12:25:34.106+0000 INFO [o.n.k.i.DiagnosticsManager]               write.lock: 2019-09-06T13:07:33+0100 - 0.00 B
+2019-10-19 12:25:34.106+0000 INFO [o.n.k.i.DiagnosticsManager]             - Total: 2019-09-11T17:57:37+0100 - 86.00 B
+2019-10-19 12:25:34.106+0000 INFO [o.n.k.i.DiagnosticsManager]             failure-message: 2019-09-06T13:07:33+0100 - 16.00 kB
+2019-10-19 12:25:34.106+0000 INFO [o.n.k.i.DiagnosticsManager]           - Total: 2019-09-06T13:07:33+0100 - 16.08 kB
+2019-10-19 12:25:34.106+0000 INFO [o.n.k.i.DiagnosticsManager]           native-1.0:
+2019-10-19 12:25:34.107+0000 INFO [o.n.k.i.DiagnosticsManager]             index-22: 2019-10-19T13:25:33+0100 - 40.00 kB
+2019-10-19 12:25:34.107+0000 INFO [o.n.k.i.DiagnosticsManager]           - Total: 2019-09-06T13:07:33+0100 - 40.00 kB
+2019-10-19 12:25:34.107+0000 INFO [o.n.k.i.DiagnosticsManager]           spatial-1.0:
+2019-10-19 12:25:34.107+0000 INFO [o.n.k.i.DiagnosticsManager]             1-4326: 2019-10-19T13:25:33+0100 - 40.00 kB
+2019-10-19 12:25:34.107+0000 INFO [o.n.k.i.DiagnosticsManager]           - Total: 2019-09-06T13:07:33+0100 - 40.00 kB
+2019-10-19 12:25:34.107+0000 INFO [o.n.k.i.DiagnosticsManager]           string-1.0:
+2019-10-19 12:25:34.108+0000 INFO [o.n.k.i.DiagnosticsManager]             index-22: 2019-10-19T13:25:33+0100 - 48.00 kB
+2019-10-19 12:25:34.108+0000 INFO [o.n.k.i.DiagnosticsManager]           - Total: 2019-09-06T13:07:33+0100 - 48.00 kB
+2019-10-19 12:25:34.108+0000 INFO [o.n.k.i.DiagnosticsManager]           temporal-1.0:
+2019-10-19 12:25:34.108+0000 INFO [o.n.k.i.DiagnosticsManager]             date: 2019-10-19T13:25:33+0100 - 40.00 kB
+2019-10-19 12:25:34.108+0000 INFO [o.n.k.i.DiagnosticsManager]           - Total: 2019-09-06T13:07:33+0100 - 40.00 kB
+2019-10-19 12:25:34.108+0000 INFO [o.n.k.i.DiagnosticsManager]         - Total: 2019-09-06T13:07:33+0100 - 184.08 kB
+2019-10-19 12:25:34.108+0000 INFO [o.n.k.i.DiagnosticsManager]         29:
+2019-10-19 12:25:34.108+0000 INFO [o.n.k.i.DiagnosticsManager]           lucene-1.0:
+2019-10-19 12:25:34.109+0000 INFO [o.n.k.i.DiagnosticsManager]             1:
+2019-10-19 12:25:34.109+0000 INFO [o.n.k.i.DiagnosticsManager]               segments_8: 2019-09-11T17:57:37+0100 - 85.00 B
+2019-10-19 12:25:34.109+0000 INFO [o.n.k.i.DiagnosticsManager]               write.lock: 2019-09-11T16:29:01+0100 - 0.00 B
+2019-10-19 12:25:34.109+0000 INFO [o.n.k.i.DiagnosticsManager]             - Total: 2019-09-11T17:57:37+0100 - 85.00 B
+2019-10-19 12:25:34.109+0000 INFO [o.n.k.i.DiagnosticsManager]             failure-message: 2019-09-11T16:29:01+0100 - 16.00 kB
+2019-10-19 12:25:34.109+0000 INFO [o.n.k.i.DiagnosticsManager]           - Total: 2019-09-11T16:29:01+0100 - 16.08 kB
+2019-10-19 12:25:34.109+0000 INFO [o.n.k.i.DiagnosticsManager]           native-1.0:
+2019-10-19 12:25:34.110+0000 INFO [o.n.k.i.DiagnosticsManager]             index-29: 2019-10-19T13:25:33+0100 - 40.00 kB
+2019-10-19 12:25:34.110+0000 INFO [o.n.k.i.DiagnosticsManager]           - Total: 2019-09-11T16:29:00+0100 - 40.00 kB
+2019-10-19 12:25:34.110+0000 INFO [o.n.k.i.DiagnosticsManager]           spatial-1.0:
+2019-10-19 12:25:34.110+0000 INFO [o.n.k.i.DiagnosticsManager]             1-4326: 2019-10-19T13:25:33+0100 - 40.00 kB
+2019-10-19 12:25:34.110+0000 INFO [o.n.k.i.DiagnosticsManager]           - Total: 2019-09-11T16:29:00+0100 - 40.00 kB
+2019-10-19 12:25:34.110+0000 INFO [o.n.k.i.DiagnosticsManager]           string-1.0:
+2019-10-19 12:25:34.111+0000 INFO [o.n.k.i.DiagnosticsManager]             index-29: 2019-10-19T13:25:33+0100 - 48.00 kB
+2019-10-19 12:25:34.111+0000 INFO [o.n.k.i.DiagnosticsManager]           - Total: 2019-09-11T16:29:00+0100 - 48.00 kB
+2019-10-19 12:25:34.111+0000 INFO [o.n.k.i.DiagnosticsManager]           temporal-1.0:
+2019-10-19 12:25:34.111+0000 INFO [o.n.k.i.DiagnosticsManager]             date: 2019-10-19T13:25:33+0100 - 40.00 kB
+2019-10-19 12:25:34.111+0000 INFO [o.n.k.i.DiagnosticsManager]           - Total: 2019-09-11T16:29:01+0100 - 40.00 kB
+2019-10-19 12:25:34.111+0000 INFO [o.n.k.i.DiagnosticsManager]         - Total: 2019-09-11T16:29:01+0100 - 184.08 kB
+2019-10-19 12:25:34.111+0000 INFO [o.n.k.i.DiagnosticsManager]         39:
+2019-10-19 12:25:34.111+0000 INFO [o.n.k.i.DiagnosticsManager]           lucene-1.0:
+2019-10-19 12:25:34.112+0000 INFO [o.n.k.i.DiagnosticsManager]             1:
+2019-10-19 12:25:34.112+0000 INFO [o.n.k.i.DiagnosticsManager]               segments_8: 2019-09-11T17:57:37+0100 - 85.00 B
+2019-10-19 12:25:34.112+0000 INFO [o.n.k.i.DiagnosticsManager]               write.lock: 2019-09-11T16:30:28+0100 - 0.00 B
+2019-10-19 12:25:34.112+0000 INFO [o.n.k.i.DiagnosticsManager]             - Total: 2019-09-11T17:57:37+0100 - 85.00 B
+2019-10-19 12:25:34.112+0000 INFO [o.n.k.i.DiagnosticsManager]             failure-message: 2019-09-11T16:30:28+0100 - 16.00 kB
+2019-10-19 12:25:34.112+0000 INFO [o.n.k.i.DiagnosticsManager]           - Total: 2019-09-11T16:30:28+0100 - 16.08 kB
+2019-10-19 12:25:34.113+0000 INFO [o.n.k.i.DiagnosticsManager]           native-1.0:
+2019-10-19 12:25:34.113+0000 INFO [o.n.k.i.DiagnosticsManager]             index-39: 2019-10-19T13:25:33+0100 - 40.00 kB
+2019-10-19 12:25:34.113+0000 INFO [o.n.k.i.DiagnosticsManager]           - Total: 2019-09-11T16:30:27+0100 - 40.00 kB
+2019-10-19 12:25:34.113+0000 INFO [o.n.k.i.DiagnosticsManager]           spatial-1.0:
+2019-10-19 12:25:34.113+0000 INFO [o.n.k.i.DiagnosticsManager]             1-4326: 2019-10-19T13:25:33+0100 - 40.00 kB
+2019-10-19 12:25:34.114+0000 INFO [o.n.k.i.DiagnosticsManager]           - Total: 2019-09-11T16:30:28+0100 - 40.00 kB
+2019-10-19 12:25:34.114+0000 INFO [o.n.k.i.DiagnosticsManager]           string-1.0:
+2019-10-19 12:25:34.114+0000 INFO [o.n.k.i.DiagnosticsManager]             index-39: 2019-10-19T13:25:33+0100 - 48.00 kB
+2019-10-19 12:25:34.114+0000 INFO [o.n.k.i.DiagnosticsManager]           - Total: 2019-09-11T16:30:27+0100 - 48.00 kB
+2019-10-19 12:25:34.114+0000 INFO [o.n.k.i.DiagnosticsManager]           temporal-1.0:
+2019-10-19 12:25:34.114+0000 INFO [o.n.k.i.DiagnosticsManager]             date: 2019-10-19T13:25:33+0100 - 40.00 kB
+2019-10-19 12:25:34.114+0000 INFO [o.n.k.i.DiagnosticsManager]           - Total: 2019-09-11T16:30:28+0100 - 40.00 kB
+2019-10-19 12:25:34.115+0000 INFO [o.n.k.i.DiagnosticsManager]         - Total: 2019-09-11T16:30:28+0100 - 184.08 kB
+2019-10-19 12:25:34.115+0000 INFO [o.n.k.i.DiagnosticsManager]         46:
+2019-10-19 12:25:34.115+0000 INFO [o.n.k.i.DiagnosticsManager]           lucene-1.0:
+2019-10-19 12:25:34.115+0000 INFO [o.n.k.i.DiagnosticsManager]             1:
+2019-10-19 12:25:34.115+0000 INFO [o.n.k.i.DiagnosticsManager]               segments_4: 2019-09-11T17:57:37+0100 - 85.00 B
+2019-10-19 12:25:34.115+0000 INFO [o.n.k.i.DiagnosticsManager]               write.lock: 2019-09-11T17:34:37+0100 - 0.00 B
+2019-10-19 12:25:34.115+0000 INFO [o.n.k.i.DiagnosticsManager]             - Total: 2019-09-11T17:57:37+0100 - 85.00 B
+2019-10-19 12:25:34.116+0000 INFO [o.n.k.i.DiagnosticsManager]             failure-message: 2019-09-11T17:34:37+0100 - 16.00 kB
+2019-10-19 12:25:34.116+0000 INFO [o.n.k.i.DiagnosticsManager]           - Total: 2019-09-11T17:34:37+0100 - 16.08 kB
+2019-10-19 12:25:34.116+0000 INFO [o.n.k.i.DiagnosticsManager]           native-1.0:
+2019-10-19 12:25:34.116+0000 INFO [o.n.k.i.DiagnosticsManager]             index-46: 2019-10-19T13:25:33+0100 - 40.00 kB
+2019-10-19 12:25:34.116+0000 INFO [o.n.k.i.DiagnosticsManager]           - Total: 2019-09-11T17:34:37+0100 - 40.00 kB
+2019-10-19 12:25:34.116+0000 INFO [o.n.k.i.DiagnosticsManager]           spatial-1.0:
+2019-10-19 12:25:34.116+0000 INFO [o.n.k.i.DiagnosticsManager]             1-4326: 2019-10-19T13:25:33+0100 - 40.00 kB
+2019-10-19 12:25:34.117+0000 INFO [o.n.k.i.DiagnosticsManager]           - Total: 2019-09-11T17:34:37+0100 - 40.00 kB
+2019-10-19 12:25:34.117+0000 INFO [o.n.k.i.DiagnosticsManager]           string-1.0:
+2019-10-19 12:25:34.117+0000 INFO [o.n.k.i.DiagnosticsManager]             index-46: 2019-10-19T13:25:33+0100 - 48.00 kB
+2019-10-19 12:25:34.117+0000 INFO [o.n.k.i.DiagnosticsManager]           - Total: 2019-09-11T17:34:37+0100 - 48.00 kB
+2019-10-19 12:25:34.117+0000 INFO [o.n.k.i.DiagnosticsManager]           temporal-1.0:
+2019-10-19 12:25:34.117+0000 INFO [o.n.k.i.DiagnosticsManager]             date: 2019-10-19T13:25:33+0100 - 40.00 kB
+2019-10-19 12:25:34.117+0000 INFO [o.n.k.i.DiagnosticsManager]           - Total: 2019-09-11T17:34:37+0100 - 40.00 kB
+2019-10-19 12:25:34.118+0000 INFO [o.n.k.i.DiagnosticsManager]         - Total: 2019-09-11T17:34:37+0100 - 184.08 kB
+2019-10-19 12:25:34.118+0000 INFO [o.n.k.i.DiagnosticsManager]         8:
+2019-10-19 12:25:34.118+0000 INFO [o.n.k.i.DiagnosticsManager]           lucene-1.0:
+2019-10-19 12:25:34.118+0000 INFO [o.n.k.i.DiagnosticsManager]             1:
+2019-10-19 12:25:34.118+0000 INFO [o.n.k.i.DiagnosticsManager]               segments_1p: 2019-09-11T17:57:37+0100 - 86.00 B
+2019-10-19 12:25:34.118+0000 INFO [o.n.k.i.DiagnosticsManager]               write.lock: 2019-09-06T13:07:33+0100 - 0.00 B
+2019-10-19 12:25:34.118+0000 INFO [o.n.k.i.DiagnosticsManager]             - Total: 2019-09-11T17:57:37+0100 - 86.00 B
+2019-10-19 12:25:34.119+0000 INFO [o.n.k.i.DiagnosticsManager]             failure-message: 2019-09-06T13:07:33+0100 - 16.00 kB
+2019-10-19 12:25:34.119+0000 INFO [o.n.k.i.DiagnosticsManager]           - Total: 2019-09-06T13:07:33+0100 - 16.08 kB
+2019-10-19 12:25:34.119+0000 INFO [o.n.k.i.DiagnosticsManager]           native-1.0:
+2019-10-19 12:25:34.119+0000 INFO [o.n.k.i.DiagnosticsManager]             index-8: 2019-10-19T13:25:33+0100 - 40.00 kB
+2019-10-19 12:25:34.119+0000 INFO [o.n.k.i.DiagnosticsManager]           - Total: 2019-09-06T13:07:33+0100 - 40.00 kB
+2019-10-19 12:25:34.119+0000 INFO [o.n.k.i.DiagnosticsManager]           spatial-1.0:
+2019-10-19 12:25:34.120+0000 INFO [o.n.k.i.DiagnosticsManager]             1-4326: 2019-10-19T13:25:33+0100 - 40.00 kB
+2019-10-19 12:25:34.120+0000 INFO [o.n.k.i.DiagnosticsManager]           - Total: 2019-09-06T13:07:33+0100 - 40.00 kB
+2019-10-19 12:25:34.120+0000 INFO [o.n.k.i.DiagnosticsManager]           string-1.0:
+2019-10-19 12:25:34.120+0000 INFO [o.n.k.i.DiagnosticsManager]             index-8: 2019-10-19T13:25:33+0100 - 48.00 kB
+2019-10-19 12:25:34.120+0000 INFO [o.n.k.i.DiagnosticsManager]           - Total: 2019-09-06T13:07:33+0100 - 48.00 kB
+2019-10-19 12:25:34.120+0000 INFO [o.n.k.i.DiagnosticsManager]           temporal-1.0:
+2019-10-19 12:25:34.120+0000 INFO [o.n.k.i.DiagnosticsManager]             date: 2019-10-19T13:25:33+0100 - 40.00 kB
+2019-10-19 12:25:34.121+0000 INFO [o.n.k.i.DiagnosticsManager]           - Total: 2019-09-06T13:07:33+0100 - 40.00 kB
+2019-10-19 12:25:34.121+0000 INFO [o.n.k.i.DiagnosticsManager]         - Total: 2019-09-06T13:07:33+0100 - 184.08 kB
+2019-10-19 12:25:34.121+0000 INFO [o.n.k.i.DiagnosticsManager]       - Total: 2019-09-11T17:34:37+0100 - 1.40 MB
+2019-10-19 12:25:34.121+0000 INFO [o.n.k.i.DiagnosticsManager]     - Total: 2019-09-06T13:07:33+0100 - 1.40 MB
+2019-10-19 12:25:34.121+0000 INFO [o.n.k.i.DiagnosticsManager]   - Total: 2019-09-06T13:07:33+0100 - 1.40 MB
+2019-10-19 12:25:34.121+0000 INFO [o.n.k.i.DiagnosticsManager]   store_lock: 2019-09-05T21:56:33+0100 - 0.00 B
+2019-10-19 12:25:34.121+0000 INFO [o.n.k.i.DiagnosticsManager] Storage summary: 
+2019-10-19 12:25:34.122+0000 INFO [o.n.k.i.DiagnosticsManager]   Total size of store: 5.21 MB
+2019-10-19 12:25:34.122+0000 INFO [o.n.k.i.DiagnosticsManager]   Total size of mapped files: 462.82 kB
+2019-10-19 12:25:34.122+0000 INFO [o.n.k.i.DiagnosticsManager] --- STARTED diagnostics for KernelDiagnostics:StoreFiles END ---
+2019-10-19 12:25:35.553+0000 INFO [o.n.k.i.DiagnosticsManager] --- SERVER STARTED START ---
+2019-10-19 12:25:36.294+0000 INFO [o.n.k.i.DiagnosticsManager] --- SERVER STARTED END ---
+2019-10-19 17:00:53.781+0000 WARN [o.n.i.p.PageCache] The dbms.memory.pagecache.size setting has not been configured. It is recommended that this setting is always explicitly configured, to ensure the system has a balanced configuration. Until then, a computed heuristic value of 6246260736 bytes will be used instead. Run `neo4j-admin memrec` for memory configuration suggestions.
+2019-10-19 17:00:54.089+0000 INFO [o.n.k.i.f.CommunityEditionModule] No locking implementation specified, defaulting to 'community'
+2019-10-19 17:00:54.246+0000 INFO [o.n.k.AvailabilityGuard] Requirement makes database unavailable: Database available
+2019-10-19 17:00:54.258+0000 INFO [o.n.k.i.DiagnosticsManager] --- INITIALIZED diagnostics START ---
+2019-10-19 17:00:54.258+0000 INFO [o.n.k.i.DiagnosticsManager] Neo4j Kernel properties:
+2019-10-19 17:00:54.258+0000 INFO [o.n.k.i.DiagnosticsManager] dbms.connector.http.enabled=true
+2019-10-19 17:00:54.258+0000 INFO [o.n.k.i.DiagnosticsManager] dbms.security.auth_enabled=false
+2019-10-19 17:00:54.258+0000 INFO [o.n.k.i.DiagnosticsManager] dbms.windows_service_name=neo4j
+2019-10-19 17:00:54.258+0000 INFO [o.n.k.i.DiagnosticsManager] dbms.connector.http.listen_address=localhost:7474
+2019-10-19 17:00:54.259+0000 INFO [o.n.k.i.DiagnosticsManager] dbms.connector.https.listen_address=localhost:7473
+2019-10-19 17:00:54.259+0000 INFO [o.n.k.i.DiagnosticsManager] unsupported.dbms.directories.neo4j_home=/home/sammo/Workload/gym_app/db/neo4j/development
+2019-10-19 17:00:54.259+0000 INFO [o.n.k.i.DiagnosticsManager] dbms.connector.bolt.listen_address=localhost:7472
+2019-10-19 17:00:54.259+0000 INFO [o.n.k.i.DiagnosticsManager] dbms.directories.import=import
+2019-10-19 17:00:54.259+0000 INFO [o.n.k.i.DiagnosticsManager] unsupported.dbms.edition=community
+2019-10-19 17:00:54.259+0000 INFO [o.n.k.i.DiagnosticsManager] dbms.connector.bolt.enabled=true
+2019-10-19 17:00:54.259+0000 INFO [o.n.k.i.DiagnosticsManager] dbms.connector.https.enabled=false
+2019-10-19 17:00:54.259+0000 INFO [o.n.k.i.DiagnosticsManager] dbms.jvm.additional=-Dunsupported.dbms.udc.source=tarball
+2019-10-19 17:00:54.259+0000 INFO [o.n.k.i.DiagnosticsManager] dbms.tx_log.rotation.retention_policy=1 days
+2019-10-19 17:00:54.259+0000 INFO [o.n.k.i.DiagnosticsManager] Diagnostics providers:
+2019-10-19 17:00:54.260+0000 INFO [o.n.k.i.DiagnosticsManager] org.neo4j.kernel.configuration.Config
+2019-10-19 17:00:54.260+0000 INFO [o.n.k.i.DiagnosticsManager] org.neo4j.kernel.info.DiagnosticsManager
+2019-10-19 17:00:54.260+0000 INFO [o.n.k.i.DiagnosticsManager] SYSTEM_MEMORY
+2019-10-19 17:00:54.260+0000 INFO [o.n.k.i.DiagnosticsManager] JAVA_MEMORY
+2019-10-19 17:00:54.260+0000 INFO [o.n.k.i.DiagnosticsManager] OPERATING_SYSTEM
+2019-10-19 17:00:54.260+0000 INFO [o.n.k.i.DiagnosticsManager] JAVA_VIRTUAL_MACHINE
+2019-10-19 17:00:54.260+0000 INFO [o.n.k.i.DiagnosticsManager] CLASSPATH
+2019-10-19 17:00:54.260+0000 INFO [o.n.k.i.DiagnosticsManager] LIBRARY_PATH
+2019-10-19 17:00:54.260+0000 INFO [o.n.k.i.DiagnosticsManager] SYSTEM_PROPERTIES
+2019-10-19 17:00:54.260+0000 INFO [o.n.k.i.DiagnosticsManager] TIMEZONE_DATABASE
+2019-10-19 17:00:54.260+0000 INFO [o.n.k.i.DiagnosticsManager] LINUX_SCHEDULERS
+2019-10-19 17:00:54.260+0000 INFO [o.n.k.i.DiagnosticsManager] NETWORK
+2019-10-19 17:00:54.261+0000 INFO [o.n.k.i.DiagnosticsManager] System memory information:
+2019-10-19 17:00:54.263+0000 INFO [o.n.k.i.DiagnosticsManager] Total Physical memory: 15.51 GB
+2019-10-19 17:00:54.263+0000 INFO [o.n.k.i.DiagnosticsManager] Free Physical memory: 9.73 GB
+2019-10-19 17:00:54.263+0000 INFO [o.n.k.i.DiagnosticsManager] Committed virtual memory: 7.60 GB
+2019-10-19 17:00:54.264+0000 INFO [o.n.k.i.DiagnosticsManager] Total swap space: 2.00 GB
+2019-10-19 17:00:54.264+0000 INFO [o.n.k.i.DiagnosticsManager] Free swap space: 2.00 GB
+2019-10-19 17:00:54.264+0000 INFO [o.n.k.i.DiagnosticsManager] JVM memory information:
+2019-10-19 17:00:54.264+0000 INFO [o.n.k.i.DiagnosticsManager] Free  memory: 215.28 MB
+2019-10-19 17:00:54.264+0000 INFO [o.n.k.i.DiagnosticsManager] Total memory: 250.00 MB
+2019-10-19 17:00:54.264+0000 INFO [o.n.k.i.DiagnosticsManager] Max   memory: 3.88 GB
+2019-10-19 17:00:54.267+0000 INFO [o.n.k.i.DiagnosticsManager] Garbage Collector: G1 Young Generation: [G1 Eden Space, G1 Survivor Space, G1 Old Gen]
+2019-10-19 17:00:54.267+0000 INFO [o.n.k.i.DiagnosticsManager] Garbage Collector: G1 Old Generation: [G1 Eden Space, G1 Survivor Space, G1 Old Gen]
+2019-10-19 17:00:54.267+0000 INFO [o.n.k.i.DiagnosticsManager] Memory Pool: Code Cache (Non-heap memory): committed=5.63 MB, used=5.60 MB, max=240.00 MB, threshold=0.00 B
+2019-10-19 17:00:54.267+0000 INFO [o.n.k.i.DiagnosticsManager] Memory Pool: Metaspace (Non-heap memory): committed=15.38 MB, used=14.28 MB, max=-1.00 B, threshold=0.00 B
+2019-10-19 17:00:54.267+0000 INFO [o.n.k.i.DiagnosticsManager] Memory Pool: Compressed Class Space (Non-heap memory): committed=2.13 MB, used=1.84 MB, max=1.00 GB, threshold=0.00 B
+2019-10-19 17:00:54.268+0000 INFO [o.n.k.i.DiagnosticsManager] Memory Pool: G1 Eden Space (Heap memory): committed=156.00 MB, used=17.00 MB, max=-1.00 B, threshold=?
+2019-10-19 17:00:54.268+0000 INFO [o.n.k.i.DiagnosticsManager] Memory Pool: G1 Survivor Space (Heap memory): committed=2.00 MB, used=2.00 MB, max=-1.00 B, threshold=?
+2019-10-19 17:00:54.268+0000 INFO [o.n.k.i.DiagnosticsManager] Memory Pool: G1 Old Gen (Heap memory): committed=92.00 MB, used=14.72 MB, max=3.88 GB, threshold=0.00 B
+2019-10-19 17:00:54.268+0000 INFO [o.n.k.i.DiagnosticsManager] Operating system information:
+2019-10-19 17:00:54.268+0000 INFO [o.n.k.i.DiagnosticsManager] Operating System: Linux; version: 4.15.0-65-generic; arch: amd64; cpus: 8
+2019-10-19 17:00:54.269+0000 INFO [o.n.k.i.DiagnosticsManager] Max number of file descriptors: 4096
+2019-10-19 17:00:54.269+0000 INFO [o.n.k.i.DiagnosticsManager] Number of open file descriptors: 122
+2019-10-19 17:00:54.269+0000 INFO [o.n.k.i.DiagnosticsManager] Process id: 5484@sammo-HP-EliteBook-840-G5
+2019-10-19 17:00:54.269+0000 INFO [o.n.k.i.DiagnosticsManager] Byte order: LITTLE_ENDIAN
+2019-10-19 17:00:54.271+0000 INFO [o.n.k.i.DiagnosticsManager] Local timezone: Europe/London
+2019-10-19 17:00:54.272+0000 INFO [o.n.k.i.DiagnosticsManager] JVM information:
+2019-10-19 17:00:54.272+0000 INFO [o.n.k.i.DiagnosticsManager] VM Name: OpenJDK 64-Bit Server VM
+2019-10-19 17:00:54.272+0000 INFO [o.n.k.i.DiagnosticsManager] VM Vendor: Private Build
+2019-10-19 17:00:54.272+0000 INFO [o.n.k.i.DiagnosticsManager] VM Version: 25.222-b10
+2019-10-19 17:00:54.272+0000 INFO [o.n.k.i.DiagnosticsManager] JIT compiler: HotSpot 64-Bit Tiered Compilers
+2019-10-19 17:00:54.272+0000 INFO [o.n.k.i.DiagnosticsManager] VM Arguments: [-XX:+UseG1GC, -XX:-OmitStackTraceInFastThrow, -XX:+AlwaysPreTouch, -XX:+UnlockExperimentalVMOptions, -XX:+TrustFinalNonStaticFields, -XX:+DisableExplicitGC, -Djdk.tls.ephemeralDHKeySize=2048, -Djdk.tls.rejectClientInitiatedRenegotiation=true, -Dunsupported.dbms.udc.source=tarball, -Dfile.encoding=UTF-8]
+2019-10-19 17:00:54.273+0000 INFO [o.n.k.i.DiagnosticsManager] Java classpath:
+2019-10-19 17:00:54.274+0000 INFO [o.n.k.i.DiagnosticsManager]  [bootstrap] /usr/lib/jvm/java-8-openjdk-amd64/jre/lib/jce.jar
+2019-10-19 17:00:54.274+0000 INFO [o.n.k.i.DiagnosticsManager]  [classpath + loader.0] file:/home/sammo/Workload/gym_app/db/neo4j/development/lib/parboiled-scala_2.11-1.1.7.jar
+2019-10-19 17:00:54.274+0000 INFO [o.n.k.i.DiagnosticsManager]  [classpath + loader.0] file:/home/sammo/Workload/gym_app/db/neo4j/development/lib/scala-library-2.11.12.jar
+2019-10-19 17:00:54.274+0000 INFO [o.n.k.i.DiagnosticsManager]  [classpath + loader.0] file:/home/sammo/Workload/gym_app/db/neo4j/development/lib/neo4j-cypher-compiler-3.1-3.1.8.jar
+2019-10-19 17:00:54.274+0000 INFO [o.n.k.i.DiagnosticsManager]  [classpath + loader.0] file:/home/sammo/Workload/gym_app/db/neo4j/development/lib/lucene-codecs-5.5.5.jar
+2019-10-19 17:00:54.274+0000 INFO [o.n.k.i.DiagnosticsManager]  [classpath + loader.0] file:/home/sammo/Workload/gym_app/db/neo4j/development/lib/jsr311-api-1.1.2.r612.jar
+2019-10-19 17:00:54.274+0000 INFO [o.n.k.i.DiagnosticsManager]  [classpath + loader.0] file:/home/sammo/Workload/gym_app/db/neo4j/development/lib/jetty-server-9.4.8.v20171121.jar
+2019-10-19 17:00:54.274+0000 INFO [o.n.k.i.DiagnosticsManager]  [classpath + loader.0] file:/home/sammo/Workload/gym_app/db/neo4j/development/lib/neo4j-cypher-logical-plans-3.3-3.3.5.jar
+2019-10-19 17:00:54.274+0000 INFO [o.n.k.i.DiagnosticsManager]  [loader.1] file:/usr/lib/jvm/java-8-openjdk-amd64/jre/lib/ext/nashorn.jar
+2019-10-19 17:00:54.274+0000 INFO [o.n.k.i.DiagnosticsManager]  [classpath + loader.0] file:/home/sammo/Workload/gym_app/db/neo4j/development/lib/neo4j-bolt-3.4.1.jar
+2019-10-19 17:00:54.274+0000 INFO [o.n.k.i.DiagnosticsManager]  [classpath + loader.0] file:/home/sammo/Workload/gym_app/db/neo4j/development/lib/neo4j-lucene-upgrade-3.4.1.jar
+2019-10-19 17:00:54.274+0000 INFO [o.n.k.i.DiagnosticsManager]  [classpath + loader.0] file:/home/sammo/Workload/gym_app/db/neo4j/development/lib/neo4j-browser-3.1.14.jar
+2019-10-19 17:00:54.275+0000 INFO [o.n.k.i.DiagnosticsManager]  [classpath + loader.0] file:/home/sammo/Workload/gym_app/db/neo4j/development/lib/commons-io-2.6.jar
+2019-10-19 17:00:54.275+0000 INFO [o.n.k.i.DiagnosticsManager]  [classpath + loader.0] file:/home/sammo/Workload/gym_app/db/neo4j/development/lib/jetty-http-9.4.8.v20171121.jar
+2019-10-19 17:00:54.275+0000 INFO [o.n.k.i.DiagnosticsManager]  [classpath + loader.0] file:/home/sammo/Workload/gym_app/db/neo4j/development/lib/rhino-1.7.9.jar
+2019-10-19 17:00:54.275+0000 INFO [o.n.k.i.DiagnosticsManager]  [classpath + loader.0] file:/home/sammo/Workload/gym_app/db/neo4j/development/lib/neo4j-jmx-3.4.1.jar
+2019-10-19 17:00:54.275+0000 INFO [o.n.k.i.DiagnosticsManager]  [classpath + loader.0] file:/home/sammo/Workload/gym_app/db/neo4j/development/lib/neo4j-cypher-frontend-3.1-3.1.8.jar
+2019-10-19 17:00:54.275+0000 INFO [o.n.k.i.DiagnosticsManager]  [classpath + loader.0] file:/home/sammo/Workload/gym_app/db/neo4j/development/lib/neo4j-common-3.4.1.jar
+2019-10-19 17:00:54.275+0000 INFO [o.n.k.i.DiagnosticsManager]  [classpath + loader.0] file:/home/sammo/Workload/gym_app/db/neo4j/development/lib/concurrentlinkedhashmap-lru-1.4.2.jar
+2019-10-19 17:00:54.275+0000 INFO [o.n.k.i.DiagnosticsManager]  [classpath + loader.0] file:/home/sammo/Workload/gym_app/db/neo4j/development/lib/neo4j-cypher-ir-3.4-3.4.1.jar
+2019-10-19 17:00:54.275+0000 INFO [o.n.k.i.DiagnosticsManager]  [classpath + loader.0] file:/home/sammo/Workload/gym_app/db/neo4j/development/lib/neo4j-server-3.4.1.jar
+2019-10-19 17:00:54.275+0000 INFO [o.n.k.i.DiagnosticsManager]  [classpath + loader.0] file:/home/sammo/Workload/gym_app/db/neo4j/development/plugins/*
+2019-10-19 17:00:54.275+0000 INFO [o.n.k.i.DiagnosticsManager]  [classpath + loader.0] file:/home/sammo/Workload/gym_app/db/neo4j/development/lib/jetty-security-9.4.8.v20171121.jar
+2019-10-19 17:00:54.275+0000 INFO [o.n.k.i.DiagnosticsManager]  [classpath + loader.0] file:/home/sammo/Workload/gym_app/db/neo4j/development/lib/javax.servlet-api-3.1.0.jar
+2019-10-19 17:00:54.275+0000 INFO [o.n.k.i.DiagnosticsManager]  [bootstrap] /usr/lib/jvm/java-8-openjdk-amd64/jre/lib/jsse.jar
+2019-10-19 17:00:54.275+0000 INFO [o.n.k.i.DiagnosticsManager]  [classpath + loader.0] file:/home/sammo/Workload/gym_app/db/neo4j/development/lib/neo4j-consistency-check-3.4.1.jar
+2019-10-19 17:00:54.275+0000 INFO [o.n.k.i.DiagnosticsManager]  [classpath + loader.0] file:/home/sammo/Workload/gym_app/db/neo4j/development/lib/neo4j-cypher-3.4.1.jar
+2019-10-19 17:00:54.275+0000 INFO [o.n.k.i.DiagnosticsManager]  [loader.1] file:/usr/lib/jvm/java-8-openjdk-amd64/jre/lib/ext/localedata.jar
+2019-10-19 17:00:54.275+0000 INFO [o.n.k.i.DiagnosticsManager]  [classpath + loader.0] file:/home/sammo/Workload/gym_app/db/neo4j/development/lib/jline-2.12.jar
+2019-10-19 17:00:54.275+0000 INFO [o.n.k.i.DiagnosticsManager]  [classpath + loader.0] file:/home/sammo/Workload/gym_app/db/neo4j/development/lib/neo4j-graphdb-api-3.4.1.jar
+2019-10-19 17:00:54.276+0000 INFO [o.n.k.i.DiagnosticsManager]  [loader.1] file:/usr/lib/jvm/java-8-openjdk-amd64/jre/lib/ext/libatk-wrapper.so
+2019-10-19 17:00:54.276+0000 INFO [o.n.k.i.DiagnosticsManager]  [classpath + loader.0] file:/home/sammo/Workload/gym_app/db/neo4j/development/lib/neo4j-cypher-frontend-3.3-3.3.5.jar
+2019-10-19 17:00:54.276+0000 INFO [o.n.k.i.DiagnosticsManager]  [classpath + loader.0] file:/home/sammo/Workload/gym_app/db/neo4j/development/lib/scala-reflect-2.11.12.jar
+2019-10-19 17:00:54.276+0000 INFO [o.n.k.i.DiagnosticsManager]  [classpath + loader.0] file:/home/sammo/Workload/gym_app/db/neo4j/development/lib/server-api-3.4.1.jar
+2019-10-19 17:00:54.276+0000 INFO [o.n.k.i.DiagnosticsManager]  [classpath + loader.0] file:/home/sammo/Workload/gym_app/db/neo4j/development/lib/neo4j-cypher-planner-spi-3.4-3.4.1.jar
+2019-10-19 17:00:54.276+0000 INFO [o.n.k.i.DiagnosticsManager]  [classpath + loader.0] file:/home/sammo/Workload/gym_app/db/neo4j/development/lib/neo4j-command-line-3.4.1.jar
+2019-10-19 17:00:54.276+0000 INFO [o.n.k.i.DiagnosticsManager]  [loader.1] file:/usr/lib/jvm/java-8-openjdk-amd64/jre/lib/ext/cldrdata.jar
+2019-10-19 17:00:54.276+0000 INFO [o.n.k.i.DiagnosticsManager]  [bootstrap] /usr/lib/jvm/java-8-openjdk-amd64/jre/classes
+2019-10-19 17:00:54.276+0000 INFO [o.n.k.i.DiagnosticsManager]  [classpath + loader.0] file:/home/sammo/Workload/gym_app/db/neo4j/development/lib/commons-configuration-1.10.jar
+2019-10-19 17:00:54.276+0000 INFO [o.n.k.i.DiagnosticsManager]  [classpath + loader.0] file:/home/sammo/Workload/gym_app/db/neo4j/development/lib/neo4j-codegen-3.4.1.jar
+2019-10-19 17:00:54.276+0000 INFO [o.n.k.i.DiagnosticsManager]  [classpath + loader.0] file:/home/sammo/Workload/gym_app/db/neo4j/development/lib/opencsv-2.3.jar
+2019-10-19 17:00:54.276+0000 INFO [o.n.k.i.DiagnosticsManager]  [classpath + loader.0] file:/home/sammo/Workload/gym_app/db/neo4j/development/lib/neo4j-graph-algo-3.4.1.jar
+2019-10-19 17:00:54.276+0000 INFO [o.n.k.i.DiagnosticsManager]  [classpath + loader.0] file:/home/sammo/Workload/gym_app/db/neo4j/development/lib/bcpkix-jdk15on-1.59.jar
+2019-10-19 17:00:54.276+0000 INFO [o.n.k.i.DiagnosticsManager]  [classpath + loader.0] file:/home/sammo/Workload/gym_app/db/neo4j/development/lib/neo4j-cypher-util-3.4-3.4.1.jar
+2019-10-19 17:00:54.276+0000 INFO [o.n.k.i.DiagnosticsManager]  [classpath + loader.0] file:/home/sammo/Workload/gym_app/db/neo4j/development/lib/commons-lang3-3.7.jar
+2019-10-19 17:00:54.276+0000 INFO [o.n.k.i.DiagnosticsManager]  [classpath + loader.0] file:/home/sammo/Workload/gym_app/db/neo4j/development/lib/commons-logging-1.1.1.jar
+2019-10-19 17:00:54.276+0000 INFO [o.n.k.i.DiagnosticsManager]  [classpath + loader.0] file:/home/sammo/Workload/gym_app/db/neo4j/development/lib/openCypher-frontend-1-3.4.1.jar
+2019-10-19 17:00:54.276+0000 INFO [o.n.k.i.DiagnosticsManager]  [classpath + loader.0] file:/home/sammo/Workload/gym_app/db/neo4j/development/lib/lucene-analyzers-common-5.5.5.jar
+2019-10-19 17:00:54.276+0000 INFO [o.n.k.i.DiagnosticsManager]  [classpath + loader.0] file:/home/sammo/Workload/gym_app/db/neo4j/development/lib/neo4j-ssl-3.4.1.jar
+2019-10-19 17:00:54.277+0000 INFO [o.n.k.i.DiagnosticsManager]  [classpath + loader.0] file:/home/sammo/Workload/gym_app/db/neo4j/development/plugins/
+2019-10-19 17:00:54.277+0000 INFO [o.n.k.i.DiagnosticsManager]  [classpath + loader.0] file:/home/sammo/Workload/gym_app/db/neo4j/development/lib/neo4j-udc-3.4.1.jar
+2019-10-19 17:00:54.277+0000 INFO [o.n.k.i.DiagnosticsManager]  [classpath + loader.0] file:/home/sammo/Workload/gym_app/db/neo4j/development/lib/neo4j-values-3.4.1.jar
+2019-10-19 17:00:54.277+0000 INFO [o.n.k.i.DiagnosticsManager]  [classpath + loader.0] file:/home/sammo/Workload/gym_app/db/neo4j/development/lib/objenesis-2.6.jar
+2019-10-19 17:00:54.277+0000 INFO [o.n.k.i.DiagnosticsManager]  [classpath + loader.0] file:/home/sammo/Workload/gym_app/db/neo4j/development/lib/WMI4Java-1.6.1.jar
+2019-10-19 17:00:54.277+0000 INFO [o.n.k.i.DiagnosticsManager]  [classpath + loader.0] file:/home/sammo/Workload/gym_app/db/neo4j/development/lib/jetty-servlet-9.4.8.v20171121.jar
+2019-10-19 17:00:54.277+0000 INFO [o.n.k.i.DiagnosticsManager]  [classpath + loader.0] file:/home/sammo/Workload/gym_app/db/neo4j/development/lib/neo4j-unsafe-3.4.1.jar
+2019-10-19 17:00:54.277+0000 INFO [o.n.k.i.DiagnosticsManager]  [classpath + loader.0] file:/home/sammo/Workload/gym_app/db/neo4j/development/lib/neo4j-cypher-compiler-3.3-3.3.5.jar
+2019-10-19 17:00:54.277+0000 INFO [o.n.k.i.DiagnosticsManager]  [classpath + loader.0] file:/home/sammo/Workload/gym_app/db/neo4j/development/lib/neo4j-cypher-compiler-2.3-2.3.12.jar
+2019-10-19 17:00:54.277+0000 INFO [o.n.k.i.DiagnosticsManager]  [classpath + loader.0] file:/home/sammo/Workload/gym_app/db/neo4j/development/lib/neo4j-io-3.4.1.jar
+2019-10-19 17:00:54.277+0000 INFO [o.n.k.i.DiagnosticsManager]  [classpath + loader.0] file:/home/sammo/Workload/gym_app/db/neo4j/development/lib/neo4j-graph-matching-3.1.6.jar
+2019-10-19 17:00:54.277+0000 INFO [o.n.k.i.DiagnosticsManager]  [classpath + loader.0] file:/home/sammo/Workload/gym_app/db/neo4j/development/lib/neo4j-collections-3.4.1.jar
+2019-10-19 17:00:54.277+0000 INFO [o.n.k.i.DiagnosticsManager]  [classpath + loader.0] file:/home/sammo/Workload/gym_app/db/neo4j/development/lib/jPowerShell-1.9.jar
+2019-10-19 17:00:54.277+0000 INFO [o.n.k.i.DiagnosticsManager]  [classpath + loader.0] file:/home/sammo/Workload/gym_app/db/neo4j/development/lib/jersey-servlet-1.19.3.jar
+2019-10-19 17:00:54.277+0000 INFO [o.n.k.i.DiagnosticsManager]  [loader.1] file:/usr/lib/jvm/java-8-openjdk-amd64/jre/lib/ext/java-atk-wrapper.jar
+2019-10-19 17:00:54.277+0000 INFO [o.n.k.i.DiagnosticsManager]  [classpath + loader.0] file:/home/sammo/Workload/gym_app/db/neo4j/development/lib/jersey-server-1.19.3.jar
+2019-10-19 17:00:54.278+0000 INFO [o.n.k.i.DiagnosticsManager]  [classpath + loader.0] file:/home/sammo/Workload/gym_app/db/neo4j/development/lib/netty-all-4.1.24.Final.jar
+2019-10-19 17:00:54.278+0000 INFO [o.n.k.i.DiagnosticsManager]  [classpath + loader.0] file:/home/sammo/Workload/gym_app/db/neo4j/development/conf/
+2019-10-19 17:00:54.278+0000 INFO [o.n.k.i.DiagnosticsManager]  [loader.1] file:/usr/lib/jvm/java-8-openjdk-amd64/jre/lib/ext/icedtea-sound.jar
+2019-10-19 17:00:54.278+0000 INFO [o.n.k.i.DiagnosticsManager]  [classpath + loader.0] file:/home/sammo/Workload/gym_app/db/neo4j/development/lib/neo4j-import-tool-3.4.1.jar
+2019-10-19 17:00:54.278+0000 INFO [o.n.k.i.DiagnosticsManager]  [classpath + loader.0] file:/home/sammo/Workload/gym_app/db/neo4j/development/lib/jackson-core-asl-1.9.13.jar
+2019-10-19 17:00:54.278+0000 INFO [o.n.k.i.DiagnosticsManager]  [classpath + loader.0] file:/home/sammo/Workload/gym_app/db/neo4j/development/lib/neo4j-primitive-collections-3.4.1.jar
+2019-10-19 17:00:54.278+0000 INFO [o.n.k.i.DiagnosticsManager]  [classpath + loader.0] file:/home/sammo/Workload/gym_app/db/neo4j/development/lib/neo4j-index-3.4.1.jar
+2019-10-19 17:00:54.278+0000 INFO [o.n.k.i.DiagnosticsManager]  [loader.1] file:/usr/lib/jvm/java-8-openjdk-amd64/jre/lib/ext/sunjce_provider.jar
+2019-10-19 17:00:54.278+0000 INFO [o.n.k.i.DiagnosticsManager]  [classpath + loader.0] file:/home/sammo/Workload/gym_app/db/neo4j/development/lib/neo4j-configuration-3.4.1.jar
+2019-10-19 17:00:54.278+0000 INFO [o.n.k.i.DiagnosticsManager]  [bootstrap] /usr/lib/jvm/java-8-openjdk-amd64/jre/lib/sunrsasign.jar
+2019-10-19 17:00:54.278+0000 INFO [o.n.k.i.DiagnosticsManager]  [classpath + loader.0] file:/home/sammo/Workload/gym_app/db/neo4j/development/lib/neo4j-kernel-api-3.4.1.jar
+2019-10-19 17:00:54.278+0000 INFO [o.n.k.i.DiagnosticsManager]  [classpath + loader.0] file:/home/sammo/Workload/gym_app/db/neo4j/development/lib/jackson-jaxrs-1.9.13.jar
+2019-10-19 17:00:54.278+0000 INFO [o.n.k.i.DiagnosticsManager]  [classpath + loader.0] file:/home/sammo/Workload/gym_app/db/neo4j/development/lib/commons-compress-1.16.1.jar
+2019-10-19 17:00:54.278+0000 INFO [o.n.k.i.DiagnosticsManager]  [classpath + loader.0] file:/home/sammo/Workload/gym_app/db/neo4j/development/lib/neo4j-csv-3.4.1.jar
+2019-10-19 17:00:54.278+0000 INFO [o.n.k.i.DiagnosticsManager]  [classpath + loader.0] file:/home/sammo/Workload/gym_app/db/neo4j/development/lib/commons-lang-2.6.jar
+2019-10-19 17:00:54.278+0000 INFO [o.n.k.i.DiagnosticsManager]  [classpath + loader.0] file:/home/sammo/Workload/gym_app/db/neo4j/development/lib/neo4j-cypher-logical-plans-3.4-3.4.1.jar
+2019-10-19 17:00:54.278+0000 INFO [o.n.k.i.DiagnosticsManager]  [classpath + loader.0] file:/home/sammo/Workload/gym_app/db/neo4j/development/lib/lucene-core-5.5.5.jar
+2019-10-19 17:00:54.278+0000 INFO [o.n.k.i.DiagnosticsManager]  [classpath + loader.0] file:/home/sammo/Workload/gym_app/db/neo4j/development/lib/lucene-queryparser-5.5.5.jar
+2019-10-19 17:00:54.278+0000 INFO [o.n.k.i.DiagnosticsManager]  [classpath + loader.0] file:/home/sammo/Workload/gym_app/db/neo4j/development/lib/neo4j-procedure-api-3.4.1.jar
+2019-10-19 17:00:54.278+0000 INFO [o.n.k.i.DiagnosticsManager]  [classpath + loader.0] file:/home/sammo/Workload/gym_app/db/neo4j/development/lib/jetty-util-9.4.8.v20171121.jar
+2019-10-19 17:00:54.278+0000 INFO [o.n.k.i.DiagnosticsManager]  [classpath + loader.0] file:/home/sammo/Workload/gym_app/db/neo4j/development/lib/neo4j-resource-3.4.1.jar
+2019-10-19 17:00:54.279+0000 INFO [o.n.k.i.DiagnosticsManager]  [loader.1] file:/usr/lib/jvm/java-8-openjdk-amd64/jre/lib/ext/jaccess.jar
+2019-10-19 17:00:54.279+0000 INFO [o.n.k.i.DiagnosticsManager]  [classpath + loader.0] file:/home/sammo/Workload/gym_app/db/neo4j/development/lib/neo4j-cypher-ir-3.3-3.3.5.jar
+2019-10-19 17:00:54.279+0000 INFO [o.n.k.i.DiagnosticsManager]  [loader.1] file:/usr/lib/jvm/java-8-openjdk-amd64/jre/lib/ext/sunpkcs11.jar
+2019-10-19 17:00:54.279+0000 INFO [o.n.k.i.DiagnosticsManager]  [classpath + loader.0] file:/home/sammo/Workload/gym_app/db/neo4j/development/lib/neo4j-cypher-runtime-util-3.4.1.jar
+2019-10-19 17:00:54.279+0000 INFO [o.n.k.i.DiagnosticsManager]  [classpath + loader.0] file:/home/sammo/Workload/gym_app/db/neo4j/development/lib/neo4j-cypher-interpreted-runtime-3.4.1.jar
+2019-10-19 17:00:54.279+0000 INFO [o.n.k.i.DiagnosticsManager]  [classpath + loader.0] file:/home/sammo/Workload/gym_app/db/neo4j/development/lib/jetty-webapp-9.4.8.v20171121.jar
+2019-10-19 17:00:54.279+0000 INFO [o.n.k.i.DiagnosticsManager]  [classpath + loader.0] file:/home/sammo/Workload/gym_app/db/neo4j/development/lib/neo4j-cypher-planner-3.4-3.4.1.jar
+2019-10-19 17:00:54.279+0000 INFO [o.n.k.i.DiagnosticsManager]  [classpath + loader.0] file:/home/sammo/Workload/gym_app/db/neo4j/development/lib/caffeine-2.6.2.jar
+2019-10-19 17:00:54.279+0000 INFO [o.n.k.i.DiagnosticsManager]  [loader.1] file:/usr/lib/jvm/java-8-openjdk-amd64/jre/lib/ext/sunec.jar
+2019-10-19 17:00:54.279+0000 INFO [o.n.k.i.DiagnosticsManager]  [bootstrap] /usr/lib/jvm/java-8-openjdk-amd64/jre/lib/jfr.jar
+2019-10-19 17:00:54.279+0000 INFO [o.n.k.i.DiagnosticsManager]  [classpath + loader.0] file:/home/sammo/Workload/gym_app/db/neo4j/development/lib/jetty-xml-9.4.8.v20171121.jar
+2019-10-19 17:00:54.279+0000 INFO [o.n.k.i.DiagnosticsManager]  [classpath + loader.0] file:/home/sammo/Workload/gym_app/db/neo4j/development/lib/neo4j-dbms-3.4.1.jar
+2019-10-19 17:00:54.279+0000 INFO [o.n.k.i.DiagnosticsManager]  [classpath + loader.0] file:/home/sammo/Workload/gym_app/db/neo4j/development/lib/neo4j-logging-3.4.1.jar
+2019-10-19 17:00:54.279+0000 INFO [o.n.k.i.DiagnosticsManager]  [classpath + loader.0] file:/home/sammo/Workload/gym_app/db/neo4j/development/lib/neo4j-spatial-index-3.4.1.jar
+2019-10-19 17:00:54.279+0000 INFO [o.n.k.i.DiagnosticsManager]  [classpath + loader.0] file:/home/sammo/Workload/gym_app/db/neo4j/development/lib/neo4j-kernel-3.4.1.jar
+2019-10-19 17:00:54.279+0000 INFO [o.n.k.i.DiagnosticsManager]  [loader.1] file:/usr/lib/jvm/java-8-openjdk-amd64/jre/lib/ext/zipfs.jar
+2019-10-19 17:00:54.279+0000 INFO [o.n.k.i.DiagnosticsManager]  [classpath + loader.0] file:/home/sammo/Workload/gym_app/db/neo4j/development/lib/bcprov-jdk15on-1.59.jar
+2019-10-19 17:00:54.279+0000 INFO [o.n.k.i.DiagnosticsManager]  [classpath + loader.0] file:/home/sammo/Workload/gym_app/db/neo4j/development/lib/jackson-mapper-asl-1.9.13.jar
+2019-10-19 17:00:54.279+0000 INFO [o.n.k.i.DiagnosticsManager]  [bootstrap] /usr/lib/jvm/java-8-openjdk-amd64/jre/lib/resources.jar
+2019-10-19 17:00:54.279+0000 INFO [o.n.k.i.DiagnosticsManager]  [classpath + loader.0] file:/home/sammo/Workload/gym_app/db/neo4j/development/lib/neo4j-cypher-frontend-2.3-2.3.12.jar
+2019-10-19 17:00:54.279+0000 INFO [o.n.k.i.DiagnosticsManager]  [classpath + loader.0] file:/home/sammo/Workload/gym_app/db/neo4j/development/lib/neo4j-lucene-index-3.4.1.jar
+2019-10-19 17:00:54.280+0000 INFO [o.n.k.i.DiagnosticsManager]  [classpath + loader.0] file:/home/sammo/Workload/gym_app/db/neo4j/development/lib/neo4j-shell-3.4.1.jar
+2019-10-19 17:00:54.280+0000 INFO [o.n.k.i.DiagnosticsManager]  [classpath + loader.0] file:/home/sammo/Workload/gym_app/db/neo4j/development/lib/parboiled-core-1.1.7.jar
+2019-10-19 17:00:54.280+0000 INFO [o.n.k.i.DiagnosticsManager]  [loader.1] file:/usr/lib/jvm/java-8-openjdk-amd64/jre/lib/ext/dnsns.jar
+2019-10-19 17:00:54.280+0000 INFO [o.n.k.i.DiagnosticsManager]  [classpath + loader.0] file:/home/sammo/Workload/gym_app/db/neo4j/development/lib/jersey-core-1.19.3.jar
+2019-10-19 17:00:54.280+0000 INFO [o.n.k.i.DiagnosticsManager]  [classpath + loader.0] file:/home/sammo/Workload/gym_app/db/neo4j/development/lib/neo4j-security-3.4.1.jar
+2019-10-19 17:00:54.280+0000 INFO [o.n.k.i.DiagnosticsManager]  [classpath + loader.0] file:/home/sammo/Workload/gym_app/db/neo4j/development/lib/jetty-io-9.4.8.v20171121.jar
+2019-10-19 17:00:54.280+0000 INFO [o.n.k.i.DiagnosticsManager]  [classpath + loader.0] file:/home/sammo/Workload/gym_app/db/neo4j/development/lib/neo4j-cypher-expression-3.4-3.4.1.jar
+2019-10-19 17:00:54.280+0000 INFO [o.n.k.i.DiagnosticsManager]  [bootstrap] /usr/lib/jvm/java-8-openjdk-amd64/jre/lib/charsets.jar
+2019-10-19 17:00:54.280+0000 INFO [o.n.k.i.DiagnosticsManager]  [classpath + loader.0] file:/home/sammo/Workload/gym_app/db/neo4j/development/lib/jProcesses-1.6.4.jar
+2019-10-19 17:00:54.280+0000 INFO [o.n.k.i.DiagnosticsManager]  [bootstrap] /usr/lib/jvm/java-8-openjdk-amd64/jre/lib/rt.jar
+2019-10-19 17:00:54.280+0000 INFO [o.n.k.i.DiagnosticsManager]  [classpath + loader.0] file:/home/sammo/Workload/gym_app/db/neo4j/development/lib/commons-text-1.3.jar
+2019-10-19 17:00:54.280+0000 INFO [o.n.k.i.DiagnosticsManager] Library path:
+2019-10-19 17:00:54.280+0000 INFO [o.n.k.i.DiagnosticsManager] /usr/java/packages/lib/amd64
+2019-10-19 17:00:54.280+0000 INFO [o.n.k.i.DiagnosticsManager] /usr/lib/x86_64-linux-gnu/jni
+2019-10-19 17:00:54.280+0000 INFO [o.n.k.i.DiagnosticsManager] /lib/x86_64-linux-gnu
+2019-10-19 17:00:54.280+0000 INFO [o.n.k.i.DiagnosticsManager] /usr/lib/x86_64-linux-gnu
+2019-10-19 17:00:54.280+0000 INFO [o.n.k.i.DiagnosticsManager] /usr/lib/jni
+2019-10-19 17:00:54.280+0000 INFO [o.n.k.i.DiagnosticsManager] /lib
+2019-10-19 17:00:54.280+0000 INFO [o.n.k.i.DiagnosticsManager] /usr/lib
+2019-10-19 17:00:54.281+0000 INFO [o.n.k.i.DiagnosticsManager] System.properties:
+2019-10-19 17:00:54.281+0000 INFO [o.n.k.i.DiagnosticsManager] sun.boot.library.path = /usr/lib/jvm/java-8-openjdk-amd64/jre/lib/amd64
+2019-10-19 17:00:54.281+0000 INFO [o.n.k.i.DiagnosticsManager] jdk.tls.rejectClientInitiatedRenegotiation = true
+2019-10-19 17:00:54.281+0000 INFO [o.n.k.i.DiagnosticsManager] path.separator = :
+2019-10-19 17:00:54.281+0000 INFO [o.n.k.i.DiagnosticsManager] file.encoding.pkg = sun.io
+2019-10-19 17:00:54.281+0000 INFO [o.n.k.i.DiagnosticsManager] user.country = GB
+2019-10-19 17:00:54.281+0000 INFO [o.n.k.i.DiagnosticsManager] sun.java.launcher = SUN_STANDARD
+2019-10-19 17:00:54.281+0000 INFO [o.n.k.i.DiagnosticsManager] sun.os.patch.level = unknown
+2019-10-19 17:00:54.281+0000 INFO [o.n.k.i.DiagnosticsManager] user.dir = /home/sammo/Workload/gym_app
+2019-10-19 17:00:54.281+0000 INFO [o.n.k.i.DiagnosticsManager] sun.jnu.encoding = UTF-8
+2019-10-19 17:00:54.281+0000 INFO [o.n.k.i.DiagnosticsManager] unsupported.dbms.udc.source = tarball
+2019-10-19 17:00:54.281+0000 INFO [o.n.k.i.DiagnosticsManager] sun.management.compiler = HotSpot 64-Bit Tiered Compilers
+2019-10-19 17:00:54.281+0000 INFO [o.n.k.i.DiagnosticsManager] user.home = /home/sammo
+2019-10-19 17:00:54.281+0000 INFO [o.n.k.i.DiagnosticsManager] user.timezone = Europe/London
+2019-10-19 17:00:54.281+0000 INFO [o.n.k.i.DiagnosticsManager] file.encoding = UTF-8
+2019-10-19 17:00:54.281+0000 INFO [o.n.k.i.DiagnosticsManager] user.name = sammo
+2019-10-19 17:00:54.281+0000 INFO [o.n.k.i.DiagnosticsManager] sun.java.command = org.neo4j.server.CommunityEntryPoint --home-dir=/home/sammo/Workload/gym_app/db/neo4j/development --config-dir=/home/sammo/Workload/gym_app/db/neo4j/development/conf
+2019-10-19 17:00:54.281+0000 INFO [o.n.k.i.DiagnosticsManager] sun.arch.data.model = 64
+2019-10-19 17:00:54.281+0000 INFO [o.n.k.i.DiagnosticsManager] user.language = en
+2019-10-19 17:00:54.282+0000 INFO [o.n.k.i.DiagnosticsManager] awt.toolkit = sun.awt.X11.XToolkit
+2019-10-19 17:00:54.282+0000 INFO [o.n.k.i.DiagnosticsManager] jdk.tls.ephemeralDHKeySize = 2048
+2019-10-19 17:00:54.282+0000 INFO [o.n.k.i.DiagnosticsManager] file.separator = /
+2019-10-19 17:00:54.282+0000 INFO [o.n.k.i.DiagnosticsManager] sun.io.unicode.encoding = UnicodeLittle
+2019-10-19 17:00:54.282+0000 INFO [o.n.k.i.DiagnosticsManager] sun.cpu.endian = little
+2019-10-19 17:00:54.282+0000 INFO [o.n.k.i.DiagnosticsManager] sun.desktop = gnome
+2019-10-19 17:00:54.282+0000 INFO [o.n.k.i.DiagnosticsManager] sun.cpu.isalist = 
+2019-10-19 17:00:54.282+0000 INFO [o.n.k.i.DiagnosticsManager] (IANA) TimeZone Database Version:
+2019-10-19 17:00:54.304+0000 INFO [o.n.k.i.DiagnosticsManager]   TimeZone version: 2019a (available for 600 zone identifiers)
+2019-10-19 17:00:54.304+0000 INFO [o.n.k.i.DiagnosticsManager] Linux scheduler information:
+2019-10-19 17:00:54.310+0000 INFO [o.n.k.i.DiagnosticsManager] [none] 
+2019-10-19 17:00:54.311+0000 INFO [o.n.k.i.DiagnosticsManager] [none] 
+2019-10-19 17:00:54.311+0000 INFO [o.n.k.i.DiagnosticsManager] [none] 
+2019-10-19 17:00:54.311+0000 INFO [o.n.k.i.DiagnosticsManager] [none] 
+2019-10-19 17:00:54.311+0000 INFO [o.n.k.i.DiagnosticsManager] [none] 
+2019-10-19 17:00:54.311+0000 INFO [o.n.k.i.DiagnosticsManager] [none] 
+2019-10-19 17:00:54.311+0000 INFO [o.n.k.i.DiagnosticsManager] [none] 
+2019-10-19 17:00:54.312+0000 INFO [o.n.k.i.DiagnosticsManager] [none] 
+2019-10-19 17:00:54.312+0000 INFO [o.n.k.i.DiagnosticsManager] [none] 
+2019-10-19 17:00:54.312+0000 INFO [o.n.k.i.DiagnosticsManager] [none] 
+2019-10-19 17:00:54.312+0000 INFO [o.n.k.i.DiagnosticsManager] [none] 
+2019-10-19 17:00:54.312+0000 INFO [o.n.k.i.DiagnosticsManager] [none] 
+2019-10-19 17:00:54.312+0000 INFO [o.n.k.i.DiagnosticsManager] [none] 
+2019-10-19 17:00:54.313+0000 INFO [o.n.k.i.DiagnosticsManager] [none] 
+2019-10-19 17:00:54.313+0000 INFO [o.n.k.i.DiagnosticsManager] noop deadline [cfq] 
+2019-10-19 17:00:54.313+0000 INFO [o.n.k.i.DiagnosticsManager] [none] 
+2019-10-19 17:00:54.313+0000 INFO [o.n.k.i.DiagnosticsManager] [none] 
+2019-10-19 17:00:54.313+0000 INFO [o.n.k.i.DiagnosticsManager] [none] 
+2019-10-19 17:00:54.313+0000 INFO [o.n.k.i.DiagnosticsManager] [none] 
+2019-10-19 17:00:54.313+0000 INFO [o.n.k.i.DiagnosticsManager] [none] 
+2019-10-19 17:00:54.313+0000 INFO [o.n.k.i.DiagnosticsManager] Network information:
+2019-10-19 17:00:54.314+0000 INFO [o.n.k.i.DiagnosticsManager] Interface br-c614a7913d56:
+2019-10-19 17:00:54.314+0000 INFO [o.n.k.i.DiagnosticsManager]     address: 172.30.0.1
+2019-10-19 17:00:54.315+0000 INFO [o.n.k.i.DiagnosticsManager] Interface br-c0dcdfdddafb:
+2019-10-19 17:00:54.315+0000 INFO [o.n.k.i.DiagnosticsManager]     address: 172.22.16.1
+2019-10-19 17:00:54.315+0000 INFO [o.n.k.i.DiagnosticsManager] Interface br-afcb2fc80723:
+2019-10-19 17:00:54.315+0000 INFO [o.n.k.i.DiagnosticsManager]     address: 172.31.0.1
+2019-10-19 17:00:54.315+0000 INFO [o.n.k.i.DiagnosticsManager] Interface docker0:
+2019-10-19 17:00:54.315+0000 INFO [o.n.k.i.DiagnosticsManager]     address: 172.17.0.1
+2019-10-19 17:00:54.315+0000 INFO [o.n.k.i.DiagnosticsManager] Interface br-87b0e862035b:
+2019-10-19 17:00:54.315+0000 INFO [o.n.k.i.DiagnosticsManager]     address: 172.22.13.1
+2019-10-19 17:00:54.315+0000 INFO [o.n.k.i.DiagnosticsManager] Interface br-7266773b3121:
+2019-10-19 17:00:54.315+0000 INFO [o.n.k.i.DiagnosticsManager]     address: 172.22.15.1
+2019-10-19 17:00:54.315+0000 INFO [o.n.k.i.DiagnosticsManager] Interface br-23ebbb90aceb:
+2019-10-19 17:00:54.315+0000 INFO [o.n.k.i.DiagnosticsManager]     address: 172.22.14.1
+2019-10-19 17:00:54.315+0000 INFO [o.n.k.i.DiagnosticsManager] Interface br-04e92565538a:
+2019-10-19 17:00:54.315+0000 INFO [o.n.k.i.DiagnosticsManager]     address: 172.20.0.1
+2019-10-19 17:00:54.315+0000 INFO [o.n.k.i.DiagnosticsManager] Interface wlp1s0:
+2019-10-19 17:00:54.315+0000 INFO [o.n.k.i.DiagnosticsManager]     address: fe80:0:0:0:315a:fb95:2d9d:999%wlp1s0
+2019-10-19 17:00:54.315+0000 INFO [o.n.k.i.DiagnosticsManager]     address: 192.168.0.10
+2019-10-19 17:00:54.315+0000 INFO [o.n.k.i.DiagnosticsManager] Interface lo:
+2019-10-19 17:00:54.315+0000 INFO [o.n.k.i.DiagnosticsManager]     address: 0:0:0:0:0:0:0:1%lo
+2019-10-19 17:00:54.315+0000 INFO [o.n.k.i.DiagnosticsManager]     address: 127.0.0.1
+2019-10-19 17:00:54.315+0000 INFO [o.n.k.i.DiagnosticsManager] --- INITIALIZED diagnostics END ---
+2019-10-19 17:00:54.446+0000 INFO [o.n.b.BoltKernelExtension] Bolt Server extension loaded.
+2019-10-19 17:00:54.686+0000 INFO [o.n.k.i.s.f.RecordFormatSelector] Selected RecordFormat:StandardV3_4[v0.A.9] record format from store /home/sammo/Workload/gym_app/db/neo4j/development/data/databases/graph.db
+2019-10-19 17:00:54.707+0000 INFO [o.n.k.i.s.f.RecordFormatSelector] Selected RecordFormat:StandardV3_4[v0.A.9] record format from store /home/sammo/Workload/gym_app/db/neo4j/development/data/databases/graph.db
+2019-10-19 17:00:54.707+0000 INFO [o.n.k.i.s.f.RecordFormatSelector] Format not configured. Selected format from the store: RecordFormat:StandardV3_4[v0.A.9]
+2019-10-19 17:00:55.136+0000 INFO [o.n.k.i.a.i.IndexingService] IndexingService.init: indexes not specifically mentioned above are ONLINE
+2019-10-19 17:00:55.141+0000 INFO [o.n.k.NeoStoreDataSource] No commits found after last check point (which is at LogPosition{logVersion=0, byteOffset=3516378})
+2019-10-19 17:00:55.145+0000 INFO [o.n.k.i.s.DynamicArrayStore] Rebuilding id generator for[/home/sammo/Workload/gym_app/db/neo4j/development/data/databases/graph.db/neostore.nodestore.db.labels] ...
+2019-10-19 17:00:55.146+0000 INFO [o.n.k.i.i.s.f.FusionIndexProvider] Schema index recovery completed: descriptor=Index( UNIQUE, :label[0](property[0]) ), file=/home/sammo/Workload/gym_app/db/neo4j/development/data/databases/graph.db/schema/index/lucene_native-2.0/1/string-1.0/index-1, Number of cleaned crashed pointers=0, Number of pages visited=3, Time spent=2ms
+2019-10-19 17:00:55.149+0000 INFO [o.n.k.i.i.s.f.FusionIndexProvider] Schema index recovery completed: descriptor=Index( UNIQUE, :label[0](property[0]) ), file=/home/sammo/Workload/gym_app/db/neo4j/development/data/databases/graph.db/schema/index/lucene_native-2.0/1/native-1.0/index-1, Number of cleaned crashed pointers=0, Number of pages visited=2, Time spent=3ms
+2019-10-19 17:00:55.150+0000 INFO [o.n.k.i.i.s.f.FusionIndexProvider] Schema index recovery completed: descriptor=Index( UNIQUE, :label[0](property[0]) ), file=/home/sammo/Workload/gym_app/db/neo4j/development/data/databases/graph.db/schema/index/lucene_native-2.0/1/spatial-1.0/1-4326, Number of cleaned crashed pointers=0, Number of pages visited=2, Time spent=1ms
+2019-10-19 17:00:55.152+0000 INFO [o.n.k.i.i.s.f.FusionIndexProvider] Schema index recovery completed: descriptor=Index( UNIQUE, :label[0](property[0]) ), file=/home/sammo/Workload/gym_app/db/neo4j/development/data/databases/graph.db/schema/index/lucene_native-2.0/1/temporal-1.0/date, Number of cleaned crashed pointers=0, Number of pages visited=2, Time spent=2ms
+2019-10-19 17:00:55.153+0000 INFO [o.n.k.i.i.s.f.FusionIndexProvider] Schema index recovery completed: descriptor=Index( UNIQUE, :label[1](property[2]) ), file=/home/sammo/Workload/gym_app/db/neo4j/development/data/databases/graph.db/schema/index/lucene_native-2.0/8/string-1.0/index-8, Number of cleaned crashed pointers=0, Number of pages visited=3, Time spent=1ms
+2019-10-19 17:00:55.154+0000 INFO [o.n.k.i.i.s.f.FusionIndexProvider] Schema index recovery completed: descriptor=Index( UNIQUE, :label[1](property[2]) ), file=/home/sammo/Workload/gym_app/db/neo4j/development/data/databases/graph.db/schema/index/lucene_native-2.0/8/native-1.0/index-8, Number of cleaned crashed pointers=0, Number of pages visited=2, Time spent=1ms
+2019-10-19 17:00:55.155+0000 INFO [o.n.k.i.i.s.f.FusionIndexProvider] Schema index recovery completed: descriptor=Index( UNIQUE, :label[1](property[2]) ), file=/home/sammo/Workload/gym_app/db/neo4j/development/data/databases/graph.db/schema/index/lucene_native-2.0/8/spatial-1.0/1-4326, Number of cleaned crashed pointers=0, Number of pages visited=2, Time spent=0ms
+2019-10-19 17:00:55.155+0000 INFO [o.n.k.i.i.s.f.FusionIndexProvider] Schema index recovery completed: descriptor=Index( UNIQUE, :label[1](property[2]) ), file=/home/sammo/Workload/gym_app/db/neo4j/development/data/databases/graph.db/schema/index/lucene_native-2.0/8/temporal-1.0/date, Number of cleaned crashed pointers=0, Number of pages visited=2, Time spent=0ms
+2019-10-19 17:00:55.157+0000 INFO [o.n.k.i.s.DynamicArrayStore] [/home/sammo/Workload/gym_app/db/neo4j/development/data/databases/graph.db/neostore.nodestore.db.labels] high id=1 (defragged=0)
+2019-10-19 17:00:55.157+0000 INFO [o.n.k.i.s.DynamicArrayStore] /home/sammo/Workload/gym_app/db/neo4j/development/data/databases/graph.db/neostore.nodestore.db.labels rebuild id generator, highId=1 defragged count=0
+2019-10-19 17:00:55.157+0000 INFO [o.n.k.i.s.NodeStore] Rebuilding id generator for[/home/sammo/Workload/gym_app/db/neo4j/development/data/databases/graph.db/neostore.nodestore.db] ...
+2019-10-19 17:00:55.158+0000 INFO [o.n.k.i.i.s.f.FusionIndexProvider] Schema index recovery completed: descriptor=Index( UNIQUE, :label[2](property[2]) ), file=/home/sammo/Workload/gym_app/db/neo4j/development/data/databases/graph.db/schema/index/lucene_native-2.0/15/string-1.0/index-15, Number of cleaned crashed pointers=0, Number of pages visited=21, Time spent=2ms
+2019-10-19 17:00:55.159+0000 INFO [o.n.k.i.i.s.f.FusionIndexProvider] Schema index recovery completed: descriptor=Index( UNIQUE, :label[2](property[2]) ), file=/home/sammo/Workload/gym_app/db/neo4j/development/data/databases/graph.db/schema/index/lucene_native-2.0/15/native-1.0/index-15, Number of cleaned crashed pointers=0, Number of pages visited=2, Time spent=1ms
+2019-10-19 17:00:55.160+0000 INFO [o.n.k.i.i.s.f.FusionIndexProvider] Schema index recovery completed: descriptor=Index( UNIQUE, :label[2](property[2]) ), file=/home/sammo/Workload/gym_app/db/neo4j/development/data/databases/graph.db/schema/index/lucene_native-2.0/15/spatial-1.0/1-4326, Number of cleaned crashed pointers=0, Number of pages visited=2, Time spent=1ms
+2019-10-19 17:00:55.168+0000 INFO [o.n.k.i.s.NodeStore] [/home/sammo/Workload/gym_app/db/neo4j/development/data/databases/graph.db/neostore.nodestore.db] high id=165 (defragged=0)
+2019-10-19 17:00:55.168+0000 INFO [o.n.k.i.s.NodeStore] /home/sammo/Workload/gym_app/db/neo4j/development/data/databases/graph.db/neostore.nodestore.db rebuild id generator, highId=165 defragged count=0
+2019-10-19 17:00:55.168+0000 INFO [o.n.k.i.s.DynamicStringStore] Rebuilding id generator for[/home/sammo/Workload/gym_app/db/neo4j/development/data/databases/graph.db/neostore.propertystore.db.index.keys] ...
+2019-10-19 17:00:55.170+0000 INFO [o.n.k.i.i.s.f.FusionIndexProvider] Schema index recovery completed: descriptor=Index( UNIQUE, :label[2](property[2]) ), file=/home/sammo/Workload/gym_app/db/neo4j/development/data/databases/graph.db/schema/index/lucene_native-2.0/15/temporal-1.0/date, Number of cleaned crashed pointers=0, Number of pages visited=2, Time spent=10ms
+2019-10-19 17:00:55.171+0000 INFO [o.n.k.i.i.s.f.FusionIndexProvider] Schema index recovery completed: descriptor=Index( UNIQUE, :label[3](property[2]) ), file=/home/sammo/Workload/gym_app/db/neo4j/development/data/databases/graph.db/schema/index/lucene_native-2.0/22/string-1.0/index-22, Number of cleaned crashed pointers=0, Number of pages visited=3, Time spent=1ms
+2019-10-19 17:00:55.172+0000 INFO [o.n.k.i.i.s.f.FusionIndexProvider] Schema index recovery completed: descriptor=Index( UNIQUE, :label[3](property[2]) ), file=/home/sammo/Workload/gym_app/db/neo4j/development/data/databases/graph.db/schema/index/lucene_native-2.0/22/native-1.0/index-22, Number of cleaned crashed pointers=0, Number of pages visited=2, Time spent=1ms
+2019-10-19 17:00:55.177+0000 INFO [o.n.k.i.s.DynamicStringStore] [/home/sammo/Workload/gym_app/db/neo4j/development/data/databases/graph.db/neostore.propertystore.db.index.keys] high id=14 (defragged=0)
+2019-10-19 17:00:55.177+0000 INFO [o.n.k.i.s.DynamicStringStore] /home/sammo/Workload/gym_app/db/neo4j/development/data/databases/graph.db/neostore.propertystore.db.index.keys rebuild id generator, highId=14 defragged count=0
+2019-10-19 17:00:55.177+0000 INFO [o.n.k.i.s.PropertyKeyTokenStore] Rebuilding id generator for[/home/sammo/Workload/gym_app/db/neo4j/development/data/databases/graph.db/neostore.propertystore.db.index] ...
+2019-10-19 17:00:55.179+0000 INFO [o.n.k.i.i.s.f.FusionIndexProvider] Schema index recovery completed: descriptor=Index( UNIQUE, :label[3](property[2]) ), file=/home/sammo/Workload/gym_app/db/neo4j/development/data/databases/graph.db/schema/index/lucene_native-2.0/22/spatial-1.0/1-4326, Number of cleaned crashed pointers=0, Number of pages visited=2, Time spent=7ms
+2019-10-19 17:00:55.183+0000 INFO [o.n.k.i.i.s.f.FusionIndexProvider] Schema index recovery completed: descriptor=Index( UNIQUE, :label[3](property[2]) ), file=/home/sammo/Workload/gym_app/db/neo4j/development/data/databases/graph.db/schema/index/lucene_native-2.0/22/temporal-1.0/date, Number of cleaned crashed pointers=0, Number of pages visited=2, Time spent=3ms
+2019-10-19 17:00:55.185+0000 INFO [o.n.k.i.i.s.f.FusionIndexProvider] Schema index recovery completed: descriptor=Index( UNIQUE, :label[1](property[3]) ), file=/home/sammo/Workload/gym_app/db/neo4j/development/data/databases/graph.db/schema/index/lucene_native-2.0/29/string-1.0/index-29, Number of cleaned crashed pointers=0, Number of pages visited=3, Time spent=2ms
+2019-10-19 17:00:55.187+0000 INFO [o.n.k.i.i.s.f.FusionIndexProvider] Schema index recovery completed: descriptor=Index( UNIQUE, :label[1](property[3]) ), file=/home/sammo/Workload/gym_app/db/neo4j/development/data/databases/graph.db/schema/index/lucene_native-2.0/29/native-1.0/index-29, Number of cleaned crashed pointers=0, Number of pages visited=2, Time spent=1ms
+2019-10-19 17:00:55.187+0000 INFO [o.n.k.i.s.PropertyKeyTokenStore] [/home/sammo/Workload/gym_app/db/neo4j/development/data/databases/graph.db/neostore.propertystore.db.index] high id=13 (defragged=0)
+2019-10-19 17:00:55.187+0000 INFO [o.n.k.i.s.PropertyKeyTokenStore] /home/sammo/Workload/gym_app/db/neo4j/development/data/databases/graph.db/neostore.propertystore.db.index rebuild id generator, highId=13 defragged count=0
+2019-10-19 17:00:55.189+0000 INFO [o.n.k.i.s.DynamicStringStore] Rebuilding id generator for[/home/sammo/Workload/gym_app/db/neo4j/development/data/databases/graph.db/neostore.propertystore.db.strings] ...
+2019-10-19 17:00:55.190+0000 INFO [o.n.k.i.i.s.f.FusionIndexProvider] Schema index recovery completed: descriptor=Index( UNIQUE, :label[1](property[3]) ), file=/home/sammo/Workload/gym_app/db/neo4j/development/data/databases/graph.db/schema/index/lucene_native-2.0/29/spatial-1.0/1-4326, Number of cleaned crashed pointers=0, Number of pages visited=2, Time spent=2ms
+2019-10-19 17:00:55.190+0000 INFO [o.n.k.i.i.s.f.FusionIndexProvider] Schema index recovery completed: descriptor=Index( UNIQUE, :label[1](property[3]) ), file=/home/sammo/Workload/gym_app/db/neo4j/development/data/databases/graph.db/schema/index/lucene_native-2.0/29/temporal-1.0/date, Number of cleaned crashed pointers=0, Number of pages visited=2, Time spent=0ms
+2019-10-19 17:00:55.191+0000 INFO [o.n.k.i.i.s.f.FusionIndexProvider] Schema index recovery completed: descriptor=Index( UNIQUE, :label[3](property[3]) ), file=/home/sammo/Workload/gym_app/db/neo4j/development/data/databases/graph.db/schema/index/lucene_native-2.0/39/string-1.0/index-39, Number of cleaned crashed pointers=0, Number of pages visited=3, Time spent=1ms
+2019-10-19 17:00:55.192+0000 INFO [o.n.k.i.i.s.f.FusionIndexProvider] Schema index recovery completed: descriptor=Index( UNIQUE, :label[3](property[3]) ), file=/home/sammo/Workload/gym_app/db/neo4j/development/data/databases/graph.db/schema/index/lucene_native-2.0/39/native-1.0/index-39, Number of cleaned crashed pointers=0, Number of pages visited=2, Time spent=1ms
+2019-10-19 17:00:55.193+0000 INFO [o.n.k.i.i.s.f.FusionIndexProvider] Schema index recovery completed: descriptor=Index( UNIQUE, :label[3](property[3]) ), file=/home/sammo/Workload/gym_app/db/neo4j/development/data/databases/graph.db/schema/index/lucene_native-2.0/39/spatial-1.0/1-4326, Number of cleaned crashed pointers=0, Number of pages visited=2, Time spent=1ms
+2019-10-19 17:00:55.198+0000 INFO [o.n.k.i.i.s.f.FusionIndexProvider] Schema index recovery completed: descriptor=Index( UNIQUE, :label[3](property[3]) ), file=/home/sammo/Workload/gym_app/db/neo4j/development/data/databases/graph.db/schema/index/lucene_native-2.0/39/temporal-1.0/date, Number of cleaned crashed pointers=0, Number of pages visited=2, Time spent=5ms
+2019-10-19 17:00:55.198+0000 INFO [o.n.k.i.s.DynamicStringStore] [/home/sammo/Workload/gym_app/db/neo4j/development/data/databases/graph.db/neostore.propertystore.db.strings] high id=1 (defragged=0)
+2019-10-19 17:00:55.198+0000 INFO [o.n.k.i.s.DynamicStringStore] /home/sammo/Workload/gym_app/db/neo4j/development/data/databases/graph.db/neostore.propertystore.db.strings rebuild id generator, highId=1 defragged count=0
+2019-10-19 17:00:55.198+0000 INFO [o.n.k.i.s.DynamicArrayStore] Rebuilding id generator for[/home/sammo/Workload/gym_app/db/neo4j/development/data/databases/graph.db/neostore.propertystore.db.arrays] ...
+2019-10-19 17:00:55.199+0000 INFO [o.n.k.i.i.s.f.FusionIndexProvider] Schema index recovery completed: descriptor=Index( UNIQUE, :label[4](property[2]) ), file=/home/sammo/Workload/gym_app/db/neo4j/development/data/databases/graph.db/schema/index/lucene_native-2.0/46/string-1.0/index-46, Number of cleaned crashed pointers=0, Number of pages visited=3, Time spent=1ms
+2019-10-19 17:00:55.201+0000 INFO [o.n.k.i.i.s.f.FusionIndexProvider] Schema index recovery completed: descriptor=Index( UNIQUE, :label[4](property[2]) ), file=/home/sammo/Workload/gym_app/db/neo4j/development/data/databases/graph.db/schema/index/lucene_native-2.0/46/native-1.0/index-46, Number of cleaned crashed pointers=0, Number of pages visited=2, Time spent=2ms
+2019-10-19 17:00:55.202+0000 INFO [o.n.k.i.i.s.f.FusionIndexProvider] Schema index recovery completed: descriptor=Index( UNIQUE, :label[4](property[2]) ), file=/home/sammo/Workload/gym_app/db/neo4j/development/data/databases/graph.db/schema/index/lucene_native-2.0/46/spatial-1.0/1-4326, Number of cleaned crashed pointers=0, Number of pages visited=2, Time spent=1ms
+2019-10-19 17:00:55.203+0000 INFO [o.n.k.i.i.s.f.FusionIndexProvider] Schema index recovery completed: descriptor=Index( UNIQUE, :label[4](property[2]) ), file=/home/sammo/Workload/gym_app/db/neo4j/development/data/databases/graph.db/schema/index/lucene_native-2.0/46/temporal-1.0/date, Number of cleaned crashed pointers=0, Number of pages visited=2, Time spent=1ms
+2019-10-19 17:00:55.205+0000 INFO [o.n.k.i.i.l.NativeLabelScanStore] Scan store recovery completed: Number of cleaned crashed pointers: 0 Number of pages visited: 3 Time spent: 1ms
+2019-10-19 17:00:55.207+0000 INFO [o.n.k.i.s.DynamicArrayStore] [/home/sammo/Workload/gym_app/db/neo4j/development/data/databases/graph.db/neostore.propertystore.db.arrays] high id=1 (defragged=0)
+2019-10-19 17:00:55.207+0000 INFO [o.n.k.i.s.DynamicArrayStore] /home/sammo/Workload/gym_app/db/neo4j/development/data/databases/graph.db/neostore.propertystore.db.arrays rebuild id generator, highId=1 defragged count=0
+2019-10-19 17:00:55.207+0000 INFO [o.n.k.i.s.PropertyStore] Rebuilding id generator for[/home/sammo/Workload/gym_app/db/neo4j/development/data/databases/graph.db/neostore.propertystore.db] ...
+2019-10-19 17:00:55.218+0000 INFO [o.n.k.i.s.PropertyStore] [/home/sammo/Workload/gym_app/db/neo4j/development/data/databases/graph.db/neostore.propertystore.db] high id=280 (defragged=0)
+2019-10-19 17:00:55.218+0000 INFO [o.n.k.i.s.PropertyStore] /home/sammo/Workload/gym_app/db/neo4j/development/data/databases/graph.db/neostore.propertystore.db rebuild id generator, highId=280 defragged count=0
+2019-10-19 17:00:55.218+0000 INFO [o.n.k.i.s.RelationshipStore] Rebuilding id generator for[/home/sammo/Workload/gym_app/db/neo4j/development/data/databases/graph.db/neostore.relationshipstore.db] ...
+2019-10-19 17:00:55.229+0000 INFO [o.n.k.i.s.RelationshipStore] [/home/sammo/Workload/gym_app/db/neo4j/development/data/databases/graph.db/neostore.relationshipstore.db] high id=222 (defragged=0)
+2019-10-19 17:00:55.229+0000 INFO [o.n.k.i.s.RelationshipStore] /home/sammo/Workload/gym_app/db/neo4j/development/data/databases/graph.db/neostore.relationshipstore.db rebuild id generator, highId=222 defragged count=0
+2019-10-19 17:00:55.229+0000 INFO [o.n.k.i.s.DynamicStringStore] Rebuilding id generator for[/home/sammo/Workload/gym_app/db/neo4j/development/data/databases/graph.db/neostore.relationshiptypestore.db.names] ...
+2019-10-19 17:00:55.239+0000 INFO [o.n.k.i.s.DynamicStringStore] [/home/sammo/Workload/gym_app/db/neo4j/development/data/databases/graph.db/neostore.relationshiptypestore.db.names] high id=8 (defragged=0)
+2019-10-19 17:00:55.239+0000 INFO [o.n.k.i.s.DynamicStringStore] /home/sammo/Workload/gym_app/db/neo4j/development/data/databases/graph.db/neostore.relationshiptypestore.db.names rebuild id generator, highId=8 defragged count=0
+2019-10-19 17:00:55.239+0000 INFO [o.n.k.i.s.RelationshipTypeTokenStore] Rebuilding id generator for[/home/sammo/Workload/gym_app/db/neo4j/development/data/databases/graph.db/neostore.relationshiptypestore.db] ...
+2019-10-19 17:00:55.248+0000 INFO [o.n.k.i.s.RelationshipTypeTokenStore] [/home/sammo/Workload/gym_app/db/neo4j/development/data/databases/graph.db/neostore.relationshiptypestore.db] high id=7 (defragged=0)
+2019-10-19 17:00:55.248+0000 INFO [o.n.k.i.s.RelationshipTypeTokenStore] /home/sammo/Workload/gym_app/db/neo4j/development/data/databases/graph.db/neostore.relationshiptypestore.db rebuild id generator, highId=7 defragged count=0
+2019-10-19 17:00:55.250+0000 INFO [o.n.k.i.s.DynamicStringStore] Rebuilding id generator for[/home/sammo/Workload/gym_app/db/neo4j/development/data/databases/graph.db/neostore.labeltokenstore.db.names] ...
+2019-10-19 17:00:55.260+0000 INFO [o.n.k.i.s.DynamicStringStore] [/home/sammo/Workload/gym_app/db/neo4j/development/data/databases/graph.db/neostore.labeltokenstore.db.names] high id=7 (defragged=0)
+2019-10-19 17:00:55.260+0000 INFO [o.n.k.i.s.DynamicStringStore] /home/sammo/Workload/gym_app/db/neo4j/development/data/databases/graph.db/neostore.labeltokenstore.db.names rebuild id generator, highId=7 defragged count=0
+2019-10-19 17:00:55.260+0000 INFO [o.n.k.i.s.LabelTokenStore] Rebuilding id generator for[/home/sammo/Workload/gym_app/db/neo4j/development/data/databases/graph.db/neostore.labeltokenstore.db] ...
+2019-10-19 17:00:55.269+0000 INFO [o.n.k.i.s.LabelTokenStore] [/home/sammo/Workload/gym_app/db/neo4j/development/data/databases/graph.db/neostore.labeltokenstore.db] high id=5 (defragged=0)
+2019-10-19 17:00:55.269+0000 INFO [o.n.k.i.s.LabelTokenStore] /home/sammo/Workload/gym_app/db/neo4j/development/data/databases/graph.db/neostore.labeltokenstore.db rebuild id generator, highId=5 defragged count=0
+2019-10-19 17:00:55.271+0000 INFO [o.n.k.i.s.SchemaStore] Rebuilding id generator for[/home/sammo/Workload/gym_app/db/neo4j/development/data/databases/graph.db/neostore.schemastore.db] ...
+2019-10-19 17:00:55.280+0000 INFO [o.n.k.i.s.SchemaStore] [/home/sammo/Workload/gym_app/db/neo4j/development/data/databases/graph.db/neostore.schemastore.db] high id=53 (defragged=0)
+2019-10-19 17:00:55.280+0000 INFO [o.n.k.i.s.SchemaStore] /home/sammo/Workload/gym_app/db/neo4j/development/data/databases/graph.db/neostore.schemastore.db rebuild id generator, highId=53 defragged count=0
+2019-10-19 17:00:55.280+0000 INFO [o.n.k.i.s.RelationshipGroupStore] Rebuilding id generator for[/home/sammo/Workload/gym_app/db/neo4j/development/data/databases/graph.db/neostore.relationshipgroupstore.db] ...
+2019-10-19 17:00:55.290+0000 INFO [o.n.k.i.s.RelationshipGroupStore] [/home/sammo/Workload/gym_app/db/neo4j/development/data/databases/graph.db/neostore.relationshipgroupstore.db] high id=1 (defragged=0)
+2019-10-19 17:00:55.290+0000 INFO [o.n.k.i.s.RelationshipGroupStore] /home/sammo/Workload/gym_app/db/neo4j/development/data/databases/graph.db/neostore.relationshipgroupstore.db rebuild id generator, highId=1 defragged count=0
+2019-10-19 17:00:55.290+0000 INFO [o.n.k.i.s.MetaDataStore] Rebuilding id generator for[/home/sammo/Workload/gym_app/db/neo4j/development/data/databases/graph.db/neostore] ...
+2019-10-19 17:00:55.299+0000 INFO [o.n.k.i.s.MetaDataStore] [/home/sammo/Workload/gym_app/db/neo4j/development/data/databases/graph.db/neostore] high id=15 (defragged=0)
+2019-10-19 17:00:55.299+0000 INFO [o.n.k.i.s.MetaDataStore] /home/sammo/Workload/gym_app/db/neo4j/development/data/databases/graph.db/neostore rebuild id generator, highId=15 defragged count=0
+2019-10-19 17:00:55.307+0000 INFO [o.n.k.i.a.i.IndexingService] IndexingService.start: indexes not specifically mentioned above are ONLINE
+2019-10-19 17:00:55.321+0000 INFO [o.n.k.i.DatabaseHealth] Database health set to OK
+2019-10-19 17:00:55.646+0000 INFO [o.n.b.BoltKernelExtension] Bolt enabled on localhost:7472.
+2019-10-19 17:00:55.654+0000 INFO [o.n.k.AvailabilityGuard] Fulfilling of requirement makes database available: Database available
+2019-10-19 17:00:55.654+0000 INFO [o.n.k.i.f.GraphDatabaseFacadeFactory] Database is now ready
+2019-10-19 17:00:55.655+0000 INFO [o.n.k.i.DiagnosticsManager] --- STARTED diagnostics for KernelDiagnostics:Versions START ---
+2019-10-19 17:00:55.655+0000 INFO [o.n.k.i.DiagnosticsManager] Graph Database: community single StoreId{creationTime=1567716994021, randomId=-8529380548656559324, storeVersion=16094931155187206, upgradeTime=1567716994021, upgradeId=1}
+2019-10-19 17:00:55.655+0000 INFO [o.n.k.i.DiagnosticsManager] Kernel version: 3.4.1,bf2fd1991decc5b49b63105e793230f19ccf6f15
+2019-10-19 17:00:55.656+0000 INFO [o.n.k.i.DiagnosticsManager] --- STARTED diagnostics for KernelDiagnostics:Versions END ---
+2019-10-19 17:00:55.657+0000 INFO [o.n.k.i.DiagnosticsManager] --- STARTED diagnostics for NEO_STORE_VERSIONS START ---
+2019-10-19 17:00:55.657+0000 INFO [o.n.k.i.DiagnosticsManager] Store versions:
+2019-10-19 17:00:55.657+0000 INFO [o.n.k.i.DiagnosticsManager] Store versions:
+2019-10-19 17:00:55.658+0000 INFO [o.n.k.i.DiagnosticsManager]   ArrayPropertyStore v0.A.9
+2019-10-19 17:00:55.658+0000 INFO [o.n.k.i.DiagnosticsManager]   NodeStore v0.A.9
+2019-10-19 17:00:55.658+0000 INFO [o.n.k.i.DiagnosticsManager]   StringPropertyStore v0.A.9
+2019-10-19 17:00:55.658+0000 INFO [o.n.k.i.DiagnosticsManager]   PropertyIndexStore v0.A.9
+2019-10-19 17:00:55.658+0000 INFO [o.n.k.i.DiagnosticsManager]   StringPropertyStore v0.A.9
+2019-10-19 17:00:55.658+0000 INFO [o.n.k.i.DiagnosticsManager]   ArrayPropertyStore v0.A.9
+2019-10-19 17:00:55.658+0000 INFO [o.n.k.i.DiagnosticsManager]   PropertyStore v0.A.9
+2019-10-19 17:00:55.658+0000 INFO [o.n.k.i.DiagnosticsManager]   RelationshipStore v0.A.9
+2019-10-19 17:00:55.658+0000 INFO [o.n.k.i.DiagnosticsManager]   StringPropertyStore v0.A.9
+2019-10-19 17:00:55.658+0000 INFO [o.n.k.i.DiagnosticsManager]   RelationshipTypeStore v0.A.9
+2019-10-19 17:00:55.658+0000 INFO [o.n.k.i.DiagnosticsManager]   StringPropertyStore v0.A.9
+2019-10-19 17:00:55.658+0000 INFO [o.n.k.i.DiagnosticsManager]   LabelTokenStore v0.A.9
+2019-10-19 17:00:55.659+0000 INFO [o.n.k.i.DiagnosticsManager]   SchemaStore v0.A.9
+2019-10-19 17:00:55.659+0000 INFO [o.n.k.i.DiagnosticsManager]   RelationshipGroupStore v0.A.9
+2019-10-19 17:00:55.659+0000 INFO [o.n.k.i.DiagnosticsManager]   NeoStore v0.A.9
+2019-10-19 17:00:55.659+0000 INFO [o.n.k.i.DiagnosticsManager] --- STARTED diagnostics for NEO_STORE_VERSIONS END ---
+2019-10-19 17:00:55.659+0000 INFO [o.n.k.i.DiagnosticsManager] --- STARTED diagnostics for NEO_STORE_ID_USAGE START ---
+2019-10-19 17:00:55.659+0000 INFO [o.n.k.i.DiagnosticsManager] Id usage:
+2019-10-19 17:00:55.659+0000 INFO [o.n.k.i.DiagnosticsManager] Id usage:
+2019-10-19 17:00:55.659+0000 INFO [o.n.k.i.DiagnosticsManager]   ArrayPropertyStore: used=1 high=0
+2019-10-19 17:00:55.660+0000 INFO [o.n.k.i.DiagnosticsManager]   NodeStore: used=165 high=164
+2019-10-19 17:00:55.660+0000 INFO [o.n.k.i.DiagnosticsManager]   StringPropertyStore: used=14 high=13
+2019-10-19 17:00:55.660+0000 INFO [o.n.k.i.DiagnosticsManager]   PropertyIndexStore: used=13 high=12
+2019-10-19 17:00:55.660+0000 INFO [o.n.k.i.DiagnosticsManager]   StringPropertyStore: used=1 high=0
+2019-10-19 17:00:55.660+0000 INFO [o.n.k.i.DiagnosticsManager]   ArrayPropertyStore: used=1 high=0
+2019-10-19 17:00:55.660+0000 INFO [o.n.k.i.DiagnosticsManager]   PropertyStore: used=280 high=279
+2019-10-19 17:00:55.660+0000 INFO [o.n.k.i.DiagnosticsManager]   RelationshipStore: used=222 high=221
+2019-10-19 17:00:55.660+0000 INFO [o.n.k.i.DiagnosticsManager]   StringPropertyStore: used=8 high=7
+2019-10-19 17:00:55.660+0000 INFO [o.n.k.i.DiagnosticsManager]   RelationshipTypeStore: used=7 high=6
+2019-10-19 17:00:55.660+0000 INFO [o.n.k.i.DiagnosticsManager]   StringPropertyStore: used=7 high=6
+2019-10-19 17:00:55.661+0000 INFO [o.n.k.i.DiagnosticsManager]   LabelTokenStore: used=5 high=4
+2019-10-19 17:00:55.661+0000 INFO [o.n.k.i.DiagnosticsManager]   SchemaStore: used=53 high=52
+2019-10-19 17:00:55.661+0000 INFO [o.n.k.i.DiagnosticsManager]   RelationshipGroupStore: used=1 high=0
+2019-10-19 17:00:55.661+0000 INFO [o.n.k.i.DiagnosticsManager]   NeoStore: used=15 high=14
+2019-10-19 17:00:55.661+0000 INFO [o.n.k.i.DiagnosticsManager] --- STARTED diagnostics for NEO_STORE_ID_USAGE END ---
+2019-10-19 17:00:55.661+0000 INFO [o.n.k.i.DiagnosticsManager] --- STARTED diagnostics for NEO_STORE_RECORDS START ---
+2019-10-19 17:00:55.661+0000 INFO [o.n.k.i.DiagnosticsManager] Neostore records:
+2019-10-19 17:00:55.661+0000 INFO [o.n.k.i.DiagnosticsManager] TIME (Creation time): 1567716994021
+2019-10-19 17:00:55.662+0000 INFO [o.n.k.i.DiagnosticsManager] RANDOM_NUMBER (Random number for store id): -8529380548656559324
+2019-10-19 17:00:55.662+0000 INFO [o.n.k.i.DiagnosticsManager] LOG_VERSION (Current log version): 0
+2019-10-19 17:00:55.662+0000 INFO [o.n.k.i.DiagnosticsManager] LAST_TRANSACTION_ID (Last committed transaction): 2103
+2019-10-19 17:00:55.662+0000 INFO [o.n.k.i.DiagnosticsManager] STORE_VERSION (Store format version): 16094931155187206
+2019-10-19 17:00:55.662+0000 INFO [o.n.k.i.DiagnosticsManager] FIRST_GRAPH_PROPERTY (First property record containing graph properties): -1
+2019-10-19 17:00:55.662+0000 INFO [o.n.k.i.DiagnosticsManager] LAST_CONSTRAINT_TRANSACTION (Last committed transaction containing constraint changes): 1950
+2019-10-19 17:00:55.662+0000 INFO [o.n.k.i.DiagnosticsManager] UPGRADE_TRANSACTION_ID (Transaction id most recent upgrade was performed at): 1
+2019-10-19 17:00:55.662+0000 INFO [o.n.k.i.DiagnosticsManager] UPGRADE_TIME (Time of last upgrade): 1567716994021
+2019-10-19 17:00:55.662+0000 INFO [o.n.k.i.DiagnosticsManager] LAST_TRANSACTION_CHECKSUM (Checksum of last committed transaction): -162458933885
+2019-10-19 17:00:55.662+0000 INFO [o.n.k.i.DiagnosticsManager] UPGRADE_TRANSACTION_CHECKSUM (Checksum of transaction id the most recent upgrade was performed at): 0
+2019-10-19 17:00:55.662+0000 INFO [o.n.k.i.DiagnosticsManager] LAST_CLOSED_TRANSACTION_LOG_VERSION (Log version where the last transaction commit entry has been written into): 0
+2019-10-19 17:00:55.662+0000 INFO [o.n.k.i.DiagnosticsManager] LAST_CLOSED_TRANSACTION_LOG_BYTE_OFFSET (Byte offset in the log file where the last transaction commit entry has been written into): 3516378
+2019-10-19 17:00:55.663+0000 INFO [o.n.k.i.DiagnosticsManager] LAST_TRANSACTION_COMMIT_TIMESTAMP (Commit time timestamp for last committed transaction): 1568220976340
+2019-10-19 17:00:55.663+0000 INFO [o.n.k.i.DiagnosticsManager] UPGRADE_TRANSACTION_COMMIT_TIMESTAMP (Commit timestamp of transaction the most recent upgrade was performed at): 0
+2019-10-19 17:00:55.663+0000 INFO [o.n.k.i.DiagnosticsManager] --- STARTED diagnostics for NEO_STORE_RECORDS END ---
+2019-10-19 17:00:55.664+0000 INFO [o.n.k.i.DiagnosticsManager] --- STARTED diagnostics for TRANSACTION_RANGE START ---
+2019-10-19 17:00:55.664+0000 INFO [o.n.k.i.DiagnosticsManager] Transaction log:
+2019-10-19 17:00:55.664+0000 INFO [o.n.k.i.DiagnosticsManager] Oldest transaction 2 found in log with version 0
+2019-10-19 17:00:55.664+0000 INFO [o.n.k.i.DiagnosticsManager] --- STARTED diagnostics for TRANSACTION_RANGE END ---
+2019-10-19 17:00:55.668+0000 INFO [o.n.k.i.DiagnosticsManager] --- STARTED diagnostics for KernelDiagnostics:StoreFiles START ---
+2019-10-19 17:00:55.669+0000 INFO [o.n.k.i.DiagnosticsManager] Disk space on partition (Total / Free / Free %): 502468108288 / 468720238592 / 93
+2019-10-19 17:00:55.669+0000 INFO [o.n.k.i.DiagnosticsManager] Storage files: (filename : modification date - size)
+2019-10-19 17:00:55.670+0000 INFO [o.n.k.i.DiagnosticsManager]   index:
+2019-10-19 17:00:55.670+0000 INFO [o.n.k.i.DiagnosticsManager]   - Total: 2019-09-05T21:56:34+0100 - 0.00 B
+2019-10-19 17:00:55.671+0000 INFO [o.n.k.i.DiagnosticsManager]   neostore: 2019-09-11T17:57:37+0100 - 8.00 kB
+2019-10-19 17:00:55.671+0000 INFO [o.n.k.i.DiagnosticsManager]   neostore.counts.db.a: 2019-09-11T17:52:42+0100 - 1.22 kB
+2019-10-19 17:00:55.671+0000 INFO [o.n.k.i.DiagnosticsManager]   neostore.counts.db.b: 2019-09-11T17:57:37+0100 - 1.25 kB
+2019-10-19 17:00:55.672+0000 INFO [o.n.k.i.DiagnosticsManager]   neostore.id: 2019-10-19T18:00:55+0100 - 9.00 B
+2019-10-19 17:00:55.672+0000 INFO [o.n.k.i.DiagnosticsManager]   neostore.labelscanstore.db: 2019-10-19T18:00:55+0100 - 48.00 kB
+2019-10-19 17:00:55.672+0000 INFO [o.n.k.i.DiagnosticsManager]   neostore.labeltokenstore.db: 2019-09-11T17:37:42+0100 - 8.00 kB
+2019-10-19 17:00:55.672+0000 INFO [o.n.k.i.DiagnosticsManager]   neostore.labeltokenstore.db.id: 2019-10-19T18:00:55+0100 - 9.00 B
+2019-10-19 17:00:55.672+0000 INFO [o.n.k.i.DiagnosticsManager]   neostore.labeltokenstore.db.names: 2019-09-11T17:37:42+0100 - 8.00 kB
+2019-10-19 17:00:55.673+0000 INFO [o.n.k.i.DiagnosticsManager]   neostore.labeltokenstore.db.names.id: 2019-10-19T18:00:55+0100 - 9.00 B
+2019-10-19 17:00:55.673+0000 INFO [o.n.k.i.DiagnosticsManager]   neostore.nodestore.db: 2019-09-11T17:57:37+0100 - 23.99 kB
+2019-10-19 17:00:55.673+0000 INFO [o.n.k.i.DiagnosticsManager]   neostore.nodestore.db.id: 2019-10-19T18:00:55+0100 - 9.00 B
+2019-10-19 17:00:55.674+0000 INFO [o.n.k.i.DiagnosticsManager]   neostore.nodestore.db.labels: 2019-09-05T21:56:33+0100 - 8.00 kB
+2019-10-19 17:00:55.674+0000 INFO [o.n.k.i.DiagnosticsManager]   neostore.nodestore.db.labels.id: 2019-10-19T18:00:55+0100 - 9.00 B
+2019-10-19 17:00:55.674+0000 INFO [o.n.k.i.DiagnosticsManager]   neostore.propertystore.db: 2019-09-11T17:57:37+0100 - 103.58 kB
+2019-10-19 17:00:55.674+0000 INFO [o.n.k.i.DiagnosticsManager]   neostore.propertystore.db.arrays: 2019-09-05T21:56:33+0100 - 8.00 kB
+2019-10-19 17:00:55.675+0000 INFO [o.n.k.i.DiagnosticsManager]   neostore.propertystore.db.arrays.id: 2019-10-19T18:00:55+0100 - 9.00 B
+2019-10-19 17:00:55.675+0000 INFO [o.n.k.i.DiagnosticsManager]   neostore.propertystore.db.id: 2019-10-19T18:00:55+0100 - 9.00 B
+2019-10-19 17:00:55.675+0000 INFO [o.n.k.i.DiagnosticsManager]   neostore.propertystore.db.index: 2019-09-11T17:57:37+0100 - 8.00 kB
+2019-10-19 17:00:55.675+0000 INFO [o.n.k.i.DiagnosticsManager]   neostore.propertystore.db.index.id: 2019-10-19T18:00:55+0100 - 9.00 B
+2019-10-19 17:00:55.675+0000 INFO [o.n.k.i.DiagnosticsManager]   neostore.propertystore.db.index.keys: 2019-09-11T17:57:37+0100 - 8.00 kB
+2019-10-19 17:00:55.676+0000 INFO [o.n.k.i.DiagnosticsManager]   neostore.propertystore.db.index.keys.id: 2019-10-19T18:00:55+0100 - 9.00 B
+2019-10-19 17:00:55.676+0000 INFO [o.n.k.i.DiagnosticsManager]   neostore.propertystore.db.strings: 2019-09-05T21:56:33+0100 - 8.00 kB
+2019-10-19 17:00:55.676+0000 INFO [o.n.k.i.DiagnosticsManager]   neostore.propertystore.db.strings.id: 2019-10-19T18:00:55+0100 - 9.00 B
+2019-10-19 17:00:55.676+0000 INFO [o.n.k.i.DiagnosticsManager]   neostore.relationshipgroupstore.db: 2019-09-11T17:02:51+0100 - 8.00 kB
+2019-10-19 17:00:55.676+0000 INFO [o.n.k.i.DiagnosticsManager]   neostore.relationshipgroupstore.db.id: 2019-10-19T18:00:55+0100 - 9.00 B
+2019-10-19 17:00:55.677+0000 INFO [o.n.k.i.DiagnosticsManager]   neostore.relationshipstore.db: 2019-09-11T17:57:37+0100 - 191.25 kB
+2019-10-19 17:00:55.677+0000 INFO [o.n.k.i.DiagnosticsManager]   neostore.relationshipstore.db.id: 2019-10-19T18:00:55+0100 - 9.00 B
+2019-10-19 17:00:55.677+0000 INFO [o.n.k.i.DiagnosticsManager]   neostore.relationshiptypestore.db: 2019-09-11T17:52:42+0100 - 8.00 kB
+2019-10-19 17:00:55.677+0000 INFO [o.n.k.i.DiagnosticsManager]   neostore.relationshiptypestore.db.id: 2019-10-19T18:00:55+0100 - 9.00 B
+2019-10-19 17:00:55.677+0000 INFO [o.n.k.i.DiagnosticsManager]   neostore.relationshiptypestore.db.names: 2019-09-11T17:52:42+0100 - 8.00 kB
+2019-10-19 17:00:55.678+0000 INFO [o.n.k.i.DiagnosticsManager]   neostore.relationshiptypestore.db.names.id: 2019-10-19T18:00:55+0100 - 9.00 B
+2019-10-19 17:00:55.678+0000 INFO [o.n.k.i.DiagnosticsManager]   neostore.schemastore.db: 2019-09-11T17:37:42+0100 - 8.00 kB
+2019-10-19 17:00:55.678+0000 INFO [o.n.k.i.DiagnosticsManager]   neostore.schemastore.db.id: 2019-10-19T18:00:55+0100 - 9.00 B
+2019-10-19 17:00:55.678+0000 INFO [o.n.k.i.DiagnosticsManager]   neostore.transaction.db.0: 2019-09-11T17:57:37+0100 - 3.35 MB
+2019-10-19 17:00:55.678+0000 INFO [o.n.k.i.DiagnosticsManager]   schema:
+2019-10-19 17:00:55.678+0000 INFO [o.n.k.i.DiagnosticsManager]     index:
+2019-10-19 17:00:55.679+0000 INFO [o.n.k.i.DiagnosticsManager]       lucene_native-2.0:
+2019-10-19 17:00:55.679+0000 INFO [o.n.k.i.DiagnosticsManager]         1:
+2019-10-19 17:00:55.679+0000 INFO [o.n.k.i.DiagnosticsManager]           lucene-1.0:
+2019-10-19 17:00:55.679+0000 INFO [o.n.k.i.DiagnosticsManager]             1:
+2019-10-19 17:00:55.679+0000 INFO [o.n.k.i.DiagnosticsManager]               segments_1f: 2019-09-11T17:57:37+0100 - 86.00 B
+2019-10-19 17:00:55.679+0000 INFO [o.n.k.i.DiagnosticsManager]               write.lock: 2019-09-06T13:07:33+0100 - 0.00 B
+2019-10-19 17:00:55.680+0000 INFO [o.n.k.i.DiagnosticsManager]             - Total: 2019-09-11T17:57:37+0100 - 86.00 B
+2019-10-19 17:00:55.680+0000 INFO [o.n.k.i.DiagnosticsManager]             failure-message: 2019-09-06T13:07:33+0100 - 16.00 kB
+2019-10-19 17:00:55.680+0000 INFO [o.n.k.i.DiagnosticsManager]           - Total: 2019-09-06T13:07:33+0100 - 16.08 kB
+2019-10-19 17:00:55.680+0000 INFO [o.n.k.i.DiagnosticsManager]           native-1.0:
+2019-10-19 17:00:55.680+0000 INFO [o.n.k.i.DiagnosticsManager]             index-1: 2019-10-19T18:00:55+0100 - 40.00 kB
+2019-10-19 17:00:55.680+0000 INFO [o.n.k.i.DiagnosticsManager]           - Total: 2019-09-06T13:07:33+0100 - 40.00 kB
+2019-10-19 17:00:55.680+0000 INFO [o.n.k.i.DiagnosticsManager]           spatial-1.0:
+2019-10-19 17:00:55.681+0000 INFO [o.n.k.i.DiagnosticsManager]             1-4326: 2019-10-19T18:00:55+0100 - 40.00 kB
+2019-10-19 17:00:55.681+0000 INFO [o.n.k.i.DiagnosticsManager]           - Total: 2019-09-06T13:07:33+0100 - 40.00 kB
+2019-10-19 17:00:55.681+0000 INFO [o.n.k.i.DiagnosticsManager]           string-1.0:
+2019-10-19 17:00:55.681+0000 INFO [o.n.k.i.DiagnosticsManager]             index-1: 2019-10-19T18:00:55+0100 - 48.00 kB
+2019-10-19 17:00:55.681+0000 INFO [o.n.k.i.DiagnosticsManager]           - Total: 2019-09-06T13:07:33+0100 - 48.00 kB
+2019-10-19 17:00:55.681+0000 INFO [o.n.k.i.DiagnosticsManager]           temporal-1.0:
+2019-10-19 17:00:55.682+0000 INFO [o.n.k.i.DiagnosticsManager]             date: 2019-10-19T18:00:55+0100 - 40.00 kB
+2019-10-19 17:00:55.682+0000 INFO [o.n.k.i.DiagnosticsManager]           - Total: 2019-09-06T13:07:33+0100 - 40.00 kB
+2019-10-19 17:00:55.682+0000 INFO [o.n.k.i.DiagnosticsManager]         - Total: 2019-09-06T13:07:33+0100 - 184.08 kB
+2019-10-19 17:00:55.682+0000 INFO [o.n.k.i.DiagnosticsManager]         15:
+2019-10-19 17:00:55.682+0000 INFO [o.n.k.i.DiagnosticsManager]           lucene-1.0:
+2019-10-19 17:00:55.682+0000 INFO [o.n.k.i.DiagnosticsManager]             1:
+2019-10-19 17:00:55.683+0000 INFO [o.n.k.i.DiagnosticsManager]               segments_1e: 2019-09-11T17:57:37+0100 - 86.00 B
+2019-10-19 17:00:55.683+0000 INFO [o.n.k.i.DiagnosticsManager]               write.lock: 2019-09-06T13:07:33+0100 - 0.00 B
+2019-10-19 17:00:55.683+0000 INFO [o.n.k.i.DiagnosticsManager]             - Total: 2019-09-11T17:57:37+0100 - 86.00 B
+2019-10-19 17:00:55.683+0000 INFO [o.n.k.i.DiagnosticsManager]             failure-message: 2019-09-06T13:07:33+0100 - 16.00 kB
+2019-10-19 17:00:55.683+0000 INFO [o.n.k.i.DiagnosticsManager]           - Total: 2019-09-06T13:07:33+0100 - 16.08 kB
+2019-10-19 17:00:55.683+0000 INFO [o.n.k.i.DiagnosticsManager]           native-1.0:
+2019-10-19 17:00:55.684+0000 INFO [o.n.k.i.DiagnosticsManager]             index-15: 2019-10-19T18:00:55+0100 - 40.00 kB
+2019-10-19 17:00:55.684+0000 INFO [o.n.k.i.DiagnosticsManager]           - Total: 2019-09-06T13:07:33+0100 - 40.00 kB
+2019-10-19 17:00:55.684+0000 INFO [o.n.k.i.DiagnosticsManager]           spatial-1.0:
+2019-10-19 17:00:55.684+0000 INFO [o.n.k.i.DiagnosticsManager]             1-4326: 2019-10-19T18:00:55+0100 - 40.00 kB
+2019-10-19 17:00:55.684+0000 INFO [o.n.k.i.DiagnosticsManager]           - Total: 2019-09-06T13:07:33+0100 - 40.00 kB
+2019-10-19 17:00:55.684+0000 INFO [o.n.k.i.DiagnosticsManager]           string-1.0:
+2019-10-19 17:00:55.685+0000 INFO [o.n.k.i.DiagnosticsManager]             index-15: 2019-10-19T18:00:55+0100 - 192.00 kB
+2019-10-19 17:00:55.685+0000 INFO [o.n.k.i.DiagnosticsManager]           - Total: 2019-09-06T13:07:33+0100 - 192.00 kB
+2019-10-19 17:00:55.685+0000 INFO [o.n.k.i.DiagnosticsManager]           temporal-1.0:
+2019-10-19 17:00:55.685+0000 INFO [o.n.k.i.DiagnosticsManager]             date: 2019-10-19T18:00:55+0100 - 40.00 kB
+2019-10-19 17:00:55.685+0000 INFO [o.n.k.i.DiagnosticsManager]           - Total: 2019-09-06T13:07:33+0100 - 40.00 kB
+2019-10-19 17:00:55.685+0000 INFO [o.n.k.i.DiagnosticsManager]         - Total: 2019-09-06T13:07:33+0100 - 328.08 kB
+2019-10-19 17:00:55.685+0000 INFO [o.n.k.i.DiagnosticsManager]         22:
+2019-10-19 17:00:55.686+0000 INFO [o.n.k.i.DiagnosticsManager]           lucene-1.0:
+2019-10-19 17:00:55.686+0000 INFO [o.n.k.i.DiagnosticsManager]             1:
+2019-10-19 17:00:55.686+0000 INFO [o.n.k.i.DiagnosticsManager]               segments_1e: 2019-09-11T17:57:37+0100 - 86.00 B
+2019-10-19 17:00:55.686+0000 INFO [o.n.k.i.DiagnosticsManager]               write.lock: 2019-09-06T13:07:33+0100 - 0.00 B
+2019-10-19 17:00:55.686+0000 INFO [o.n.k.i.DiagnosticsManager]             - Total: 2019-09-11T17:57:37+0100 - 86.00 B
+2019-10-19 17:00:55.687+0000 INFO [o.n.k.i.DiagnosticsManager]             failure-message: 2019-09-06T13:07:33+0100 - 16.00 kB
+2019-10-19 17:00:55.687+0000 INFO [o.n.k.i.DiagnosticsManager]           - Total: 2019-09-06T13:07:33+0100 - 16.08 kB
+2019-10-19 17:00:55.687+0000 INFO [o.n.k.i.DiagnosticsManager]           native-1.0:
+2019-10-19 17:00:55.687+0000 INFO [o.n.k.i.DiagnosticsManager]             index-22: 2019-10-19T18:00:55+0100 - 40.00 kB
+2019-10-19 17:00:55.687+0000 INFO [o.n.k.i.DiagnosticsManager]           - Total: 2019-09-06T13:07:33+0100 - 40.00 kB
+2019-10-19 17:00:55.687+0000 INFO [o.n.k.i.DiagnosticsManager]           spatial-1.0:
+2019-10-19 17:00:55.687+0000 INFO [o.n.k.i.DiagnosticsManager]             1-4326: 2019-10-19T18:00:55+0100 - 40.00 kB
+2019-10-19 17:00:55.688+0000 INFO [o.n.k.i.DiagnosticsManager]           - Total: 2019-09-06T13:07:33+0100 - 40.00 kB
+2019-10-19 17:00:55.688+0000 INFO [o.n.k.i.DiagnosticsManager]           string-1.0:
+2019-10-19 17:00:55.688+0000 INFO [o.n.k.i.DiagnosticsManager]             index-22: 2019-10-19T18:00:55+0100 - 48.00 kB
+2019-10-19 17:00:55.688+0000 INFO [o.n.k.i.DiagnosticsManager]           - Total: 2019-09-06T13:07:33+0100 - 48.00 kB
+2019-10-19 17:00:55.688+0000 INFO [o.n.k.i.DiagnosticsManager]           temporal-1.0:
+2019-10-19 17:00:55.689+0000 INFO [o.n.k.i.DiagnosticsManager]             date: 2019-10-19T18:00:55+0100 - 40.00 kB
+2019-10-19 17:00:55.689+0000 INFO [o.n.k.i.DiagnosticsManager]           - Total: 2019-09-06T13:07:33+0100 - 40.00 kB
+2019-10-19 17:00:55.689+0000 INFO [o.n.k.i.DiagnosticsManager]         - Total: 2019-09-06T13:07:33+0100 - 184.08 kB
+2019-10-19 17:00:55.689+0000 INFO [o.n.k.i.DiagnosticsManager]         29:
+2019-10-19 17:00:55.689+0000 INFO [o.n.k.i.DiagnosticsManager]           lucene-1.0:
+2019-10-19 17:00:55.689+0000 INFO [o.n.k.i.DiagnosticsManager]             1:
+2019-10-19 17:00:55.690+0000 INFO [o.n.k.i.DiagnosticsManager]               segments_8: 2019-09-11T17:57:37+0100 - 85.00 B
+2019-10-19 17:00:55.690+0000 INFO [o.n.k.i.DiagnosticsManager]               write.lock: 2019-09-11T16:29:01+0100 - 0.00 B
+2019-10-19 17:00:55.690+0000 INFO [o.n.k.i.DiagnosticsManager]             - Total: 2019-09-11T17:57:37+0100 - 85.00 B
+2019-10-19 17:00:55.690+0000 INFO [o.n.k.i.DiagnosticsManager]             failure-message: 2019-09-11T16:29:01+0100 - 16.00 kB
+2019-10-19 17:00:55.690+0000 INFO [o.n.k.i.DiagnosticsManager]           - Total: 2019-09-11T16:29:01+0100 - 16.08 kB
+2019-10-19 17:00:55.690+0000 INFO [o.n.k.i.DiagnosticsManager]           native-1.0:
+2019-10-19 17:00:55.691+0000 INFO [o.n.k.i.DiagnosticsManager]             index-29: 2019-10-19T18:00:55+0100 - 40.00 kB
+2019-10-19 17:00:55.691+0000 INFO [o.n.k.i.DiagnosticsManager]           - Total: 2019-09-11T16:29:00+0100 - 40.00 kB
+2019-10-19 17:00:55.691+0000 INFO [o.n.k.i.DiagnosticsManager]           spatial-1.0:
+2019-10-19 17:00:55.691+0000 INFO [o.n.k.i.DiagnosticsManager]             1-4326: 2019-10-19T18:00:55+0100 - 40.00 kB
+2019-10-19 17:00:55.691+0000 INFO [o.n.k.i.DiagnosticsManager]           - Total: 2019-09-11T16:29:00+0100 - 40.00 kB
+2019-10-19 17:00:55.691+0000 INFO [o.n.k.i.DiagnosticsManager]           string-1.0:
+2019-10-19 17:00:55.692+0000 INFO [o.n.k.i.DiagnosticsManager]             index-29: 2019-10-19T18:00:55+0100 - 48.00 kB
+2019-10-19 17:00:55.692+0000 INFO [o.n.k.i.DiagnosticsManager]           - Total: 2019-09-11T16:29:00+0100 - 48.00 kB
+2019-10-19 17:00:55.692+0000 INFO [o.n.k.i.DiagnosticsManager]           temporal-1.0:
+2019-10-19 17:00:55.692+0000 INFO [o.n.k.i.DiagnosticsManager]             date: 2019-10-19T18:00:55+0100 - 40.00 kB
+2019-10-19 17:00:55.692+0000 INFO [o.n.k.i.DiagnosticsManager]           - Total: 2019-09-11T16:29:01+0100 - 40.00 kB
+2019-10-19 17:00:55.692+0000 INFO [o.n.k.i.DiagnosticsManager]         - Total: 2019-09-11T16:29:01+0100 - 184.08 kB
+2019-10-19 17:00:55.692+0000 INFO [o.n.k.i.DiagnosticsManager]         39:
+2019-10-19 17:00:55.693+0000 INFO [o.n.k.i.DiagnosticsManager]           lucene-1.0:
+2019-10-19 17:00:55.693+0000 INFO [o.n.k.i.DiagnosticsManager]             1:
+2019-10-19 17:00:55.693+0000 INFO [o.n.k.i.DiagnosticsManager]               segments_8: 2019-09-11T17:57:37+0100 - 85.00 B
+2019-10-19 17:00:55.693+0000 INFO [o.n.k.i.DiagnosticsManager]               write.lock: 2019-09-11T16:30:28+0100 - 0.00 B
+2019-10-19 17:00:55.693+0000 INFO [o.n.k.i.DiagnosticsManager]             - Total: 2019-09-11T17:57:37+0100 - 85.00 B
+2019-10-19 17:00:55.693+0000 INFO [o.n.k.i.DiagnosticsManager]             failure-message: 2019-09-11T16:30:28+0100 - 16.00 kB
+2019-10-19 17:00:55.694+0000 INFO [o.n.k.i.DiagnosticsManager]           - Total: 2019-09-11T16:30:28+0100 - 16.08 kB
+2019-10-19 17:00:55.694+0000 INFO [o.n.k.i.DiagnosticsManager]           native-1.0:
+2019-10-19 17:00:55.694+0000 INFO [o.n.k.i.DiagnosticsManager]             index-39: 2019-10-19T18:00:55+0100 - 40.00 kB
+2019-10-19 17:00:55.694+0000 INFO [o.n.k.i.DiagnosticsManager]           - Total: 2019-09-11T16:30:27+0100 - 40.00 kB
+2019-10-19 17:00:55.694+0000 INFO [o.n.k.i.DiagnosticsManager]           spatial-1.0:
+2019-10-19 17:00:55.694+0000 INFO [o.n.k.i.DiagnosticsManager]             1-4326: 2019-10-19T18:00:55+0100 - 40.00 kB
+2019-10-19 17:00:55.694+0000 INFO [o.n.k.i.DiagnosticsManager]           - Total: 2019-09-11T16:30:28+0100 - 40.00 kB
+2019-10-19 17:00:55.695+0000 INFO [o.n.k.i.DiagnosticsManager]           string-1.0:
+2019-10-19 17:00:55.695+0000 INFO [o.n.k.i.DiagnosticsManager]             index-39: 2019-10-19T18:00:55+0100 - 48.00 kB
+2019-10-19 17:00:55.695+0000 INFO [o.n.k.i.DiagnosticsManager]           - Total: 2019-09-11T16:30:27+0100 - 48.00 kB
+2019-10-19 17:00:55.695+0000 INFO [o.n.k.i.DiagnosticsManager]           temporal-1.0:
+2019-10-19 17:00:55.695+0000 INFO [o.n.k.i.DiagnosticsManager]             date: 2019-10-19T18:00:55+0100 - 40.00 kB
+2019-10-19 17:00:55.695+0000 INFO [o.n.k.i.DiagnosticsManager]           - Total: 2019-09-11T16:30:28+0100 - 40.00 kB
+2019-10-19 17:00:55.696+0000 INFO [o.n.k.i.DiagnosticsManager]         - Total: 2019-09-11T16:30:28+0100 - 184.08 kB
+2019-10-19 17:00:55.696+0000 INFO [o.n.k.i.DiagnosticsManager]         46:
+2019-10-19 17:00:55.696+0000 INFO [o.n.k.i.DiagnosticsManager]           lucene-1.0:
+2019-10-19 17:00:55.696+0000 INFO [o.n.k.i.DiagnosticsManager]             1:
+2019-10-19 17:00:55.696+0000 INFO [o.n.k.i.DiagnosticsManager]               segments_4: 2019-09-11T17:57:37+0100 - 85.00 B
+2019-10-19 17:00:55.696+0000 INFO [o.n.k.i.DiagnosticsManager]               write.lock: 2019-09-11T17:34:37+0100 - 0.00 B
+2019-10-19 17:00:55.696+0000 INFO [o.n.k.i.DiagnosticsManager]             - Total: 2019-09-11T17:57:37+0100 - 85.00 B
+2019-10-19 17:00:55.697+0000 INFO [o.n.k.i.DiagnosticsManager]             failure-message: 2019-09-11T17:34:37+0100 - 16.00 kB
+2019-10-19 17:00:55.697+0000 INFO [o.n.k.i.DiagnosticsManager]           - Total: 2019-09-11T17:34:37+0100 - 16.08 kB
+2019-10-19 17:00:55.697+0000 INFO [o.n.k.i.DiagnosticsManager]           native-1.0:
+2019-10-19 17:00:55.697+0000 INFO [o.n.k.i.DiagnosticsManager]             index-46: 2019-10-19T18:00:55+0100 - 40.00 kB
+2019-10-19 17:00:55.697+0000 INFO [o.n.k.i.DiagnosticsManager]           - Total: 2019-09-11T17:34:37+0100 - 40.00 kB
+2019-10-19 17:00:55.697+0000 INFO [o.n.k.i.DiagnosticsManager]           spatial-1.0:
+2019-10-19 17:00:55.697+0000 INFO [o.n.k.i.DiagnosticsManager]             1-4326: 2019-10-19T18:00:55+0100 - 40.00 kB
+2019-10-19 17:00:55.698+0000 INFO [o.n.k.i.DiagnosticsManager]           - Total: 2019-09-11T17:34:37+0100 - 40.00 kB
+2019-10-19 17:00:55.698+0000 INFO [o.n.k.i.DiagnosticsManager]           string-1.0:
+2019-10-19 17:00:55.698+0000 INFO [o.n.k.i.DiagnosticsManager]             index-46: 2019-10-19T18:00:55+0100 - 48.00 kB
+2019-10-19 17:00:55.698+0000 INFO [o.n.k.i.DiagnosticsManager]           - Total: 2019-09-11T17:34:37+0100 - 48.00 kB
+2019-10-19 17:00:55.698+0000 INFO [o.n.k.i.DiagnosticsManager]           temporal-1.0:
+2019-10-19 17:00:55.698+0000 INFO [o.n.k.i.DiagnosticsManager]             date: 2019-10-19T18:00:55+0100 - 40.00 kB
+2019-10-19 17:00:55.698+0000 INFO [o.n.k.i.DiagnosticsManager]           - Total: 2019-09-11T17:34:37+0100 - 40.00 kB
+2019-10-19 17:00:55.699+0000 INFO [o.n.k.i.DiagnosticsManager]         - Total: 2019-09-11T17:34:37+0100 - 184.08 kB
+2019-10-19 17:00:55.699+0000 INFO [o.n.k.i.DiagnosticsManager]         8:
+2019-10-19 17:00:55.699+0000 INFO [o.n.k.i.DiagnosticsManager]           lucene-1.0:
+2019-10-19 17:00:55.699+0000 INFO [o.n.k.i.DiagnosticsManager]             1:
+2019-10-19 17:00:55.699+0000 INFO [o.n.k.i.DiagnosticsManager]               segments_1p: 2019-09-11T17:57:37+0100 - 86.00 B
+2019-10-19 17:00:55.699+0000 INFO [o.n.k.i.DiagnosticsManager]               write.lock: 2019-09-06T13:07:33+0100 - 0.00 B
+2019-10-19 17:00:55.699+0000 INFO [o.n.k.i.DiagnosticsManager]             - Total: 2019-09-11T17:57:37+0100 - 86.00 B
+2019-10-19 17:00:55.700+0000 INFO [o.n.k.i.DiagnosticsManager]             failure-message: 2019-09-06T13:07:33+0100 - 16.00 kB
+2019-10-19 17:00:55.700+0000 INFO [o.n.k.i.DiagnosticsManager]           - Total: 2019-09-06T13:07:33+0100 - 16.08 kB
+2019-10-19 17:00:55.700+0000 INFO [o.n.k.i.DiagnosticsManager]           native-1.0:
+2019-10-19 17:00:55.700+0000 INFO [o.n.k.i.DiagnosticsManager]             index-8: 2019-10-19T18:00:55+0100 - 40.00 kB
+2019-10-19 17:00:55.700+0000 INFO [o.n.k.i.DiagnosticsManager]           - Total: 2019-09-06T13:07:33+0100 - 40.00 kB
+2019-10-19 17:00:55.700+0000 INFO [o.n.k.i.DiagnosticsManager]           spatial-1.0:
+2019-10-19 17:00:55.700+0000 INFO [o.n.k.i.DiagnosticsManager]             1-4326: 2019-10-19T18:00:55+0100 - 40.00 kB
+2019-10-19 17:00:55.701+0000 INFO [o.n.k.i.DiagnosticsManager]           - Total: 2019-09-06T13:07:33+0100 - 40.00 kB
+2019-10-19 17:00:55.701+0000 INFO [o.n.k.i.DiagnosticsManager]           string-1.0:
+2019-10-19 17:00:55.702+0000 INFO [o.n.k.i.DiagnosticsManager]             index-8: 2019-10-19T18:00:55+0100 - 48.00 kB
+2019-10-19 17:00:55.702+0000 INFO [o.n.k.i.DiagnosticsManager]           - Total: 2019-09-06T13:07:33+0100 - 48.00 kB
+2019-10-19 17:00:55.702+0000 INFO [o.n.k.i.DiagnosticsManager]           temporal-1.0:
+2019-10-19 17:00:55.702+0000 INFO [o.n.k.i.DiagnosticsManager]             date: 2019-10-19T18:00:55+0100 - 40.00 kB
+2019-10-19 17:00:55.703+0000 INFO [o.n.k.i.DiagnosticsManager]           - Total: 2019-09-06T13:07:33+0100 - 40.00 kB
+2019-10-19 17:00:55.703+0000 INFO [o.n.k.i.DiagnosticsManager]         - Total: 2019-09-06T13:07:33+0100 - 184.08 kB
+2019-10-19 17:00:55.703+0000 INFO [o.n.k.i.DiagnosticsManager]       - Total: 2019-09-11T17:34:37+0100 - 1.40 MB
+2019-10-19 17:00:55.703+0000 INFO [o.n.k.i.DiagnosticsManager]     - Total: 2019-09-06T13:07:33+0100 - 1.40 MB
+2019-10-19 17:00:55.703+0000 INFO [o.n.k.i.DiagnosticsManager]   - Total: 2019-09-06T13:07:33+0100 - 1.40 MB
+2019-10-19 17:00:55.703+0000 INFO [o.n.k.i.DiagnosticsManager]   store_lock: 2019-09-05T21:56:33+0100 - 0.00 B
+2019-10-19 17:00:55.703+0000 INFO [o.n.k.i.DiagnosticsManager] Storage summary: 
+2019-10-19 17:00:55.703+0000 INFO [o.n.k.i.DiagnosticsManager]   Total size of store: 5.21 MB
+2019-10-19 17:00:55.704+0000 INFO [o.n.k.i.DiagnosticsManager]   Total size of mapped files: 462.82 kB
+2019-10-19 17:00:55.704+0000 INFO [o.n.k.i.DiagnosticsManager] --- STARTED diagnostics for KernelDiagnostics:StoreFiles END ---
+2019-10-19 17:00:57.244+0000 INFO [o.n.k.i.DiagnosticsManager] --- SERVER STARTED START ---
+2019-10-19 17:00:58.056+0000 INFO [o.n.k.i.DiagnosticsManager] --- SERVER STARTED END ---
