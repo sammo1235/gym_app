@@ -12,6 +12,10 @@ class WorkOutsController < ApplicationController
   def show
   end
 
+  def show_work_units
+    render json: WorkOut.find(params[:uuid]).work_unit
+  end
+
   # GET /work_outs/new
   def new
     @work_out = WorkOut.new
@@ -64,7 +68,7 @@ class WorkOutsController < ApplicationController
   private
     # Use callbacks to share common setup or constraints between actions.
     def set_work_out
-      @work_out = WorkOut.find(params[:id])
+      @work_out = WorkOut.find(params[:uuid])
     end
 
     # Never trust parameters from the scary internet, only allow the white list through.

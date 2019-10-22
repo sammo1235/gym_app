@@ -11,6 +11,7 @@
       <th>User</th>
       <th>Lift</th>
       <th>Date</th>
+      <th>Workout</th>
       <th colspan="5"></th>
     </tr>
   </thead>
@@ -24,6 +25,7 @@
         <td><%= work_unit.user.try(:name) %></td>
         <td><%= work_unit.lift.try(:name) %></td>
         <td><%= work_unit.created_at %></td>
+        <td><%= work_unit.work_out.try(:type) %></td>
         <td><%= link_to 'Show', work_unit %></td>
         <td><%= link_to 'Edit', edit_work_unit_path(work_unit) %></td>
         <td><%= link_to 'Destroy', work_unit, method: :delete, data: { confirm: 'Are you sure?' } %></td>
