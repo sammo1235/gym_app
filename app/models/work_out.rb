@@ -8,4 +8,9 @@ class WorkOut
   has_one :in, :user, type: nil
   has_many :in, :work_unit, type: nil
 
+  before_save :calculate_total_sets
+
+  def calculate_total_sets
+    self.total_sets = self.work_unit.count
+  end
 end

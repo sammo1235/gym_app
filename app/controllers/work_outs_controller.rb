@@ -10,6 +10,7 @@ class WorkOutsController < ApplicationController
   # GET /work_outs/1
   # GET /work_outs/1.json
   def show
+    @work_out.calculate_total_sets
   end
 
   def show_work_units
@@ -73,6 +74,6 @@ class WorkOutsController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def work_out_params
-      params.require(:work_out).permit(:type, :created_at, :total_workload, :user_id)
+      params.require(:work_out).permit(:type, :created_at, :total_workload, :user_id, :total_sets)
     end
 end

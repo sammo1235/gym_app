@@ -64,11 +64,11 @@ class WorkUnitsController < ApplicationController
   private
     # Use callbacks to share common setup or constraints between actions.
     def set_work_unit
-      @work_unit = WorkUnit.find(params[:uuid])
+      @work_unit = WorkUnit.find(params[:id])
     end
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def work_unit_params
-      params.require(:work_unit).permit(:weight, :reps, :user, :lift)
+      params.require(:work_unit).permit(:weight, :reps, :lift => {}, :user => {}, :work_out => {})
     end
 end
