@@ -17,7 +17,7 @@
 
 <p>
   <strong>Lift:</strong>
-  <%= @work_unit.lift.name %>
+  <%= @work_unit.lift.try(:name) %>
 </p>
 
 <%= link_to 'Edit', edit_work_unit_path(@work_unit) %> |

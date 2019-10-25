@@ -10,11 +10,11 @@ class WorkOutsController < ApplicationController
   # GET /work_outs/1
   # GET /work_outs/1.json
   def show
-    @work_out.calculate_total_sets
+    @work_units = WorkOut.find(params[:id]).work_unit
   end
 
   def show_work_units
-    render json: WorkOut.find(params[:uuid]).work_unit
+    render json: WorkOut.find(params[:id]).work_unit
   end
 
   # GET /work_outs/new
@@ -69,11 +69,11 @@ class WorkOutsController < ApplicationController
   private
     # Use callbacks to share common setup or constraints between actions.
     def set_work_out
-      @work_out = WorkOut.find(params[:uuid])
+      @work_out = WorkOut.find(params[:id])
     end
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def work_out_params
-      params.require(:work_out).permit(:type, :created_at, :total_workload, :user_id, :total_sets)
+      params.require(:work_out).permit(:type, :created_at, :total_workload, :user, :total_sets)
     end
 end

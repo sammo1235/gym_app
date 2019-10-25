@@ -17,9 +17,9 @@
     <% @work_outs.each do |work_out| %>
       <tr>
         <td><%= work_out.type %></td>
-        <td><%= work_out.created_at %></td>
+        <td><%= work_out.created_at.to_date %></td>
         <td><%= work_out.total_workload %></td>
-        <td><%= work_out.user %></td>
+        <td><%= work_out.user.try(:name) %></td>
         <td><%= link_to 'Show', work_out %></td>
         <td><%= link_to 'Edit', edit_work_out_path(work_out) %></td>
         <td><%= link_to 'Destroy', work_out, method: :delete, data: { confirm: 'Are you sure?' } %></td>

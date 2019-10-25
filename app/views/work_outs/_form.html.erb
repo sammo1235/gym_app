@@ -17,18 +17,8 @@
   </div>
 
   <div class="field">
-    <%= form.label :created_at %>
-    <%= form.datetime_select :created_at %>
-  </div>
-
-  <div class="field">
-    <%= form.label :total_workload %>
-    <%= form.number_field :total_workload %>
-  </div>
-
-  <div class="field">
-    <%= form.label :user_id %>
-    <%= form.text_field :user_id %>
+    <%= form.label :user %>
+    <%= form.select :user, options_from_collection_for_select(User.all, :id, :name, @work_out.try(:id)) %>
   </div>
 
   <div class="actions">

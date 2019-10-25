@@ -1,5 +1,5 @@
 <p id="notice"><%= notice %></p>
-
+<h2>WorkOut id: <%= @work_out.id %>
 <p>
   <strong>Type:</strong>
   <%= @work_out.type %>
@@ -7,7 +7,12 @@
 
 <p>
   <strong>Created at:</strong>
-  <%= @work_out.created_at %>
+  <%= @work_out.created_at.to_date %>
+</p>
+
+<p>
+  <strong>Total Sets:</strong>
+  <%= @work_out.total_sets %>
 </p>
 
 <p>
@@ -17,7 +22,39 @@
 
 <p>
   <strong>User:</strong>
-  <%= @work_out.user %>
+  <%= @work_out.user.try(:name) %>
+</p>
+
+<h1>Sets</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Lift</th>
+      <th>Weight</th>
+      <th>Reps</th>
+      <th>Workload</th>
+      <th>Temp: User</th>
+      <th colspan="4"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @work_units.each do |work_unit| %>
+      <tr>
+        <td><%= work_unit.lift.try(:name) %></td>
+        <td><%= work_unit.weight %></td>
+        <td><%= work_unit.reps %></td>
+        <td><%= work_unit.workload %></td>
+        <td><%= work_unit.user.try(:name) %></td>
+        <td><%= link_to 'Edit', edit_work_unit_path(work_unit) %></td>
+        <td><%= link_to 'Destroy', work_unit, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+<p>
+<%= link_to 'Add new set', new_work_unit_path %>
 </p>
 
 <%= link_to 'Edit', edit_work_out_path(@work_out) %> |

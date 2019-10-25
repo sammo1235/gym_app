@@ -35,6 +35,13 @@
     @work_unit.lift.try(:id)), include_blank: true %>
   </div>
 
+  <div class="field">
+    <%= form.label :work_out %>
+    <%= form.select :work_out, 
+    options_from_collection_for_select(WorkOut.all, :id, :type,
+    @work_unit.work_out.try(:id)) %>
+  </div>
+
   <div class="actions">
     <%= form.submit %>
   </div>

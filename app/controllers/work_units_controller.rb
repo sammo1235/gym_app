@@ -28,7 +28,9 @@ class WorkUnitsController < ApplicationController
 
     respond_to do |format|
       if @work_unit.save
-        format.html { redirect_to @work_unit, notice: 'Work unit was successfully created.' }
+        @work_unit.work_out.calculate_workout_volume
+
+        format.html { redirect_to work_out_path(@work_unit.work_out.id), notice: 'Work unit was successfully created.' }
         format.json { render :show, status: :created, location: @work_unit }
       else
         format.html { render :new }
@@ -42,7 +44,9 @@ class WorkUnitsController < ApplicationController
   def update
     respond_to do |format|
       if @work_unit.update(work_unit_params)
-        format.html { redirect_to @work_unit, notice: 'Work unit was successfully updated.' }
+        @work_unit.work_out.calculate_workout_volume
+
+        format.html { redirect_to work_out_path(@work_unit.work_out.id), notice: 'Work unit and work out were successfully updated.' }
         format.json { render :show, status: :ok, location: @work_unit }
       else
         format.html { render :edit }
@@ -54,9 +58,11 @@ class WorkUnitsController < ApplicationController
   # DELETE /work_units/1
   # DELETE /work_units/1.json
   def destroy
+    workout = @work_unit.work_out
     @work_unit.destroy
+    workout.calculate_workout_volume
     respond_to do |format|
-      format.html { redirect_to work_units_url, notice: 'Work unit was successfully destroyed.' }
+      format.html { redirect_to work_out_path(workout.id), notice: 'Work unit was successfully destroyed.' }
       format.json { head :no_content }
     end
   end
@@ -69,6 +75,6 @@ class WorkUnitsController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def work_unit_params
-      params.require(:work_unit).permit(:weight, :reps, :lift => {}, :user => {}, :work_out => {})
+      params.require(:work_unit).permit(:weight, :reps, :lift, :user, :work_out)
     end
 end

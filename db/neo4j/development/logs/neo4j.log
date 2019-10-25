@@ -5792,3 +5792,16 @@ nohup: ignoring input
 2019-10-22 11:47:06.326+0000 INFO  Bolt enabled on localhost:7472.
 2019-10-22 11:47:07.846+0000 INFO  Started.
 2019-10-22 11:47:08.606+0000 INFO  Remote interface available at http://localhost:7474/
+nohup: ignoring input
+2019-10-24 19:57:52.849+0000 INFO  ======== Neo4j 3.4.1 ========
+2019-10-24 19:57:52.886+0000 INFO  Starting...
+2019-10-24 19:57:55.084+0000 INFO  Bolt enabled on localhost:7472.
+2019-10-24 19:57:56.677+0000 INFO  Started.
+2019-10-24 19:57:57.553+0000 INFO  Remote interface available at http://localhost:7474/
+nohup: ignoring input
+2019-10-25 11:09:07.580+0000 INFO  ======== Neo4j 3.4.1 ========
+2019-10-25 11:09:07.610+0000 INFO  Starting...
+2019-10-25 11:09:09.659+0000 INFO  Bolt enabled on localhost:7472.
+2019-10-25 11:09:11.049+0000 INFO  Started.
+2019-10-25 11:09:11.775+0000 INFO  Remote interface available at http://localhost:7474/
+2019-10-25 14:45:11.063+0000 INFO  Transaction with id 330 has been automatically rolled back due to transaction timeout.
