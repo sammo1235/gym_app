@@ -30,10 +30,11 @@ class WorkOutsController < ApplicationController
   # POST /work_outs.json
   def create
     @work_out = WorkOut.new(work_out_params)
+    @work_out.type = params[:new_workout_type] unless params[:new_workout_type].empty?
 
     respond_to do |format|
       if @work_out.save
-        format.html { redirect_to @work_out, notice: 'Work out was successfully created.' }
+        format.html { redirect_to new_work_unit_path(work_out_id: @work_out.id), notice: 'Work out was successfully created.' }
         format.json { render :show, status: :created, location: @work_out }
       else
         format.html { render :new }

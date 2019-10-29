@@ -28,7 +28,7 @@ class LiftsController < ApplicationController
 
     respond_to do |format|
       if @lift.save
-        format.html { redirect_to @lift, notice: 'Lift was successfully created.' }
+        format.html { redirect_to lifts_path, notice: 'Lift was successfully created.' }
         format.json { render :show, status: :created, location: @lift }
       else
         format.html { render :new }
@@ -42,7 +42,7 @@ class LiftsController < ApplicationController
   def update
     respond_to do |format|
       if @lift.update(lift_params)
-        format.html { redirect_to @lift, notice: 'Lift was successfully updated.' }
+        format.html { redirect_to lifts_path, notice: 'Lift was successfully updated.' }
         format.json { render :show, status: :ok, location: @lift }
       else
         format.html { render :edit }

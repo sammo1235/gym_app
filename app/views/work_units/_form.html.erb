@@ -12,6 +12,13 @@
   <% end %>
 
   <div class="field">
+    <%= form.label :lift %>
+    <%= form.select :lift, 
+    options_from_collection_for_select(Lift.order(:name), :id, :name,
+    @work_unit.lift.try(:id)), include_blank: true %>
+  </div>
+  
+  <div class="field">
     <%= form.label :weight %>
     <%= form.number_field :weight %>
   </div>
@@ -22,24 +29,11 @@
   </div>
 
   <div class="field">
-    <%= form.label :user %>
-    <%= form.select :user,
-    options_from_collection_for_select(User.all, :id, :name,
-    @work_unit.user.try(:id)), include_blank: true %>
+    <%= form.hidden_field :user, value: @user.id %>
   </div>
 
   <div class="field">
-    <%= form.label :lift %>
-    <%= form.select :lift, 
-    options_from_collection_for_select(Lift.order(:name), :id, :name,
-    @work_unit.lift.try(:id)), include_blank: true %>
-  </div>
-
-  <div class="field">
-    <%= form.label :work_out %>
-    <%= form.select :work_out, 
-    options_from_collection_for_select(WorkOut.all, :id, :type,
-    @work_unit.work_out.try(:id)) %>
+    <%= form.hidden_field :work_out, value: @work_out.id %>
   </div>
 
   <div class="actions">

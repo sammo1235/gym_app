@@ -5,6 +5,6 @@ class User
   property :bodyweight, type: Integer
 
   has_many :in, :work_units, type: nil
-  has_many :in, :work_outs, type: :work_outs
+  has_many :in, :work_outs, type: nil
 
 end

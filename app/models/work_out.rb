@@ -8,10 +8,11 @@ class WorkOut
   has_one :out, :user, type: :user
   has_many :in, :work_unit, type: nil
 
-  validate :work_units_prescence
+  before_save :work_units_presence
+  validates :type, presence: true
   validate :user_prescence
 
-  def work_units_prescence
+  def work_units_presence
     errors.add(:work_units, "You must add at least one set to the workout") unless
     work_unit.present?
   end

@@ -1,6 +1,6 @@
 <%= form_with(model: work_out, local: true) do |form| %>
   <% if work_out.errors.any? %>
-    <div id="error_explanation">
+    <div id="error_explanation", style="text-align:center">
       <h2><%= pluralize(work_out.errors.count, "error") %> prohibited this work_out from being saved:</h2>
 
       <ul>
@@ -11,17 +11,25 @@
     </div>
   <% end %>
 
+<% WorkOut.all.each { |i| puts i.type }.uniq.pluck(:type) %>
+
   <div class="field">
+    <%= label_tag :new_workout_type %> 
+    <%= text_field_tag :new_workout_type %>
+    
     <%= form.label :type %>
-    <%= form.text_field :type %>
+    <%= form.select(:type, WorkOut.all.each { |i| puts i.type }.uniq.pluck(:type), include_blank: true)  %>
+    
   </div>
 
   <div class="field">
     <%= form.label :user %>
-    <%= form.select :user, options_from_collection_for_select(User.all, :id, :name, @work_out.try(:id)) %>
+    <%= form.select :user,
+    options_from_collection_for_select(User.all, :id, :name, 
+    @work_out.try(:id)) %>
   </div>
 
   <div class="actions">
-    <%= form.submit %>
+    <%= form.submit 'Create Workout' %>
   </div>
 <% end %>

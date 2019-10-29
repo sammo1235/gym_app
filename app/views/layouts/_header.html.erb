@@ -1,0 +1,10 @@
+<div class="banner" style="padding:15px; text-align:center; font-color:red">
+  <div class="banner-content">
+    
+    <% unless current_page?(root_path) %>
+      <%= link_to 'Home', root_path %> | 
+    <% end %>
+  <%= link_to 'Users', users_path %> | <%= link_to 'Lifts', lifts_path %> | <%= link_to 'Show all work units', work_units_path %>
+
+  </div>
+</div>

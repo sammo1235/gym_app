@@ -9,14 +9,8 @@ class WorkUnit
   has_one :out, :lift, type: nil
   has_one :out, :work_out, type: nil
 
-  before_save :workout_prescence
   validate :user_match_workout
   validate :lift_prescence
-
-  def workout_prescence
-    #errors.add(:work_out, "Work Unit must have an associated workout") unless
-    #work_out.present?
-  end
 
   def lift_prescence
     errors.add(:lift, "Set must had an associated lift") unless

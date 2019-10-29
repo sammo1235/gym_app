@@ -15,6 +15,8 @@ class WorkUnitsController < ApplicationController
   # GET /work_units/new
   def new
     @work_unit = WorkUnit.new
+    @work_out = WorkOut.find(params[:work_out_id])
+    @user = @work_out.user
   end
 
   # GET /work_units/1/edit

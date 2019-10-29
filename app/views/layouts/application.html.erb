@@ -1,7 +1,8 @@
 <!DOCTYPE html>
-<html>
+<html style="text-align:center">
   <head>
     <title>GymApp</title>
+    <%= render 'layouts/header' %>
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
 
@@ -9,8 +10,7 @@
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
   </head>
 
-  <body>
+  <body style="text-align:center">
     <%= yield %>
-    | <%= link_to 'Show all work units', work_units_path %>
   </body>
 </html>

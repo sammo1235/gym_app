@@ -10,6 +10,14 @@
   <%= @work_out.created_at.to_date %>
 </p>
 
+
+<p>
+  <strong>User:</strong>
+  <%= @work_out.user.try(:name) %>
+</p>
+
+<% if @work_out.work_unit.present? %>
+
 <p>
   <strong>Total Sets:</strong>
   <%= @work_out.total_sets %>
@@ -20,14 +28,9 @@
   <%= @work_out.total_workload %>
 </p>
 
-<p>
-  <strong>User:</strong>
-  <%= @work_out.user.try(:name) %>
-</p>
 
 <h1>Sets</h1>
-
-<table>
+<table align="center">
   <thead>
     <tr>
       <th>Lift</th>
@@ -53,9 +56,11 @@
     <% end %>
   </tbody>
 </table>
+
+<% end %>
 <p>
-<%= link_to 'Add new set', new_work_unit_path %>
+<%= link_to 'Add new set', new_work_unit_path(work_out_id: @work_out.id) %>
 </p>
 
 <%= link_to 'Edit', edit_work_out_path(@work_out) %> |
-<%= link_to 'Back', work_outs_path %>
+<%= link_to 'Back', user_path(@work_out.user) %>

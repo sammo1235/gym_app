@@ -16,6 +16,7 @@
   ) ASSERT `neo4j::migrations::schemamigration`.migration_id IS UNIQUE
 - CONSTRAINT ON ( lift:Lift ) ASSERT lift.name IS UNIQUE
 - CONSTRAINT ON ( lift:Lift ) ASSERT lift.uuid IS UNIQUE
+- CONSTRAINT ON ( update:Update ) ASSERT update.uuid IS UNIQUE
 - CONSTRAINT ON ( user:User ) ASSERT user.name IS UNIQUE
 - CONSTRAINT ON ( user:User ) ASSERT user.uuid IS UNIQUE
 - CONSTRAINT ON ( workout:WorkOut ) ASSERT workout.uuid IS UNIQUE
@@ -23,3 +24,4 @@
 :indexes: []
 :versions:
 - '20190911163421'
+- '20191029204254'
