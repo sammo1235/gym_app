@@ -1,0 +1,68 @@
+User authentication
+a user should be able to see all other users workouts and stats
+a user should only be able to create/edit/delete their own workouts
+
+User signup feature
+
+Workout creation
+Upon the creation of a workout, the page should redirect to a
+set creation form. // DONE
+
+Set creation in multiples
+On adding a set, a user should be able to add any number of sets 
+they wish at once // NEXT
+
+Lift leaderboards
+Show records for all users on a given lift
+Show records for a given user on that lift
+
+Graphical data display
+For each lift - how it has progressed over time
+For Workouts over time - by type (e.g. how legs front workouts
+are progressing
+On workout show page - how volume is spread across lifts
+
+Workout should calculate volumes for each lift
+
+Test API functionality
+
+Add RPE property to WorkUnit
+
+Show best three lifts on show user page
+
+Total workload of user displayed on users index + show user
+
+Best WorkUnit of the month
+
+Best WorkUnit of last month
+
+WorkOut by type over time (todo before graph display) 
+Should show a history of your WorkOuts in this time with the 
+most recent shown first.
+Percentage increase in volume since first instance (eventually,
+implement from given date)
+Best workout in given type
+Sort by rep range (propertion of sets in low rep range etc)
+
+Add notes property to workout
+
+Feed on homepage for updates to app (each of these tickets) and
+blog articles etc
+
+About page with philosophy behind tracking volume etc
+
+User Leaderboards
+Most improved user this month
+Highest total workload 
+
+Comments on workouts - any user
+
+All lifts should be available to all users - this is how lift
+record tables are made
+
+Overall styling and look of site
+
+Embed videos into workouts/sets
+
+Workout Type - can select or create new one // DONE
+cannot be blank // DONE

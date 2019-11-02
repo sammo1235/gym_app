@@ -4,3 +4,14 @@
       <p>Admodum deserunt intellegam in duo, novum nonumy populo est at, qui an reque ignota constituto. Utinam aperiri equidem te vis. Cu ius velit populo impetus. Et qui ullum nusquam contentiones</p>
   </div>
 </div>
+
+
+<% if @updates.present? %>
+  <% @updates.each do |update| %>
+    <div class="banner" style="padding:15px; text-align:center;">
+      <h2><%= update.title %></h2>
+      <p><%= update.body %><p>
+      Date posted: <p><%= update.created_at.to_date %></p>
+    </div>
+  <% end %>
+<% end %> 

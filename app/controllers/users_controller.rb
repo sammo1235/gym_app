@@ -12,6 +12,10 @@ class UsersController < ApplicationController
   def show
   end
 
+  def show_workouts_for_user
+    render json: User.find(params[:id]).work_outs
+  end
+
   # GET /users/new
   def new
     @user = User.new

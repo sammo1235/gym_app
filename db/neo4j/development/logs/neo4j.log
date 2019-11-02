@@ -5811,3 +5811,21 @@ nohup: ignoring input
 2019-10-29 20:44:14.502+0000 INFO  Bolt enabled on localhost:7472.
 2019-10-29 20:44:15.980+0000 INFO  Started.
 2019-10-29 20:44:16.727+0000 INFO  Remote interface available at http://localhost:7474/
+nohup: ignoring input
+2019-10-30 10:39:20.584+0000 INFO  ======== Neo4j 3.4.1 ========
+2019-10-30 10:39:20.615+0000 INFO  Starting...
+2019-10-30 10:39:22.812+0000 INFO  Bolt enabled on localhost:7472.
+2019-10-30 10:39:24.263+0000 INFO  Started.
+2019-10-30 10:39:25.052+0000 INFO  Remote interface available at http://localhost:7474/
+nohup: ignoring input
+2019-10-31 14:16:08.383+0000 INFO  ======== Neo4j 3.4.1 ========
+2019-10-31 14:16:08.417+0000 INFO  Starting...
+2019-10-31 14:16:10.800+0000 INFO  Bolt enabled on localhost:7472.
+2019-10-31 14:16:12.317+0000 INFO  Started.
+2019-10-31 14:16:13.171+0000 INFO  Remote interface available at http://localhost:7474/
+nohup: ignoring input
+2019-11-01 22:46:52.642+0000 INFO  ======== Neo4j 3.4.1 ========
+2019-11-01 22:46:52.672+0000 INFO  Starting...
+2019-11-01 22:46:54.726+0000 INFO  Bolt enabled on localhost:7472.
+2019-11-01 22:46:56.325+0000 INFO  Started.
+2019-11-01 22:46:57.009+0000 INFO  Remote interface available at http://localhost:7474/
