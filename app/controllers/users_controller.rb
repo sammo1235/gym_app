@@ -4,7 +4,8 @@ class UsersController < ApplicationController
   # GET /users
   # GET /users.json
   def index
-    @users = User.all.with_associations(:work_outs)
+      @users = User.all
+      User.all.each { |i| @units = i.work_units }
   end
 
   # GET /users/1
@@ -73,6 +74,6 @@ class UsersController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def user_params
-      params.require(:user).permit(:name, :email, :bodyweight)
+      params.require(:user).permit(:name, :email, :bodyweight, :work_out_ids => [])
     end
 end

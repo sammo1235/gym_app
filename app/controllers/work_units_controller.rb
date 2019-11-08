@@ -4,7 +4,7 @@ class WorkUnitsController < ApplicationController
   # GET /work_units
   # GET /work_units.json
   def index
-    @work_units = WorkUnit.all.order(:created_at).reverse_each
+    @work_units = WorkUnit.all#.order(:created_at).reverse_each
   end
 
   # GET /work_units/1
@@ -47,6 +47,11 @@ class WorkUnitsController < ApplicationController
     respond_to do |format|
       if @work_unit.update(work_unit_params)
         @work_unit.work_out.calculate_workout_volume
+
+        if Lift.find_by(name: params[:lift][:lift][:name]).nil?
+          lift = Lift.create(name: params[:lift][:lift][:name])
+          @work_unit.update(lift: lift)
+        end
 
         format.html { redirect_to work_out_path(@work_unit.work_out.id), notice: 'Work unit and work out were successfully updated.' }
         format.json { render :show, status: :ok, location: @work_unit }
