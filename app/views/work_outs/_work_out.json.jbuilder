@@ -2,7 +2,7 @@ json.extract! work_out, :id, :type, :created_at, :total_workload, :total_sets, :
 
   json.work_units(work_out.work_unit) do |unit|
   json.id unit.id
-  json.lift unit.lift
+  json.lift unit.lift.name
   json.weight unit.weight
   json.reps unit.reps
   json.workload unit.workload

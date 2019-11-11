@@ -5841,3 +5841,324 @@ nohup: ignoring input
 2019-11-08 12:01:25.099+0000 INFO  Bolt enabled on localhost:7472.
 2019-11-08 12:01:26.615+0000 INFO  Started.
 2019-11-08 12:01:27.374+0000 INFO  Remote interface available at http://localhost:7474/
+nohup: ignoring input
+2019-11-09 17:01:59.750+0000 INFO  ======== Neo4j 3.4.1 ========
+2019-11-09 17:01:59.773+0000 INFO  Starting...
+2019-11-09 17:02:00.626+0000 ERROR Failed to start Neo4j: Starting Neo4j failed: Component 'org.neo4j.server.database.LifecycleManagingDatabase@1603cd68' was successfully initialized, but failed to start. Please see the attached cause exception "Store and its lock file has been locked by another process: /home/sammo/Workload/gym_app/db/neo4j/development/data/databases/graph.db/store_lock. Please ensure no other process is using this database, and that the directory is writable (required even for read-only access)". Starting Neo4j failed: Component 'org.neo4j.server.database.LifecycleManagingDatabase@1603cd68' was successfully initialized, but failed to start. Please see the attached cause exception "Store and its lock file has been locked by another process: /home/sammo/Workload/gym_app/db/neo4j/development/data/databases/graph.db/store_lock. Please ensure no other process is using this database, and that the directory is writable (required even for read-only access)".
+org.neo4j.server.ServerStartupException: Starting Neo4j failed: Component 'org.neo4j.server.database.LifecycleManagingDatabase@1603cd68' was successfully initialized, but failed to start. Please see the attached cause exception "Store and its lock file has been locked by another process: /home/sammo/Workload/gym_app/db/neo4j/development/data/databases/graph.db/store_lock. Please ensure no other process is using this database, and that the directory is writable (required even for read-only access)".
+	at org.neo4j.server.exception.ServerStartupErrors.translateToServerStartupError(ServerStartupErrors.java:68)
+	at org.neo4j.server.AbstractNeoServer.start(AbstractNeoServer.java:220)
+	at org.neo4j.server.ServerBootstrapper.start(ServerBootstrapper.java:111)
+	at org.neo4j.server.ServerBootstrapper.start(ServerBootstrapper.java:79)
+	at org.neo4j.server.CommunityEntryPoint.main(CommunityEntryPoint.java:32)
+Caused by: org.neo4j.kernel.lifecycle.LifecycleException: Component 'org.neo4j.server.database.LifecycleManagingDatabase@1603cd68' was successfully initialized, but failed to start. Please see the attached cause exception "Store and its lock file has been locked by another process: /home/sammo/Workload/gym_app/db/neo4j/development/data/databases/graph.db/store_lock. Please ensure no other process is using this database, and that the directory is writable (required even for read-only access)".
+	at org.neo4j.kernel.lifecycle.LifeSupport$LifecycleInstance.start(LifeSupport.java:466)
+	at org.neo4j.kernel.lifecycle.LifeSupport.start(LifeSupport.java:107)
+	at org.neo4j.server.AbstractNeoServer.start(AbstractNeoServer.java:212)
+	... 3 more
+Caused by: java.lang.RuntimeException: Error starting org.neo4j.kernel.impl.factory.GraphDatabaseFacadeFactory, /home/sammo/Workload/gym_app/db/neo4j/development/data/databases/graph.db
+	at org.neo4j.kernel.impl.factory.GraphDatabaseFacadeFactory.initFacade(GraphDatabaseFacadeFactory.java:212)
+	at org.neo4j.kernel.impl.factory.GraphDatabaseFacadeFactory.newFacade(GraphDatabaseFacadeFactory.java:125)
+	at org.neo4j.server.CommunityNeoServer.lambda$static$0(CommunityNeoServer.java:58)
+	at org.neo4j.server.database.LifecycleManagingDatabase.start(LifecycleManagingDatabase.java:88)
+	at org.neo4j.kernel.lifecycle.LifeSupport$LifecycleInstance.start(LifeSupport.java:445)
+	... 5 more
+Caused by: org.neo4j.kernel.lifecycle.LifecycleException: Component 'org.neo4j.kernel.internal.locker.StoreLockerLifecycleAdapter@141e5bef' was successfully initialized, but failed to start. Please see the attached cause exception "Store and its lock file has been locked by another process: /home/sammo/Workload/gym_app/db/neo4j/development/data/databases/graph.db/store_lock. Please ensure no other process is using this database, and that the directory is writable (required even for read-only access)".
+	at org.neo4j.kernel.lifecycle.LifeSupport$LifecycleInstance.start(LifeSupport.java:466)
+	at org.neo4j.kernel.lifecycle.LifeSupport.start(LifeSupport.java:107)
+	at org.neo4j.kernel.impl.factory.GraphDatabaseFacadeFactory.initFacade(GraphDatabaseFacadeFactory.java:208)
+	... 9 more
+Caused by: org.neo4j.kernel.StoreLockException: Store and its lock file has been locked by another process: /home/sammo/Workload/gym_app/db/neo4j/development/data/databases/graph.db/store_lock. Please ensure no other process is using this database, and that the directory is writable (required even for read-only access)
+	at org.neo4j.kernel.internal.locker.StoreLocker.storeLockException(StoreLocker.java:117)
+	at org.neo4j.kernel.internal.locker.StoreLocker.checkLock(StoreLocker.java:93)
+	at org.neo4j.kernel.internal.locker.GlobalStoreLocker.checkLock(GlobalStoreLocker.java:60)
+	at org.neo4j.kernel.internal.locker.StoreLockerLifecycleAdapter.start(StoreLockerLifecycleAdapter.java:36)
+	at org.neo4j.kernel.lifecycle.LifeSupport$LifecycleInstance.start(LifeSupport.java:445)
+	... 11 more
+2019-11-09 17:02:00.627+0000 INFO  Neo4j Server shutdown initiated by request
+nohup: ignoring input
+2019-11-09 17:06:51.465+0000 INFO  ======== Neo4j 3.4.1 ========
+2019-11-09 17:06:51.493+0000 INFO  Starting...
+2019-11-09 17:06:52.314+0000 ERROR Failed to start Neo4j: Starting Neo4j failed: Component 'org.neo4j.server.database.LifecycleManagingDatabase@1603cd68' was successfully initialized, but failed to start. Please see the attached cause exception "Store and its lock file has been locked by another process: /home/sammo/Workload/gym_app/db/neo4j/development/data/databases/graph.db/store_lock. Please ensure no other process is using this database, and that the directory is writable (required even for read-only access)". Starting Neo4j failed: Component 'org.neo4j.server.database.LifecycleManagingDatabase@1603cd68' was successfully initialized, but failed to start. Please see the attached cause exception "Store and its lock file has been locked by another process: /home/sammo/Workload/gym_app/db/neo4j/development/data/databases/graph.db/store_lock. Please ensure no other process is using this database, and that the directory is writable (required even for read-only access)".
+org.neo4j.server.ServerStartupException: Starting Neo4j failed: Component 'org.neo4j.server.database.LifecycleManagingDatabase@1603cd68' was successfully initialized, but failed to start. Please see the attached cause exception "Store and its lock file has been locked by another process: /home/sammo/Workload/gym_app/db/neo4j/development/data/databases/graph.db/store_lock. Please ensure no other process is using this database, and that the directory is writable (required even for read-only access)".
+	at org.neo4j.server.exception.ServerStartupErrors.translateToServerStartupError(ServerStartupErrors.java:68)
+	at org.neo4j.server.AbstractNeoServer.start(AbstractNeoServer.java:220)
+	at org.neo4j.server.ServerBootstrapper.start(ServerBootstrapper.java:111)
+	at org.neo4j.server.ServerBootstrapper.start(ServerBootstrapper.java:79)
+	at org.neo4j.server.CommunityEntryPoint.main(CommunityEntryPoint.java:32)
+Caused by: org.neo4j.kernel.lifecycle.LifecycleException: Component 'org.neo4j.server.database.LifecycleManagingDatabase@1603cd68' was successfully initialized, but failed to start. Please see the attached cause exception "Store and its lock file has been locked by another process: /home/sammo/Workload/gym_app/db/neo4j/development/data/databases/graph.db/store_lock. Please ensure no other process is using this database, and that the directory is writable (required even for read-only access)".
+	at org.neo4j.kernel.lifecycle.LifeSupport$LifecycleInstance.start(LifeSupport.java:466)
+	at org.neo4j.kernel.lifecycle.LifeSupport.start(LifeSupport.java:107)
+	at org.neo4j.server.AbstractNeoServer.start(AbstractNeoServer.java:212)
+	... 3 more
+Caused by: java.lang.RuntimeException: Error starting org.neo4j.kernel.impl.factory.GraphDatabaseFacadeFactory, /home/sammo/Workload/gym_app/db/neo4j/development/data/databases/graph.db
+	at org.neo4j.kernel.impl.factory.GraphDatabaseFacadeFactory.initFacade(GraphDatabaseFacadeFactory.java:212)
+	at org.neo4j.kernel.impl.factory.GraphDatabaseFacadeFactory.newFacade(GraphDatabaseFacadeFactory.java:125)
+	at org.neo4j.server.CommunityNeoServer.lambda$static$0(CommunityNeoServer.java:58)
+	at org.neo4j.server.database.LifecycleManagingDatabase.start(LifecycleManagingDatabase.java:88)
+	at org.neo4j.kernel.lifecycle.LifeSupport$LifecycleInstance.start(LifeSupport.java:445)
+	... 5 more
+Caused by: org.neo4j.kernel.lifecycle.LifecycleException: Component 'org.neo4j.kernel.internal.locker.StoreLockerLifecycleAdapter@141e5bef' was successfully initialized, but failed to start. Please see the attached cause exception "Store and its lock file has been locked by another process: /home/sammo/Workload/gym_app/db/neo4j/development/data/databases/graph.db/store_lock. Please ensure no other process is using this database, and that the directory is writable (required even for read-only access)".
+	at org.neo4j.kernel.lifecycle.LifeSupport$LifecycleInstance.start(LifeSupport.java:466)
+	at org.neo4j.kernel.lifecycle.LifeSupport.start(LifeSupport.java:107)
+	at org.neo4j.kernel.impl.factory.GraphDatabaseFacadeFactory.initFacade(GraphDatabaseFacadeFactory.java:208)
+	... 9 more
+Caused by: org.neo4j.kernel.StoreLockException: Store and its lock file has been locked by another process: /home/sammo/Workload/gym_app/db/neo4j/development/data/databases/graph.db/store_lock. Please ensure no other process is using this database, and that the directory is writable (required even for read-only access)
+	at org.neo4j.kernel.internal.locker.StoreLocker.storeLockException(StoreLocker.java:117)
+	at org.neo4j.kernel.internal.locker.StoreLocker.checkLock(StoreLocker.java:93)
+	at org.neo4j.kernel.internal.locker.GlobalStoreLocker.checkLock(GlobalStoreLocker.java:60)
+	at org.neo4j.kernel.internal.locker.StoreLockerLifecycleAdapter.start(StoreLockerLifecycleAdapter.java:36)
+	at org.neo4j.kernel.lifecycle.LifeSupport$LifecycleInstance.start(LifeSupport.java:445)
+	... 11 more
+2019-11-09 17:06:52.316+0000 INFO  Neo4j Server shutdown initiated by request
+nohup: ignoring input
+2019-11-09 17:09:42.589+0000 INFO  ======== Neo4j 3.4.1 ========
+2019-11-09 17:09:42.614+0000 INFO  Starting...
+2019-11-09 17:09:43.309+0000 ERROR Failed to start Neo4j: Starting Neo4j failed: Component 'org.neo4j.server.database.LifecycleManagingDatabase@1603cd68' was successfully initialized, but failed to start. Please see the attached cause exception "Store and its lock file has been locked by another process: /home/sammo/Workload/gym_app/db/neo4j/development/data/databases/graph.db/store_lock. Please ensure no other process is using this database, and that the directory is writable (required even for read-only access)". Starting Neo4j failed: Component 'org.neo4j.server.database.LifecycleManagingDatabase@1603cd68' was successfully initialized, but failed to start. Please see the attached cause exception "Store and its lock file has been locked by another process: /home/sammo/Workload/gym_app/db/neo4j/development/data/databases/graph.db/store_lock. Please ensure no other process is using this database, and that the directory is writable (required even for read-only access)".
+org.neo4j.server.ServerStartupException: Starting Neo4j failed: Component 'org.neo4j.server.database.LifecycleManagingDatabase@1603cd68' was successfully initialized, but failed to start. Please see the attached cause exception "Store and its lock file has been locked by another process: /home/sammo/Workload/gym_app/db/neo4j/development/data/databases/graph.db/store_lock. Please ensure no other process is using this database, and that the directory is writable (required even for read-only access)".
+	at org.neo4j.server.exception.ServerStartupErrors.translateToServerStartupError(ServerStartupErrors.java:68)
+	at org.neo4j.server.AbstractNeoServer.start(AbstractNeoServer.java:220)
+	at org.neo4j.server.ServerBootstrapper.start(ServerBootstrapper.java:111)
+	at org.neo4j.server.ServerBootstrapper.start(ServerBootstrapper.java:79)
+	at org.neo4j.server.CommunityEntryPoint.main(CommunityEntryPoint.java:32)
+Caused by: org.neo4j.kernel.lifecycle.LifecycleException: Component 'org.neo4j.server.database.LifecycleManagingDatabase@1603cd68' was successfully initialized, but failed to start. Please see the attached cause exception "Store and its lock file has been locked by another process: /home/sammo/Workload/gym_app/db/neo4j/development/data/databases/graph.db/store_lock. Please ensure no other process is using this database, and that the directory is writable (required even for read-only access)".
+	at org.neo4j.kernel.lifecycle.LifeSupport$LifecycleInstance.start(LifeSupport.java:466)
+	at org.neo4j.kernel.lifecycle.LifeSupport.start(LifeSupport.java:107)
+	at org.neo4j.server.AbstractNeoServer.start(AbstractNeoServer.java:212)
+	... 3 more
+Caused by: java.lang.RuntimeException: Error starting org.neo4j.kernel.impl.factory.GraphDatabaseFacadeFactory, /home/sammo/Workload/gym_app/db/neo4j/development/data/databases/graph.db
+	at org.neo4j.kernel.impl.factory.GraphDatabaseFacadeFactory.initFacade(GraphDatabaseFacadeFactory.java:212)
+	at org.neo4j.kernel.impl.factory.GraphDatabaseFacadeFactory.newFacade(GraphDatabaseFacadeFactory.java:125)
+	at org.neo4j.server.CommunityNeoServer.lambda$static$0(CommunityNeoServer.java:58)
+	at org.neo4j.server.database.LifecycleManagingDatabase.start(LifecycleManagingDatabase.java:88)
+	at org.neo4j.kernel.lifecycle.LifeSupport$LifecycleInstance.start(LifeSupport.java:445)
+	... 5 more
+Caused by: org.neo4j.kernel.lifecycle.LifecycleException: Component 'org.neo4j.kernel.internal.locker.StoreLockerLifecycleAdapter@141e5bef' was successfully initialized, but failed to start. Please see the attached cause exception "Store and its lock file has been locked by another process: /home/sammo/Workload/gym_app/db/neo4j/development/data/databases/graph.db/store_lock. Please ensure no other process is using this database, and that the directory is writable (required even for read-only access)".
+	at org.neo4j.kernel.lifecycle.LifeSupport$LifecycleInstance.start(LifeSupport.java:466)
+	at org.neo4j.kernel.lifecycle.LifeSupport.start(LifeSupport.java:107)
+	at org.neo4j.kernel.impl.factory.GraphDatabaseFacadeFactory.initFacade(GraphDatabaseFacadeFactory.java:208)
+	... 9 more
+Caused by: org.neo4j.kernel.StoreLockException: Store and its lock file has been locked by another process: /home/sammo/Workload/gym_app/db/neo4j/development/data/databases/graph.db/store_lock. Please ensure no other process is using this database, and that the directory is writable (required even for read-only access)
+	at org.neo4j.kernel.internal.locker.StoreLocker.storeLockException(StoreLocker.java:117)
+	at org.neo4j.kernel.internal.locker.StoreLocker.checkLock(StoreLocker.java:93)
+	at org.neo4j.kernel.internal.locker.GlobalStoreLocker.checkLock(GlobalStoreLocker.java:60)
+	at org.neo4j.kernel.internal.locker.StoreLockerLifecycleAdapter.start(StoreLockerLifecycleAdapter.java:36)
+	at org.neo4j.kernel.lifecycle.LifeSupport$LifecycleInstance.start(LifeSupport.java:445)
+	... 11 more
+2019-11-09 17:09:43.310+0000 INFO  Neo4j Server shutdown initiated by request
+nohup: ignoring input
+2019-11-09 17:20:35.906+0000 INFO  ======== Neo4j 3.4.1 ========
+2019-11-09 17:20:35.931+0000 INFO  Starting...
+2019-11-09 17:20:36.703+0000 ERROR Failed to start Neo4j: Starting Neo4j failed: Component 'org.neo4j.server.database.LifecycleManagingDatabase@1603cd68' was successfully initialized, but failed to start. Please see the attached cause exception "Store and its lock file has been locked by another process: /home/sammo/Workload/gym_app/db/neo4j/development/data/databases/graph.db/store_lock. Please ensure no other process is using this database, and that the directory is writable (required even for read-only access)". Starting Neo4j failed: Component 'org.neo4j.server.database.LifecycleManagingDatabase@1603cd68' was successfully initialized, but failed to start. Please see the attached cause exception "Store and its lock file has been locked by another process: /home/sammo/Workload/gym_app/db/neo4j/development/data/databases/graph.db/store_lock. Please ensure no other process is using this database, and that the directory is writable (required even for read-only access)".
+org.neo4j.server.ServerStartupException: Starting Neo4j failed: Component 'org.neo4j.server.database.LifecycleManagingDatabase@1603cd68' was successfully initialized, but failed to start. Please see the attached cause exception "Store and its lock file has been locked by another process: /home/sammo/Workload/gym_app/db/neo4j/development/data/databases/graph.db/store_lock. Please ensure no other process is using this database, and that the directory is writable (required even for read-only access)".
+	at org.neo4j.server.exception.ServerStartupErrors.translateToServerStartupError(ServerStartupErrors.java:68)
+	at org.neo4j.server.AbstractNeoServer.start(AbstractNeoServer.java:220)
+	at org.neo4j.server.ServerBootstrapper.start(ServerBootstrapper.java:111)
+	at org.neo4j.server.ServerBootstrapper.start(ServerBootstrapper.java:79)
+	at org.neo4j.server.CommunityEntryPoint.main(CommunityEntryPoint.java:32)
+Caused by: org.neo4j.kernel.lifecycle.LifecycleException: Component 'org.neo4j.server.database.LifecycleManagingDatabase@1603cd68' was successfully initialized, but failed to start. Please see the attached cause exception "Store and its lock file has been locked by another process: /home/sammo/Workload/gym_app/db/neo4j/development/data/databases/graph.db/store_lock. Please ensure no other process is using this database, and that the directory is writable (required even for read-only access)".
+	at org.neo4j.kernel.lifecycle.LifeSupport$LifecycleInstance.start(LifeSupport.java:466)
+	at org.neo4j.kernel.lifecycle.LifeSupport.start(LifeSupport.java:107)
+	at org.neo4j.server.AbstractNeoServer.start(AbstractNeoServer.java:212)
+	... 3 more
+Caused by: java.lang.RuntimeException: Error starting org.neo4j.kernel.impl.factory.GraphDatabaseFacadeFactory, /home/sammo/Workload/gym_app/db/neo4j/development/data/databases/graph.db
+	at org.neo4j.kernel.impl.factory.GraphDatabaseFacadeFactory.initFacade(GraphDatabaseFacadeFactory.java:212)
+	at org.neo4j.kernel.impl.factory.GraphDatabaseFacadeFactory.newFacade(GraphDatabaseFacadeFactory.java:125)
+	at org.neo4j.server.CommunityNeoServer.lambda$static$0(CommunityNeoServer.java:58)
+	at org.neo4j.server.database.LifecycleManagingDatabase.start(LifecycleManagingDatabase.java:88)
+	at org.neo4j.kernel.lifecycle.LifeSupport$LifecycleInstance.start(LifeSupport.java:445)
+	... 5 more
+Caused by: org.neo4j.kernel.lifecycle.LifecycleException: Component 'org.neo4j.kernel.internal.locker.StoreLockerLifecycleAdapter@141e5bef' was successfully initialized, but failed to start. Please see the attached cause exception "Store and its lock file has been locked by another process: /home/sammo/Workload/gym_app/db/neo4j/development/data/databases/graph.db/store_lock. Please ensure no other process is using this database, and that the directory is writable (required even for read-only access)".
+	at org.neo4j.kernel.lifecycle.LifeSupport$LifecycleInstance.start(LifeSupport.java:466)
+	at org.neo4j.kernel.lifecycle.LifeSupport.start(LifeSupport.java:107)
+	at org.neo4j.kernel.impl.factory.GraphDatabaseFacadeFactory.initFacade(GraphDatabaseFacadeFactory.java:208)
+	... 9 more
+Caused by: org.neo4j.kernel.StoreLockException: Store and its lock file has been locked by another process: /home/sammo/Workload/gym_app/db/neo4j/development/data/databases/graph.db/store_lock. Please ensure no other process is using this database, and that the directory is writable (required even for read-only access)
+	at org.neo4j.kernel.internal.locker.StoreLocker.storeLockException(StoreLocker.java:117)
+	at org.neo4j.kernel.internal.locker.StoreLocker.checkLock(StoreLocker.java:93)
+	at org.neo4j.kernel.internal.locker.GlobalStoreLocker.checkLock(GlobalStoreLocker.java:60)
+	at org.neo4j.kernel.internal.locker.StoreLockerLifecycleAdapter.start(StoreLockerLifecycleAdapter.java:36)
+	at org.neo4j.kernel.lifecycle.LifeSupport$LifecycleInstance.start(LifeSupport.java:445)
+	... 11 more
+2019-11-09 17:20:36.704+0000 INFO  Neo4j Server shutdown initiated by request
+nohup: ignoring input
+2019-11-09 17:25:23.271+0000 INFO  ======== Neo4j 3.4.1 ========
+2019-11-09 17:25:23.299+0000 INFO  Starting...
+2019-11-09 17:25:24.221+0000 ERROR Failed to start Neo4j: Starting Neo4j failed: Component 'org.neo4j.server.database.LifecycleManagingDatabase@1603cd68' was successfully initialized, but failed to start. Please see the attached cause exception "Store and its lock file has been locked by another process: /home/sammo/Workload/gym_app/db/neo4j/development/data/databases/graph.db/store_lock. Please ensure no other process is using this database, and that the directory is writable (required even for read-only access)". Starting Neo4j failed: Component 'org.neo4j.server.database.LifecycleManagingDatabase@1603cd68' was successfully initialized, but failed to start. Please see the attached cause exception "Store and its lock file has been locked by another process: /home/sammo/Workload/gym_app/db/neo4j/development/data/databases/graph.db/store_lock. Please ensure no other process is using this database, and that the directory is writable (required even for read-only access)".
+org.neo4j.server.ServerStartupException: Starting Neo4j failed: Component 'org.neo4j.server.database.LifecycleManagingDatabase@1603cd68' was successfully initialized, but failed to start. Please see the attached cause exception "Store and its lock file has been locked by another process: /home/sammo/Workload/gym_app/db/neo4j/development/data/databases/graph.db/store_lock. Please ensure no other process is using this database, and that the directory is writable (required even for read-only access)".
+	at org.neo4j.server.exception.ServerStartupErrors.translateToServerStartupError(ServerStartupErrors.java:68)
+	at org.neo4j.server.AbstractNeoServer.start(AbstractNeoServer.java:220)
+	at org.neo4j.server.ServerBootstrapper.start(ServerBootstrapper.java:111)
+	at org.neo4j.server.ServerBootstrapper.start(ServerBootstrapper.java:79)
+	at org.neo4j.server.CommunityEntryPoint.main(CommunityEntryPoint.java:32)
+Caused by: org.neo4j.kernel.lifecycle.LifecycleException: Component 'org.neo4j.server.database.LifecycleManagingDatabase@1603cd68' was successfully initialized, but failed to start. Please see the attached cause exception "Store and its lock file has been locked by another process: /home/sammo/Workload/gym_app/db/neo4j/development/data/databases/graph.db/store_lock. Please ensure no other process is using this database, and that the directory is writable (required even for read-only access)".
+	at org.neo4j.kernel.lifecycle.LifeSupport$LifecycleInstance.start(LifeSupport.java:466)
+	at org.neo4j.kernel.lifecycle.LifeSupport.start(LifeSupport.java:107)
+	at org.neo4j.server.AbstractNeoServer.start(AbstractNeoServer.java:212)
+	... 3 more
+Caused by: java.lang.RuntimeException: Error starting org.neo4j.kernel.impl.factory.GraphDatabaseFacadeFactory, /home/sammo/Workload/gym_app/db/neo4j/development/data/databases/graph.db
+	at org.neo4j.kernel.impl.factory.GraphDatabaseFacadeFactory.initFacade(GraphDatabaseFacadeFactory.java:212)
+	at org.neo4j.kernel.impl.factory.GraphDatabaseFacadeFactory.newFacade(GraphDatabaseFacadeFactory.java:125)
+	at org.neo4j.server.CommunityNeoServer.lambda$static$0(CommunityNeoServer.java:58)
+	at org.neo4j.server.database.LifecycleManagingDatabase.start(LifecycleManagingDatabase.java:88)
+	at org.neo4j.kernel.lifecycle.LifeSupport$LifecycleInstance.start(LifeSupport.java:445)
+	... 5 more
+Caused by: org.neo4j.kernel.lifecycle.LifecycleException: Component 'org.neo4j.kernel.internal.locker.StoreLockerLifecycleAdapter@141e5bef' was successfully initialized, but failed to start. Please see the attached cause exception "Store and its lock file has been locked by another process: /home/sammo/Workload/gym_app/db/neo4j/development/data/databases/graph.db/store_lock. Please ensure no other process is using this database, and that the directory is writable (required even for read-only access)".
+	at org.neo4j.kernel.lifecycle.LifeSupport$LifecycleInstance.start(LifeSupport.java:466)
+	at org.neo4j.kernel.lifecycle.LifeSupport.start(LifeSupport.java:107)
+	at org.neo4j.kernel.impl.factory.GraphDatabaseFacadeFactory.initFacade(GraphDatabaseFacadeFactory.java:208)
+	... 9 more
+Caused by: org.neo4j.kernel.StoreLockException: Store and its lock file has been locked by another process: /home/sammo/Workload/gym_app/db/neo4j/development/data/databases/graph.db/store_lock. Please ensure no other process is using this database, and that the directory is writable (required even for read-only access)
+	at org.neo4j.kernel.internal.locker.StoreLocker.storeLockException(StoreLocker.java:117)
+	at org.neo4j.kernel.internal.locker.StoreLocker.checkLock(StoreLocker.java:93)
+	at org.neo4j.kernel.internal.locker.GlobalStoreLocker.checkLock(GlobalStoreLocker.java:60)
+	at org.neo4j.kernel.internal.locker.StoreLockerLifecycleAdapter.start(StoreLockerLifecycleAdapter.java:36)
+	at org.neo4j.kernel.lifecycle.LifeSupport$LifecycleInstance.start(LifeSupport.java:445)
+	... 11 more
+2019-11-09 17:25:24.222+0000 INFO  Neo4j Server shutdown initiated by request
+nohup: ignoring input
+2019-11-09 17:28:25.471+0000 INFO  ======== Neo4j 3.4.1 ========
+2019-11-09 17:28:25.504+0000 INFO  Starting...
+2019-11-09 17:28:26.371+0000 ERROR Failed to start Neo4j: Starting Neo4j failed: Component 'org.neo4j.server.database.LifecycleManagingDatabase@1603cd68' was successfully initialized, but failed to start. Please see the attached cause exception "Store and its lock file has been locked by another process: /home/sammo/Workload/gym_app/db/neo4j/development/data/databases/graph.db/store_lock. Please ensure no other process is using this database, and that the directory is writable (required even for read-only access)". Starting Neo4j failed: Component 'org.neo4j.server.database.LifecycleManagingDatabase@1603cd68' was successfully initialized, but failed to start. Please see the attached cause exception "Store and its lock file has been locked by another process: /home/sammo/Workload/gym_app/db/neo4j/development/data/databases/graph.db/store_lock. Please ensure no other process is using this database, and that the directory is writable (required even for read-only access)".
+org.neo4j.server.ServerStartupException: Starting Neo4j failed: Component 'org.neo4j.server.database.LifecycleManagingDatabase@1603cd68' was successfully initialized, but failed to start. Please see the attached cause exception "Store and its lock file has been locked by another process: /home/sammo/Workload/gym_app/db/neo4j/development/data/databases/graph.db/store_lock. Please ensure no other process is using this database, and that the directory is writable (required even for read-only access)".
+	at org.neo4j.server.exception.ServerStartupErrors.translateToServerStartupError(ServerStartupErrors.java:68)
+	at org.neo4j.server.AbstractNeoServer.start(AbstractNeoServer.java:220)
+	at org.neo4j.server.ServerBootstrapper.start(ServerBootstrapper.java:111)
+	at org.neo4j.server.ServerBootstrapper.start(ServerBootstrapper.java:79)
+	at org.neo4j.server.CommunityEntryPoint.main(CommunityEntryPoint.java:32)
+Caused by: org.neo4j.kernel.lifecycle.LifecycleException: Component 'org.neo4j.server.database.LifecycleManagingDatabase@1603cd68' was successfully initialized, but failed to start. Please see the attached cause exception "Store and its lock file has been locked by another process: /home/sammo/Workload/gym_app/db/neo4j/development/data/databases/graph.db/store_lock. Please ensure no other process is using this database, and that the directory is writable (required even for read-only access)".
+	at org.neo4j.kernel.lifecycle.LifeSupport$LifecycleInstance.start(LifeSupport.java:466)
+	at org.neo4j.kernel.lifecycle.LifeSupport.start(LifeSupport.java:107)
+	at org.neo4j.server.AbstractNeoServer.start(AbstractNeoServer.java:212)
+	... 3 more
+Caused by: java.lang.RuntimeException: Error starting org.neo4j.kernel.impl.factory.GraphDatabaseFacadeFactory, /home/sammo/Workload/gym_app/db/neo4j/development/data/databases/graph.db
+	at org.neo4j.kernel.impl.factory.GraphDatabaseFacadeFactory.initFacade(GraphDatabaseFacadeFactory.java:212)
+	at org.neo4j.kernel.impl.factory.GraphDatabaseFacadeFactory.newFacade(GraphDatabaseFacadeFactory.java:125)
+	at org.neo4j.server.CommunityNeoServer.lambda$static$0(CommunityNeoServer.java:58)
+	at org.neo4j.server.database.LifecycleManagingDatabase.start(LifecycleManagingDatabase.java:88)
+	at org.neo4j.kernel.lifecycle.LifeSupport$LifecycleInstance.start(LifeSupport.java:445)
+	... 5 more
+Caused by: org.neo4j.kernel.lifecycle.LifecycleException: Component 'org.neo4j.kernel.internal.locker.StoreLockerLifecycleAdapter@141e5bef' was successfully initialized, but failed to start. Please see the attached cause exception "Store and its lock file has been locked by another process: /home/sammo/Workload/gym_app/db/neo4j/development/data/databases/graph.db/store_lock. Please ensure no other process is using this database, and that the directory is writable (required even for read-only access)".
+	at org.neo4j.kernel.lifecycle.LifeSupport$LifecycleInstance.start(LifeSupport.java:466)
+	at org.neo4j.kernel.lifecycle.LifeSupport.start(LifeSupport.java:107)
+	at org.neo4j.kernel.impl.factory.GraphDatabaseFacadeFactory.initFacade(GraphDatabaseFacadeFactory.java:208)
+	... 9 more
+Caused by: org.neo4j.kernel.StoreLockException: Store and its lock file has been locked by another process: /home/sammo/Workload/gym_app/db/neo4j/development/data/databases/graph.db/store_lock. Please ensure no other process is using this database, and that the directory is writable (required even for read-only access)
+	at org.neo4j.kernel.internal.locker.StoreLocker.storeLockException(StoreLocker.java:117)
+	at org.neo4j.kernel.internal.locker.StoreLocker.checkLock(StoreLocker.java:93)
+	at org.neo4j.kernel.internal.locker.GlobalStoreLocker.checkLock(GlobalStoreLocker.java:60)
+	at org.neo4j.kernel.internal.locker.StoreLockerLifecycleAdapter.start(StoreLockerLifecycleAdapter.java:36)
+	at org.neo4j.kernel.lifecycle.LifeSupport$LifecycleInstance.start(LifeSupport.java:445)
+	... 11 more
+2019-11-09 17:28:26.372+0000 INFO  Neo4j Server shutdown initiated by request
+nohup: ignoring input
+2019-11-09 17:34:54.192+0000 INFO  ======== Neo4j 3.4.1 ========
+2019-11-09 17:34:54.221+0000 INFO  Starting...
+2019-11-09 17:34:55.093+0000 ERROR Failed to start Neo4j: Starting Neo4j failed: Component 'org.neo4j.server.database.LifecycleManagingDatabase@1603cd68' was successfully initialized, but failed to start. Please see the attached cause exception "Store and its lock file has been locked by another process: /home/sammo/Workload/gym_app/db/neo4j/development/data/databases/graph.db/store_lock. Please ensure no other process is using this database, and that the directory is writable (required even for read-only access)". Starting Neo4j failed: Component 'org.neo4j.server.database.LifecycleManagingDatabase@1603cd68' was successfully initialized, but failed to start. Please see the attached cause exception "Store and its lock file has been locked by another process: /home/sammo/Workload/gym_app/db/neo4j/development/data/databases/graph.db/store_lock. Please ensure no other process is using this database, and that the directory is writable (required even for read-only access)".
+org.neo4j.server.ServerStartupException: Starting Neo4j failed: Component 'org.neo4j.server.database.LifecycleManagingDatabase@1603cd68' was successfully initialized, but failed to start. Please see the attached cause exception "Store and its lock file has been locked by another process: /home/sammo/Workload/gym_app/db/neo4j/development/data/databases/graph.db/store_lock. Please ensure no other process is using this database, and that the directory is writable (required even for read-only access)".
+	at org.neo4j.server.exception.ServerStartupErrors.translateToServerStartupError(ServerStartupErrors.java:68)
+	at org.neo4j.server.AbstractNeoServer.start(AbstractNeoServer.java:220)
+	at org.neo4j.server.ServerBootstrapper.start(ServerBootstrapper.java:111)
+	at org.neo4j.server.ServerBootstrapper.start(ServerBootstrapper.java:79)
+	at org.neo4j.server.CommunityEntryPoint.main(CommunityEntryPoint.java:32)
+Caused by: org.neo4j.kernel.lifecycle.LifecycleException: Component 'org.neo4j.server.database.LifecycleManagingDatabase@1603cd68' was successfully initialized, but failed to start. Please see the attached cause exception "Store and its lock file has been locked by another process: /home/sammo/Workload/gym_app/db/neo4j/development/data/databases/graph.db/store_lock. Please ensure no other process is using this database, and that the directory is writable (required even for read-only access)".
+	at org.neo4j.kernel.lifecycle.LifeSupport$LifecycleInstance.start(LifeSupport.java:466)
+	at org.neo4j.kernel.lifecycle.LifeSupport.start(LifeSupport.java:107)
+	at org.neo4j.server.AbstractNeoServer.start(AbstractNeoServer.java:212)
+	... 3 more
+Caused by: java.lang.RuntimeException: Error starting org.neo4j.kernel.impl.factory.GraphDatabaseFacadeFactory, /home/sammo/Workload/gym_app/db/neo4j/development/data/databases/graph.db
+	at org.neo4j.kernel.impl.factory.GraphDatabaseFacadeFactory.initFacade(GraphDatabaseFacadeFactory.java:212)
+	at org.neo4j.kernel.impl.factory.GraphDatabaseFacadeFactory.newFacade(GraphDatabaseFacadeFactory.java:125)
+	at org.neo4j.server.CommunityNeoServer.lambda$static$0(CommunityNeoServer.java:58)
+	at org.neo4j.server.database.LifecycleManagingDatabase.start(LifecycleManagingDatabase.java:88)
+	at org.neo4j.kernel.lifecycle.LifeSupport$LifecycleInstance.start(LifeSupport.java:445)
+	... 5 more
+Caused by: org.neo4j.kernel.lifecycle.LifecycleException: Component 'org.neo4j.kernel.internal.locker.StoreLockerLifecycleAdapter@141e5bef' was successfully initialized, but failed to start. Please see the attached cause exception "Store and its lock file has been locked by another process: /home/sammo/Workload/gym_app/db/neo4j/development/data/databases/graph.db/store_lock. Please ensure no other process is using this database, and that the directory is writable (required even for read-only access)".
+	at org.neo4j.kernel.lifecycle.LifeSupport$LifecycleInstance.start(LifeSupport.java:466)
+	at org.neo4j.kernel.lifecycle.LifeSupport.start(LifeSupport.java:107)
+	at org.neo4j.kernel.impl.factory.GraphDatabaseFacadeFactory.initFacade(GraphDatabaseFacadeFactory.java:208)
+	... 9 more
+Caused by: org.neo4j.kernel.StoreLockException: Store and its lock file has been locked by another process: /home/sammo/Workload/gym_app/db/neo4j/development/data/databases/graph.db/store_lock. Please ensure no other process is using this database, and that the directory is writable (required even for read-only access)
+	at org.neo4j.kernel.internal.locker.StoreLocker.storeLockException(StoreLocker.java:117)
+	at org.neo4j.kernel.internal.locker.StoreLocker.checkLock(StoreLocker.java:93)
+	at org.neo4j.kernel.internal.locker.GlobalStoreLocker.checkLock(GlobalStoreLocker.java:60)
+	at org.neo4j.kernel.internal.locker.StoreLockerLifecycleAdapter.start(StoreLockerLifecycleAdapter.java:36)
+	at org.neo4j.kernel.lifecycle.LifeSupport$LifecycleInstance.start(LifeSupport.java:445)
+	... 11 more
+2019-11-09 17:34:55.094+0000 INFO  Neo4j Server shutdown initiated by request
+nohup: ignoring input
+2019-11-09 17:37:30.426+0000 INFO  ======== Neo4j 3.4.1 ========
+2019-11-09 17:37:30.454+0000 INFO  Starting...
+2019-11-09 17:37:31.296+0000 ERROR Failed to start Neo4j: Starting Neo4j failed: Component 'org.neo4j.server.database.LifecycleManagingDatabase@1603cd68' was successfully initialized, but failed to start. Please see the attached cause exception "Store and its lock file has been locked by another process: /home/sammo/Workload/gym_app/db/neo4j/development/data/databases/graph.db/store_lock. Please ensure no other process is using this database, and that the directory is writable (required even for read-only access)". Starting Neo4j failed: Component 'org.neo4j.server.database.LifecycleManagingDatabase@1603cd68' was successfully initialized, but failed to start. Please see the attached cause exception "Store and its lock file has been locked by another process: /home/sammo/Workload/gym_app/db/neo4j/development/data/databases/graph.db/store_lock. Please ensure no other process is using this database, and that the directory is writable (required even for read-only access)".
+org.neo4j.server.ServerStartupException: Starting Neo4j failed: Component 'org.neo4j.server.database.LifecycleManagingDatabase@1603cd68' was successfully initialized, but failed to start. Please see the attached cause exception "Store and its lock file has been locked by another process: /home/sammo/Workload/gym_app/db/neo4j/development/data/databases/graph.db/store_lock. Please ensure no other process is using this database, and that the directory is writable (required even for read-only access)".
+	at org.neo4j.server.exception.ServerStartupErrors.translateToServerStartupError(ServerStartupErrors.java:68)
+	at org.neo4j.server.AbstractNeoServer.start(AbstractNeoServer.java:220)
+	at org.neo4j.server.ServerBootstrapper.start(ServerBootstrapper.java:111)
+	at org.neo4j.server.ServerBootstrapper.start(ServerBootstrapper.java:79)
+	at org.neo4j.server.CommunityEntryPoint.main(CommunityEntryPoint.java:32)
+Caused by: org.neo4j.kernel.lifecycle.LifecycleException: Component 'org.neo4j.server.database.LifecycleManagingDatabase@1603cd68' was successfully initialized, but failed to start. Please see the attached cause exception "Store and its lock file has been locked by another process: /home/sammo/Workload/gym_app/db/neo4j/development/data/databases/graph.db/store_lock. Please ensure no other process is using this database, and that the directory is writable (required even for read-only access)".
+	at org.neo4j.kernel.lifecycle.LifeSupport$LifecycleInstance.start(LifeSupport.java:466)
+	at org.neo4j.kernel.lifecycle.LifeSupport.start(LifeSupport.java:107)
+	at org.neo4j.server.AbstractNeoServer.start(AbstractNeoServer.java:212)
+	... 3 more
+Caused by: java.lang.RuntimeException: Error starting org.neo4j.kernel.impl.factory.GraphDatabaseFacadeFactory, /home/sammo/Workload/gym_app/db/neo4j/development/data/databases/graph.db
+	at org.neo4j.kernel.impl.factory.GraphDatabaseFacadeFactory.initFacade(GraphDatabaseFacadeFactory.java:212)
+	at org.neo4j.kernel.impl.factory.GraphDatabaseFacadeFactory.newFacade(GraphDatabaseFacadeFactory.java:125)
+	at org.neo4j.server.CommunityNeoServer.lambda$static$0(CommunityNeoServer.java:58)
+	at org.neo4j.server.database.LifecycleManagingDatabase.start(LifecycleManagingDatabase.java:88)
+	at org.neo4j.kernel.lifecycle.LifeSupport$LifecycleInstance.start(LifeSupport.java:445)
+	... 5 more
+Caused by: org.neo4j.kernel.lifecycle.LifecycleException: Component 'org.neo4j.kernel.internal.locker.StoreLockerLifecycleAdapter@141e5bef' was successfully initialized, but failed to start. Please see the attached cause exception "Store and its lock file has been locked by another process: /home/sammo/Workload/gym_app/db/neo4j/development/data/databases/graph.db/store_lock. Please ensure no other process is using this database, and that the directory is writable (required even for read-only access)".
+	at org.neo4j.kernel.lifecycle.LifeSupport$LifecycleInstance.start(LifeSupport.java:466)
+	at org.neo4j.kernel.lifecycle.LifeSupport.start(LifeSupport.java:107)
+	at org.neo4j.kernel.impl.factory.GraphDatabaseFacadeFactory.initFacade(GraphDatabaseFacadeFactory.java:208)
+	... 9 more
+Caused by: org.neo4j.kernel.StoreLockException: Store and its lock file has been locked by another process: /home/sammo/Workload/gym_app/db/neo4j/development/data/databases/graph.db/store_lock. Please ensure no other process is using this database, and that the directory is writable (required even for read-only access)
+	at org.neo4j.kernel.internal.locker.StoreLocker.storeLockException(StoreLocker.java:117)
+	at org.neo4j.kernel.internal.locker.StoreLocker.checkLock(StoreLocker.java:93)
+	at org.neo4j.kernel.internal.locker.GlobalStoreLocker.checkLock(GlobalStoreLocker.java:60)
+	at org.neo4j.kernel.internal.locker.StoreLockerLifecycleAdapter.start(StoreLockerLifecycleAdapter.java:36)
+	at org.neo4j.kernel.lifecycle.LifeSupport$LifecycleInstance.start(LifeSupport.java:445)
+	... 11 more
+2019-11-09 17:37:31.297+0000 INFO  Neo4j Server shutdown initiated by request
+nohup: ignoring input
+2019-11-09 17:43:27.187+0000 INFO  ======== Neo4j 3.4.1 ========
+2019-11-09 17:43:27.219+0000 INFO  Starting...
+2019-11-09 17:43:27.995+0000 ERROR Failed to start Neo4j: Starting Neo4j failed: Component 'org.neo4j.server.database.LifecycleManagingDatabase@1603cd68' was successfully initialized, but failed to start. Please see the attached cause exception "Store and its lock file has been locked by another process: /home/sammo/Workload/gym_app/db/neo4j/development/data/databases/graph.db/store_lock. Please ensure no other process is using this database, and that the directory is writable (required even for read-only access)". Starting Neo4j failed: Component 'org.neo4j.server.database.LifecycleManagingDatabase@1603cd68' was successfully initialized, but failed to start. Please see the attached cause exception "Store and its lock file has been locked by another process: /home/sammo/Workload/gym_app/db/neo4j/development/data/databases/graph.db/store_lock. Please ensure no other process is using this database, and that the directory is writable (required even for read-only access)".
+org.neo4j.server.ServerStartupException: Starting Neo4j failed: Component 'org.neo4j.server.database.LifecycleManagingDatabase@1603cd68' was successfully initialized, but failed to start. Please see the attached cause exception "Store and its lock file has been locked by another process: /home/sammo/Workload/gym_app/db/neo4j/development/data/databases/graph.db/store_lock. Please ensure no other process is using this database, and that the directory is writable (required even for read-only access)".
+	at org.neo4j.server.exception.ServerStartupErrors.translateToServerStartupError(ServerStartupErrors.java:68)
+	at org.neo4j.server.AbstractNeoServer.start(AbstractNeoServer.java:220)
+	at org.neo4j.server.ServerBootstrapper.start(ServerBootstrapper.java:111)
+	at org.neo4j.server.ServerBootstrapper.start(ServerBootstrapper.java:79)
+	at org.neo4j.server.CommunityEntryPoint.main(CommunityEntryPoint.java:32)
+Caused by: org.neo4j.kernel.lifecycle.LifecycleException: Component 'org.neo4j.server.database.LifecycleManagingDatabase@1603cd68' was successfully initialized, but failed to start. Please see the attached cause exception "Store and its lock file has been locked by another process: /home/sammo/Workload/gym_app/db/neo4j/development/data/databases/graph.db/store_lock. Please ensure no other process is using this database, and that the directory is writable (required even for read-only access)".
+	at org.neo4j.kernel.lifecycle.LifeSupport$LifecycleInstance.start(LifeSupport.java:466)
+	at org.neo4j.kernel.lifecycle.LifeSupport.start(LifeSupport.java:107)
+	at org.neo4j.server.AbstractNeoServer.start(AbstractNeoServer.java:212)
+	... 3 more
+Caused by: java.lang.RuntimeException: Error starting org.neo4j.kernel.impl.factory.GraphDatabaseFacadeFactory, /home/sammo/Workload/gym_app/db/neo4j/development/data/databases/graph.db
+	at org.neo4j.kernel.impl.factory.GraphDatabaseFacadeFactory.initFacade(GraphDatabaseFacadeFactory.java:212)
+	at org.neo4j.kernel.impl.factory.GraphDatabaseFacadeFactory.newFacade(GraphDatabaseFacadeFactory.java:125)
+	at org.neo4j.server.CommunityNeoServer.lambda$static$0(CommunityNeoServer.java:58)
+	at org.neo4j.server.database.LifecycleManagingDatabase.start(LifecycleManagingDatabase.java:88)
+	at org.neo4j.kernel.lifecycle.LifeSupport$LifecycleInstance.start(LifeSupport.java:445)
+	... 5 more
+Caused by: org.neo4j.kernel.lifecycle.LifecycleException: Component 'org.neo4j.kernel.internal.locker.StoreLockerLifecycleAdapter@141e5bef' was successfully initialized, but failed to start. Please see the attached cause exception "Store and its lock file has been locked by another process: /home/sammo/Workload/gym_app/db/neo4j/development/data/databases/graph.db/store_lock. Please ensure no other process is using this database, and that the directory is writable (required even for read-only access)".
+	at org.neo4j.kernel.lifecycle.LifeSupport$LifecycleInstance.start(LifeSupport.java:466)
+	at org.neo4j.kernel.lifecycle.LifeSupport.start(LifeSupport.java:107)
+	at org.neo4j.kernel.impl.factory.GraphDatabaseFacadeFactory.initFacade(GraphDatabaseFacadeFactory.java:208)
+	... 9 more
+Caused by: org.neo4j.kernel.StoreLockException: Store and its lock file has been locked by another process: /home/sammo/Workload/gym_app/db/neo4j/development/data/databases/graph.db/store_lock. Please ensure no other process is using this database, and that the directory is writable (required even for read-only access)
+	at org.neo4j.kernel.internal.locker.StoreLocker.storeLockException(StoreLocker.java:117)
+	at org.neo4j.kernel.internal.locker.StoreLocker.checkLock(StoreLocker.java:93)
+	at org.neo4j.kernel.internal.locker.GlobalStoreLocker.checkLock(GlobalStoreLocker.java:60)
+	at org.neo4j.kernel.internal.locker.StoreLockerLifecycleAdapter.start(StoreLockerLifecycleAdapter.java:36)
+	at org.neo4j.kernel.lifecycle.LifeSupport$LifecycleInstance.start(LifeSupport.java:445)
+	... 11 more
+2019-11-09 17:43:27.996+0000 INFO  Neo4j Server shutdown initiated by request
+nohup: ignoring input
+2019-11-11 12:43:32.821+0000 INFO  ======== Neo4j 3.4.1 ========
+2019-11-11 12:43:32.853+0000 INFO  Starting...
+2019-11-11 12:43:34.873+0000 INFO  Bolt enabled on localhost:7472.
+2019-11-11 12:43:36.461+0000 INFO  Started.
+2019-11-11 12:43:37.191+0000 INFO  Remote interface available at http://localhost:7474/

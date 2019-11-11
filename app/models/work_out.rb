@@ -5,7 +5,7 @@ class WorkOut
   property :total_workload, type: Integer
   property :total_sets, type: Integer
 
-  has_one :out, :user, type: :user
+  has_one :out, :user, type: nil
   has_many :in, :work_unit, type: nil
 
   before_save :work_units_presence

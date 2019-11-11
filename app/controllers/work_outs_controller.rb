@@ -10,7 +10,7 @@ class WorkOutsController < ApplicationController
   # GET /work_outs/1
   # GET /work_outs/1.json
   def show
-    @work_units = WorkOut.find(params[:id])
+    @work_units = WorkOut.find(params[:id]).work_unit
   end
 
   def show_work_units

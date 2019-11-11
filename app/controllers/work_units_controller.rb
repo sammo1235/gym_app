@@ -4,7 +4,7 @@ class WorkUnitsController < ApplicationController
   # GET /work_units
   # GET /work_units.json
   def index
-    @work_units = WorkUnit.all#.order(:created_at).reverse_each
+    @work_units = WorkUnit.all.order(:created_at).reverse_each
   end
 
   # GET /work_units/1
@@ -44,14 +44,17 @@ class WorkUnitsController < ApplicationController
   # PATCH/PUT /work_units/1
   # PATCH/PUT /work_units/1.json
   def update
+    puts "THE LIFT BEING SAVED \n ++++ #{params[:lift]} ++++++ \n HERE"
+    if Lift.find_by(name: params[:lift]).nil?
+      lift = Lift.create(name: params[:lift])
+    else
+      lift = Lift.find_by(name: params[:lift])
+    end
+    @work_unit.update(lift: lift)
     respond_to do |format|
       if @work_unit.update(work_unit_params)
         @work_unit.work_out.calculate_workout_volume
 
-        if Lift.find_by(name: params[:lift][:lift][:name]).nil?
-          lift = Lift.create(name: params[:lift][:lift][:name])
-          @work_unit.update(lift: lift)
-        end
 
         format.html { redirect_to work_out_path(@work_unit.work_out.id), notice: 'Work unit and work out were successfully updated.' }
         format.json { render :show, status: :ok, location: @work_unit }
@@ -70,7 +73,7 @@ class WorkUnitsController < ApplicationController
     workout.calculate_workout_volume
     respond_to do |format|
       format.html { redirect_to work_out_path(workout.id), notice: 'Work unit was successfully destroyed.' }
-      format.json { head :no_content }
+      format.json { render json: workout.to_json }
     end
   end
 

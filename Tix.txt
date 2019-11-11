@@ -66,3 +66,5 @@ Embed videos into workouts/sets
 
 Workout Type - can select or create new one // DONE
 cannot be blank // DONE
+
+WorkUnit Lift - can Create new lifts on workout page // DONE

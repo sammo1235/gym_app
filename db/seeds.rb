@@ -1,5 +1,5 @@
-user = User.create(name: "Sam", bodyweight: 95, email: "sam@hop.com")
-lift = Lift.create(name: "Squat")
+user = User.find_or_create_by(name: "Luna", bodyweight: 60, email: "sam@hop.com")
+lift = Lift.find_or_create_by(name: "Squat")
 
 # create essentially a workout with its nested sets and ting
 workout_1 = WorkOut.create(type: "Legs", user: user)

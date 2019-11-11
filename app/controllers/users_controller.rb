@@ -5,7 +5,6 @@ class UsersController < ApplicationController
   # GET /users.json
   def index
       @users = User.all
-      User.all.each { |i| @units = i.work_units }
   end
 
   # GET /users/1
