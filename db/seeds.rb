@@ -19,7 +19,7 @@ lifts.each {|l| Lift.find_or_create_by(name: l)}
   workout = Workout.create(variant: rand(7), notes: '')
 
   rand(15).times do
-    sett = Sett.create(reps: rand(10), weight: rand(100), lift: Lift.find(rand(1..4)), workout_id: workout.id)
+    sett = Sett.create(reps: rand(1..10), weight: rand(5..100), lift: Lift.find(rand(1..4)), workout_id: workout.id)
     workout.setts << sett
   end
 end

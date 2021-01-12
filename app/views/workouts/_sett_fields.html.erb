@@ -1,0 +1,17 @@
+<div class="nested-fields">
+
+  <div class="flex items-center justify-between bg-gray-100 py-3 px-6 rounded">
+    <%= f.label :lift_id, "Lift", class: "font-bold" %>
+    <%= f.select :lift_id, Lift.all.pluck(:name, :id) %>
+  </div>
+
+  <div class="flex items-center justify-between bg-gray-100 py-3 px-6 rounded">
+    <%= f.label :weight, "Weight", class: "font-bold" %>
+    <%= f.number_field :weight %>
+  </div>
+
+  <div class="flex items-center justify-between bg-gray-100 py-3 px-6 rounded">
+    <%= f.label :reps, "Reps", class: "font-bold" %>
+    <%= f.number_field :reps %>
+  </div>
+</div>
