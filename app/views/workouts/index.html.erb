@@ -1,0 +1,33 @@
+<p id="notice"><%= notice %></p>
+
+<div class="px-8 py-6 rounded shadow bg-white">
+  <table class="w-full leading-10">
+    <thead class="text-left border-b">
+      <tr class="pb-1">
+        <th>Type</th>
+        <th>Date</th>
+        <th>Sets</th>
+        <th>Total Workload</th>
+        <th>&nbsp;</th>
+      </tr>
+    </thead>
+
+    <tbody>
+      <% @workouts.each do |workout| %>
+        <tr>
+          <td><%= workout.variant.capitalize %></td>
+          <td><%= workout.created_at.to_date %></td>
+          <td><%= workout.setts.count %></td>
+          <td><%= workout.total_workload %></td>
+          <td class="text-right">
+            <%= link_to 'Show', workout %> | <%= link_to 'Edit', edit_workout_path(workout) %>
+          </td>
+        </tr>
+      <% end %>
+    </tbody>
+  </table>
+</div>
+
+<div class="flex justify-center mt-4">
+  <%= link_to 'New Work Out', new_workout_path, class: "inline-block bg-blue-500 hover:bg-blue-600 text-white rounded shadow cursor-pointer font-bold px-3 py-2" %>
+</div>

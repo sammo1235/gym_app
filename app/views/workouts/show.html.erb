@@ -1,0 +1,58 @@
+<div class="mx-auto px-8 py-6 rounded shadow bg-white">
+  <div class="flex flex-col space-y-4">
+    <div class="flex items-center justify-between bg-gray-100 py-3 px-6 rounded">
+      <span class="font-bold">
+      Variant
+      </span>
+      <span>
+        <%= @workout.variant.capitalize %>
+      </span>
+    </div>
+
+    <div class="flex items-center justify-between bg-gray-100 py-3 px-6 rounded">
+      <span class="font-bold">
+         Total Sets
+      </span>
+      <span>
+        <%= @workout.setts.count %>
+      </span>
+    </div>
+
+    <div class="flex items-center justify-between bg-gray-100 py-3 px-6 rounded">
+      <span class="font-bold">
+         Total Workload
+      </span>
+      <span>
+        <%= @workout.total_workload %>
+      </span>
+    </div>
+  </div>
+</div>
+
+<div class="px-8 py-6 rounded shadow bg-white">
+  <table class="w-full leading-10">
+    <thead class="text-left border-b">
+      <tr class="pb-1">
+        <th>Lift</th>
+        <th>Weight</th>
+        <th>Reps</th>
+        <th>Total Workload</th>
+        <th>&nbsp;</th>
+      </tr>
+    </thead>
+
+    <tbody>
+      <% @workout.setts.each do |sett| %>
+        <tr>
+          <td><%= sett.lift.name %></td>
+          <td><%= sett.weight %></td>
+          <td><%= sett.reps %></td>
+          <td><%= sett.workload %></td>
+          <td class="text-right">
+            <%= link_to 'Edit', edit_sett_path(sett) %> | <%= link_to 'Destroy', sett, method: :delete, data: { confirm: 'Are you sure?' } %>
+          </td>
+        </tr>
+      <% end %>
+    </tbody>
+  </table>
+</div>
