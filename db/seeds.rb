@@ -25,7 +25,7 @@ lifts = %w[
 lifts.each {|l| Lift.find_or_create_by(name: l)}
 
 20.times do
-  workout = Workout.create(variant: rand(7), notes: '')
+  workout = Workout.create(variant: rand(7), notes: '', user: User.first)
 
   rand(15).times do
     sett = Sett.create(reps: rand(1..10), weight: rand(5..200), lift: Lift.find(rand(1..lifts.count-1)), workout_id: workout.id)

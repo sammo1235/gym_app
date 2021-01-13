@@ -1,4 +1,5 @@
 class Workout < ApplicationRecord
+  belongs_to :user
   has_many :setts
   has_many :lifts, through: :setts
   accepts_nested_attributes_for :setts, allow_destroy: true
