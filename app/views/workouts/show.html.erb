@@ -30,29 +30,39 @@
 </div>
 
 <div class="px-8 py-6 rounded shadow bg-white">
-  <table class="w-full leading-10">
-    <thead class="text-left border-b">
-      <tr class="pb-1">
-        <th>Lift</th>
-        <th>Weight</th>
-        <th>Reps</th>
-        <th>Total Workload</th>
-        <th>&nbsp;</th>
-      </tr>
-    </thead>
-
-    <tbody>
-      <% @workout.setts.each do |sett| %>
-        <tr>
-          <td><%= sett.lift.name %></td>
-          <td><%= sett.weight %></td>
-          <td><%= sett.reps %></td>
-          <td><%= sett.workload %></td>
-          <td class="text-right">
-            <%= link_to 'Edit', edit_sett_path(sett) %> | <%= link_to 'Destroy', sett, method: :delete, data: { confirm: 'Are you sure?' } %>
-          </td>
+  <% unless @workout.setts.count.zero? %>
+    <table class="w-full leading-10">
+      <thead class="text-left border-b">
+        <tr class="pb-1">
+          <th>Lift</th>
+          <th>Weight</th>
+          <th>Reps</th>
+          <th>Workload</th>
+          <th>&nbsp;</th>
         </tr>
-      <% end %>
-    </tbody>
-  </table>
+      </thead>
+
+      <tbody>
+        <% @workout.setts.each do |sett| %>
+          <tr>
+            <td><%= sett.lift.name %></td>
+            <td><%= sett.weight %></td>
+            <td><%= sett.reps %></td>
+            <td><%= sett.workload %></td>
+            <td class="text-right">
+              <%= link_to 'Edit', edit_sett_path(sett) %> | <%= link_to 'Destroy', sett, method: :delete, data: { confirm: 'Are you sure?' } %>
+            </td>
+          </tr>
+        <% end %>
+      </tbody>
+    </table>
+  <% end %>
+
+  <div class="flex justify-center mt-4 justify-evenly">
+    <%= link_to 'Edit Work Out', edit_workout_path(@workout), class: "inline-block bg-blue-500 hover:bg-blue-600 text-white rounded shadow cursor-pointer font-bold px-3 py-2" %>
+    <%= link_to 'Delete Work Out', workout_path(@workout), method: :delete, class: "inline-block bg-blue-500 hover:bg-blue-600 text-white rounded shadow cursor-pointer font-bold px-3 py-2" %>
+  </div>
+
+  <div class="flex justify-center mt-4">
+  </div>
 </div>

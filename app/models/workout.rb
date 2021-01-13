@@ -16,4 +16,8 @@ class Workout < ApplicationRecord
   def total_workload
     setts.reduce(0) {|memo, sett| memo += sett.workload; memo }
   end
+
+  def prepared_variant
+    variant.capitalize.gsub(/_/, ' ')
+  end
 end

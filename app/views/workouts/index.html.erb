@@ -15,7 +15,7 @@
     <tbody>
       <% @workouts.each do |workout| %>
         <tr>
-          <td><%= workout.variant.capitalize %></td>
+          <td><%= workout.prepared_variant %></td>
           <td><%= workout.created_at.to_date %></td>
           <td><%= workout.setts.count %></td>
           <td><%= workout.total_workload %></td>

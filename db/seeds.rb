@@ -11,6 +11,15 @@ lifts = %w[
   Bench
   Deadlift
   Row
+  Incline Dumbell Press
+  Romainian Deadlift
+  Dumbell Press
+  Dumbell Row
+  Machine OHP
+  Lat Pulldown
+  Pullups
+  Leg Press
+  Dips
 ]
 
 lifts.each {|l| Lift.find_or_create_by(name: l)}
@@ -19,7 +28,7 @@ lifts.each {|l| Lift.find_or_create_by(name: l)}
   workout = Workout.create(variant: rand(7), notes: '')
 
   rand(15).times do
-    sett = Sett.create(reps: rand(1..10), weight: rand(5..100), lift: Lift.find(rand(1..4)), workout_id: workout.id)
+    sett = Sett.create(reps: rand(1..10), weight: rand(5..200), lift: Lift.find(rand(1..lifts.count-1)), workout_id: workout.id)
     workout.setts << sett
   end
 end

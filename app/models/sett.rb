@@ -6,9 +6,4 @@ class Sett < ApplicationRecord
   def workload
     weight * reps
   end
-
-  private
-  def sett_params
-    params.require(:sett).permit(:weight, :reps, :lift_id)
-  end
 end
