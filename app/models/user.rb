@@ -6,4 +6,9 @@ class User < ApplicationRecord
 
   has_many :workouts
   has_many :setts, through: :workouts
+
+  enum gender: [
+    :male,
+    :female
+  ]
 end

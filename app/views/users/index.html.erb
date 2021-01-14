@@ -1,0 +1,25 @@
+<p id="notice"><%= notice %></p>
+
+<div class="px-8 py-6 rounded shadow bg-white">
+  <table class="w-full leading-10">
+    <thead class="text-left border-b">
+      <tr class="pb-1">
+        <th>Name</th>
+        <th>Age</th>
+        <th>Sets</th>
+        <th>Wilks</th>
+      </tr>
+    </thead>
+
+    <tbody>
+      <% @users.each do |user| %>
+        <tr>
+          <td><%= user.username %></td>
+          <td><%= user.age %></td>
+          <td><%= user.setts.count %></td>
+          <td><%= user.wilks_score %>
+        </tr>
+      <% end %>
+    </tbody>
+  </table>
+</div>
