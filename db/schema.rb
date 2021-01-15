@@ -57,5 +57,5 @@ ActiveRecord::Schema.define(version: 2021_01_13_182319) do
 
   add_foreign_key "setts", "lifts"
   add_foreign_key "setts", "workouts"
-  add_foreign_key "workouts", "users"
+  add_foreign_key "workouts", "users", on_delete: :cascade
 end

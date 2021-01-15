@@ -4,8 +4,8 @@ class User < ApplicationRecord
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :validatable
 
-  has_many :workouts
-  has_many :setts, through: :workouts
+  has_many :workouts, dependent: :destroy
+  has_many :setts, through: :workouts, dependent: :destroy
 
   enum gender: [
     :male,

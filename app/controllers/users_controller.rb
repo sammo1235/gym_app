@@ -2,7 +2,9 @@ class UsersController < ApplicationController
   before_action :set_user, only: [:show, :edit, :update]
 
   def index
-    @users = User.all.order(wilks_score: :desc)
+    @users = User.all
+      .includes(:setts)
+      .order(wilks_score: :desc)
   end
 
   def show
