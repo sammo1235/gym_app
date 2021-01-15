@@ -20,7 +20,7 @@
           <td><%= workout.setts.count %></td>
           <td><%= workout.total_workload %></td>
           <td class="text-right">
-            <%= link_to 'Show', workout %> | <%= link_to 'Edit', edit_workout_path(workout) %>
+            <%= link_to 'Show', user_workout_path(@user.id, workout.id) %> | <%= link_to 'Edit', edit_user_workout_path(@user.id, workout.id) %>
           </td>
         </tr>
       <% end %>
@@ -29,5 +29,5 @@
 </div>
 
 <div class="flex justify-center mt-4">
-  <%= link_to 'New Work Out', new_workout_path, class: "inline-block bg-blue-500 hover:bg-blue-600 text-white rounded shadow cursor-pointer font-bold px-3 py-2" %>
+  <%= link_to 'New Work Out', new_user_workout_path, class: "inline-block bg-blue-500 hover:bg-blue-600 text-white rounded shadow cursor-pointer font-bold px-3 py-2" %>
 </div>

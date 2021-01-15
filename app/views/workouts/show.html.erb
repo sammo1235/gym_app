@@ -59,8 +59,8 @@
   <% end %>
 
   <div class="flex justify-center mt-4 justify-evenly">
-    <%= link_to 'Edit Work Out', edit_workout_path(@workout), class: "inline-block bg-blue-500 hover:bg-blue-600 text-white rounded shadow cursor-pointer font-bold px-3 py-2" %>
-    <%= link_to 'Delete Work Out', workout_path(@workout), method: :delete, class: "inline-block bg-blue-500 hover:bg-blue-600 text-white rounded shadow cursor-pointer font-bold px-3 py-2" %>
+    <%= link_to 'Edit Work Out', edit_user_workout_path(@user, @workout), class: "inline-block bg-blue-500 hover:bg-blue-600 text-white rounded shadow cursor-pointer font-bold px-3 py-2" %>
+    <%= link_to 'Delete Work Out', user_workout_path(user_id: @user.id, id: @workout.id), method: :delete, class: "inline-block bg-blue-500 hover:bg-blue-600 text-white rounded shadow cursor-pointer font-bold px-3 py-2" %>
   </div>
 
   <div class="flex justify-center mt-4">
