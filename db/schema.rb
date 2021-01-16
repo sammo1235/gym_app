@@ -19,8 +19,8 @@ ActiveRecord::Schema.define(version: 2021_01_13_182319) do
   end
 
   create_table "setts", force: :cascade do |t|
-    t.integer "reps"
-    t.integer "weight"
+    t.integer "reps", null: false
+    t.integer "weight", null: false
     t.integer "lift_id", null: false
     t.integer "workout_id", null: false
     t.datetime "created_at", precision: 6, null: false

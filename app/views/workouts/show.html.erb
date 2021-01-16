@@ -50,7 +50,9 @@
             <td><%= sett.reps %></td>
             <td><%= sett.workload %></td>
             <td class="text-right">
-              <%= link_to 'Edit', edit_sett_path(sett) %> | <%= link_to 'Destroy', sett, method: :delete, data: { confirm: 'Are you sure?' } %>
+              <% if user_signed_in? %>
+                <%= link_to 'Edit', edit_sett_path(sett) %> | <%= link_to 'Destroy', sett, method: :delete, data: { confirm: 'Are you sure?' } %>
+              <% end %>
             </td>
           </tr>
         <% end %>
@@ -58,11 +60,10 @@
     </table>
   <% end %>
 
-  <div class="flex justify-center mt-4 justify-evenly">
-    <%= link_to 'Edit Work Out', edit_user_workout_path(@user, @workout), class: "inline-block bg-blue-500 hover:bg-blue-600 text-white rounded shadow cursor-pointer font-bold px-3 py-2" %>
-    <%= link_to 'Delete Work Out', user_workout_path(user_id: @user.id, id: @workout.id), method: :delete, class: "inline-block bg-blue-500 hover:bg-blue-600 text-white rounded shadow cursor-pointer font-bold px-3 py-2" %>
-  </div>
-
-  <div class="flex justify-center mt-4">
-  </div>
+  <% if user_signed_in? %>
+    <div class="flex justify-center mt-4 justify-evenly">
+      <%= link_to 'Edit Work Out', edit_user_workout_path(@user, @workout), class: "inline-block bg-blue-500 hover:bg-blue-600 text-white rounded shadow cursor-pointer font-bold px-3 py-2" %>
+      <%= link_to 'Delete Work Out', user_workout_path(user_id: @user.id, id: @workout.id), method: :delete, class: "inline-block bg-blue-500 hover:bg-blue-600 text-white rounded shadow cursor-pointer font-bold px-3 py-2" %>
+    </div>
+  <% end %>
 </div>

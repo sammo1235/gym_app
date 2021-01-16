@@ -1,6 +1,7 @@
 class WorkoutsController < ApplicationController
   before_action :set_workout, only: [:show, :edit, :update, :destroy]
-  before_action :set_user, only: [:index, :show, :edit, :update, :destroy]
+  before_action :set_user, only: [:new, :index, :show, :edit, :update, :destroy]
+  before_action :authenticate_user!, except: [:index, :show]
 
 
   def index
@@ -18,9 +19,9 @@ class WorkoutsController < ApplicationController
   end
 
   def create
-    @workout = Workout.new workout_params
+    @workout = current_user.workouts.build workout_params
     if @workout.save
-      redirect_to workout_path(@workout)
+      redirect_to user_workout_path(current_user, @workout)
     else
       render :new
     end
@@ -31,7 +32,7 @@ class WorkoutsController < ApplicationController
 
   def update
     if @workout.update workout_params
-      redirect_to user_workout_path(@user, @workout)
+      redirect_to user_workout_path(current_user, @workout)
     else
       render :edit
     end
@@ -44,7 +45,7 @@ class WorkoutsController < ApplicationController
 
   private
     def workout_params
-      params.require(:workout).permit(:variant, :notes, setts_attributes: [:id, :weight, :reps, :lift_id, :_destroy])
+      params.require(:workout).permit(:user_id, :variant, :notes, setts_attributes: [:id, :weight, :reps, :lift_id, :_destroy])
     end
 
     def set_workout
