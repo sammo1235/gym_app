@@ -2,8 +2,13 @@
 
 
 <div class="px-8 py-6 rounded shadow bg-white">
-  <div class="font-bold booked">
-    <%= @user.username %>
+  <div class="flex justify-evenly">
+    <div class="font-bold">
+      User: <%= @user.username %>
+    </div>
+    <div class="font-bold">
+      Wilks: <%= @user.wilks_score %>
+    </div>
   </div>
   <table class="w-full leading-10">
     <thead class="text-left border-b">
