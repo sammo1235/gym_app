@@ -1,6 +1,10 @@
 <p id="notice"><%= notice %></p>
 
+
 <div class="px-8 py-6 rounded shadow bg-white">
+  <div class="font-bold booked">
+    <%= @user.username %>
+  </div>
   <table class="w-full leading-10">
     <thead class="text-left border-b">
       <tr class="pb-1">
@@ -20,7 +24,7 @@
           <td><%= workout.setts.count %></td>
           <td><%= workout.total_workload %></td>
           <td class="text-right">
-            <% if user_signed_in? %>
+            <% if current_user == @user %>
               <%= link_to 'Edit', edit_user_workout_path(@user, workout) %>
             <% end %>
           </td>
@@ -30,7 +34,7 @@
   </table>
 </div>
 
-<% if user_signed_in? %>
+<% if current_user == @user %>
   <div class="flex justify-center mt-4">
     <%= link_to 'New Work Out', new_user_workout_path, class: "inline-block bg-blue-500 hover:bg-blue-600 text-white rounded shadow cursor-pointer font-bold px-3 py-2" %>
   </div>

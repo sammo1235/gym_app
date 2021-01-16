@@ -1,4 +1,8 @@
 <div class="mx-auto px-8 py-6 rounded shadow bg-white">
+  <div class="font-bold booked">
+    <%= @user.username %>
+  </div>
+
   <div class="flex flex-col space-y-4">
     <div class="flex items-center justify-between bg-gray-100 py-3 px-6 rounded">
       <span class="font-bold">
@@ -50,7 +54,7 @@
             <td><%= sett.reps %></td>
             <td><%= sett.workload %></td>
             <td class="text-right">
-              <% if user_signed_in? %>
+              <% if current_user == @user %>
                 <%= link_to 'Edit', edit_sett_path(sett) %> | <%= link_to 'Destroy', sett, method: :delete, data: { confirm: 'Are you sure?' } %>
               <% end %>
             </td>
@@ -60,7 +64,7 @@
     </table>
   <% end %>
 
-  <% if user_signed_in? %>
+  <% if current_user == @user %>
     <div class="flex justify-center mt-4 justify-evenly">
       <%= link_to 'Edit Work Out', edit_user_workout_path(@user, @workout), class: "inline-block bg-blue-500 hover:bg-blue-600 text-white rounded shadow cursor-pointer font-bold px-3 py-2" %>
       <%= link_to 'Delete Work Out', user_workout_path(user_id: @user.id, id: @workout.id), method: :delete, class: "inline-block bg-blue-500 hover:bg-blue-600 text-white rounded shadow cursor-pointer font-bold px-3 py-2" %>
