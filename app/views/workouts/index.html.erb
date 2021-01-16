@@ -1,6 +1,15 @@
 <p id="notice"><%= notice %></p>
 
+
 <div class="px-8 py-6 rounded shadow bg-white">
+  <div class="flex justify-evenly">
+    <div class="font-bold">
+      User: <%= @user.username %>
+    </div>
+    <div class="font-bold">
+      Wilks: <%= @user.wilks_score %>
+    </div>
+  </div>
   <table class="w-full leading-10">
     <thead class="text-left border-b">
       <tr class="pb-1">
@@ -15,12 +24,14 @@
     <tbody>
       <% @workouts.each do |workout| %>
         <tr>
-          <td><%= workout.prepared_variant %></td>
+          <td><%= link_to workout.prepared_variant, user_workout_path(@user, workout) %></td>
           <td><%= workout.created_at.to_date %></td>
           <td><%= workout.setts.count %></td>
           <td><%= workout.total_workload %></td>
           <td class="text-right">
-            <%= link_to 'Show', workout %> | <%= link_to 'Edit', edit_workout_path(workout) %>
+            <% if current_user == @user %>
+              <%= link_to 'Edit', edit_user_workout_path(@user, workout) %>
+            <% end %>
           </td>
         </tr>
       <% end %>
@@ -28,6 +39,8 @@
   </table>
 </div>
 
-<div class="flex justify-center mt-4">
-  <%= link_to 'New Work Out', new_workout_path, class: "inline-block bg-blue-500 hover:bg-blue-600 text-white rounded shadow cursor-pointer font-bold px-3 py-2" %>
-</div>
+<% if current_user == @user %>
+  <div class="flex justify-center mt-4">
+    <%= link_to 'New Work Out', new_user_workout_path, class: "inline-block bg-blue-500 hover:bg-blue-600 text-white rounded shadow cursor-pointer font-bold px-3 py-2" %>
+  </div>
+<% end %>
