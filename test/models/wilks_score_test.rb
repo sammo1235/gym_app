@@ -92,4 +92,16 @@ class WilksScoreTest < ActiveSupport::TestCase
 
     assert_equal @user.best_wilks, @wilks
   end
+
+  test "lifts other than S/B/D aren't counted" do
+    @dumbell_press = Lift.create(name: 'Dumbell Press')
+    Workout.new(variant: 5, user: @user).tap do |workout|
+      workout.setts << Sett.create(lift: @dumbell_press, weight: 30, reps: 1)
+      workout.setts << Sett.create(lift: @dumbell_press, weight: 35, reps: 5)
+      workout.setts << Sett.create(lift: @dumbell_press, weight: 40, reps: 6)
+      workout.save
+    end
+
+    refute @user.best_wilks
+  end
 end

@@ -16,6 +16,6 @@ class User < ApplicationRecord
   ]
 
   def best_wilks
-    wilks_scores.order(score: :desc).first&.score || "N/A"
+    wilks_scores.order(score: :desc).first&.score
   end
 end
