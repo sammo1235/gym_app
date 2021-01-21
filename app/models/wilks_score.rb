@@ -7,11 +7,6 @@ class WilksScore < ApplicationRecord
 
   def self.create_score(workout, user)
     lift_ids = Lift.where(name: LIFTS).pluck(:id)
-    # takes in setts from a new workout
-    # if any are from the LIFTS list
-    # get projected or actual (if rep count == 1) 1RM
-    # if any of these individually or combined make the users best wilks increase
-    # create a new wilks score record
 
     personal_bests = Hash[LIFTS.map {|lift| [lift, Sett.user_best_for_lift(user, lift)]}]
 
@@ -23,12 +18,12 @@ class WilksScore < ApplicationRecord
       end
     end
 
+    return unless personal_bests.values.select(&:zero?).size.zero?
+
     new_wilks = WilksCalc.send(user.gender, user.bodyweight, personal_bests.values.sum)
 
-    if user.best_wilks.nil?
+    if user.best_wilks.nil? || new_wilks > user.best_wilks
       self.create(user: user, score: new_wilks)
-    else
-      self.create(user: user, score: new_wilks) if new_wilks > user.best_wilks
     end
   end
 end

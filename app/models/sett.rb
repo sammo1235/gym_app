@@ -42,10 +42,10 @@ class Sett < ApplicationRecord
   end
 
   def upper_body_projected_1RM
-    weight.round * 1.1307 + 0.6998
+    (weight.round * 1.1307 + 0.6998).round(2)
   end
 
   def lower_body_projected_1RM
-    weight.round * 1.09703 + 14.2546
+    (weight.round * 1.09703 + 14.2546).round(2)
   end
 end
