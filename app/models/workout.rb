@@ -4,6 +4,10 @@ class Workout < ApplicationRecord
   has_many :lifts, through: :setts
   accepts_nested_attributes_for :setts, allow_destroy: true
 
+  after_create do
+    WilksScore.create_score(self, self.user)
+  end
+
   enum variant: [
     :back,
     :legs,

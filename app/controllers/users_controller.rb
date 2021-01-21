@@ -4,7 +4,7 @@ class UsersController < ApplicationController
   def index
     @users = User.all
       .includes(:setts)
-      .order(wilks_score: :desc)
+      .ordered_by_wilks
   end
 
   def show

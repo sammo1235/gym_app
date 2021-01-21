@@ -36,7 +36,6 @@ class DeviseCreateUsers < ActiveRecord::Migration[6.0]
       t.integer :age, null: false
       t.integer :gender, null: false
       t.float :bodyweight, null: false
-      t.float :wilks_score
 
       t.timestamps null: false
     end
