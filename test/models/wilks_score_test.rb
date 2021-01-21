@@ -2,19 +2,21 @@ require 'test_helper'
 
 class WilksScoreTest < ActiveSupport::TestCase
   setup do
+    @user = create(:user)
     @squat = Lift.create(name: 'Back Squat')
     @bench = Lift.create(name: 'Bench Press')
     @deadlift = Lift.create(name: 'Deadlift')
   end
 
   def default_workout
-    @user = create(:user)
     @workout = Workout.new(variant: 5, user: @user).tap do |workout|
       workout.setts << Sett.create(lift: @squat, weight: 200, reps: 1)
       workout.setts << Sett.create(lift: @bench, weight: 150, reps: 1)
       workout.setts << Sett.create(lift: @deadlift, weight: 250, reps: 1)
       workout.save
     end
+    @wilks = WilksCalc.send(@user.gender, @user.bodyweight, 600)
+    assert_equal @user.best_wilks, @wilks
   end
 
   test "it should generate the correct wilks score with 1RMs" do
@@ -24,9 +26,7 @@ class WilksScoreTest < ActiveSupport::TestCase
   end
 
   test "it should generate the correct wilks score with 5RMs" do
-    user = create(:user)
-
-    workout = Workout.new(variant: 5, user: user).tap do |workout|
+    workout = Workout.new(variant: 5, user: @user).tap do |workout|
       workout.setts << Sett.create(lift: @squat, weight: 200, reps: 5)
       workout.setts << Sett.create(lift: @bench, weight: 150, reps: 5)
       workout.setts << Sett.create(lift: @deadlift, weight: 250, reps: 5)
@@ -43,26 +43,33 @@ class WilksScoreTest < ActiveSupport::TestCase
       end
     end
 
-    wilks = WilksCalc.send(user.gender, user.bodyweight, projected_1rms.sum)
-    assert_equal user.best_wilks, wilks
+    wilks = WilksCalc.send(@user.gender, @user.bodyweight, projected_1rms.sum)
+    assert_equal @user.best_wilks, wilks
+  end
+
+  test "it doesn't create a wilks score if reps are out of bounds" do
+    workout = Workout.new(variant: 5, user: @user).tap do |workout|
+      workout.setts << Sett.create(lift: @squat, weight: 100, reps: 12)
+      workout.setts << Sett.create(lift: @bench, weight: 120, reps: 7)
+      workout.setts << Sett.create(lift: @deadlift, weight: 250, reps: 4)
+      workout.save
+    end
+
+    refute @user.best_wilks
   end
 
   test "it shouldn't create a WilksScore without all three lifts present" do
-    user = create(:user)
-    Workout.new(variant: 5, user: user).tap do |workout|
+    Workout.new(variant: 5, user: @user).tap do |workout|
       workout.setts << Sett.create(lift: @squat, weight: 200, reps: 1)
       workout.setts << Sett.create(lift: @bench, weight: 150, reps: 1)
       workout.save
     end
 
-    refute user.best_wilks
+    refute @user.best_wilks
   end
 
   test "it should update wilks score with better set" do
     default_workout
-
-    wilks = WilksCalc.send(@user.gender, @user.bodyweight, 600)
-    assert_equal @user.best_wilks, wilks
 
     Workout.new(variant: 5, user: @user).tap do |workout|
       workout.setts << Sett.create(lift: @squat, weight: 205, reps: 1)
@@ -76,9 +83,6 @@ class WilksScoreTest < ActiveSupport::TestCase
   test "it shouldn't create a lower wilks with a lower new total" do
     default_workout
 
-    wilks = WilksCalc.send(@user.gender, @user.bodyweight, 600)
-    assert_equal @user.best_wilks, wilks
-
     Workout.new(variant: 5, user: @user).tap do |workout|
       workout.setts << Sett.create(lift: @squat, weight: 190, reps: 1)
       workout.setts << Sett.create(lift: @bench, weight: 80, reps: 5)
@@ -86,6 +90,6 @@ class WilksScoreTest < ActiveSupport::TestCase
       workout.save
     end
 
-    assert_equal @user.best_wilks, wilks
+    assert_equal @user.best_wilks, @wilks
   end
 end
