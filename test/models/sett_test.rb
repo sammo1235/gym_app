@@ -23,4 +23,26 @@ class SettTest < ActiveSupport::TestCase
 
     assert_equal 200, Sett.user_best_for_lift(@user, 'Back Squat')
   end
+
+  test 'Sett.user_best gives projected best 1RM for sets with 4-6 reps...' do
+    default_workout
+
+    Workout.new(variant: 0, user: @user).tap do |workout|
+      workout.setts << Sett.create(weight: 190, reps: 5, lift: @squat)
+      workout.save
+    end
+
+    assert_equal 222.69, Sett.user_best_for_lift(@user, @squat)
+  end
+
+  test '...but other rep ranges dont affect it' do
+    default_workout
+
+    Workout.new(variant: 0, user: @user).tap do |workout|
+      workout.setts << Sett.create(weight: 160, reps: 10, lift: @squat)
+      workout.save
+    end
+
+    assert_equal 200, Sett.user_best_for_lift(@user, @squat)
+  end
 end
