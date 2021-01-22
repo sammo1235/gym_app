@@ -2,7 +2,10 @@ class Sett < ApplicationRecord
   belongs_to :lift
   belongs_to :workout
 
-  # validate presence reps, weight, lift, workout
+  validates :reps, :weight, :lift, presence: :true
+
+  after_update -> { WilksScore.create_score(self.workout, self.workout.user) }
+
   def workload
     weight * reps
   end

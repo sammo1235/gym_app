@@ -104,4 +104,16 @@ class WilksScoreTest < ActiveSupport::TestCase
 
     refute @user.best_wilks
   end
+
+  test "new wilks will be created if sett is edited" do
+    default_workout
+
+    assert_difference '@user.wilks_scores.count', 1 do
+      @workout.setts.first.update(weight: 210)
+    end
+
+    new_wilks = WilksCalc.send(@user.gender, @user.bodyweight, 610)
+
+    assert_equal @user.best_wilks, new_wilks
+  end
 end
