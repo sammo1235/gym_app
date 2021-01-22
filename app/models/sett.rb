@@ -12,10 +12,9 @@ class Sett < ApplicationRecord
 
   def self.user_best_for_lift(user, lift)
     unless lift.is_a? Lift
-      begin
-        lift = Lift.find_by(name: lift)
-      rescue ActiveRecord::RecordNotFound => e
-        print e
+      lift = Lift.find_by(name: lift)
+      if lift.nil?
+        raise ActiveRecord::RecordNotFound
       end
     end
 
@@ -40,7 +39,6 @@ class Sett < ApplicationRecord
       end
     else
       0
-      # raise StandardError::MaxCannotBeCalculatedError => e
     end
   end
 
