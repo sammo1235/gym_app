@@ -7,8 +7,8 @@
 #   Character.create(name: 'Luke', movie: movies.first)
 
 lifts = [
-  "Squat",
-  "Bench",
+  "Back Squat",
+  "Bench Press",
   "Deadlift",
   "Row",
   "Incline Dumbell Press",
@@ -31,7 +31,6 @@ lifts.each {|l| Lift.find_or_create_by(name: l)}
   age: rand(15..90),
   gender: rand(0..1),
   bodyweight: rand(45..150),
-  wilks_score: rand(100..500.0).round(2),
   password: Faker::Company.bs.gsub(/\s/, '')
   )
 
@@ -51,7 +50,6 @@ user = User.find_by(username: 'sammo1235') || User.create!(
   age: 28,
   gender: 0,
   bodyweight: 90,
-  wilks_score: rand(100..500.0).round(2),
   password: 'password'
   )
 

@@ -1,6 +1,6 @@
 class WorkoutsController < ApplicationController
   before_action :set_user
-  before_action :set_workout, only: [:show, :edit, :update, :destroy]
+  before_action :set_workout, except: [:index, :new, :create]
   before_action :authenticate_user!, except: [:index, :show]
 
 
@@ -44,15 +44,16 @@ class WorkoutsController < ApplicationController
   end
 
   private
-    def workout_params
-      params.require(:workout).permit(:user_id, :variant, :notes, setts_attributes: [:id, :weight, :reps, :lift_id, :_destroy])
-    end
 
-    def set_workout
-      @workout = Workout.find params[:id]
-    end
+  def workout_params
+    params.require(:workout).permit(:user_id, :variant, :notes, setts_attributes: [:id, :weight, :reps, :lift_id, :_destroy])
+  end
 
-    def set_user
-      @user = User.find params[:user_id]
-    end
+  def set_workout
+    @workout = Workout.find params[:id]
+  end
+
+  def set_user
+    @user = User.find params[:user_id]
+  end
 end

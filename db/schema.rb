@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2021_01_13_182319) do
+ActiveRecord::Schema.define(version: 2021_01_21_103005) do
 
   create_table "lifts", force: :cascade do |t|
     t.string "name"
@@ -39,11 +39,18 @@ ActiveRecord::Schema.define(version: 2021_01_13_182319) do
     t.integer "age", null: false
     t.integer "gender", null: false
     t.float "bodyweight", null: false
-    t.float "wilks_score"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
     t.index ["email"], name: "index_users_on_email", unique: true
     t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
+  end
+
+  create_table "wilks_scores", force: :cascade do |t|
+    t.float "score"
+    t.integer "user_id", null: false
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+    t.index ["user_id"], name: "index_wilks_scores_on_user_id"
   end
 
   create_table "workouts", force: :cascade do |t|
@@ -57,5 +64,6 @@ ActiveRecord::Schema.define(version: 2021_01_13_182319) do
 
   add_foreign_key "setts", "lifts"
   add_foreign_key "setts", "workouts"
+  add_foreign_key "wilks_scores", "users"
   add_foreign_key "workouts", "users", on_delete: :cascade
 end

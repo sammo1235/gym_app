@@ -1,24 +1,7 @@
 ## gym app ##
 
-lift
-id
-name
+An app for tracking workouts, training volumes and wilks scores for powerlifting (PL).
 
-has_many :sets
-has_many :workouts, through :sets
-
-workout
-id
-
-has_many :sets
-has_many :lifts, through: :sets
-
-set
-id
-reps
-weight
-ref lift
-ref workout
-
-belongs_to :workout
-belongs_to :lift
+The three PL lifts (Squat, Bench, Deadlift (sumo or conventional)) will be used to
+calculate either a projected wilks score (in the case of working sets being entered)
+or an actual score (from the best three 1RMs a user has performed).
