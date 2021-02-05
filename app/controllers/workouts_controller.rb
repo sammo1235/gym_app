@@ -1,13 +1,19 @@
 class WorkoutsController < ApplicationController
   before_action :set_user
-  before_action :set_workout, except: [:index, :new, :create]
-  before_action :authenticate_user!, except: [:index, :show]
+  before_action :set_workout, except: [:index, :new, :create, :wilks_history]
+  before_action :authenticate_user!, except: [:index, :show, :wilks_history]
 
 
   def index
     @workouts = Workout
       .where(user_id: @user.id)
       .order(created_at: :desc)
+
+    @lift_data = Sett.user_history(@user)
+  end
+
+  def wilks_history
+    @wilks_data = WilksScore.user_history(@user)
   end
 
   def show

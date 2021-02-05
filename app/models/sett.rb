@@ -6,6 +6,18 @@ class Sett < ApplicationRecord
 
   after_update -> { WilksScore.create_score(self.workout, self.workout.user) }
 
+  def self.user_history(user)
+    lift_ids = Lift.where(name: Lift::POWERLIFTS).pluck(:id)
+
+    user.setts.where(lift_id: lift_ids).map do |sett|
+      [
+        sett.created_at.strftime("%d/%m"),
+        sett.workload,
+        sett.lift.name
+      ]
+    end
+  end
+
   def workload
     weight * reps
   end

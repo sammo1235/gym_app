@@ -3,10 +3,17 @@ class WilksScore < ApplicationRecord
   # do we want to access the setts used to create the wilks_score?
   # maybe wilks.setts > through join table wilks_score_setts ?
 
-  LIFTS = ['Back Squat', 'Bench Press', 'Deadlift']
+  def self.user_history(user)
+    WilksScore.where(user: user).map do |wilks|
+      [
+        wilks.created_at.strftime("%d/%m"),
+        wilks.score
+      ]
+    end
+  end
 
   def self.create_score(workout, user)
-    lift_ids = Lift.where(name: LIFTS).pluck(:id)
+    lift_ids = Lift.where(name: Lift::POWERLIFTS).pluck(:id)
 
     personal_bests = Hash[LIFTS.map {|lift| [lift, Sett.user_best_for_lift(user, lift)]}]
 
