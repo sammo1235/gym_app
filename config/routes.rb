@@ -3,6 +3,7 @@ Rails.application.routes.draw do
   root to: redirect('/users')
   resources :setts
   resources :users do
+    get 'wilks_history', to: 'workouts#wilks_history'
     resources :workouts
   end
 end

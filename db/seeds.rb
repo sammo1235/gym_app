@@ -6,7 +6,7 @@
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
 
-lifts = [
+LIFTS = [
   "Back Squat",
   "Bench Press",
   "Deadlift",
@@ -22,9 +22,20 @@ lifts = [
   "Dips"
 ]
 
-lifts.each {|l| Lift.find_or_create_by(name: l)}
+def create_lifts
+  LIFTS.each {|l| Lift.find_or_create_by(name: l)}
+end
 
-20.times do
+def create_workout(user)
+  workout = Workout.create(variant: rand(7), notes: '', user: user)
+
+  rand(15).times do
+    sett = Sett.create(reps: rand(1..10), weight: rand(5..200), lift: Lift.find(rand(1..LIFTS.count-1)), workout_id: workout.id)
+    workout.setts << sett
+  end
+end
+
+def create_user
   user = User.create!(
   email: Faker::Internet.email,
   username: "#{Faker::Name.name.split(/\s/).map(&:downcase).join('_')}#{rand(500..3000)}",
@@ -35,29 +46,31 @@ lifts.each {|l| Lift.find_or_create_by(name: l)}
   )
 
   7.times do
-    workout = Workout.create(variant: rand(7), notes: '', user: user)
+    create_workout(user)    
+  end
+end
 
-    rand(15).times do
-      sett = Sett.create(reps: rand(1..10), weight: rand(5..200), lift: Lift.find(rand(1..lifts.count-1)), workout_id: workout.id)
-      workout.setts << sett
+def create_me
+  user = User.find_by(username: 'sammo1235') || User.create!(
+    email: 'sammo@gmail.com',
+    username: 'sammo1235',
+    age: 28,
+    gender: 0,
+    bodyweight: 90,
+    password: 'password'
+    )
+
+  7.times do
+   create_workout(user)
+  end
+end
+
+def workouts_for_everyone
+  User.all.each do |user|
+    7.times do
+      create_workout(user)
     end
   end
 end
 
-user = User.find_by(username: 'sammo1235') || User.create!(
-  email: 'sammo@gmail.com',
-  username: 'sammo1235',
-  age: 28,
-  gender: 0,
-  bodyweight: 90,
-  password: 'password'
-  )
-
-7.times do
-  workout = Workout.create(variant: rand(7), notes: '', user: user)
-
-  rand(15).times do
-    sett = Sett.create(reps: rand(1..10), weight: rand(5..200), lift: Lift.find(rand(1..lifts.count-1)), workout_id: workout.id)
-    workout.setts << sett
-  end
-end
+workouts_for_everyone
