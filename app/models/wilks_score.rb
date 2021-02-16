@@ -4,12 +4,15 @@ class WilksScore < ApplicationRecord
   # maybe wilks.setts > through join table wilks_score_setts ?
 
   def self.user_history(user)
-    WilksScore.where(user: user).map do |wilks|
-      [
-        wilks.created_at.strftime("%d/%m"),
-        wilks.score
-      ]
+    hist = (user.created_at.to_date..Date.today).each_with_object(Hash.new(0)) do |date, hash| 
+      hash[date.strftime("%d/%m")] = 0
     end
+
+    WilksScore.where(user: user).map do |wilks|
+      hist[wilks.created_at.strftime("%d/%m")] = wilks.score
+    end
+    
+    hist.to_a
   end
 
   def self.create_score(workout, user)

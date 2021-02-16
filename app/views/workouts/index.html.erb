@@ -24,7 +24,7 @@
 
   function drawChart() {
     var data = JSON.parse('<%= @lift_data.to_json.html_safe -%>');
-    data = [['Day/Month', 'Volume', {role: "style"}]].concat(data);
+    data = [['Day/Month', 'Squat', 'Bench', 'Deadlift']].concat(data);
     data = google.visualization.arrayToDataTable(data);
     var options = {
       chart: {

@@ -8,14 +8,19 @@ class Sett < ApplicationRecord
 
   def self.user_history(user)
     lift_ids = Lift.where(name: Lift::POWERLIFTS).pluck(:id)
+    lift_enum = Lift::POWERLIFTS.each_with_object({}).with_index do |(lift, acc), index|
+       acc[lift] = index
+    end
+
+    history = (user.created_at.to_date..Date.today).each_with_object(Hash.new(0)) do |date, hash| 
+      hash[date.strftime("%d/%m")] = [0, 0, 0]
+    end
 
     user.setts.where(lift_id: lift_ids).map do |sett|
-      [
-        sett.created_at.strftime("%d/%m"),
-        sett.workload,
-        sett.lift.name
-      ]
+      history[sett.created_at.strftime("%d/%m")][lift_enum[sett.lift.name]] = sett.workload
     end
+    
+    history.to_a.map(&:flatten)
   end
 
   def workload
