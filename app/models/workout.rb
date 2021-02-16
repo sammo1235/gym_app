@@ -16,15 +16,6 @@ class Workout < ApplicationRecord
     :shoulders
   ]
 
-  def self.user_history(user)
-    user.workouts.map do |workout|
-      [
-        workout.created_at.strftime("%d/%m"),
-        workout.total_workload
-      ]
-    end
-  end
-
   def total_workload
     setts.reduce(0) {|memo, sett| memo += sett.workload; memo }
   end
