@@ -17,6 +17,9 @@ class WorkoutsController < ApplicationController
     @wilks_data = WilksScore.user_history(@user)
     @workout_data = Workout.user_history(@user)
     @one_rep_max_data = Sett.user_one_rep_max_history(@user)
+    @best_squat = Sett.user_best_for_lift(@user, 'Back Squat', one_rep_max_only: true)
+    @best_bench = Sett.user_best_for_lift(@user, 'Bench Press', one_rep_max_only: true)
+    @best_deadlift = Sett.user_best_for_lift(@user, 'Deadlift', one_rep_max_only: true)
   end
 
   def show

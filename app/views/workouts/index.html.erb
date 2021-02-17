@@ -1,7 +1,7 @@
 <p id="notice"><%= notice %></p>
 
 
-<div class="px-8 py-6 rounded shadow bg-white">
+<div class="m-2 px-8 py-6 rounded shadow bg-white">
   <div class="flex justify-evenly">
     <div class="font-bold">
       User: <%= @user.username %>
@@ -14,6 +14,23 @@
     </div>
     <div class="font-bold">
       Date Joined: <%= @user.created_at.to_date %>
+    </div>
+  </div>
+</div>
+
+<div class="m-2 px-8 py-6 rounded shadow bg-white">
+  <div class="flex justify-evenly">
+    <div class="font-bold">
+      1RM PBs:
+    </div>
+    <div class="font-bold">
+      Squat: <%= @best_squat %>Kg
+    </div>
+    <div class="font-bold">
+      Bench: <%= @best_bench %>Kg
+    </div>
+    <div class="font-bold">
+      Deadlift: <%= @best_deadlift %>Kg
     </div>
   </div>
 </div>

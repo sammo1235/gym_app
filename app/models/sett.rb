@@ -40,7 +40,7 @@ class Sett < ApplicationRecord
     weight * reps
   end
 
-  def self.user_best_for_lift(user, lift)
+  def self.user_best_for_lift(user, lift, one_rep_max_only: false)
     unless lift.is_a? Lift
       lift = Lift.find_by(name: lift)
       if lift.nil?
@@ -50,7 +50,10 @@ class Sett < ApplicationRecord
 
     best = 0
 
-    user.setts.where(lift: lift, reps: [1, (4..6)]).each do |sett|
+    reps_allowed = [1]
+    reps_allowed << (4..6) unless one_rep_max_only
+
+    user.setts.where(lift: lift, reps: reps_allowed).each do |sett|
       weight = sett.one_rep_max
       best = weight if weight > best
     end
