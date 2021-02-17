@@ -1,6 +1,6 @@
 <div class="mx-auto px-8 py-6 rounded shadow bg-white">
-  <div class="font-bold booked">
-    <%= @user.username %>
+  <div class="font-bold my-2">
+    <%= link_to @user.username, user_workouts_path(@user.id) %>
   </div>
 
   <div class="flex flex-col space-y-4">
