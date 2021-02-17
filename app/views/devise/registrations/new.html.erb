@@ -1,49 +1,52 @@
-<h2>Sign up</h2>
+<div class="mx-auto w-96 m-2 px-8 py-6 rounded shadow bg-white">
+  <h2 class="my-4">Sign up</h2>
 
-<%= form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
-  <%= render "devise/shared/error_messages", resource: resource %>
+  <%= form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
+    <%= render "devise/shared/error_messages", resource: resource %>
 
-  <div class="field">
-    <%= f.label :email %><br />
-    <%= f.email_field :email, autofocus: true, autocomplete: "email" %>
+    <div class="field m-2 px-8 py-6 rounded shadow">
+      <div>
+        <%= f.label :email %><br />
+        <%= f.email_field :email, autofocus: true, autocomplete: "email", class: "shadow m-1 px-2 py-2" %>
+      </div>
+
+      <div class="field">
+        <%= f.label :username %><br />
+        <%= f.text_field :username, class: "shadow m-1 px-2 py-2" %>
+      </div>
+
+      <div class="field appearance-none">
+        <%= f.label :gender, "Sex" %><br />
+        <%= f.select :gender, User.genders.keys.to_a, class: "shadow m-1 px-2 py-2" %>
+      </div>
+
+      <div class="field">
+        <%= f.label :age %><br />
+        <%= f.number_field :age, class: "shadow m-1 px-2 py-2" %>
+      </div>
+
+      <div class="field">
+        <%= f.label :bodyweight %><br />
+        <%= f.number_field :bodyweight, class: "shadow m-1 px-2 py-2" %>
+      </div>
+
+      <div class="field">
+        <%= f.label :password %>
+        <% if @minimum_password_length %>
+        <em>(<%= @minimum_password_length %> characters minimum)</em>
+        <% end %><br />
+        <%= f.password_field :password, autocomplete: "new-password", class: "shadow m-1 px-2 py-2" %>
+      </div>
+
+      <div class="field">
+        <%= f.label :password_confirmation %><br />
+        <%= f.password_field :password_confirmation, autocomplete: "new-password", class: "shadow m-1 px-2 py-2" %>
+      </div>
+
+      <div class="actions">
+        <%= f.submit "Sign up", class: "m-2 px-2 py-2 cursor-pointer rounded font-medium border border-transparent rounded-md shadow-sm text-base text-white bg-indigo-600 hover:bg-indigo-700" %>
+      </div>
+    <% end %>
   </div>
-
-  <div class="field">
-    <%= f.label :username %><br />
-    <%= f.text_field :username %>
-  </div>
-
-  <div class="field">
-    <%= f.label :gender, "Sex" %><br />
-    <%= f.select :gender, User.genders.keys.to_a %>
-  </div>
-
-  <div class="field">
-    <%= f.label :age %><br />
-    <%= f.number_field :age %>
-  </div>
-
-  <div class="field">
-    <%= f.label :bodyweight %><br />
-    <%= f.number_field :bodyweight %>
-  </div>
-
-  <div class="field">
-    <%= f.label :password %>
-    <% if @minimum_password_length %>
-    <em>(<%= @minimum_password_length %> characters minimum)</em>
-    <% end %><br />
-    <%= f.password_field :password, autocomplete: "new-password" %>
-  </div>
-
-  <div class="field">
-    <%= f.label :password_confirmation %><br />
-    <%= f.password_field :password_confirmation, autocomplete: "new-password" %>
-  </div>
-
-  <div class="actions">
-    <%= f.submit "Sign up" %>
-  </div>
-<% end %>
-
-<%= render "devise/shared/links" %>
+  <%= render "devise/shared/links" %>
+</div>
