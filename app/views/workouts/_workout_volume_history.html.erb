@@ -1,4 +1,4 @@
-<div class="m-2 px-8 py-6 rounded shadow bg-white w-1/2" id="columnchart_material" style="height: 500px;">
+<div class="m-2 px-8 py-6 rounded shadow bg-white w-1/2" id="columnchart_material2" style="height: 500px;">
 </div>
 <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
 <%= javascript_tag do -%>
@@ -6,17 +6,17 @@
   google.charts.setOnLoadCallback(drawChart);
 
   function drawChart() {
-    var data = JSON.parse('<%= @lift_data.to_json.html_safe -%>');
-    data = [['Day/Month', 'Squat', 'Bench', 'Deadlift']].concat(data);
+    var data = JSON.parse('<%= @workout_data.to_json.html_safe -%>');
+    data = [['Day/Month', 'Back', 'Legs', 'Chest', 'Upper', 'Lower', 'Full Body', 'Shoulders']].concat(data);
     data = google.visualization.arrayToDataTable(data);
     var options = {
       chart: {
         title: 'Volume/time',
-        subtitle: 'By Lift'
+        subtitle: 'By Workout Variant'
       }
     };
 
-    var chart = new google.charts.Bar(document.getElementById('columnchart_material'));
+    var chart = new google.charts.Bar(document.getElementById('columnchart_material2'));
     chart.draw(data, google.charts.Bar.convertOptions(options));
   }
 <% end -%>

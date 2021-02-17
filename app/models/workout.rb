@@ -16,6 +16,18 @@ class Workout < ApplicationRecord
     :shoulders
   ]
 
+  def self.user_history(user)
+    past_month = (user.created_at.to_date..Date.today).each_with_object(Hash.new(0)) do |date, hash| 
+      hash[date.strftime("%d/%m")] = Workout.variants.map {|k, v| [k, 0]}.to_h
+    end
+
+    Workout.where(user: user, variant: [0, 1, 2, 3, 4]).map do |workout|
+      past_month[workout.created_at.strftime("%d/%m")][workout.variant] += workout.total_workload
+    end
+
+    past_month.map {|k, v| [k,v.values]}.map(&:flatten)
+  end
+
   def total_workload
     setts.reduce(0) {|memo, sett| memo += sett.workload; memo }
   end

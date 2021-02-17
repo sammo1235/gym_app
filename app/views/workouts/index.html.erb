@@ -1,7 +1,7 @@
 <p id="notice"><%= notice %></p>
 
 
-<div class="px-8 py-6 rounded shadow bg-white">
+<div class="m-2 px-8 py-6 rounded shadow bg-white">
   <div class="flex justify-evenly">
     <div class="font-bold">
       User: <%= @user.username %>
@@ -18,39 +18,106 @@
   </div>
 </div>
 
+<div class="m-2 px-8 py-2 rounded shadow bg-white">
+  <div class="flex justify-evenly">
+    <div class="font-bold">
+      1RM PBs
+    </div>
+    <div class="font-medium">
+      Squat: <%= @best_squat %>Kg
+    </div>
+    <div class="font-medium">
+      Bench: <%= @best_bench %>Kg
+    </div>
+    <div class="font-medium">
+      Deadlift: <%= @best_deadlift %>Kg
+    </div>
+  </div>
+</div>
+
+<div class="m-2 px-8 py-2 rounded shadow bg-white">
+  <div class="flex justify-evenly">
+    <div class="font-bold">
+      Projected PBs
+    </div>
+    <div class="font-medium">
+      Squat: <%= @best_projected_squat %>Kg
+    </div>
+    <div class="font-medium">
+      Bench: <%= @best_projected_bench %>Kg
+    </div>
+    <div class="font-medium">
+      Deadlift: <%= @best_projected_deadlift %>Kg
+    </div>
+  </div>
+</div>
+
 <div class="flex flex-row">
   <%= render 'sett_volume_history' %>
   <%= render 'wilks_history' %>
 </div>
 
-<div class="px-8 py-6 rounded shadow bg-white">
-  <table class="w-full leading-10">
-    <thead class="text-left border-b">
-      <tr class="pb-1">
-        <th>Type</th>
-        <th>Date</th>
-        <th>Sets</th>
-        <th>Total Workload</th>
-        <th>&nbsp;</th>
-      </tr>
-    </thead>
+<div class="flex flex-row">
+  <%= render 'workout_volume_history' %>
+  <%= render 'one_rep_max_history' %>
+</div>
 
-    <tbody>
-      <% @workouts.each do |workout| %>
-        <tr>
-          <td><%= link_to workout.prepared_variant, user_workout_path(@user, workout) %></td>
-          <td><%= workout.created_at.to_date %></td>
-          <td><%= workout.setts.count %></td>
-          <td><%= workout.total_workload %></td>
-          <td class="text-right">
-            <% if current_user == @user %>
-              <%= link_to 'Edit', edit_user_workout_path(@user, workout) %>
-            <% end %>
-          </td>
+<div class="flex flex-row">
+  <div class="m-2 px-8 py-6 rounded shadow bg-white w-1/2">
+    <div class="font-medium">
+      Workouts
+    </div>
+    <table class="w-full leading-10">
+      <thead class="text-left border-b">
+        <tr class="pb-1">
+          <th>Type</th>
+          <th>Sets</th>
+          <th>Volume</th>
+          <th>Date</th>
         </tr>
-      <% end %>
-    </tbody>
-  </table>
+      </thead>
+
+      <tbody>
+        <% @workouts.each do |workout| %>
+          <tr>
+            <td><%= link_to workout.prepared_variant, user_workout_path(@user, workout), class: "hover:text-gray-500" %></td>
+            <td><%= workout.setts.count %></td>
+            <td><%= workout.total_workload %></td>
+            <td><%= workout.created_at.to_date %></td>
+          </tr>
+        <% end %>
+      </tbody>
+    </table>
+  </div>
+
+  <div class="m-2 px-8 py-6 rounded shadow bg-white w-1/2">
+    <div class="font-medium">
+      Sets
+    </div>
+    <table class="w-full leading-10">
+      <thead class="text-left border-b">
+        <tr class="pb-1">
+          <th>Lift</th>
+          <th>Weight</th>
+          <th>Reps</th>
+          <th>Volume</th>
+          <th>Date</th>
+        </tr>
+      </thead>
+
+      <tbody>
+        <% @setts.each do |sett| %>
+          <tr>
+            <td><%= sett.lift.name %></td>
+            <td><%= sett.weight %></td>
+            <td><%= sett.reps %></td>
+            <td><%= sett.workload %></td>
+            <td><%= sett.created_at.to_date %></td>
+          </tr>
+        <% end %>
+      </tbody>
+    </table>
+  </div>
 </div>
 
 <% if current_user == @user %>

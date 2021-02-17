@@ -8,9 +8,21 @@ class WorkoutsController < ApplicationController
     @workouts = Workout
       .where(user_id: @user.id)
       .order(created_at: :desc)
+      .limit(25)
+    @setts = @user.setts
+      .order(created_at: :desc)
+      .limit(25)
 
     @lift_data = Sett.user_history(@user)
     @wilks_data = WilksScore.user_history(@user)
+    @workout_data = Workout.user_history(@user)
+    @one_rep_max_data = Sett.user_one_rep_max_history(@user)
+    @best_squat = Sett.user_best_for_lift(@user, 'Back Squat', one_rep_max_only: true)
+    @best_bench = Sett.user_best_for_lift(@user, 'Bench Press', one_rep_max_only: true)
+    @best_deadlift = Sett.user_best_for_lift(@user, 'Deadlift', one_rep_max_only: true)
+    @best_projected_squat = Sett.user_best_for_lift(@user, 'Back Squat')
+    @best_projected_bench = Sett.user_best_for_lift(@user, 'Bench Press')
+    @best_projected_deadlift = Sett.user_best_for_lift(@user, 'Deadlift')
   end
 
   def show

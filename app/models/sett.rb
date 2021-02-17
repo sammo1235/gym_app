@@ -7,7 +7,7 @@ class Sett < ApplicationRecord
   after_update -> { WilksScore.create_score(self.workout, self.workout.user) }
 
   def self.user_history(user)
-    lift_ids = Lift.where(name: Lift::POWERLIFTS.keys).pluck(:id)
+    lift_ids = Lift.powerlift_ids
 
     history = (user.created_at.to_date..Date.today).each_with_object(Hash.new(0)) do |date, hash| 
       hash[date.strftime("%d/%m")] = [0, 0, 0]
@@ -20,11 +20,27 @@ class Sett < ApplicationRecord
     history.to_a.map(&:flatten)
   end
 
+  def self.user_one_rep_max_history(user)
+    lift_ids = Lift.powerlift_ids
+
+    history = (user.created_at.to_date..Date.today).each_with_object(Hash.new(0)) do |date, hash| 
+      hash[date.strftime("%d/%m")] = [0, 0, 0]
+    end
+
+    user.setts.where(lift_id: lift_ids, reps: 1).map do |sett|
+      if sett.weight > history[sett.created_at.strftime("%d/%m")][Lift::POWERLIFTS[sett.lift.name]]
+        history[sett.created_at.strftime("%d/%m")][Lift::POWERLIFTS[sett.lift.name]] = sett.weight
+      end
+    end
+    
+    history.to_a.map(&:flatten)
+  end
+
   def workload
     weight * reps
   end
 
-  def self.user_best_for_lift(user, lift)
+  def self.user_best_for_lift(user, lift, one_rep_max_only: false)
     unless lift.is_a? Lift
       lift = Lift.find_by(name: lift)
       if lift.nil?
@@ -34,7 +50,10 @@ class Sett < ApplicationRecord
 
     best = 0
 
-    user.setts.where(lift: lift, reps: [1, (4..6)]).each do |sett|
+    reps_allowed = [1]
+    reps_allowed << (4..6) unless one_rep_max_only
+
+    user.setts.where(lift: lift, reps: reps_allowed).each do |sett|
       weight = sett.one_rep_max
       best = weight if weight > best
     end
