@@ -12,13 +12,10 @@
     <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
   </head>
 
-  <body class="bg-gray-100 text-gray-900 tracking-wider leading-normal">
-    <div class="container mx-auto max-w-screen-lg px-4">
-      <!-- nav -->
-      <div class="flex justify-evenly my-8 font-sans font-bold break-normal text-2xl">
-        <%= render "shared/header" %>
-      </div>
+  <body class="bg-gray-300 text-gray-900 tracking-wider leading-normal">
+    <%= render "shared/header" %>
 
+    <div class="container mx-auto full my-4">
       <%= yield %>
     </div>
   </body>
