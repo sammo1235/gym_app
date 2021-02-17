@@ -7,7 +7,7 @@ class Sett < ApplicationRecord
   after_update -> { WilksScore.create_score(self.workout, self.workout.user) }
 
   def self.user_history(user)
-    lift_ids = Lift.where(name: Lift::POWERLIFTS.keys).pluck(:id)
+    lift_ids = Lift.powerlift_ids
 
     history = (user.created_at.to_date..Date.today).each_with_object(Hash.new(0)) do |date, hash| 
       hash[date.strftime("%d/%m")] = [0, 0, 0]
@@ -15,6 +15,22 @@ class Sett < ApplicationRecord
 
     user.setts.where(lift_id: lift_ids).map do |sett|
       history[sett.created_at.strftime("%d/%m")][Lift::POWERLIFTS[sett.lift.name]] = sett.workload
+    end
+    
+    history.to_a.map(&:flatten)
+  end
+
+  def self.user_one_rep_max_history(user)
+    lift_ids = Lift.powerlift_ids
+
+    history = (user.created_at.to_date..Date.today).each_with_object(Hash.new(0)) do |date, hash| 
+      hash[date.strftime("%d/%m")] = [0, 0, 0]
+    end
+
+    user.setts.where(lift_id: lift_ids, reps: 1).map do |sett|
+      if sett.weight > history[sett.created_at.strftime("%d/%m")][Lift::POWERLIFTS[sett.lift.name]]
+        history[sett.created_at.strftime("%d/%m")][Lift::POWERLIFTS[sett.lift.name]] = sett.weight
+      end
     end
     
     history.to_a.map(&:flatten)

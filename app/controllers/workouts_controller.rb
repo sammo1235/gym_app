@@ -16,6 +16,7 @@ class WorkoutsController < ApplicationController
     @lift_data = Sett.user_history(@user)
     @wilks_data = WilksScore.user_history(@user)
     @workout_data = Workout.user_history(@user)
+    @one_rep_max_data = Sett.user_one_rep_max_history(@user)
   end
 
   def show
