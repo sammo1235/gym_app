@@ -14,7 +14,7 @@
     <tbody>
       <% @users.each do |user| %>
         <tr>
-          <td><%= link_to user.username, user_workouts_path(user.id) %></td>
+          <td><%= link_to user.username, user_workouts_path(user.id), class: "hover:text-gray-500" %></td>
           <td><%= user.age %></td>
           <td><%= user.setts.count %></td>
           <td><%= user.best_wilks || 0 %>

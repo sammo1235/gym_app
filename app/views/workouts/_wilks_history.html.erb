@@ -1,0 +1,22 @@
+<div class="m-2 px-8 py-6 rounded shadow bg-white w-1/2" id="chart" style="height: 500px;">
+</div>
+
+<script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+<%= javascript_tag do -%>
+  google.charts.load('current', {'packages':['bar']});
+  google.charts.setOnLoadCallback(drawChart);
+
+  function drawChart() {
+    var data = JSON.parse('<%= @wilks_data.to_json.html_safe -%>');
+    data = [['Day/Month', 'Score']].concat(data);
+    data = google.visualization.arrayToDataTable(data);
+    var options = {
+      chart: {
+        title: 'Wilks/time',
+      }
+    };
+
+    var chart = new google.charts.Bar(document.getElementById('chart'));
+    chart.draw(data, google.charts.Bar.convertOptions(options));
+  }
+<% end -%>

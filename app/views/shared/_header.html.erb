@@ -1,9 +1,19 @@
-<h1 class="text-green-600"><%= link_to "Gym App", root_path %></h1>
-<% if user_signed_in? %>
-  <strong><%= link_to current_user.username, user_workouts_path(current_user) %></strong>
-  <%= link_to 'Edit profile', edit_user_registration_path, :class => 'navbar-link' %> |
-  <%= link_to "Logout", destroy_user_session_path, method: :delete, :class => 'navbar-link'  %>
-<% else %>
-  <%= link_to "Sign up", new_user_registration_path, :class => 'navbar-link'  %> |
-  <%= link_to "Login", new_user_session_path, :class => 'navbar-link'  %>
-<% end %>
+<div class="flex justify-start h-16 bg-gray-700 font-sans font-bold text-xl">
+  <div class="justify-between mx-10 my-5 w-1/2">
+    <span class="text-green-600 mx-4">Gym App</span>
+    <span class="font-normal text-gray-200 mx-4 hover:text-gray-900"><%= link_to "Leaderboard", root_path %></span>
+  </div>
+
+  <div class="hidden md:flex items-center justify-end md:flex-1 lg:w-0">
+    <div>
+      <% if user_signed_in? %>
+        <%= link_to current_user.username, user_workouts_path(current_user), :class => "mr-8 text-base font-medium text-gray-300 hover:text-gray-900" %>
+        <%= link_to 'Edit profile', edit_user_registration_path, :class => "mx-4 whitespace-nowrap text-base font-medium text-gray-300 hover:text-gray-900" %> |
+        <%= link_to "Logout", destroy_user_session_path, method: :delete, :class => "mx-4 whitespace-nowrap text-base font-medium text-gray-300 hover:text-gray-900"  %>
+      <% else %>
+        <%= link_to "Sign up", new_user_registration_path, :class => " mx-4 whitespace-nowrap text-base font-medium text-gray-500 hover:text-gray-900"  %> |
+        <%= link_to "Login", new_user_session_path, :class => "mx-4 whitespace-nowrap inline-flex  px-4 py-2 border border-transparent rounded-md shadow-sm text-base font-medium text-white bg-indigo-600 hover:bg-indigo-700"  %>
+      <% end %>
+    </div>
+  </div>
+</div>

@@ -10,9 +10,6 @@ class WorkoutsController < ApplicationController
       .order(created_at: :desc)
 
     @lift_data = Sett.user_history(@user)
-  end
-
-  def wilks_history
     @wilks_data = WilksScore.user_history(@user)
   end
 
