@@ -9,6 +9,12 @@
     <div class="font-bold">
       Best Wilks: <%= @user.best_wilks %>
     </div>
+    <div class="font-bold">
+      Total Workouts: <%= @user.workouts.count %>
+    </div>
+    <div class="font-bold">
+      Date Joined: <%= @user.created_at.to_date %>
+    </div>
   </div>
 </div>
 
