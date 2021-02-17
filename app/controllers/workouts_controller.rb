@@ -20,6 +20,9 @@ class WorkoutsController < ApplicationController
     @best_squat = Sett.user_best_for_lift(@user, 'Back Squat', one_rep_max_only: true)
     @best_bench = Sett.user_best_for_lift(@user, 'Bench Press', one_rep_max_only: true)
     @best_deadlift = Sett.user_best_for_lift(@user, 'Deadlift', one_rep_max_only: true)
+    @best_projected_squat = Sett.user_best_for_lift(@user, 'Back Squat')
+    @best_projected_bench = Sett.user_best_for_lift(@user, 'Bench Press')
+    @best_projected_deadlift = Sett.user_best_for_lift(@user, 'Deadlift')
   end
 
   def show
