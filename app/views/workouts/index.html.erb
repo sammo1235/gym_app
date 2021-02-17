@@ -23,34 +23,67 @@
   <%= render 'wilks_history' %>
 </div>
 
-<div class="px-8 py-6 rounded shadow bg-white">
-  <table class="w-full leading-10">
-    <thead class="text-left border-b">
-      <tr class="pb-1">
-        <th>Type</th>
-        <th>Date</th>
-        <th>Sets</th>
-        <th>Total Workload</th>
-        <th>&nbsp;</th>
-      </tr>
-    </thead>
+<div class="flex flex-row">
+  <%= render 'workout_volume_history' %>
+</div>
 
-    <tbody>
-      <% @workouts.each do |workout| %>
-        <tr>
-          <td><%= link_to workout.prepared_variant, user_workout_path(@user, workout) %></td>
-          <td><%= workout.created_at.to_date %></td>
-          <td><%= workout.setts.count %></td>
-          <td><%= workout.total_workload %></td>
-          <td class="text-right">
-            <% if current_user == @user %>
-              <%= link_to 'Edit', edit_user_workout_path(@user, workout) %>
-            <% end %>
-          </td>
+<div class="flex flex-row">
+  <div class="m-2 px-8 py-6 rounded shadow bg-white w-1/2">
+    <div class="font-medium">
+      Workouts
+    </div>
+    <table class="w-full leading-10">
+      <thead class="text-left border-b">
+        <tr class="pb-1">
+          <th>Type</th>
+          <th>Sets</th>
+          <th>Volume</th>
+          <th>Date</th>
         </tr>
-      <% end %>
-    </tbody>
-  </table>
+      </thead>
+
+      <tbody>
+        <% @workouts.each do |workout| %>
+          <tr>
+            <td><%= link_to workout.prepared_variant, user_workout_path(@user, workout), class: "hover:text-gray-500" %></td>
+            <td><%= workout.setts.count %></td>
+            <td><%= workout.total_workload %></td>
+            <td><%= workout.created_at.to_date %></td>
+          </tr>
+        <% end %>
+      </tbody>
+    </table>
+  </div>
+
+  <div class="m-2 px-8 py-6 rounded shadow bg-white w-1/2">
+    <div class="font-medium">
+      Sets
+    </div>
+    <table class="w-full leading-10">
+      <thead class="text-left border-b">
+        <tr class="pb-1">
+          <th>Lift</th>
+          <th>Weight</th>
+          <th>Reps</th>
+          <th>Volume</th>
+          <th>Date</th>
+          <th>&nbsp;</th>
+        </tr>
+      </thead>
+
+      <tbody>
+        <% @setts.each do |sett| %>
+          <tr>
+            <td><%= sett.lift.name %></td>
+            <td><%= sett.weight %></td>
+            <td><%= sett.reps %></td>
+            <td><%= sett.workload %></td>
+            <td><%= sett.created_at.to_date %></td>
+          </tr>
+        <% end %>
+      </tbody>
+    </table>
+  </div>
 </div>
 
 <% if current_user == @user %>

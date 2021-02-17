@@ -8,9 +8,14 @@ class WorkoutsController < ApplicationController
     @workouts = Workout
       .where(user_id: @user.id)
       .order(created_at: :desc)
+      .limit(25)
+    @setts = @user.setts
+      .order(created_at: :desc)
+      .limit(25)
 
     @lift_data = Sett.user_history(@user)
     @wilks_data = WilksScore.user_history(@user)
+    @workout_data = Workout.user_history(@user)
   end
 
   def show
