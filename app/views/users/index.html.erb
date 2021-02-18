@@ -1,25 +1,31 @@
-<p id="notice"><%= notice %></p>
 
-<div class="px-8 py-6 rounded shadow bg-white">
-  <table class="w-full leading-10">
-    <thead class="text-left border-b">
-      <tr class="pb-1">
-        <th>User</th>
-        <th>Age</th>
-        <th>Sets</th>
-        <th>Wilks</th>
-      </tr>
-    </thead>
-
-    <tbody>
-      <% @users.each do |user| %>
-        <tr>
-          <td><%= link_to user.username, user_workouts_path(user.id), class: "hover:text-gray-500" %></td>
-          <td><%= user.age %></td>
-          <td><%= user.setts.count %></td>
-          <td><%= user.best_wilks || 0 %>
-        </tr>
+<% @users.each do |user| %>
+  <%= link_to user_workouts_path(user.id) do %>
+    <div class="flex mb-4 px-8 py-6 rounded shadow bg-white hover:bg-gray-300 cursor-pointer">
+      <div class="flex items-center w-20">
+        <div class="text-3xl font-mono italic">
+          #<%= user.rank%>
+        </div>
+      </div>
+      <% if user.avatar.attached? && user.rank == 1 %>
+        <%= image_tag user.avatar.variant(resize_to_limit: [250, 250]).processed %>
+      <% elsif user.avatar.attached? %>
+        <%= image_tag user.avatar.variant(resize_to_limit: [150, 150]).processed %>
+      <% else %>
+        <%= image_tag 'green', size: "150x150" %>
       <% end %>
-    </tbody>
-  </table>
-</div>
+
+      <div class="container px-4 justify-evenly">
+        <div class="font-bold">
+          <%= user.username %>
+        </div>
+        <div class="flex flex-col">
+          <div>Age: <%= user.age %></div>
+          <div>Sex: <%= user.gender %></div>
+          <div>Wilks: <%= user.best_wilks || 0 %></div>
+          <div>BW: <%= user.bodyweight %>Kg</div>
+        </div>
+      </div>
+    </div>
+  <% end %>
+<% end %>

@@ -1,4 +1,4 @@
-<div class="mx-auto min-w-1/3 max-w-lg m-2 px-8 py-6 rounded shadow bg-white">
+<div class="mx-auto min-w-1/2 max-w-lg m-2 px-8 py-6 rounded shadow bg-white">
   <h2>Edit <%= resource_name.to_s.humanize %></h2>
 
   <%= form_for(resource, as: resource_name, url: registration_path(resource_name), html: { method: :put }) do |f| %>
@@ -13,29 +13,34 @@
       <% end %>
 
       <div class="field">
-      <div class="field">
-        <%= f.label :password %> <i>(leave blank if you don't want to change it)</i><br />
-        <%= f.password_field :password, autocomplete: "new-password", class: "shadow m-1 px-2 py-2" %>
-        <% if @minimum_password_length %>
-          <br />
-          <em><%= @minimum_password_length %> characters minimum</em>
-        <% end %>
-      </div>
+        <div class="field">
+          <%= f.label :password %> <i>(leave blank if you don't want to change it)</i><br />
+          <%= f.password_field :password, autocomplete: "new-password", class: "shadow m-1 px-2 py-2" %>
+          <% if @minimum_password_length %>
+            <br />
+            <em><%= @minimum_password_length %> characters minimum</em>
+          <% end %>
+        </div>
 
-      <div class="field">
-        <%= f.label :password_confirmation %><br />
-        <%= f.password_field :password_confirmation, autocomplete: "new-password", class: "shadow m-1 px-2 py-2" %>
-      </div>
+        <div class="field">
+          <%= f.label :password_confirmation %><br />
+          <%= f.password_field :password_confirmation, autocomplete: "new-password", class: "shadow m-1 px-2 py-2" %>
+        </div>
 
-      <div class="field">
-        <%= f.label :current_password %> <i>(we need your current password to confirm your changes)</i><br />
-        <%= f.password_field :current_password, autocomplete: "current-password", class: "shadow m-1 px-2 py-2" %>
-      </div>
+        <div class="field">
+          <%= f.label :current_password %> <i>(we need your current password to confirm your changes)</i><br />
+          <%= f.password_field :current_password, autocomplete: "current-password", class: "shadow m-1 px-2 py-2" %>
+        </div>
 
-      <div class="actions">
-        <%= f.submit "Update", class: "m-2 px-2 py-2 rounded font-medium cursor-pointer border border-transparent rounded-md shadow-sm text-base text-white bg-indigo-600 hover:bg-indigo-700" %>
-      </div>
-    <% end %>
+        <div>
+          <%= f.label :avatar %>
+          <%= f.file_field  :avatar, class: "shadow m-1 px-2 py-2" %>
+        </div>
+
+        <div class="actions">
+          <%= f.submit "Update", class: "m-2 px-2 py-2 rounded font-medium cursor-pointer border border-transparent rounded-md shadow-sm text-base text-white bg-indigo-600 hover:bg-indigo-700" %>
+        </div>
+      <% end %>
     </div>
 
   <p class="m-2 px-2 py-2">Unhappy? <%= button_to "Cancel my account", registration_path(resource_name), data: { confirm: "Are you sure?" }, method: :delete, class: "m-2 px-2 py-2 rounded font-medium cursor-pointer border border-transparent rounded-md shadow-sm text-base text-white bg-red-600 hover:bg-red-700" %></p>

@@ -1,54 +1,76 @@
-<p id="notice"><%= notice %></p>
+<div class="flex justify-center">
+  <div class="flex m-2 px-4 py-4 rounded shadow bg-white">
+    <% if @user.avatar.attached? %>
+      <%= image_tag @user.avatar.variant(resize_to_limit: [250, 250]).processed %>
+    <% else %>
+      <%= image_tag 'green', size: "250x250" %>
+    <% end %>
+  </div>  
 
+  <div class="flex m-2 px-8 py-6 rounded shadow bg-white">
+    <div class="flex flex-col justify-evenly">
+      <div class="font-bold">
+        <%= @user.username %>
+      </div>
 
-<div class="m-2 px-8 py-6 rounded shadow bg-white">
-  <div class="flex justify-evenly">
-    <div class="font-bold">
-      User: <%= @user.username %>
-    </div>
-    <div class="font-bold">
-      Best Wilks: <%= @user.best_wilks %>
-    </div>
-    <div class="font-bold">
-      Total Workouts: <%= @user.workouts.count %>
-    </div>
-    <div class="font-bold">
-      Date Joined: <%= @user.created_at.to_date %>
+      <div class="">
+        Rank: <%= @user.rank %>
+      </div>
+
+      <div class="">
+        Sex: <%= @user.gender %>
+      </div>
+
+      <div>
+        BW: <%= @user.bodyweight %>Kg
+      </div>
+
+      <div class="">
+        Age: <%= @user.age %>
+      </div>
+
+      <div class="">
+        Best Wilks: <%= @user.best_wilks %>
+      </div>
+
+      <div class="">
+        Total Workouts: <%= @user.workouts.count %>
+      </div>
+      
+      <div class="">
+        Date Joined: <%= @user.created_at.to_date %>
+      </div>
     </div>
   </div>
 </div>
 
-<div class="m-2 px-8 py-2 rounded shadow bg-white">
-  <div class="flex justify-evenly">
-    <div class="font-bold">
-      1RM PBs
-    </div>
-    <div class="font-medium">
-      Squat: <%= @best_squat %>Kg
-    </div>
-    <div class="font-medium">
-      Bench: <%= @best_bench %>Kg
-    </div>
-    <div class="font-medium">
-      Deadlift: <%= @best_deadlift %>Kg
-    </div>
+<div class="flex justify-evenly md:w-auto m-2 px-8 py-2 rounded shadow bg-white">
+  <div class="font-bold">
+    1RM PBs
+  </div>
+  <div>
+    Squat: <%= @best_squat %>Kg
+  </div>
+  <div>
+    Bench: <%= @best_bench %>Kg
+  </div>
+  <div>
+    Deadlift: <%= @best_deadlift %>Kg
   </div>
 </div>
 
-<div class="m-2 px-8 py-2 rounded shadow bg-white">
-  <div class="flex justify-evenly">
-    <div class="font-bold">
-      Projected PBs
-    </div>
-    <div class="font-medium">
-      Squat: <%= @best_projected_squat %>Kg
-    </div>
-    <div class="font-medium">
-      Bench: <%= @best_projected_bench %>Kg
-    </div>
-    <div class="font-medium">
-      Deadlift: <%= @best_projected_deadlift %>Kg
-    </div>
+<div class="flex justify-evenly m-2 px-8 py-2 rounded shadow bg-white">
+  <div class="font-bold">
+    Projected PBs
+  </div>
+  <div>
+    Squat: <%= @best_projected_squat %>Kg
+  </div>
+  <div>
+    Bench: <%= @best_projected_bench %>Kg
+  </div>
+  <div>
+    Deadlift: <%= @best_projected_deadlift %>Kg
   </div>
 </div>
 
