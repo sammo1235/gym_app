@@ -20,6 +20,18 @@ class User < ApplicationRecord
     :female
   ]
 
+  def self.search(fields)
+    bws = fields[:bodyweight].compact.map {|wr| wr.split(',').map(&:to_i) }.flatten
+
+    if fields
+      where("username LIKE ?", "%#{fields[:username]}%")
+      .where(gender: [fields[:male], fields[:female]].compact)
+      .where(bodyweight: (bws.min..bws.max))
+    else
+      all
+    end
+  end
+
   def best_wilks
     wilks_scores.order(score: :desc).first&.score
   end

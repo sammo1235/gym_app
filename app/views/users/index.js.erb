@@ -1,0 +1,6 @@
+function replaceUsers (innerHTML) {
+    const users = document.getElementById('users');
+    users.innerHTML = innerHTML;
+}
+
+replaceUsers("<%= j render 'user', users: @users %>");
