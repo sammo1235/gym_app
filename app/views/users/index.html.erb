@@ -1,4 +1,4 @@
-<div class="flex mx-auto mb-4 px-8 py-2">
+<div class="flex mx-auto mb-1 px-8 py-1">
   <%= form_with(url: '/users', method: 'get', id: 'filter-form') do |f| %>
     <%= f.text_field(:username) %>
 
@@ -8,18 +8,31 @@
     <%= f.label :female %>
     <%= f.check_box :female, {}, 1, nil %>
 
-    BW: 
-    <%= f.label "40-60" %>
-    <%= f.check_box :_40, {}, "40,60", nil %>
+    BW (Kg): 
+    <%= f.label "40-59" %>
+    <%= f.check_box :_40, {}, "40,59", nil %>
 
-    <%= f.label "61-80" %>
-    <%= f.check_box :_61, {}, "61,80", nil %>
+    <%= f.label "60-79" %>
+    <%= f.check_box :_60, {}, "60,79", nil %>
 
-    <%= f.label "81-100" %>
-    <%= f.check_box :_81, {}, "81,100", nil %>
+    <%= f.label "80-99" %>
+    <%= f.check_box :_80, {}, "80,99", nil %>
 
-    <%= f.submit("Search", id: "submit", :class => "mr-2 text-base font-medium text-gray-300 px-4 py-1 border border-transparent rounded-md shadow-sm text-base font-medium text-white bg-gray-800 hover:bg-gray-900") %>
+    <%= f.label "100-119" %>
+    <%= f.check_box :_100, {}, "100,119", nil %>
+
+    <%= f.label "120+" %>
+    <%= f.check_box :_120, {}, "120,200", nil %>
+
+    <%= f.submit("Search", id: "submit", :class => "mr-2 px-4 py-1 text-base font-medium text-gray-300 border border-transparent rounded-md shadow-sm text-base font-medium text-white bg-gray-800 hover:bg-gray-900") %>
   <% end %>
+
+  <div id="message" class="flex justify-start">
+    <% unless @count.nil? %>
+      <%= render 'message', count: @count %>
+    <% end %>
+  </div>
+
 </div>
 
 

@@ -3,4 +3,10 @@ function replaceUsers (innerHTML) {
     users.innerHTML = innerHTML;
 }
 
+function showResultCount (innerHTML) {
+    const message = document.getElementById('message');
+    message.innerHTML = innerHTML;
+}
+
 replaceUsers("<%= j render 'user', users: @users %>");
+showResultCount("<%= j render 'message', count: @count %>")

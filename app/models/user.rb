@@ -21,15 +21,25 @@ class User < ApplicationRecord
   ]
 
   def self.search(fields)
-    bws = fields[:bodyweight].compact.map {|wr| wr.split(',').map(&:to_i) }.flatten
-
-    if fields
-      where("username LIKE ?", "%#{fields[:username]}%")
-      .where(gender: [fields[:male], fields[:female]].compact)
-      .where(bodyweight: (bws.min..bws.max))
-    else
-      all
+    bws = fields[:bodyweight].compact.map do |wr| 
+      range = wr.split(',').map(&:to_i)
+      Range.new(range.min, range.max)
     end
+  
+    genders = [fields[:male], fields[:female]].compact
+    
+    users = where("username LIKE ?", "%#{fields[:username]}%")
+              .where(gender: genders)
+              .where(bodyweight: bws.pop)
+
+    users = bws.inject(users) do |relation, bw_range|
+      relation.or(self.where(
+        bodyweight: bw_range,
+        gender: genders)
+        .where("username LIKE ?", "%#{fields[:username]}%")
+      )
+    end if bws.any?
+    users
   end
 
   def best_wilks

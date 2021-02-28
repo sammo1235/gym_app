@@ -2,20 +2,23 @@ class UsersController < ApplicationController
   before_action :set_user, except: :index
 
   def index
-    # no doubt there's a cleaner way to do this
-    if params[:username] || params[:male] || params[:female] || params[:_40] || params[:_61] || params[:_81]
+    search_params = ["username", "male", "female", "_40", "_60", "_80", "_100", "_120"]
+    if (params.keys & search_params).present?
       @users = User.search({
         username: params[:username], 
         male: params[:male],
         female: params[:female],
         bodyweight: [
           params[:_40],
-          params[:_61],
-          params[:_81]
+          params[:_60],
+          params[:_80],
+          params[:_100],
+          params[:_120]
         ],
       })
         .includes(:setts)
         .ordered_by_wilks
+      @count = @users.count
     else
       @users = User.all
         .includes(:setts)
