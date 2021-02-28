@@ -29,8 +29,8 @@ class User < ApplicationRecord
     genders = [fields[:male], fields[:female]].compact
     
     users = where("username LIKE ?", "%#{fields[:username]}%")
-              .where(gender: genders)
-              .where(bodyweight: bws.pop)
+            .where(gender: genders)
+            .where(bodyweight: bws.pop)
 
     users = bws.inject(users) do |relation, bw_range|
       relation.or(self.where(
