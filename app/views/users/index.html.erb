@@ -1,30 +1,30 @@
 <div class="flex mx-auto mb-1 px-8 py-1">
   <%= form_with(url: '/users', method: 'get', id: 'filter-form') do |f| %>
-    <%= f.text_field(:username) %>
+    <%= f.text_field :username, placeholder: "search username", class: "mr-2 px-4 py-1 text-base font-medium text-gray-600 border border-transparent rounded-md shadow-sm rounded"  %>
 
     <%= f.label :male %>
-    <%= f.check_box :male, {}, 0, nil %>
+    <%= f.check_box :male, {checked: true}, 0, nil %>
 
     <%= f.label :female %>
-    <%= f.check_box :female, {}, 1, nil %>
+    <%= f.check_box :female, {checked: true}, 1, nil %>
 
     BW (Kg): 
     <%= f.label "40-59" %>
-    <%= f.check_box :_40, {}, "40,59", nil %>
+    <%= f.check_box :_40, {checked: true}, "40,59", nil %>
 
     <%= f.label "60-79" %>
-    <%= f.check_box :_60, {}, "60,79", nil %>
+    <%= f.check_box :_60, {checked: true}, "60,79", nil %>
 
     <%= f.label "80-99" %>
-    <%= f.check_box :_80, {}, "80,99", nil %>
+    <%= f.check_box :_80, {checked: true}, "80,99", nil %>
 
     <%= f.label "100-119" %>
-    <%= f.check_box :_100, {}, "100,119", nil %>
+    <%= f.check_box :_100, {checked: true}, "100,119", nil %>
 
     <%= f.label "120+" %>
-    <%= f.check_box :_120, {}, "120,200", nil %>
+    <%= f.check_box :_120, {checked: true}, "120,200", nil %>
 
-    <%= f.submit("Search", id: "submit", :class => "mr-2 px-4 py-1 text-base font-medium text-gray-300 border border-transparent rounded-md shadow-sm text-base font-medium text-white bg-gray-800 hover:bg-gray-900") %>
+    <%= f.submit("Search", id: "submit", :class => "mr-2 px-4 py-1 text-base font-medium text-gray-300 border border-transparent rounded-md shadow-sm font-medium text-white bg-gray-800 hover:bg-gray-900") %>
   <% end %>
 
   <div id="message" class="flex justify-start">
