@@ -5,7 +5,7 @@
   google.charts.load('current', {'packages':['bar']});
   google.charts.setOnLoadCallback(drawChart);
 
-  function drawChart() {
+  setTimeout(function drawChart() {
     var data = JSON.parse('<%= @one_rep_max_data.to_json.html_safe -%>');
     data = [['Day/Month', 'Squat', 'Bench', 'Deadlift']].concat(data);
     data = google.visualization.arrayToDataTable(data);
@@ -18,5 +18,5 @@
 
     var chart = new google.charts.Bar(document.getElementById('columnchart_material3'));
     chart.draw(data, google.charts.Bar.convertOptions(options));
-  }
+  }, 100);
 <% end -%>
