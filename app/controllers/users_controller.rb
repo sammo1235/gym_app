@@ -1,9 +1,10 @@
 class UsersController < ApplicationController
   before_action :set_user, except: :index
 
+  SEARCH_PARAMS = ["username", "male", "female", "_40", "_60", "_80", "_100", "_120"].freeze
+
   def index
-    search_params = ["username", "male", "female", "_40", "_60", "_80", "_100", "_120"]
-    if (params.keys & search_params).present?
+    if (params.keys & SEARCH_PARAMS).present?
       @users = User.search({
         username: params[:username], 
         male: params[:male],
