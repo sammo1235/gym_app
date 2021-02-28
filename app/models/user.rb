@@ -27,17 +27,10 @@ class User < ApplicationRecord
     end
   
     genders = [fields[:male], fields[:female]].compact
-    
-    users = where("username LIKE ?", "%#{fields[:username]}%")
-            .where(gender: genders)
-            .where(bodyweight: bws.pop)
+    users = filter_users(fields[:username], genders, bws.pop)
 
     users = bws.inject(users) do |relation, bw_range|
-      relation.or(self.where(
-        bodyweight: bw_range,
-        gender: genders)
-        .where("username LIKE ?", "%#{fields[:username]}%")
-      )
+      relation.or(filter_users(fields[:username], genders, bw_range))
     end if bws.any?
     users
   end
@@ -48,5 +41,15 @@ class User < ApplicationRecord
 
   def rank
     self.class.ordered_by_wilks.index(self) + 1
+  end
+
+  private
+
+  def self.filter_users(username, genders, bodyweight_range)
+    where("username LIKE ?", "%#{username}%")
+    .where(
+      bodyweight: bodyweight_range,
+      gender: genders
+    )
   end
 end
