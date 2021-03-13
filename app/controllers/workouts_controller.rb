@@ -36,6 +36,7 @@ class WorkoutsController < ApplicationController
   def create
     @workout = current_user.workouts.build workout_params
     if @workout.save
+      thing
       redirect_to user_workout_path(current_user, @workout)
     else
       render :new
@@ -59,7 +60,7 @@ class WorkoutsController < ApplicationController
   end
 
   private
-
+  
   def workout_params
     params.require(:workout).permit(:user_id, :variant, :notes, setts_attributes: [:id, :weight, :reps, :lift_id, :_destroy])
   end
