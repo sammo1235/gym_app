@@ -1,7 +1,7 @@
 class WorkoutsController < ApplicationController
   before_action :set_user
-  before_action :set_workout, except: [:index, :new, :create, :wilks_history]
-  before_action :authenticate_user!, except: [:index, :show, :wilks_history]
+  before_action :set_workout, except: [:index, :new, :create]
+  before_action :authenticate_user!, except: [:index, :show]
 
 
   def index
@@ -36,7 +36,6 @@ class WorkoutsController < ApplicationController
   def create
     @workout = current_user.workouts.build workout_params
     if @workout.save
-      thing
       redirect_to user_workout_path(current_user, @workout)
     else
       render :new
@@ -56,7 +55,11 @@ class WorkoutsController < ApplicationController
 
   def destroy
     @workout.destroy
-    redirect_to user_workouts_path(@user)
+    
+    respond_to do |format|
+      format.html { redirect_to user_workouts_path(@user) }
+      format.js
+    end
   end
 
   private
