@@ -1,6 +1,6 @@
 class WorkoutsController < ApplicationController
   before_action :set_user
-  before_action :set_workout, except: [:index, :new, :create]
+  before_action :set_workout, except: [:index, :new, :create, :filter]
   before_action :authenticate_user!, except: [:index, :show]
 
 
@@ -23,6 +23,21 @@ class WorkoutsController < ApplicationController
     @best_projected_squat = Sett.user_best_for_lift(@user, 'Back Squat')
     @best_projected_bench = Sett.user_best_for_lift(@user, 'Bench Press')
     @best_projected_deadlift = Sett.user_best_for_lift(@user, 'Deadlift')
+  end
+
+  def filter
+    if params[:variant] == 'all'
+      @workouts = Workout.where(user_id: @user.id).order(created_at: :desc).limit(25)
+    elsif params[:variant]
+      @workouts = Workout
+      .where(user_id: @user.id, variant: params[:variant])
+      .order(created_at: :desc)
+      .limit(25)
+    end
+
+    respond_to do |format|
+      format.js
+    end
   end
 
   def show
@@ -55,7 +70,7 @@ class WorkoutsController < ApplicationController
 
   def destroy
     @workout.destroy
-    
+
     respond_to do |format|
       format.html { redirect_to user_workouts_path(@user) }
       format.js

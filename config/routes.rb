@@ -3,6 +3,8 @@ Rails.application.routes.draw do
   root to: redirect('/users')
   resources :setts
   resources :users do
-    resources :workouts
+    get 'workouts/filter', to: 'workouts#filter'
+    resources :workouts do
+    end
   end
 end

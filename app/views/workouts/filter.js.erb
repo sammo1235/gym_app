@@ -1,0 +1,6 @@
+function filterWorkouts(innerHTML) {
+    const workouts = document.getElementById("workouts");
+    workouts.innerHTML = innerHTML;
+}
+
+filterWorkouts("<%= j render 'workouts', workouts: @workouts %>");
