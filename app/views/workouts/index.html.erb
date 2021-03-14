@@ -95,7 +95,7 @@
         <%= f.label :variant, "Variant", class: "font-bold" %>
         <%= f.select :variant, Workout.variants.map {|k, v| [k.capitalize, k ]}.unshift(["All", :all]), { selected: 'All' }, { class: "" } %>
 
-        <%= f.submit("filter", class: "items-center justify-center bg-white hover:bg-gray-100 h-6 w-24") %>
+        <%= f.submit("filter", class: "items-center justify-center bg-gray-100 hover:bg-gray-200 h-6 w-24") %>
       <% end %>
     </span>
 
@@ -104,12 +104,29 @@
     </div>
   </div>
 
-  <div id="sets" class="m-2 px-8 py-6 rounded shadow bg-white w-1/2">
-    <div class="font-medium">
-      Sets
-    </div>
+  <div class="m-2 px-8 py-6 rounded shadow bg-white w-1/2">
+    <span class="font-medium">
+      Sets (<%= @user.setts.count %> total)
+    </span>
 
-    <%= render 'setts', setts: @setts %>
+    <span>
+      <%= form_with(url: user_setts_filter_path(@user.id), method: :get) do |f| %>
+        <%= f.label :lift, "Lift", class: "font-bold" %>
+        <%= f.select :lift, Lift.all.pluck(:name, :id).unshift(["All", :all]), { selected: 'All' }, { class: "" } %>
+
+        <%= f.submit("filter", class: "items-center justify-center bg-gray-100 hover:bg-gray-200 h-6 w-24") %>
+      <% end %>
+    </span>
+
+    <span id="sett_count">
+      <% unless @filtered_setts_count.nil? %>
+        <%= render 'message', filtered_setts_count: @filtered_setts_count %>
+      <% end %>
+    </span>
+
+    <div id="setts">
+      <%= render 'setts', setts: @setts %>
+    </div>
   </div>
 </div>
 

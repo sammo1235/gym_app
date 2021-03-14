@@ -1,0 +1,12 @@
+function filterSetts(innerHTML) {
+    const setts = document.getElementById('setts');
+    setts.innerHTML = innerHTML;
+}
+
+function filteredCount(innerHTML) {
+    const count = document.getElementById('sett_count');
+    count.innerHTML = innerHTML;
+}
+
+filterSetts("<%= j render 'workouts/setts', setts: @setts %>");
+filteredCount("<%= j render 'message', filtered_setts_count: @filtered_setts_count %>");
