@@ -3,4 +3,10 @@ function filterWorkouts(innerHTML) {
     workouts.innerHTML = innerHTML;
 }
 
+function filteredCount(innerHTML) {
+    const count = document.getElementById("workout_count");
+    count.innerHTML = innerHTML;
+}
+
 filterWorkouts("<%= j render 'workouts', workouts: @workouts %>");
+filteredCount("<%= j render 'message', filtered_workouts_count: @filtered_workouts_count %>")

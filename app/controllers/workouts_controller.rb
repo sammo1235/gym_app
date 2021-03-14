@@ -35,6 +35,8 @@ class WorkoutsController < ApplicationController
       .limit(25)
     end
 
+    @filtered_workouts_count = @workouts.count
+
     respond_to do |format|
       format.js
     end
