@@ -115,9 +115,11 @@
   </div>
 </div>
 
-<div id="workouts" class="flex flex-col mx-auto">    
-  <% @workouts.each do |workout| %>
-    <%= render partial: 'workout', locals: {user: @user, workout: workout} %>
-  <% end %>    
-</div>
-
+<%= turbo_stream_from "workouts" %>
+<%= turbo_frame_tag "workouts" do %>
+  <div class="flex flex-col mx-auto">
+    <% @workouts.each do |workout| %>
+      <%= render partial: 'workouts/workout', locals: {user: @user, workout: workout} %>
+    <% end %>
+  </div>
+<% end %>

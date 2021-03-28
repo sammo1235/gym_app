@@ -9,9 +9,6 @@ class WorkoutsController < ApplicationController
       .where(user_id: @user.id)
       .order(created_at: :desc)
       .limit(25)
-    @setts = @user.setts
-      .order(created_at: :desc)
-      .limit(25)
 
     @lift_data = Sett.user_history(@user)
     @wilks_data = WilksScore.user_history(@user)
@@ -53,7 +50,7 @@ class WorkoutsController < ApplicationController
   def create
     @workout = current_user.workouts.build workout_params
     if @workout.save
-      redirect_to user_workout_path(current_user, @workout)
+      redirect_to user_workout_path(@user, @workout)
     else
       render :new
     end
@@ -64,7 +61,7 @@ class WorkoutsController < ApplicationController
 
   def update
     if @workout.update workout_params
-      render partial: 'workout', locals: {workout: @workout}
+      redirect_to user_workout_path(@user, @workout)
     else
       render :edit
     end
@@ -74,7 +71,7 @@ class WorkoutsController < ApplicationController
     @workout.destroy
 
     respond_to do |format|
-      format.html { redirect_to user_workouts_path(@user) }
+      format.html { redirect_to user_workouts_path(@user), notice: "Workout successfully deleted" }
       format.js
     end
   end
