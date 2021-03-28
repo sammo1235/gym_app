@@ -84,8 +84,14 @@
   <%= render 'one_rep_max_history' %>
 </div>
 
-<div class="flex flex-row">
-  <div class="m-2 px-8 py-6 rounded shadow bg-white w-1/2">
+<% if current_user == @user %>
+  <div class="flex justify-center mt-4">
+    <%= link_to 'New Work Out', new_user_workout_path, class: "inline-block bg-blue-500 hover:bg-blue-600 text-white rounded shadow cursor-pointer font-bold px-3 py-2" %>
+  </div>
+<% end %>
+
+<div class="flex mx-auto">
+  <div class="flex m-2 px-8 py-6 rounded shadow bg-white w-max">
     <div class="font-medium">
       Workouts (<%= @user.workouts.count %> total)
     </div>
@@ -106,42 +112,12 @@
         <% end %>
       </div>
     </div>
-
-    <div id="workouts">    
-      <%= render 'workouts', workouts: @workouts %>
-    </div>
-  </div>
-
-  <div class="m-2 px-8 py-6 rounded shadow bg-white w-1/2">
-    <span class="font-medium">
-      Sets (<%= @user.setts.count %> total)
-    </span>
-
-    <div class="flex mx-auto mb-1 px-8 py-1">
-      <span>
-        <%= form_with(url: user_setts_filter_path(@user.id), method: :get) do |f| %>
-          <%= f.label :lift, "Lift", class: "font-bold" %>
-          <%= f.select :lift, Lift.all.pluck(:name, :id).unshift(["All", :all]), { selected: 'All' }, { class: "" } %>
-
-          <%= f.submit("filter", class: "items-center justify-center bg-gray-100 hover:bg-gray-200 h-6 w-24") %>
-        <% end %>
-      </span>
-
-      <span id="sett_count">
-        <% unless @filtered_setts_count.nil? %>
-          <%= render 'message', filtered_setts_count: @filtered_setts_count %>
-        <% end %>
-      </span>
-    </div>
-    
-    <div id="setts">
-      <%= render 'setts', setts: @setts %>
-    </div>
   </div>
 </div>
 
-<% if current_user == @user %>
-  <div class="flex justify-center mt-4">
-    <%= link_to 'New Work Out', new_user_workout_path, class: "inline-block bg-blue-500 hover:bg-blue-600 text-white rounded shadow cursor-pointer font-bold px-3 py-2" %>
-  </div>
-<% end %>
+<div id="workouts" class="flex flex-col mx-auto">    
+  <% @workouts.each do |workout| %>
+    <%= render partial: 'workout', locals: {user: @user, workout: workout} %>
+  <% end %>    
+</div>
+

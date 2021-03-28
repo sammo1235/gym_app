@@ -7,6 +7,7 @@ class User < ApplicationRecord
   has_many :workouts, dependent: :destroy
   has_many :setts, through: :workouts, dependent: :destroy
   has_many :wilks_scores, dependent: :destroy
+  has_many :comments
   
   has_one_attached :avatar do |attachable|
     attachable.variant :thumb, resize: "100x100"

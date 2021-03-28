@@ -64,7 +64,7 @@ class WorkoutsController < ApplicationController
 
   def update
     if @workout.update workout_params
-      redirect_to user_workout_path(current_user, @workout)
+      render partial: 'workout', locals: {workout: @workout}
     else
       render :edit
     end

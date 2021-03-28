@@ -1,37 +1,39 @@
-<div class="mx-auto px-8 py-6 rounded shadow bg-white">
-  <%= form_with url: user_workout_path(@user, @workout), model: @workout, local: true do |workout_form| %>
-    <div class="flex flex-col space-y-4">
-      <div class="flex items-center justify-between bg-gray-100 py-3 px-6 rounded">
-        <%= workout_form.label :variant, "Variant", class: "font-bold" %>
-        <%= workout_form.select :variant, Workout.variants.map {|k, v| [k.capitalize, k ]} %>
+<%= turbo_frame_tag(dom_id(@workout)) do %>
+  <div class="mx-auto px-8 py-6 rounded shadow bg-white">
+    <%= form_with url: user_workout_path(@user, @workout), model: @workout do |workout_form| %>
+      <div class="flex flex-col space-y-4">
+        <div class="flex items-center justify-between bg-gray-100 py-3 px-6 rounded">
+          <%= workout_form.label :variant, "Variant", class: "font-bold" %>
+          <%= workout_form.select :variant, Workout.variants.map {|k, v| [k.capitalize, k ]} %>
+        </div>
+
+        <div class="flex items-center justify-between bg-gray-100 py-3 px-6 rounded">
+          <%= workout_form.label :notes, "Notes", class: "font-bold" %>
+          <%= workout_form.text_field :notes %>
+        </div>
+
+        <%= workout_form.fields_for :setts do |sett_field| %>
+          <div class="flex items-center justify-between bg-gray-100 py-3 px-6 rounded">
+            <%= sett_field.label :lift_id, "Lift", class: "font-bold" %>
+            <%= sett_field.select :lift_id, Lift.all.pluck(:name, :id) %>
+          </div>
+
+          <div class="flex items-center justify-between bg-gray-100 py-3 px-6 rounded">
+            <%= sett_field.label :weight, "Weight", class: "font-bold" %>
+            <%= sett_field.number_field :weight %>
+          </div>
+
+          <div class="flex items-center justify-between bg-gray-100 py-3 px-6 rounded">
+            <%= sett_field.label :reps, "Reps", class: "font-bold" %>
+            <%= sett_field.number_field :reps %>
+          </div>
+        <% end %>
+          <%= link_to_add_fields 'Add Set To Workout', workout_form, :setts %>
       </div>
 
-      <div class="flex items-center justify-between bg-gray-100 py-3 px-6 rounded">
-        <%= workout_form.label :notes, "Notes", class: "font-bold" %>
-        <%= workout_form.text_field :notes %>
+      <div class="flex justify-between mt-4">
+        <%= workout_form.submit "Save", class: "bg-blue-500 hover:bg-blue-600 text-white rounded shadow cursor-pointer font-bold px-3 py-2" %>
       </div>
-
-      <%= workout_form.fields_for :setts do |sett_field| %>
-        <div class="flex items-center justify-between bg-gray-100 py-3 px-6 rounded">
-          <%= sett_field.label :lift_id, "Lift", class: "font-bold" %>
-          <%= sett_field.select :lift_id, Lift.all.pluck(:name, :id) %>
-        </div>
-
-        <div class="flex items-center justify-between bg-gray-100 py-3 px-6 rounded">
-          <%= sett_field.label :weight, "Weight", class: "font-bold" %>
-          <%= sett_field.number_field :weight %>
-        </div>
-
-        <div class="flex items-center justify-between bg-gray-100 py-3 px-6 rounded">
-          <%= sett_field.label :reps, "Reps", class: "font-bold" %>
-          <%= sett_field.number_field :reps %>
-        </div>
-      <% end %>
-        <%= link_to_add_fields 'Add Set To Workout', workout_form, :setts %>
-    </div>
-
-    <div class="flex justify-between mt-4">
-      <%= workout_form.submit "Save", class: "bg-blue-500 hover:bg-blue-600 text-white rounded shadow cursor-pointer font-bold px-3 py-2" %>
-    </div>
-  <% end %>
-</div>
+    <% end %>
+  </div>
+<% end %>

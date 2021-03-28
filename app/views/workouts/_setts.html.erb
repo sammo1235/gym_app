@@ -12,16 +12,7 @@
 
     <tbody>
     <% @setts.each do |sett| %>
-        <tr id="sett_<%=sett.id%>">
-        <td><%= sett.lift.name %></td>
-        <td><%= sett.weight %></td>
-        <td><%= sett.reps %></td>
-        <td><%= sett.workload %></td>
-        <td><%= sett.created_at.to_date %></td>
-        <% if current_user == @user %>
-            <td><%= link_to 'x', sett_path(sett), method: :delete, remote: :true, class: "flex items-center justify-center h-8 w-8 rounded-full bg-white hover:bg-gray-100 border-gray-400 border-2" %></td>
-        <% end %>
-        </tr>
+        <%= render 'sett', locals: { sett: sett } %>
     <% end %>
     </tbody>
 </table>
