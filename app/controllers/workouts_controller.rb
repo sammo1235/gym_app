@@ -40,6 +40,8 @@ class WorkoutsController < ApplicationController
   end
 
   def show
+    @comments = @workout.comments
+    @comment = Comment.new
   end
 
   def new

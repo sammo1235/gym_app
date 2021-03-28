@@ -1,5 +1,7 @@
 class CommentsController < ApplicationController
   before_action :set_comment, only: [:show, :edit, :update, :destroy]
+  before_action :set_workout
+  before_action :set_user
 
   # GET /comments
   # GET /comments.json
@@ -26,12 +28,12 @@ class CommentsController < ApplicationController
   # POST /comments.json
   def create
     @comment = Comment.new(comment_params)
-    @comment.user_id = 21
-    @comment.workout_id = 1
+    @comment.user = current_user
+    @comment.workout = @workout
 
     respond_to do |format|
       if @comment.save
-        format.html { redirect_to comments_url, notice: 'Comment was successfully created.' }
+        format.html { redirect_to user_workout_path(@user, @workout), notice: 'Comment was successfully created.' }
         format.json { render :show, status: :created, location: @comment }
       else
         format.turbo_stream { render turbo_stream: turbo_stream.replace(@comment, partial: "comments/form", locals: { comment: @comment })}
@@ -69,6 +71,14 @@ class CommentsController < ApplicationController
     # Use callbacks to share common setup or constraints between actions.
     def set_comment
       @comment = Comment.find(params[:id])
+    end
+
+    def set_workout
+      @workout = Workout.find(params[:workout_id])
+    end
+
+    def set_user
+      @user = User.find params[:user_id]
     end
 
     # Only allow a list of trusted parameters through.
