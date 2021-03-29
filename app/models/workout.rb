@@ -5,7 +5,7 @@ class Workout < ApplicationRecord
   has_many :comments
   accepts_nested_attributes_for :setts, allow_destroy: true
 
-  # after_create_commit { broadcast_prepend_to "workouts" }
+  after_create_commit { broadcast_prepend_to "workouts" }
   after_destroy_commit { broadcast_remove_to "workouts" }
 
   after_save -> { WilksScore.create_score(self, self.user) }

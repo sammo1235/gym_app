@@ -1,5 +1,4 @@
-<%= turbo_frame_tag(dom_id(sett.id)) do %>
-  <tr id="sett_<%=sett.id%>">
+<%= turbo_frame_tag dom_id(sett) do %>
   <td><%= sett.lift.name %></td>
   <td><%= sett.weight %></td>
   <td><%= sett.reps %></td>

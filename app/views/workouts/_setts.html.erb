@@ -11,8 +11,10 @@
     </thead>
 
     <tbody>
-    <% @setts.each do |sett| %>
-        <%= render 'sett', locals: { sett: sett } %>
+    <% if setts.any? %>
+        <% setts&.each do |sett| %>
+            <%= render partial: 'sett', locals: { sett: sett } %>
+        <% end %>
     <% end %>
     </tbody>
 </table>
