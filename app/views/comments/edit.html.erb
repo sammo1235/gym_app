@@ -3,9 +3,6 @@
 <%= turbo_frame_tag dom_id(@comment) do %>
   <div class="container">
     <%= render 'form', comment: @comment %>
-    <%= link_to 'Cancel', @comment %>
+    <%= link_to 'Cancel', user_workout_comment_path(@user, @workout, @comment) %>
   </div>
 <% end %>
-
-<%= link_to 'Show', @comment %> |
-<%= link_to 'Back', comments_path %>

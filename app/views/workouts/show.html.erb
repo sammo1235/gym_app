@@ -78,6 +78,6 @@
 <%= turbo_stream_from "comments" %>
 
 <%= turbo_frame_tag "comments" do %>
-  <%= render @comments %>
+  <%= render @comments, locals: { user: @user, workout: @workout } %>
 <% end %>
 

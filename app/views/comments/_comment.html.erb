@@ -1,5 +1,8 @@
 <%= turbo_frame_tag dom_id(comment) do %>
   <div class="container">
     <%= comment.body %>
-  </div> 
+  </div>
+  <% if current_user = comment.user %>
+    <%= link_to "edit", edit_user_workout_comment_path(comment.workout.user, comment.workout, comment) %>
+  <% end %>
 <% end %>
