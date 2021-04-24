@@ -71,8 +71,10 @@
   <% end %>
 </div>
 
-<%= turbo_frame_tag "comment_form" do %>
-  <%= render partial: 'comments/form', locals: { user: @user, workout: @workout, comment: @comment } %>
+<% if current_user == @user %>
+  <%= turbo_frame_tag "comment_form" do %>
+    <%= render partial: 'comments/form', locals: { user: @user, workout: @workout, comment: @comment } %>
+  <% end %>
 <% end %>
 
 <%= turbo_stream_from "comments" %>

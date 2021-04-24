@@ -1,20 +1,22 @@
-<table class="w-full leading-10">
-    <thead class="text-left border-b">
-    <tr class="pb-1">
-        <th>Lift</th>
-        <th>Weight</th>
-        <th>Reps</th>
-        <th>Volume</th>
-        <th>Date</th>
-        <th>&nbsp;</th>
-    </tr>
-    </thead>
+<div class="mx-8">
+    <table class="table-auto border-separate border border-gray-300 mx-auto mx-8 mb-4 px-8 py-6 rounded shadow bg-white w-full leading-10">
+        <thead class="text-left border-b">
+        <tr class="pb-1">
+            <th>Lift</th>
+            <th>Weight</th>
+            <th>Reps</th>
+            <th>Volume</th>
+            <th>Date</th>
+            <th>&nbsp;</th>
 
-    <tbody>
-    <% if setts.any? %>
-        <% setts&.each do |sett| %>
-            <%= render partial: 'sett', locals: { sett: sett } %>
+        </thead>
+
+        <tbody>
+        <% if setts.any? %>
+            <% setts&.each do |sett| %>
+                <%= render partial: 'sett', locals: { sett: sett } %>
+            <% end %>
         <% end %>
-    <% end %>
-    </tbody>
-</table>
+        </tbody>
+    </table>
+</div>
