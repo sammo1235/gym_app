@@ -63,7 +63,6 @@
       </tbody>
     </table>
   <% end %>
-
   <% if current_user == @user %>
     <div class="flex justify-center mt-4 justify-evenly">
       <%= link_to 'Edit Work Out', edit_user_workout_path(@user, @workout), class: "inline-block bg-blue-500 hover:bg-blue-600 text-white rounded shadow cursor-pointer font-bold px-3 py-2" %>
@@ -71,3 +70,16 @@
     </div>
   <% end %>
 </div>
+
+<% if current_user == @user %>
+  <%= turbo_frame_tag "comment_form" do %>
+    <%= render partial: 'comments/form', locals: { user: @user, workout: @workout, comment: @comment } %>
+  <% end %>
+<% end %>
+
+<%= turbo_stream_from "comments" %>
+
+<%= turbo_frame_tag "comments" do %>
+  <%= render @comments, locals: { user: @user, workout: @workout } %>
+<% end %>
+

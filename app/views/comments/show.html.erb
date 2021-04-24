@@ -1,0 +1,5 @@
+<p id="notice"><%= notice %></p>
+
+<%= turbo_frame_tag dom_id(@comment) do %>
+  <%= render partial: "comment", locals: { user: @user, workout: @workout, comment: @comment } %>
+<% end %>

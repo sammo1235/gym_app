@@ -1,27 +1,22 @@
-<table class="w-full leading-10">
-    <thead class="text-left border-b">
-    <tr class="pb-1">
-        <th>Lift</th>
-        <th>Weight</th>
-        <th>Reps</th>
-        <th>Volume</th>
-        <th>Date</th>
-        <th>&nbsp;</th>
-    </tr>
-    </thead>
+<div class="mx-8">
+    <table class="table-auto border-separate border border-gray-300 mx-auto mx-8 mb-4 px-8 py-6 rounded shadow bg-white w-full leading-10">
+        <thead class="text-left border-b">
+        <tr class="pb-1">
+            <th>Lift</th>
+            <th>Weight</th>
+            <th>Reps</th>
+            <th>Volume</th>
+            <th>Date</th>
+            <th>&nbsp;</th>
 
-    <tbody>
-    <% @setts.each do |sett| %>
-        <tr id="sett_<%=sett.id%>">
-        <td><%= sett.lift.name %></td>
-        <td><%= sett.weight %></td>
-        <td><%= sett.reps %></td>
-        <td><%= sett.workload %></td>
-        <td><%= sett.created_at.to_date %></td>
-        <% if current_user == @user %>
-            <td><%= link_to 'x', sett_path(sett), method: :delete, remote: :true, class: "flex items-center justify-center h-8 w-8 rounded-full bg-white hover:bg-gray-100 border-gray-400 border-2" %></td>
+        </thead>
+
+        <tbody>
+        <% if setts.any? %>
+            <% setts&.each do |sett| %>
+                <%= render partial: 'sett', locals: { sett: sett } %>
+            <% end %>
         <% end %>
-        </tr>
-    <% end %>
-    </tbody>
-</table>
+        </tbody>
+    </table>
+</div>
